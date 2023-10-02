@@ -207,6 +207,7 @@ func TestMetricRouter(t *testing.T) {
 			ts := httptest.NewServer(MetricRouter(stor))
 			defer ts.Close()
 			resp, body := testRequest(t, ts, tt.method, tt.uri)
+			defer resp.Body.Close()
 			assert.Equal(t, tt.wantCode, resp.StatusCode)
 			if tt.wantBody != "" {
 				assert.Equal(t, tt.wantBody, body)
