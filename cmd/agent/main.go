@@ -23,11 +23,11 @@ func main() {
 }
 
 func sendMetrics(metrics []metrics.Metric, serverAddress string) error {
-	init_url := fmt.Sprintf("%s/update", serverAddress)
+	initUrl := fmt.Sprintf("%s/update", serverAddress)
 	client := resty.New()
 
 	for _, metric := range metrics {
-		url := fmt.Sprintf("%s/%s/%s/%s", init_url, metric.Type, metric.Name, metric.Val)
+		url := fmt.Sprintf("%s/%s/%s/%s", initUrl, metric.Type, metric.Name, metric.Val)
 
 		resp, err := client.R().SetHeader("Content-Type", "text/plain").Post(url)
 		if err != nil {
