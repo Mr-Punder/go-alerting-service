@@ -15,16 +15,8 @@ func main() {
 
 func run() error {
 
-	storage := &storage.MemStorage{
-		GaugeStorage:   make(map[string]float64),
-		CounterStorage: make(map[string]int64)}
+	storage := new(storage.MemStorage)
 
-	mux := http.NewServeMux()
-
-	mux.HandleFunc(`/update/counter/`, handlers.CounterUpd(storage))
-	mux.HandleFunc(`/update/gauge/`, handlers.GaugeUpd(storage))
-	mux.HandleFunc(`/`, handlers.DefoultHandler)
-
-	return http.ListenAndServe(`:8080`, mux)
+	return http.ListenAndServe(`:8080`, handlers.MetricRouter(storage))
 
 }

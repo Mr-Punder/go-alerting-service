@@ -7,11 +7,27 @@ type MemStor interface {
 	GetCounter(string) (int64, bool)
 	DeleteGouge(string)
 	DeleteCouner(string)
+	GetAllGauge() map[string]float64
+	GetAllCounter() map[string]int64
 }
 
 type MemStorage struct {
 	GaugeStorage   map[string]float64
 	CounterStorage map[string]int64
+}
+
+func (stor *MemStorage) GetAllGauge() map[string]float64 {
+	if stor.GaugeStorage == nil {
+		stor.GaugeStorage = make(map[string]float64)
+	}
+	return stor.GaugeStorage
+}
+
+func (stor *MemStorage) GetAllCounter() map[string]int64 {
+	if stor.GaugeStorage == nil {
+		stor.GaugeStorage = make(map[string]float64)
+	}
+	return stor.CounterStorage
 }
 
 func (stor *MemStorage) SetGouge(key string, val float64) error {

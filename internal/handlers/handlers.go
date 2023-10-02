@@ -1,83 +1,131 @@
 package handlers
 
 import (
+	"fmt"
 	"net/http"
 	"strconv"
-	"strings"
 
 	"github.com/Mr-Punder/go-alerting-service/internal/storage"
+	"github.com/go-chi/chi/v5"
 )
 
-func GaugeUpd(stor storage.MemStor) http.HandlerFunc {
-	return func(res http.ResponseWriter, req *http.Request) {
+func MetricRouter(storage storage.MemStor) chi.Router {
+	r := chi.NewRouter()
 
-		if req.Method != http.MethodPost {
-			http.Error(res, "Only POST requests are allowed!", http.StatusMethodNotAllowed)
+	return r.Route("/", func(r chi.Router) {
+		r.Get("/", ShowAllHandler(storage))
+		r.Route("/update", func(r chi.Router) {
+			r.Post("/{type}/{name}/{value}", UpdHandler(storage))
+		})
+		r.Get("/value/{type}/{name}", ValueHandler(storage))
+		r.Get("/{}", DefoultHandler)
+		r.Post("/{}", DefoultHandler)
+	})
+}
+
+func UpdHandler(stor storage.MemStor) http.HandlerFunc {
+	return func(w http.ResponseWriter, r *http.Request) {
+
+		if r.Method != http.MethodPost {
+			http.Error(w, "Only POST requests are allowed for update!", http.StatusMethodNotAllowed)
 			return
 		}
 
-		path := req.URL.Path
-		params := strings.Split(path, `/`)
+		tp := chi.URLParam(r, "type")
+		name := chi.URLParam(r, "name")
+		val := chi.URLParam(r, "value")
 
-		if len(params) < 5 {
-			res.WriteHeader(http.StatusNotFound)
+		switch tp {
+		case "gauge":
+			fval, err := strconv.ParseFloat(val, 64)
+			if err != nil {
+				http.Error(w, "wrong format value", http.StatusBadRequest)
+				return
+			}
+
+			if err := stor.SetGouge(name, fval); err != nil {
+				w.WriteHeader(http.StatusBadRequest)
+				return
+			}
+		case "counter":
+			ival, err := strconv.ParseInt(val, 10, 64)
+			if err != nil {
+				http.Error(w, "wrong format value", http.StatusBadRequest)
+				return
+			}
+
+			if err := stor.SetCounter(name, ival); err != nil {
+				w.WriteHeader(http.StatusBadRequest)
+				return
+			}
+		default:
+			http.Error(w, "wrong type", http.StatusBadRequest)
 			return
 		}
 
-		name := params[3]
-		val := params[4]
-
-		fval, err := strconv.ParseFloat(val, 64)
-		if err != nil {
-			res.WriteHeader(http.StatusBadRequest)
-			return
-		}
-
-		if err := stor.SetGouge(name, fval); err != nil {
-			res.WriteHeader(http.StatusBadRequest)
-			return
-		}
-
-		res.WriteHeader(http.StatusOK)
+		w.WriteHeader(http.StatusOK)
 
 	}
 
 }
 
-func DefoultHandler(res http.ResponseWriter, req *http.Request) {
-	res.WriteHeader(http.StatusBadRequest)
+func DefoultHandler(w http.ResponseWriter, r *http.Request) {
+	http.Error(w, "wrong requests", http.StatusBadRequest)
 }
 
-func CounterUpd(stor storage.MemStor) http.HandlerFunc {
-	return func(res http.ResponseWriter, req *http.Request) {
-		if req.Method != http.MethodPost {
-			http.Error(res, "Only POST requests are allowed!", http.StatusMethodNotAllowed)
+func ValueHandler(stor storage.MemStor) http.HandlerFunc {
+	return func(w http.ResponseWriter, r *http.Request) {
+		if r.Method != http.MethodGet {
+			http.Error(w, "Only Get requests are allowed for value!", http.StatusMethodNotAllowed)
 			return
 		}
 
-		path := req.URL.Path
-		params := strings.Split(path, `/`)
+		tp := chi.URLParam(r, "type")
+		name := chi.URLParam(r, "name")
+		w.Header().Set("Content-Type", "text/plain")
+		switch tp {
+		case "gauge":
+			val, ok := stor.GetGouge(name)
+			if !ok {
+				http.Error(w, fmt.Sprintf("%s not found", name), http.StatusNotFound)
+				return
+			}
+			w.Write([]byte(strconv.FormatFloat(val, 'f', -1, 64)))
+		case "counter":
+			val, ok := stor.GetCounter(name)
+			if !ok {
+				http.Error(w, fmt.Sprintf("%s not found", name), http.StatusNotFound)
+				return
+			}
+			w.Write([]byte(strconv.FormatInt(val, 10)))
+		default:
+			http.Error(w, "wrong type", http.StatusBadRequest)
+		}
 
-		if len(params) < 5 {
-			res.WriteHeader(http.StatusNotFound)
+	}
+}
+
+func ShowAllHandler(stor storage.MemStor) http.HandlerFunc {
+	return func(w http.ResponseWriter, r *http.Request) {
+		if r.Method != http.MethodGet {
+			http.Error(w, "Only Get requests are allowed for value!", http.StatusMethodNotAllowed)
 			return
 		}
 
-		name := params[3]
-		val := params[4]
+		html := "<html><body>"
 
-		ival, err := strconv.ParseInt(val, 10, 64)
-		if err != nil {
-			res.WriteHeader(http.StatusBadRequest)
-			return
+		html += "<h2>Gauge:</h2>"
+		for key, val := range stor.GetAllGauge() {
+			html += fmt.Sprintf("<p>%s: %f</p>", key, val)
 		}
-
-		if err := stor.SetCounter(name, ival); err != nil {
-			res.WriteHeader(http.StatusBadRequest)
-			return
+		html += "<h2>Counter:</h2>"
+		for key, val := range stor.GetAllCounter() {
+			html += fmt.Sprintf("<p>%s: %d</p>", key, val)
 		}
+		html += "</body></html>"
+		w.Header().Set("Content-Type", "text/html")
 
-		res.WriteHeader(http.StatusOK)
+		w.Write([]byte(html))
 
 	}
 }

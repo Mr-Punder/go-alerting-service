@@ -7,6 +7,7 @@ import (
 	"time"
 
 	"github.com/Mr-Punder/go-alerting-service/internal/metrics"
+	"github.com/go-resty/resty/v2"
 )
 
 const (
@@ -15,37 +16,28 @@ const (
 	serverAddress  = "http://localhost:8080"
 )
 
-func sendMetrics(metrics []metrics.Metric, serverAddress string) error {
-	url := fmt.Sprintf("%s/update", serverAddress)
-	client := &http.Client{}
-
-	for _, metric := range metrics {
-		url = fmt.Sprintf("%s/%s/%s/%s", url, metric.Type, metric.Name, metric.Val)
-
-		req, err := http.NewRequest("POST", url, nil)
-		if err != nil {
-			return err
-		}
-
-		req.Header.Set("Content-Type", "text/plain")
-
-		resp, err := client.Do(req)
-		if err != nil {
-			return err
-		}
-
-		defer resp.Body.Close()
-		if resp.StatusCode != http.StatusOK {
-			return fmt.Errorf("unexpected status code: %d", resp.StatusCode)
-		}
-	}
-	return nil
-}
-
 func main() {
 	if err := run(); err != nil {
 		panic(err)
 	}
+}
+
+func sendMetrics(metrics []metrics.Metric, serverAddress string) error {
+	init_url := fmt.Sprintf("%s/update", serverAddress)
+	client := resty.New()
+
+	for _, metric := range metrics {
+		url := fmt.Sprintf("%s/%s/%s/%s", init_url, metric.Type, metric.Name, metric.Val)
+
+		resp, err := client.R().SetHeader("Content-Type", "text/plain").Post(url)
+		if err != nil {
+			return err
+		}
+		if resp.StatusCode() != http.StatusOK {
+			return fmt.Errorf("unexpected status code: %d", resp.StatusCode())
+		}
+	}
+	return nil
 }
 
 func run() error {
