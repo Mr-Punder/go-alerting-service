@@ -18,11 +18,11 @@ func testRequest(t *testing.T, ts *httptest.Server, method, path string) (*http.
 
 	resp, err := ts.Client().Do(req)
 	require.NoError(t, err)
-	defer resp.Body.Close()
 
 	body, err := io.ReadAll(resp.Body)
 	require.NoError(t, err)
 
+	resp.Body.Close()
 	return resp, string(body)
 }
 
