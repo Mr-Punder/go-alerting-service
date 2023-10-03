@@ -3,6 +3,7 @@ package handlers
 import (
 	"fmt"
 	"net/http"
+	"sort"
 	"strconv"
 
 	"github.com/Mr-Punder/go-alerting-service/internal/storage"
@@ -115,8 +116,13 @@ func ShowAllHandler(stor storage.MemStor) http.HandlerFunc {
 		html := "<html><body>"
 
 		html += "<h2>Gauge:</h2>"
+		metrics := []string{}
 		for key, val := range stor.GetAllGauge() {
-			html += fmt.Sprintf("<p>%s: %f</p>", key, val)
+			metrics = append(metrics, fmt.Sprintf("<p>%s: %f</p>", key, val))
+		}
+		sort.Strings(metrics)
+		for _, str := range metrics {
+			html += str
 		}
 		html += "<h2>Counter:</h2>"
 		for key, val := range stor.GetAllCounter() {

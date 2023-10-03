@@ -8,6 +8,7 @@ import (
 )
 
 func main() {
+	parseFlags()
 	if err := run(); err != nil {
 		panic(err)
 	}
@@ -17,6 +18,6 @@ func run() error {
 
 	storage := new(storage.MemStorage)
 
-	return http.ListenAndServe(`:8080`, handlers.MetricRouter(storage))
+	return http.ListenAndServe(flagRunAddr, handlers.MetricRouter(storage))
 
 }

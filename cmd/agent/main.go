@@ -10,13 +10,8 @@ import (
 	"github.com/go-resty/resty/v2"
 )
 
-const (
-	pollInterval   = 2 * time.Second
-	reportInterval = 10 * time.Second
-	serverAddress  = "http://localhost:8080"
-)
-
 func main() {
+	parseFlags()
 	if err := run(); err != nil {
 		panic(err)
 	}
