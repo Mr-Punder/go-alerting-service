@@ -18,7 +18,7 @@ func main() {
 }
 
 func sendMetrics(metrics []metrics.Metric, serverAddress string) error {
-	init := fmt.Sprintf("%s/update", serverAddress)
+	init := fmt.Sprintf("http://%s/update", serverAddress)
 	client := resty.New()
 
 	for _, metric := range metrics {
