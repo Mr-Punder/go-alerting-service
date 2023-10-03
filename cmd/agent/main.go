@@ -17,8 +17,8 @@ func main() {
 	}
 }
 
-func sendMetrics(metrics []metrics.Metric, serverAddress string) error {
-	init := fmt.Sprintf("http://%s/update", serverAddress)
+func sendMetrics(metrics []metrics.Metric, addres string) error {
+	init := fmt.Sprintf("%s/update", addres)
 	client := resty.New()
 
 	for _, metric := range metrics {
@@ -48,8 +48,8 @@ func run() error {
 			metric = metrics.Collect()
 
 		case <-reportTicker.C:
-
-			err := sendMetrics(metric, serverAddress)
+			addres := "http://" + serverAddress
+			err := sendMetrics(metric, addres)
 			if err != nil {
 				return err
 			}
