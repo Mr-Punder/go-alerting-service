@@ -26,9 +26,8 @@ func parseFlags() {
 	}
 
 	if envPollInterval, ok := os.LookupEnv("POLL_INTERVAL"); ok {
-		var rawPollInterval64 int64
-		var err error
-		if rawPollInterval64, err = strconv.ParseInt(envPollInterval, 10, 64); err != nil {
+		rawPollInterval64, err := strconv.ParseInt(envPollInterval, 10, 64)
+		if err != nil {
 			log.Fatal("wrong report interval")
 		}
 		rawPollInterval = int(rawPollInterval64)
@@ -36,9 +35,8 @@ func parseFlags() {
 	}
 
 	if envReportInterval, ok := os.LookupEnv("REPORT_INTERVAL"); ok {
-		var rawReportInterval64 int64
-		var err error
-		if rawReportInterval64, err = strconv.ParseInt(envReportInterval, 10, 64); err != nil {
+		rawReportInterval64, err := strconv.ParseInt(envReportInterval, 10, 64)
+		if err != nil {
 			log.Fatal("wrong report interval")
 		}
 		rawReportInterval = int(rawReportInterval64)
