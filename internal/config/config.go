@@ -1,4 +1,4 @@
-package main
+package config
 
 import (
 	"flag"
@@ -9,20 +9,20 @@ import (
 )
 
 var (
-	pollInterval   time.Duration
-	reportInterval time.Duration
-	serverAddress  string
+	PollInterval   time.Duration
+	ReportInterval time.Duration
+	ServerAddress  string
 )
 
-func parseFlags() {
+func ParseFlags() {
 	var rawPollInterval, rawReportInterval int
-	flag.StringVar(&serverAddress, "a", "localhost:8080", "addres and port to connect")
+	flag.StringVar(&ServerAddress, "a", "localhost:8080", "address and port to connect")
 	flag.IntVar(&rawPollInterval, "r", 2, "poll interval")
 	flag.IntVar(&rawReportInterval, "p", 10, "report interval")
 	flag.Parse()
 
 	if envAddrs, ok := os.LookupEnv("ADDRESS"); ok {
-		serverAddress = envAddrs
+		ServerAddress = envAddrs
 	}
 
 	if envPollInterval, ok := os.LookupEnv("POLL_INTERVAL"); ok {
@@ -43,7 +43,7 @@ func parseFlags() {
 
 	}
 
-	pollInterval = time.Duration(rawPollInterval) * time.Second
-	reportInterval = time.Duration(rawReportInterval) * time.Second
+	PollInterval = time.Duration(rawPollInterval) * time.Second
+	ReportInterval = time.Duration(rawReportInterval) * time.Second
 
 }

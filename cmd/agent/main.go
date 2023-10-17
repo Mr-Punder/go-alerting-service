@@ -6,12 +6,13 @@ import (
 
 	"time"
 
+	"github.com/Mr-Punder/go-alerting-service/internal/config"
 	"github.com/Mr-Punder/go-alerting-service/internal/metrics"
 	"github.com/go-resty/resty/v2"
 )
 
 func main() {
-	parseFlags()
+	config.ParseFlags()
 	if err := run(); err != nil {
 		panic(err)
 	}
@@ -36,8 +37,8 @@ func sendMetrics(metrics []metrics.Metric, addres string) error {
 }
 
 func run() error {
-	pollTicker := time.NewTicker(pollInterval)
-	reportTicker := time.NewTicker(reportInterval)
+	pollTicker := time.NewTicker(config.PollInterval)
+	reportTicker := time.NewTicker(config.ReportInterval)
 	defer pollTicker.Stop()
 	defer reportTicker.Stop()
 
@@ -48,8 +49,8 @@ func run() error {
 			metric = metrics.Collect()
 
 		case <-reportTicker.C:
-			addres := "http://" + serverAddress
-			err := sendMetrics(metric, addres)
+			address := "http://" + config.ServerAddress
+			err := sendMetrics(metric, address)
 			if err != nil {
 				return err
 			}
