@@ -6,13 +6,13 @@ import (
 	"go.uber.org/zap"
 )
 
-// LogHttpZap is implementation of HttpLogger with zap
-type LogHttpZap struct {
+// LogHTTPZap is implementation of HTTPLogger with zap
+type LogHTTPZap struct {
 	logZap *zap.SugaredLogger //zap.NewNop()
 
 }
 
-func NewLogZap(level string, path string, errorPath string) (*LogHttpZap, error) {
+func NewLogZap(level string, path string, errorPath string) (*LogHTTPZap, error) {
 	lvl, err := zap.ParseAtomicLevel(level)
 	if err != nil {
 		return nil, err
@@ -33,11 +33,11 @@ func NewLogZap(level string, path string, errorPath string) (*LogHttpZap, error)
 	}
 	defer logger.Sync()
 
-	return &LogHttpZap{logger.Sugar()}, nil
+	return &LogHTTPZap{logger.Sugar()}, nil
 }
 
 // RequestLog makes request log
-func (logger *LogHttpZap) RequestLog(method string, path string, duration time.Duration) {
+func (logger *LogHTTPZap) RequestLog(method string, path string, duration time.Duration) {
 	logger.logZap.Infow("incoming request",
 		"method", method,
 		"path", path,
@@ -45,7 +45,7 @@ func (logger *LogHttpZap) RequestLog(method string, path string, duration time.D
 	)
 }
 
-func (logger *LogHttpZap) ResponseLog(status int, size int) {
+func (logger *LogHTTPZap) ResponseLog(status int, size int) {
 	logger.logZap.Infow("Send response with",
 		"status", status,
 		"size", size,
