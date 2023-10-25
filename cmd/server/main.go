@@ -4,20 +4,27 @@ import (
 	"net/http"
 
 	"github.com/Mr-Punder/go-alerting-service/internal/handlers"
+	"github.com/Mr-Punder/go-alerting-service/internal/logger"
+	"github.com/Mr-Punder/go-alerting-service/internal/server/config"
 	"github.com/Mr-Punder/go-alerting-service/internal/storage"
 )
 
 func main() {
-	parseFlags()
-	if err := run(); err != nil {
+	conf := config.GetConfig()
+	if err := run(conf); err != nil {
 		panic(err)
 	}
 }
 
-func run() error {
+func run(conf *config.Config) error {
+
+	zapLogger, err := logger.NewLogZap(conf.LogLevel, conf.LogOutputPath, conf.LogErrorPath)
+	if err != nil {
+		return err
+	}
 
 	storage := new(storage.MemStorage)
 
-	return http.ListenAndServe(flagRunAddr, handlers.MetricRouter(storage))
+	return http.ListenAndServe(conf.FlagRunAddr, handlers.MetricRouter(storage, zapLogger))
 
 }

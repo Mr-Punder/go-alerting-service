@@ -6,12 +6,14 @@ import (
 	"strconv"
 )
 
+// Metric is a type of Go runtime parameter
 type Metric struct {
 	Name string
 	Type string
 	Val  string
 }
 
+// Collect returns slice of current runtime metrics
 func Collect() []Metric {
 
 	memStats := runtime.MemStats{}

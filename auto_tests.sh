@@ -6,6 +6,7 @@ go build -o server *.go
 cd ../..
 
 go test ./...
+
 metricstest -test.v -test.run=^TestIteration1$ -binary-path=cmd/server/server
 
 metricstest -test.v -test.run=^TestIteration2[AB]*$ \
@@ -32,6 +33,15 @@ SERVER_PORT=8099
           ADDRESS="localhost:${SERVER_PORT}"
           TEMP_FILE=$(random tempfile)
           metricstest -test.v -test.run=^TestIteration5$ \
+            -agent-binary-path=cmd/agent/agent \
+            -binary-path=cmd/server/server \
+            -server-port=$SERVER_PORT \
+            -source-path=.
+
+
+ADDRESS="localhost:${SERVER_PORT}"
+          TEMP_FILE=$(random tempfile)
+          metricstest -test.v -test.run=^TestIteration6$ \
             -agent-binary-path=cmd/agent/agent \
             -binary-path=cmd/server/server \
             -server-port=$SERVER_PORT \

@@ -1,6 +1,6 @@
 package storage
 
-type MemStor interface {
+type MemStorer interface {
 	SetGouge(string, float64) error
 	SetCounter(string, int64) error
 	GetGouge(string) (float64, bool)

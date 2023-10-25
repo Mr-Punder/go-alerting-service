@@ -6,7 +6,7 @@ import (
 
 	"time"
 
-	"github.com/Mr-Punder/go-alerting-service/internal/config"
+	"github.com/Mr-Punder/go-alerting-service/internal/agent/config"
 	"github.com/Mr-Punder/go-alerting-service/internal/metrics"
 	"github.com/go-resty/resty/v2"
 )

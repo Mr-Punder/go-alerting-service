@@ -7,6 +7,7 @@ import (
 	"net/http/httptest"
 	"testing"
 
+	"github.com/Mr-Punder/go-alerting-service/internal/logger"
 	"github.com/Mr-Punder/go-alerting-service/internal/storage"
 	"github.com/stretchr/testify/assert"
 	"github.com/stretchr/testify/require"
@@ -204,7 +205,10 @@ func TestMetricRouter(t *testing.T) {
 	for _, tt := range tests {
 		t.Run(tt.name, func(t *testing.T) {
 			stor := &storage.MemStorage{GaugeStorage: tt.gaugeMetric, CounterStorage: tt.counterMetric}
-			ts := httptest.NewServer(MetricRouter(stor))
+			Log, err := logger.NewLogZap("error", "stdoout", "stderr")
+			require.NoError(t, err)
+
+			ts := httptest.NewServer(MetricRouter(stor, Log))
 			defer ts.Close()
 			resp, body := testRequest(t, ts, tt.method, tt.uri)
 			defer resp.Body.Close()
