@@ -1,6 +1,7 @@
 package handlers
 
 import (
+	"encoding/json"
 	"fmt"
 	"net/http"
 	"os"
@@ -8,6 +9,7 @@ import (
 	"strconv"
 	"time"
 
+	"github.com/Mr-Punder/go-alerting-service/internal/metrics"
 	"github.com/go-chi/chi/v5"
 )
 
@@ -20,47 +22,45 @@ type responseData struct {
 type httpLogger interface {
 	RequestLog(method string, path string, duration time.Duration)
 	ResponseLog(status int, size int)
+	Info(mes string)
+	Error(mes string)
 }
 
-type memAllGetter interface {
-	GetAllGauge() map[string]float64
-	GetAllCounter() map[string]int64
+type metricsAllGetter interface {
+	GetAll() map[string]metrics.Metrics
 }
 
-type memGetter interface {
-	GetGouge(string) (float64, bool)
-	GetCounter(string) (int64, bool)
+type metricsGetter interface {
+	Get(metric metrics.Metrics) (metrics.Metrics, bool)
 }
 
-type memSetter interface {
-	SetGouge(string, float64) error
-	SetCounter(string, int64) error
+type metricsSetter interface {
+	Set(metric metrics.Metrics) error
 }
 
-type memDeleter interface {
-	DeleteGouge(string)
-	DeleteCouner(string)
+type metricsDeleter interface {
+	DeleteGouge(metric metrics.Metrics)
 }
 
-// Memstorer is a general metrics storage
-type memStorer interface {
-	memDeleter
-	memGetter
-	memSetter
-	memAllGetter
+// Memstorer is a general metrics storage interface
+type metricsStorer interface {
+	metricsDeleter
+	metricsGetter
+	metricsSetter
+	metricsAllGetter
 }
 
 // Handler type contains MemStorer and HttpLogger
 type Handler struct {
-	stor   memStorer
+	stor   metricsStorer
 	logger httpLogger
 }
 
-func NewHandler(stor memStorer, logger httpLogger) *Handler {
+func NewHandler(stor metricsStorer, logger httpLogger) *Handler {
 	return &Handler{stor, logger}
 }
 
-func MetricRouter(storage memStorer, logger httpLogger) chi.Router {
+func MetricRouter(storage metricsStorer, logger httpLogger) chi.Router {
 	r := chi.NewRouter()
 
 	handler := NewHandler(storage, logger)
@@ -68,13 +68,145 @@ func MetricRouter(storage memStorer, logger httpLogger) chi.Router {
 	return r.Route("/", func(r chi.Router) {
 		r.Get("/", handler.ShowAllHandler)
 		r.Route("/update", func(r chi.Router) {
+			r.Post("/", handler.JSONUpdHandler)
 			r.Post("/{type}/{name}/{value}", handler.UpdHandler)
 		})
-		r.Get("/value/{type}/{name}", handler.ValueHandler)
+		r.Route("/value", func(r chi.Router) {
+			r.Post("/", handler.JSONValueHandler)
+			r.Get("/{type}/{name}", handler.ValueHandler)
+		})
 		r.Get("/favicon.ico", handler.FaviconHandler)
 		r.Get("/{}", handler.DefoultHandler)
 		r.Post("/{}", handler.DefoultHandler)
 	})
+}
+
+func (h *Handler) JSONUpdHandler(w http.ResponseWriter, r *http.Request) {
+	h.logger.Info("Entered JSONUpdHandler")
+	path := r.RequestURI
+	method := r.Method
+	start := time.Now()
+	rData := responseData{}
+	defer func() {
+		duration := time.Since(start)
+
+		h.logger.RequestLog(method, path, duration)
+		h.logger.ResponseLog(rData.status, rData.size)
+	}()
+
+	if r.Method != http.MethodPost {
+		http.Error(w, "Only POST requests are allowed for update!", http.StatusMethodNotAllowed)
+		h.logger.Error("wrong request method")
+		rData.size = 0
+		rData.status = http.StatusBadRequest
+		return
+	}
+
+	metric := metrics.Metrics{}
+
+	if err := json.NewDecoder(r.Body).Decode(&metric); err != nil {
+		http.Error(w, "wrong requests", http.StatusBadRequest)
+		h.logger.Error("json decoding error")
+
+		rData.size = 0
+		rData.status = http.StatusBadRequest
+		return
+	}
+
+	if metric.MType != "gauge" && metric.MType != "counter" {
+		http.Error(w, "wrong type", http.StatusBadRequest)
+		h.logger.Error("wrong type")
+
+		rData.size = 0
+		rData.status = http.StatusBadRequest
+		return
+	}
+
+	if err := h.stor.Set(metric); err != nil {
+		w.WriteHeader(http.StatusBadRequest)
+		h.logger.Error("Cann't find metric")
+		rData.size = 0
+		rData.status = http.StatusBadRequest
+		return
+	}
+
+	respMetric, _ := h.stor.Get(metric)
+	w.Header().Set("Content-Type", "application/json")
+
+	body, err := json.Marshal(respMetric)
+	if err != nil {
+		w.WriteHeader(http.StatusInternalServerError)
+		h.logger.Error("json marhsaling error")
+		rData.size = 0
+		rData.status = http.StatusInternalServerError
+		return
+	}
+
+	rData.size, _ = w.Write(body)
+	rData.status = http.StatusOK
+
+}
+
+func (h *Handler) JSONValueHandler(w http.ResponseWriter, r *http.Request) {
+	h.logger.Info("Entered JSONValueHandler")
+	path := r.RequestURI
+	method := r.Method
+	start := time.Now()
+	rData := responseData{}
+	defer func() {
+		duration := time.Since(start)
+
+		h.logger.RequestLog(method, path, duration)
+		h.logger.ResponseLog(rData.status, rData.size)
+	}()
+
+	if r.Method != http.MethodPost {
+		http.Error(w, "Only POST requests are allowed for update!", http.StatusMethodNotAllowed)
+		h.logger.Error("wrong request method")
+		rData.size = 0
+		rData.status = http.StatusBadRequest
+		return
+	}
+
+	metric := metrics.Metrics{}
+
+	if err := json.NewDecoder(r.Body).Decode(&metric); err != nil {
+		http.Error(w, "wrong requests", http.StatusBadRequest)
+		h.logger.Error("json decoding error")
+		rData.size = 0
+		rData.status = http.StatusBadRequest
+		return
+	}
+
+	if metric.MType != "gauge" && metric.MType != "counter" {
+		http.Error(w, "wrong type", http.StatusBadRequest)
+		h.logger.Error("wrong type")
+		rData.size = 0
+		rData.status = http.StatusBadRequest
+		return
+	}
+
+	respMetric, ok := h.stor.Get(metric)
+	if !ok {
+		http.Error(w, fmt.Sprintf("%s not found", metric.ID), http.StatusNotFound)
+		h.logger.Error("Cann't find metric")
+		rData.size = 0
+		rData.status = http.StatusNotFound
+		return
+	}
+	w.Header().Set("Content-Type", "application/json")
+
+	body, err := json.Marshal(respMetric)
+	if err != nil {
+		w.WriteHeader(http.StatusInternalServerError)
+		h.logger.Error("json marhsaling error")
+		rData.size = 0
+		rData.status = http.StatusInternalServerError
+		return
+	}
+
+	rData.size, _ = w.Write(body)
+	rData.status = http.StatusOK
 }
 
 // UpdHandler updates one metric or creates new one with name
@@ -111,12 +243,19 @@ func (h *Handler) UpdHandler(w http.ResponseWriter, r *http.Request) {
 			return
 		}
 
-		if err := h.stor.SetGouge(name, fval); err != nil {
+		metric := metrics.Metrics{
+			ID:    name,
+			MType: tp,
+			Value: fval,
+		}
+
+		if err := h.stor.Set(metric); err != nil {
 			w.WriteHeader(http.StatusBadRequest)
 			rData.size = 0
 			rData.status = http.StatusBadRequest
 			return
 		}
+
 	case "counter":
 		ival, err := strconv.ParseInt(val, 10, 64)
 		if err != nil {
@@ -126,7 +265,13 @@ func (h *Handler) UpdHandler(w http.ResponseWriter, r *http.Request) {
 			return
 		}
 
-		if err := h.stor.SetCounter(name, ival); err != nil {
+		metric := metrics.Metrics{
+			ID:    name,
+			MType: tp,
+			Delta: ival,
+		}
+
+		if err := h.stor.Set(metric); err != nil {
 			w.WriteHeader(http.StatusBadRequest)
 			rData.size = 0
 			rData.status = http.StatusBadRequest
@@ -185,27 +330,31 @@ func (h *Handler) ValueHandler(w http.ResponseWriter, r *http.Request) {
 
 	tp := chi.URLParam(r, "type")
 	name := chi.URLParam(r, "name")
+	metric := metrics.Metrics{
+		ID:    name,
+		MType: tp,
+	}
 	w.Header().Set("Content-Type", "text/plain")
 	switch tp {
 	case "gauge":
-		val, ok := h.stor.GetGouge(name)
+		val, ok := h.stor.Get(metric)
 		if !ok {
 			http.Error(w, fmt.Sprintf("%s not found", name), http.StatusNotFound)
 			rData.size = 0
 			rData.status = http.StatusNotFound
 			return
 		}
-		rData.size, _ = w.Write([]byte(strconv.FormatFloat(val, 'f', -1, 64)))
+		rData.size, _ = w.Write([]byte(strconv.FormatFloat(val.Value, 'f', -1, 64)))
 		rData.status = http.StatusOK
 	case "counter":
-		val, ok := h.stor.GetCounter(name)
+		val, ok := h.stor.Get(metric)
 		if !ok {
 			http.Error(w, fmt.Sprintf("%s not found", name), http.StatusNotFound)
 			rData.size = 0
 			rData.status = http.StatusNotFound
 			return
 		}
-		rData.size, _ = w.Write([]byte(strconv.FormatInt(val, 10)))
+		rData.size, _ = w.Write([]byte(strconv.FormatInt(val.Delta, 10)))
 		rData.status = http.StatusOK
 	default:
 		http.Error(w, "wrong type", http.StatusBadRequest)
@@ -235,20 +384,26 @@ func (h *Handler) ShowAllHandler(w http.ResponseWriter, r *http.Request) {
 		return
 	}
 
+	gaugeMetrics := []string{}
+	counterMetrics := []string{}
+	for key, val := range h.stor.GetAll() {
+		if val.MType == "gauge" {
+			gaugeMetrics = append(gaugeMetrics, fmt.Sprintf("<p>%s: %f</p>", key, val.Value))
+		} else if val.MType == "counter" {
+			counterMetrics = append(counterMetrics, fmt.Sprintf("<p>%s: %d</p>", key, val.Delta))
+		}
+	}
 	html := "<html><body>"
 
 	html += "<h2>Gauge:</h2>"
-	metrics := []string{}
-	for key, val := range h.stor.GetAllGauge() {
-		metrics = append(metrics, fmt.Sprintf("<p>%s: %f</p>", key, val))
-	}
-	sort.Strings(metrics)
-	for _, str := range metrics {
+	sort.Strings(gaugeMetrics)
+	for _, str := range gaugeMetrics {
 		html += str
 	}
 	html += "<h2>Counter:</h2>"
-	for key, val := range h.stor.GetAllCounter() {
-		html += fmt.Sprintf("<p>%s: %d</p>", key, val)
+	sort.Strings(counterMetrics)
+	for _, str := range counterMetrics {
+		html += str
 	}
 	html += "</body></html>"
 	w.Header().Set("Content-Type", "text/html")

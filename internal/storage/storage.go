@@ -1,71 +1,62 @@
 package storage
 
-type MemStorer interface {
-	SetGouge(string, float64) error
-	SetCounter(string, int64) error
-	GetGouge(string) (float64, bool)
-	GetCounter(string) (int64, bool)
-	DeleteGouge(string)
-	DeleteCouner(string)
-	GetAllGauge() map[string]float64
-	GetAllCounter() map[string]int64
-}
+import (
+	"errors"
 
+	"github.com/Mr-Punder/go-alerting-service/internal/metrics"
+)
+
+// MemStorage is simple implementation of storage metrics storage with map
 type MemStorage struct {
-	GaugeStorage   map[string]float64
-	CounterStorage map[string]int64
+	Storage map[string]metrics.Metrics
 }
 
-func (stor *MemStorage) GetAllGauge() map[string]float64 {
-	if stor.GaugeStorage == nil {
-		stor.GaugeStorage = make(map[string]float64)
+// GetAll returns map with all metrics
+func (stor *MemStorage) GetAll() map[string]metrics.Metrics {
+	if stor.Storage == nil {
+		stor.Storage = make(map[string]metrics.Metrics)
 	}
-	return stor.GaugeStorage
+	return stor.Storage
 }
 
-func (stor *MemStorage) GetAllCounter() map[string]int64 {
-	if stor.GaugeStorage == nil {
-		stor.GaugeStorage = make(map[string]float64)
+// Set stores metric
+func (stor *MemStorage) Set(metric metrics.Metrics) error {
+	if stor.Storage == nil {
+		stor.Storage = make(map[string]metrics.Metrics)
 	}
-	return stor.CounterStorage
-}
-
-func (stor *MemStorage) SetGouge(key string, val float64) error {
-	if stor.GaugeStorage == nil {
-		stor.GaugeStorage = make(map[string]float64)
+	if metric.MType == "gauge" {
+		stor.Storage[metric.ID] = metric
+		return nil
 	}
-	stor.GaugeStorage[key] = val
-	return nil
-}
-
-func (stor *MemStorage) SetCounter(key string, val int64) error {
-	if stor.CounterStorage == nil {
-		stor.CounterStorage = make(map[string]int64)
+	if metric.MType == "counter" {
+		if st, ok := stor.Storage[metric.ID]; ok {
+			st.Delta += metric.Delta
+			stor.Storage[metric.ID] = st
+		} else {
+			stor.Storage[metric.ID] = metric
+		}
+		return nil
 	}
-	stor.CounterStorage[key] += val
-	return nil
+	return errors.New("wrong type")
 }
 
-func (stor *MemStorage) GetGouge(name string) (float64, bool) {
-	if stor.GaugeStorage == nil {
-		stor.GaugeStorage = make(map[string]float64)
+// Get returns one metric  and it's existence
+// returns metrics.Metrics{}, false if metric is not found
+func (stor *MemStorage) Get(metric metrics.Metrics) (metrics.Metrics, bool) {
+	if stor.Storage == nil {
+		stor.Storage = make(map[string]metrics.Metrics)
 	}
-	val, ok := stor.GaugeStorage[name]
-	return val, ok
-}
-
-func (stor *MemStorage) GetCounter(name string) (int64, bool) {
-	if stor.CounterStorage == nil {
-		stor.CounterStorage = make(map[string]int64)
+	if metric.MType != "gauge" && metric.MType != "counter" {
+		return metrics.Metrics{}, false
 	}
-	val, ok := stor.CounterStorage[name]
-	return val, ok
+	m, ok := stor.Storage[metric.ID]
+	return m, ok
 }
 
-func (stor *MemStorage) DeleteGouge(name string) {
-	delete(stor.GaugeStorage, name)
-}
-
-func (stor *MemStorage) DeleteCouner(name string) {
-	delete(stor.GaugeStorage, name)
+// Delete deletes one gauge by name and do nothibg if the metric does not exist
+func (stor *MemStorage) DeleteGouge(metric metrics.Metrics) {
+	if stor.Storage == nil {
+		stor.Storage = make(map[string]metrics.Metrics)
+	}
+	delete(stor.Storage, metric.ID)
 }

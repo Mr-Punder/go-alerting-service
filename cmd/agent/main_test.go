@@ -18,26 +18,26 @@ func TestSendMetrics(t *testing.T) {
 
 	tests := []struct {
 		name    string
-		metric  []metrics.Metric
+		metric  []metrics.Metrics
 		wantErr bool
 	}{
 		{
 			name:    "empty",
-			metric:  make([]metrics.Metric, 0),
+			metric:  make([]metrics.Metrics, 0),
 			wantErr: false,
 		},
 		{
 			name: "simple metric",
-			metric: []metrics.Metric{
+			metric: []metrics.Metrics{
 				{
-					Name: "metric 1",
-					Type: "gauge",
-					Val:  "4.2",
+					ID:    "metric 1",
+					MType: "gauge",
+					Value: 4.2,
 				},
 				{
-					Name: "metric 2",
-					Type: "counter",
-					Val:  "42",
+					ID:    "metric 2",
+					MType: "counter",
+					Delta: 42,
 				},
 			},
 			wantErr: false,

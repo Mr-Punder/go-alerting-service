@@ -45,6 +45,18 @@ func (logger *LogHTTPZap) RequestLog(method string, path string, duration time.D
 	)
 }
 
+// Info logs message at info level
+func (logger *LogHTTPZap) Info(mes string) {
+	logger.logZap.Info(mes)
+}
+
+// Error logs message at error level
+func (logger *LogHTTPZap) Error(mes string) {
+	// logger.logZap.Error(mes)
+	logger.logZap.Desugar().Error(mes)
+}
+
+// ResponseLog makes response log
 func (logger *LogHTTPZap) ResponseLog(status int, size int) {
 	logger.logZap.Infow("Send response with",
 		"status", status,
