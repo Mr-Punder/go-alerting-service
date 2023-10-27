@@ -54,9 +54,9 @@ func sendMetrics(metrics []metrics.Metrics, addres string, logger simpleLogger) 
 		for i := 0; i < retries; i++ {
 			if err != nil {
 
-				time.Sleep(5 * time.Second)
+				time.Sleep(40 * time.Millisecond)
 				resp, err = client.R().SetHeader("Content-Type", "application/json").SetBody(body).Post(url)
-				logger.Info("Repeat request")
+				logger.Info(fmt.Sprintf("Repeated request, err: %v", err))
 				if err != nil {
 					i++
 				} else {
@@ -75,6 +75,9 @@ func sendMetrics(metrics []metrics.Metrics, addres string, logger simpleLogger) 
 
 			return fmt.Errorf("unexpected status code: %d", resp.StatusCode())
 		}
+		ans := resp.Body()
+		logger.Info(fmt.Sprintf("recievd: %s", string(ans)))
+
 	}
 	return nil
 }

@@ -101,6 +101,7 @@ func (h *Handler) JSONUpdHandler(w http.ResponseWriter, r *http.Request) {
 		rData.status = http.StatusBadRequest
 		return
 	}
+	h.logger.Info("Method checked")
 
 	metric := metrics.Metrics{}
 
@@ -112,7 +113,7 @@ func (h *Handler) JSONUpdHandler(w http.ResponseWriter, r *http.Request) {
 		rData.status = http.StatusBadRequest
 		return
 	}
-
+	h.logger.Info(fmt.Sprintf("Decoded metric to stor %v", metric))
 	if metric.MType != "gauge" && metric.MType != "counter" {
 		h.logger.Error(fmt.Sprintf("wrong type %s", metric.MType))
 
@@ -123,6 +124,12 @@ func (h *Handler) JSONUpdHandler(w http.ResponseWriter, r *http.Request) {
 		return
 	}
 
+	str := "Metrics on server: "
+	for key := range h.stor.GetAll() {
+		str += key + ", "
+	}
+	h.logger.Info(str)
+
 	if err := h.stor.Set(metric); err != nil {
 		w.WriteHeader(http.StatusBadRequest)
 		h.logger.Error("Cann't find metric")
@@ -130,6 +137,8 @@ func (h *Handler) JSONUpdHandler(w http.ResponseWriter, r *http.Request) {
 		rData.status = http.StatusBadRequest
 		return
 	}
+
+	h.logger.Info(fmt.Sprintf("Metric %s stored", metric.ID))
 
 	respMetric, _ := h.stor.Get(metric)
 	w.Header().Set("Content-Type", "application/json")
@@ -192,14 +201,10 @@ func (h *Handler) JSONValueHandler(w http.ResponseWriter, r *http.Request) {
 		return
 	}
 
-	str := "Metrics on server: "
-	for key, _ := range h.stor.GetAll() {
-		str += key + ", "
-	}
 	respMetric, ok := h.stor.Get(metric)
 	if !ok {
 		str := "Metrics on server: "
-		for key, _ := range h.stor.GetAll() {
+		for key := range h.stor.GetAll() {
 			str += key + ", "
 		}
 		h.logger.Info(str)
@@ -406,7 +411,7 @@ func (h *Handler) ShowAllHandler(w http.ResponseWriter, r *http.Request) {
 	counterMetrics := []string{}
 	for key, val := range h.stor.GetAll() {
 		if val.MType == "gauge" {
-			var value float64 = 0.0
+			var value = 0.0
 			if val.Value != nil {
 				value = *val.Value
 			}
