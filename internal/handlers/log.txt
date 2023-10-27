@@ -1,0 +1,1103 @@
+2023-10-27T15:05:37.221+0300	[34mINFO[0m	logger/logger.go:45	incoming request	{"method": "POST", "path": "/update/gauge/anotherGaugeMetric/4.2", "time": "1.538µs"}
+2023-10-27T15:05:37.221+0300	[34mINFO[0m	logger/logger.go:64	Send response with	{"status": 200, "size": 0}
+2023-10-27T15:05:37.223+0300	[34mINFO[0m	logger/logger.go:45	incoming request	{"method": "POST", "path": "/update/gauge/gaugeMetric/4.2", "time": "1.272µs"}
+2023-10-27T15:05:37.223+0300	[34mINFO[0m	logger/logger.go:64	Send response with	{"status": 200, "size": 0}
+2023-10-27T15:05:37.224+0300	[34mINFO[0m	logger/logger.go:45	incoming request	{"method": "POST", "path": "/update/gauge/anotherCounterMtric/A5C", "time": "5.243µs"}
+2023-10-27T15:05:37.224+0300	[34mINFO[0m	logger/logger.go:64	Send response with	{"status": 400, "size": 0}
+2023-10-27T15:05:37.227+0300	[34mINFO[0m	logger/logger.go:45	incoming request	{"method": "POST", "path": "/update/counter/anothercounterMetric/42", "time": "824ns"}
+2023-10-27T15:05:37.227+0300	[34mINFO[0m	logger/logger.go:64	Send response with	{"status": 200, "size": 0}
+2023-10-27T15:05:37.228+0300	[34mINFO[0m	logger/logger.go:45	incoming request	{"method": "POST", "path": "/update/counter/counterMetric/42", "time": "917ns"}
+2023-10-27T15:05:37.228+0300	[34mINFO[0m	logger/logger.go:64	Send response with	{"status": 200, "size": 0}
+2023-10-27T15:05:37.229+0300	[34mINFO[0m	logger/logger.go:45	incoming request	{"method": "POST", "path": "/update/counter/anothercounterMtric/A5C", "time": "5.235µs"}
+2023-10-27T15:05:37.229+0300	[34mINFO[0m	logger/logger.go:64	Send response with	{"status": 400, "size": 0}
+2023-10-27T15:05:37.231+0300	[34mINFO[0m	logger/logger.go:45	incoming request	{"method": "GET", "path": "/value/gauge/g", "time": "12.574µs"}
+2023-10-27T15:05:37.231+0300	[34mINFO[0m	logger/logger.go:64	Send response with	{"status": 200, "size": 3}
+2023-10-27T15:05:37.233+0300	[34mINFO[0m	logger/logger.go:45	incoming request	{"method": "GET", "path": "/value/gauge/M", "time": "3.98µs"}
+2023-10-27T15:05:37.233+0300	[34mINFO[0m	logger/logger.go:64	Send response with	{"status": 404, "size": 0}
+2023-10-27T15:05:37.235+0300	[34mINFO[0m	logger/logger.go:45	incoming request	{"method": "GET", "path": "/value/counter/c", "time": "2.666µs"}
+2023-10-27T15:05:37.235+0300	[34mINFO[0m	logger/logger.go:64	Send response with	{"status": 200, "size": 1}
+2023-10-27T15:05:37.236+0300	[34mINFO[0m	logger/logger.go:45	incoming request	{"method": "GET", "path": "/value/counter/M", "time": "5.862µs"}
+2023-10-27T15:05:37.236+0300	[34mINFO[0m	logger/logger.go:64	Send response with	{"status": 404, "size": 0}
+2023-10-27T15:05:37.238+0300	[34mINFO[0m	logger/logger.go:45	incoming request	{"method": "GET", "path": "/", "time": "22.076µs"}
+2023-10-27T15:05:37.238+0300	[34mINFO[0m	logger/logger.go:64	Send response with	{"status": 200, "size": 109}
+2023-10-27T15:05:37.240+0300	[34mINFO[0m	logger/logger.go:45	incoming request	{"method": "POST", "path": "/another", "time": "3.271µs"}
+2023-10-27T15:05:37.240+0300	[34mINFO[0m	logger/logger.go:64	Send response with	{"status": 400, "size": 0}
+2023-10-27T15:05:37.241+0300	[34mINFO[0m	logger/logger.go:45	incoming request	{"method": "GET", "path": "/another", "time": "5.869µs"}
+2023-10-27T15:05:37.241+0300	[34mINFO[0m	logger/logger.go:64	Send response with	{"status": 400, "size": 0}
+2023-10-27T15:05:37.243+0300	[34mINFO[0m	logger/logger.go:54	Entered JSONUpdHandler
+2023-10-27T15:05:37.243+0300	[31mERROR[0m	logger/logger.go:59	json decoding error
+2023-10-27T15:05:37.243+0300	[34mINFO[0m	logger/logger.go:45	incoming request	{"method": "POST", "path": "/update", "time": "39.884µs"}
+2023-10-27T15:05:37.243+0300	[34mINFO[0m	logger/logger.go:64	Send response with	{"status": 400, "size": 0}
+2023-10-27T15:05:37.245+0300	[34mINFO[0m	logger/logger.go:54	Entered JSONValueHandler
+2023-10-27T15:05:37.245+0300	[34mINFO[0m	logger/logger.go:54	Method checked
+2023-10-27T15:05:37.245+0300	[31mERROR[0m	logger/logger.go:59	json decoding error
+2023-10-27T15:05:37.245+0300	[34mINFO[0m	logger/logger.go:45	incoming request	{"method": "POST", "path": "/value", "time": "34.38µs"}
+2023-10-27T15:05:37.245+0300	[34mINFO[0m	logger/logger.go:64	Send response with	{"status": 400, "size": 0}
+2023-10-27T15:05:37.247+0300	[34mINFO[0m	logger/logger.go:54	Entered JSONUpdHandler
+2023-10-27T15:05:37.247+0300	[31mERROR[0m	logger/logger.go:59	json decoding error
+2023-10-27T15:05:37.247+0300	[34mINFO[0m	logger/logger.go:45	incoming request	{"method": "POST", "path": "/update", "time": "27.334µs"}
+2023-10-27T15:05:37.247+0300	[34mINFO[0m	logger/logger.go:64	Send response with	{"status": 400, "size": 0}
+2023-10-27T15:05:37.250+0300	[34mINFO[0m	logger/logger.go:54	Entered JSONUpdHandler
+2023-10-27T15:05:37.250+0300	[31mERROR[0m	logger/logger.go:59	json decoding error
+2023-10-27T15:05:37.250+0300	[34mINFO[0m	logger/logger.go:45	incoming request	{"method": "POST", "path": "/update", "time": "27.965µs"}
+2023-10-27T15:05:37.250+0300	[34mINFO[0m	logger/logger.go:64	Send response with	{"status": 400, "size": 0}
+2023-10-27T15:05:37.251+0300	[34mINFO[0m	logger/logger.go:54	Entered JSONUpdHandler
+2023-10-27T15:05:37.251+0300	[31mERROR[0m	logger/logger.go:59	json decoding error
+2023-10-27T15:05:37.251+0300	[34mINFO[0m	logger/logger.go:45	incoming request	{"method": "POST", "path": "/update", "time": "18.305µs"}
+2023-10-27T15:05:37.251+0300	[34mINFO[0m	logger/logger.go:64	Send response with	{"status": 400, "size": 0}
+2023-10-27T15:05:37.253+0300	[34mINFO[0m	logger/logger.go:54	Entered JSONUpdHandler
+2023-10-27T15:05:37.253+0300	[31mERROR[0m	logger/logger.go:59	json decoding error
+2023-10-27T15:05:37.253+0300	[34mINFO[0m	logger/logger.go:45	incoming request	{"method": "POST", "path": "/update", "time": "29.922µs"}
+2023-10-27T15:05:37.253+0300	[34mINFO[0m	logger/logger.go:64	Send response with	{"status": 400, "size": 0}
+2023-10-27T15:05:37.255+0300	[34mINFO[0m	logger/logger.go:54	Entered JSONValueHandler
+2023-10-27T15:05:37.256+0300	[34mINFO[0m	logger/logger.go:54	Method checked
+2023-10-27T15:05:37.256+0300	[31mERROR[0m	logger/logger.go:59	json decoding error
+2023-10-27T15:05:37.256+0300	[34mINFO[0m	logger/logger.go:45	incoming request	{"method": "POST", "path": "/value", "time": "68.808µs"}
+2023-10-27T15:05:37.256+0300	[34mINFO[0m	logger/logger.go:64	Send response with	{"status": 400, "size": 0}
+2023-10-27T15:05:37.258+0300	[34mINFO[0m	logger/logger.go:54	Entered JSONValueHandler
+2023-10-27T15:05:37.258+0300	[34mINFO[0m	logger/logger.go:54	Method checked
+2023-10-27T15:05:37.258+0300	[31mERROR[0m	logger/logger.go:59	json decoding error
+2023-10-27T15:05:37.258+0300	[34mINFO[0m	logger/logger.go:45	incoming request	{"method": "POST", "path": "/value", "time": "31.275µs"}
+2023-10-27T15:05:37.258+0300	[34mINFO[0m	logger/logger.go:64	Send response with	{"status": 400, "size": 0}
+2023-10-27T15:05:37.260+0300	[34mINFO[0m	logger/logger.go:54	Entered JSONValueHandler
+2023-10-27T15:05:37.260+0300	[34mINFO[0m	logger/logger.go:54	Method checked
+2023-10-27T15:05:37.260+0300	[31mERROR[0m	logger/logger.go:59	json decoding error
+2023-10-27T15:05:37.260+0300	[34mINFO[0m	logger/logger.go:45	incoming request	{"method": "POST", "path": "/value", "time": "57.636µs"}
+2023-10-27T15:05:37.260+0300	[34mINFO[0m	logger/logger.go:64	Send response with	{"status": 400, "size": 0}
+2023-10-27T15:05:37.264+0300	[34mINFO[0m	logger/logger.go:54	Entered JSONValueHandler
+2023-10-27T15:05:37.264+0300	[34mINFO[0m	logger/logger.go:54	Method checked
+2023-10-27T15:05:37.265+0300	[31mERROR[0m	logger/logger.go:59	json decoding error
+2023-10-27T15:05:37.265+0300	[34mINFO[0m	logger/logger.go:45	incoming request	{"method": "POST", "path": "/value", "time": "49.882µs"}
+2023-10-27T15:05:37.265+0300	[34mINFO[0m	logger/logger.go:64	Send response with	{"status": 400, "size": 0}
+2023-10-27T15:09:35.933+0300	[34mINFO[0m	logger/logger.go:45	incoming request	{"method": "POST", "path": "/update/gauge/anotherGaugeMetric/4.2", "time": "1.072µs"}
+2023-10-27T15:09:35.933+0300	[34mINFO[0m	logger/logger.go:64	Send response with	{"status": 200, "size": 0}
+2023-10-27T15:09:35.936+0300	[34mINFO[0m	logger/logger.go:45	incoming request	{"method": "POST", "path": "/update/gauge/gaugeMetric/4.2", "time": "1.153µs"}
+2023-10-27T15:09:35.936+0300	[34mINFO[0m	logger/logger.go:64	Send response with	{"status": 200, "size": 0}
+2023-10-27T15:09:35.938+0300	[34mINFO[0m	logger/logger.go:45	incoming request	{"method": "POST", "path": "/update/gauge/anotherCounterMtric/A5C", "time": "4.015µs"}
+2023-10-27T15:09:35.938+0300	[34mINFO[0m	logger/logger.go:64	Send response with	{"status": 400, "size": 0}
+2023-10-27T15:09:35.940+0300	[34mINFO[0m	logger/logger.go:45	incoming request	{"method": "POST", "path": "/update/counter/anothercounterMetric/42", "time": "1.096µs"}
+2023-10-27T15:09:35.940+0300	[34mINFO[0m	logger/logger.go:64	Send response with	{"status": 200, "size": 0}
+2023-10-27T15:09:35.942+0300	[34mINFO[0m	logger/logger.go:45	incoming request	{"method": "POST", "path": "/update/counter/counterMetric/42", "time": "1.109µs"}
+2023-10-27T15:09:35.942+0300	[34mINFO[0m	logger/logger.go:64	Send response with	{"status": 200, "size": 0}
+2023-10-27T15:09:35.943+0300	[34mINFO[0m	logger/logger.go:45	incoming request	{"method": "POST", "path": "/update/counter/anothercounterMtric/A5C", "time": "3.059µs"}
+2023-10-27T15:09:35.943+0300	[34mINFO[0m	logger/logger.go:64	Send response with	{"status": 400, "size": 0}
+2023-10-27T15:09:35.946+0300	[34mINFO[0m	logger/logger.go:45	incoming request	{"method": "GET", "path": "/value/gauge/g", "time": "10.643µs"}
+2023-10-27T15:09:35.946+0300	[34mINFO[0m	logger/logger.go:64	Send response with	{"status": 200, "size": 3}
+2023-10-27T15:09:35.948+0300	[34mINFO[0m	logger/logger.go:45	incoming request	{"method": "GET", "path": "/value/gauge/M", "time": "5.814µs"}
+2023-10-27T15:09:35.948+0300	[34mINFO[0m	logger/logger.go:64	Send response with	{"status": 404, "size": 0}
+2023-10-27T15:09:35.950+0300	[34mINFO[0m	logger/logger.go:45	incoming request	{"method": "GET", "path": "/value/counter/c", "time": "4.05µs"}
+2023-10-27T15:09:35.950+0300	[34mINFO[0m	logger/logger.go:64	Send response with	{"status": 200, "size": 1}
+2023-10-27T15:09:35.951+0300	[34mINFO[0m	logger/logger.go:45	incoming request	{"method": "GET", "path": "/value/counter/M", "time": "5.201µs"}
+2023-10-27T15:09:35.951+0300	[34mINFO[0m	logger/logger.go:64	Send response with	{"status": 404, "size": 0}
+2023-10-27T15:09:35.953+0300	[34mINFO[0m	logger/logger.go:45	incoming request	{"method": "GET", "path": "/", "time": "19.625µs"}
+2023-10-27T15:09:35.953+0300	[34mINFO[0m	logger/logger.go:64	Send response with	{"status": 200, "size": 109}
+2023-10-27T15:09:35.955+0300	[34mINFO[0m	logger/logger.go:45	incoming request	{"method": "POST", "path": "/another", "time": "5.674µs"}
+2023-10-27T15:09:35.955+0300	[34mINFO[0m	logger/logger.go:64	Send response with	{"status": 400, "size": 0}
+2023-10-27T15:09:35.957+0300	[34mINFO[0m	logger/logger.go:45	incoming request	{"method": "GET", "path": "/another", "time": "4.089µs"}
+2023-10-27T15:09:35.957+0300	[34mINFO[0m	logger/logger.go:64	Send response with	{"status": 400, "size": 0}
+2023-10-27T15:09:35.958+0300	[34mINFO[0m	logger/logger.go:54	Entered JSONUpdHandler
+2023-10-27T15:09:35.958+0300	[31mERROR[0m	logger/logger.go:59	json decoding error &{%!e(string=invalid character 'g' after object key) %!e(int64=22)}
+2023-10-27T15:09:35.958+0300	[34mINFO[0m	logger/logger.go:45	incoming request	{"method": "POST", "path": "/update", "time": "56.004µs"}
+2023-10-27T15:09:35.958+0300	[34mINFO[0m	logger/logger.go:64	Send response with	{"status": 400, "size": 0}
+2023-10-27T15:09:35.960+0300	[34mINFO[0m	logger/logger.go:54	Entered JSONValueHandler
+2023-10-27T15:09:35.961+0300	[34mINFO[0m	logger/logger.go:54	Method checked
+2023-10-27T15:09:35.961+0300	[31mERROR[0m	logger/logger.go:59	json decoding error
+2023-10-27T15:09:35.961+0300	[34mINFO[0m	logger/logger.go:45	incoming request	{"method": "POST", "path": "/value", "time": "41.561µs"}
+2023-10-27T15:09:35.961+0300	[34mINFO[0m	logger/logger.go:64	Send response with	{"status": 400, "size": 0}
+2023-10-27T15:09:35.963+0300	[34mINFO[0m	logger/logger.go:54	Entered JSONUpdHandler
+2023-10-27T15:09:35.963+0300	[31mERROR[0m	logger/logger.go:59	json decoding error &{%!e(string=invalid character 'c' after object key) %!e(int64=22)}
+2023-10-27T15:09:35.963+0300	[34mINFO[0m	logger/logger.go:45	incoming request	{"method": "POST", "path": "/update", "time": "45.641µs"}
+2023-10-27T15:09:35.963+0300	[34mINFO[0m	logger/logger.go:64	Send response with	{"status": 400, "size": 0}
+2023-10-27T15:09:35.965+0300	[34mINFO[0m	logger/logger.go:54	Entered JSONUpdHandler
+2023-10-27T15:09:35.965+0300	[31mERROR[0m	logger/logger.go:59	json decoding error &{%!e(string=invalid character 's' after object key) %!e(int64=22)}
+2023-10-27T15:09:35.965+0300	[34mINFO[0m	logger/logger.go:45	incoming request	{"method": "POST", "path": "/update", "time": "46.305µs"}
+2023-10-27T15:09:35.965+0300	[34mINFO[0m	logger/logger.go:64	Send response with	{"status": 400, "size": 0}
+2023-10-27T15:09:35.967+0300	[34mINFO[0m	logger/logger.go:54	Entered JSONUpdHandler
+2023-10-27T15:09:35.967+0300	[31mERROR[0m	logger/logger.go:59	json decoding error &{%!e(string=invalid character 'c' after object key) %!e(int64=18)}
+2023-10-27T15:09:35.967+0300	[34mINFO[0m	logger/logger.go:45	incoming request	{"method": "POST", "path": "/update", "time": "37.104µs"}
+2023-10-27T15:09:35.967+0300	[34mINFO[0m	logger/logger.go:64	Send response with	{"status": 400, "size": 0}
+2023-10-27T15:09:35.969+0300	[34mINFO[0m	logger/logger.go:54	Entered JSONUpdHandler
+2023-10-27T15:09:35.969+0300	[31mERROR[0m	logger/logger.go:59	json decoding error &{%!e(string=invalid character 'g' after object key) %!e(int64=18)}
+2023-10-27T15:09:35.969+0300	[34mINFO[0m	logger/logger.go:45	incoming request	{"method": "POST", "path": "/update", "time": "30.079µs"}
+2023-10-27T15:09:35.969+0300	[34mINFO[0m	logger/logger.go:64	Send response with	{"status": 400, "size": 0}
+2023-10-27T15:09:35.971+0300	[34mINFO[0m	logger/logger.go:54	Entered JSONValueHandler
+2023-10-27T15:09:35.971+0300	[34mINFO[0m	logger/logger.go:54	Method checked
+2023-10-27T15:09:35.971+0300	[31mERROR[0m	logger/logger.go:59	json decoding error
+2023-10-27T15:09:35.971+0300	[34mINFO[0m	logger/logger.go:45	incoming request	{"method": "POST", "path": "/value", "time": "58.027µs"}
+2023-10-27T15:09:35.971+0300	[34mINFO[0m	logger/logger.go:64	Send response with	{"status": 400, "size": 0}
+2023-10-27T15:09:35.974+0300	[34mINFO[0m	logger/logger.go:54	Entered JSONValueHandler
+2023-10-27T15:09:35.974+0300	[34mINFO[0m	logger/logger.go:54	Method checked
+2023-10-27T15:09:35.974+0300	[31mERROR[0m	logger/logger.go:59	json decoding error
+2023-10-27T15:09:35.974+0300	[34mINFO[0m	logger/logger.go:45	incoming request	{"method": "POST", "path": "/value", "time": "59.382µs"}
+2023-10-27T15:09:35.974+0300	[34mINFO[0m	logger/logger.go:64	Send response with	{"status": 400, "size": 0}
+2023-10-27T15:09:35.977+0300	[34mINFO[0m	logger/logger.go:54	Entered JSONValueHandler
+2023-10-27T15:09:35.977+0300	[34mINFO[0m	logger/logger.go:54	Method checked
+2023-10-27T15:09:35.977+0300	[31mERROR[0m	logger/logger.go:59	json decoding error
+2023-10-27T15:09:35.977+0300	[34mINFO[0m	logger/logger.go:45	incoming request	{"method": "POST", "path": "/value", "time": "73.287µs"}
+2023-10-27T15:09:35.977+0300	[34mINFO[0m	logger/logger.go:64	Send response with	{"status": 400, "size": 0}
+2023-10-27T15:09:35.979+0300	[34mINFO[0m	logger/logger.go:54	Entered JSONValueHandler
+2023-10-27T15:09:35.979+0300	[34mINFO[0m	logger/logger.go:54	Method checked
+2023-10-27T15:09:35.979+0300	[31mERROR[0m	logger/logger.go:59	json decoding error
+2023-10-27T15:09:35.979+0300	[34mINFO[0m	logger/logger.go:45	incoming request	{"method": "POST", "path": "/value", "time": "42.061µs"}
+2023-10-27T15:09:35.979+0300	[34mINFO[0m	logger/logger.go:64	Send response with	{"status": 400, "size": 0}
+2023-10-27T15:11:36.271+0300	[34mINFO[0m	logger/logger.go:45	incoming request	{"method": "POST", "path": "/update/gauge/anotherGaugeMetric/4.2", "time": "1.653µs"}
+2023-10-27T15:11:36.271+0300	[34mINFO[0m	logger/logger.go:64	Send response with	{"status": 200, "size": 0}
+2023-10-27T15:11:36.279+0300	[34mINFO[0m	logger/logger.go:45	incoming request	{"method": "POST", "path": "/update/gauge/gaugeMetric/4.2", "time": "1.462µs"}
+2023-10-27T15:11:36.279+0300	[34mINFO[0m	logger/logger.go:64	Send response with	{"status": 200, "size": 0}
+2023-10-27T15:11:36.281+0300	[34mINFO[0m	logger/logger.go:45	incoming request	{"method": "POST", "path": "/update/gauge/anotherCounterMtric/A5C", "time": "5.401µs"}
+2023-10-27T15:11:36.281+0300	[34mINFO[0m	logger/logger.go:64	Send response with	{"status": 400, "size": 0}
+2023-10-27T15:11:36.284+0300	[34mINFO[0m	logger/logger.go:45	incoming request	{"method": "POST", "path": "/update/counter/anothercounterMetric/42", "time": "1.507µs"}
+2023-10-27T15:11:36.284+0300	[34mINFO[0m	logger/logger.go:64	Send response with	{"status": 200, "size": 0}
+2023-10-27T15:11:36.286+0300	[34mINFO[0m	logger/logger.go:45	incoming request	{"method": "POST", "path": "/update/counter/counterMetric/42", "time": "1.852µs"}
+2023-10-27T15:11:36.286+0300	[34mINFO[0m	logger/logger.go:64	Send response with	{"status": 200, "size": 0}
+2023-10-27T15:11:36.287+0300	[34mINFO[0m	logger/logger.go:45	incoming request	{"method": "POST", "path": "/update/counter/anothercounterMtric/A5C", "time": "8.584µs"}
+2023-10-27T15:11:36.287+0300	[34mINFO[0m	logger/logger.go:64	Send response with	{"status": 400, "size": 0}
+2023-10-27T15:11:36.290+0300	[34mINFO[0m	logger/logger.go:45	incoming request	{"method": "GET", "path": "/value/gauge/g", "time": "11.43µs"}
+2023-10-27T15:11:36.290+0300	[34mINFO[0m	logger/logger.go:64	Send response with	{"status": 200, "size": 3}
+2023-10-27T15:11:36.291+0300	[34mINFO[0m	logger/logger.go:45	incoming request	{"method": "GET", "path": "/value/gauge/M", "time": "9.141µs"}
+2023-10-27T15:11:36.291+0300	[34mINFO[0m	logger/logger.go:64	Send response with	{"status": 404, "size": 0}
+2023-10-27T15:11:36.293+0300	[34mINFO[0m	logger/logger.go:45	incoming request	{"method": "GET", "path": "/value/counter/c", "time": "4.629µs"}
+2023-10-27T15:11:36.293+0300	[34mINFO[0m	logger/logger.go:64	Send response with	{"status": 200, "size": 1}
+2023-10-27T15:11:36.295+0300	[34mINFO[0m	logger/logger.go:45	incoming request	{"method": "GET", "path": "/value/counter/M", "time": "12.186µs"}
+2023-10-27T15:11:36.295+0300	[34mINFO[0m	logger/logger.go:64	Send response with	{"status": 404, "size": 0}
+2023-10-27T15:11:36.297+0300	[34mINFO[0m	logger/logger.go:45	incoming request	{"method": "GET", "path": "/", "time": "27.901µs"}
+2023-10-27T15:11:36.297+0300	[34mINFO[0m	logger/logger.go:64	Send response with	{"status": 200, "size": 109}
+2023-10-27T15:11:36.299+0300	[34mINFO[0m	logger/logger.go:45	incoming request	{"method": "POST", "path": "/another", "time": "5.648µs"}
+2023-10-27T15:11:36.299+0300	[34mINFO[0m	logger/logger.go:64	Send response with	{"status": 400, "size": 0}
+2023-10-27T15:11:36.301+0300	[34mINFO[0m	logger/logger.go:45	incoming request	{"method": "GET", "path": "/another", "time": "8.075µs"}
+2023-10-27T15:11:36.301+0300	[34mINFO[0m	logger/logger.go:64	Send response with	{"status": 400, "size": 0}
+2023-10-27T15:11:36.303+0300	[34mINFO[0m	logger/logger.go:54	Entered JSONUpdHandler
+2023-10-27T15:11:36.303+0300	[34mINFO[0m	logger/logger.go:45	incoming request	{"method": "POST", "path": "/update", "time": "191.46µs"}
+2023-10-27T15:11:36.303+0300	[34mINFO[0m	logger/logger.go:64	Send response with	{"status": 200, "size": 41}
+2023-10-27T15:11:36.305+0300	[34mINFO[0m	logger/logger.go:54	Entered JSONValueHandler
+2023-10-27T15:11:36.305+0300	[34mINFO[0m	logger/logger.go:54	Method checked
+2023-10-27T15:11:36.306+0300	[34mINFO[0m	logger/logger.go:54	Decoded metric {g gauge <nil> <nil>}
+2023-10-27T15:11:36.306+0300	[34mINFO[0m	logger/logger.go:45	incoming request	{"method": "POST", "path": "/value", "time": "70.65µs"}
+2023-10-27T15:11:36.306+0300	[34mINFO[0m	logger/logger.go:64	Send response with	{"status": 200, "size": 37}
+2023-10-27T15:11:36.307+0300	[34mINFO[0m	logger/logger.go:54	Entered JSONUpdHandler
+2023-10-27T15:11:36.307+0300	[34mINFO[0m	logger/logger.go:45	incoming request	{"method": "POST", "path": "/update", "time": "32.751µs"}
+2023-10-27T15:11:36.308+0300	[34mINFO[0m	logger/logger.go:64	Send response with	{"status": 200, "size": 41}
+2023-10-27T15:11:36.309+0300	[34mINFO[0m	logger/logger.go:54	Entered JSONUpdHandler
+2023-10-27T15:11:36.309+0300	[31mERROR[0m	logger/logger.go:59	wrong type smth
+2023-10-27T15:11:36.309+0300	[34mINFO[0m	logger/logger.go:45	incoming request	{"method": "POST", "path": "/update", "time": "26.314µs"}
+2023-10-27T15:11:36.309+0300	[34mINFO[0m	logger/logger.go:64	Send response with	{"status": 400, "size": 0}
+2023-10-27T15:11:36.311+0300	[34mINFO[0m	logger/logger.go:54	Entered JSONUpdHandler
+2023-10-27T15:11:36.311+0300	[34mINFO[0m	logger/logger.go:45	incoming request	{"method": "POST", "path": "/update", "time": "24.929µs"}
+2023-10-27T15:11:36.311+0300	[34mINFO[0m	logger/logger.go:64	Send response with	{"status": 200, "size": 37}
+2023-10-27T15:11:36.313+0300	[34mINFO[0m	logger/logger.go:54	Entered JSONUpdHandler
+2023-10-27T15:11:36.313+0300	[34mINFO[0m	logger/logger.go:45	incoming request	{"method": "POST", "path": "/update", "time": "32.333µs"}
+2023-10-27T15:11:36.313+0300	[34mINFO[0m	logger/logger.go:64	Send response with	{"status": 200, "size": 37}
+2023-10-27T15:11:36.314+0300	[34mINFO[0m	logger/logger.go:54	Entered JSONValueHandler
+2023-10-27T15:11:36.314+0300	[34mINFO[0m	logger/logger.go:54	Method checked
+2023-10-27T15:11:36.314+0300	[34mINFO[0m	logger/logger.go:54	Decoded metric {c counter <nil> <nil>}
+2023-10-27T15:11:36.314+0300	[34mINFO[0m	logger/logger.go:45	incoming request	{"method": "POST", "path": "/value", "time": "52.4µs"}
+2023-10-27T15:11:36.314+0300	[34mINFO[0m	logger/logger.go:64	Send response with	{"status": 200, "size": 37}
+2023-10-27T15:11:36.316+0300	[34mINFO[0m	logger/logger.go:54	Entered JSONValueHandler
+2023-10-27T15:11:36.316+0300	[34mINFO[0m	logger/logger.go:54	Method checked
+2023-10-27T15:11:36.316+0300	[34mINFO[0m	logger/logger.go:54	Decoded metric {c_unk counter <nil> <nil>}
+2023-10-27T15:11:36.316+0300	[34mINFO[0m	logger/logger.go:54	Metrics on server: gaugeMetric, c, 
+2023-10-27T15:11:36.316+0300	[31mERROR[0m	logger/logger.go:59	Cann't find metric
+2023-10-27T15:11:36.316+0300	[34mINFO[0m	logger/logger.go:45	incoming request	{"method": "POST", "path": "/value", "time": "110.041µs"}
+2023-10-27T15:11:36.316+0300	[34mINFO[0m	logger/logger.go:64	Send response with	{"status": 404, "size": 0}
+2023-10-27T15:11:36.318+0300	[34mINFO[0m	logger/logger.go:54	Entered JSONValueHandler
+2023-10-27T15:11:36.318+0300	[34mINFO[0m	logger/logger.go:54	Method checked
+2023-10-27T15:11:36.318+0300	[34mINFO[0m	logger/logger.go:54	Decoded metric {g_unk gauge <nil> <nil>}
+2023-10-27T15:11:36.318+0300	[34mINFO[0m	logger/logger.go:54	Metrics on server: gaugeMetric, c, 
+2023-10-27T15:11:36.318+0300	[31mERROR[0m	logger/logger.go:59	Cann't find metric
+2023-10-27T15:11:36.318+0300	[34mINFO[0m	logger/logger.go:45	incoming request	{"method": "POST", "path": "/value", "time": "78.118µs"}
+2023-10-27T15:11:36.318+0300	[34mINFO[0m	logger/logger.go:64	Send response with	{"status": 404, "size": 0}
+2023-10-27T15:11:36.320+0300	[34mINFO[0m	logger/logger.go:54	Entered JSONValueHandler
+2023-10-27T15:11:36.320+0300	[34mINFO[0m	logger/logger.go:54	Method checked
+2023-10-27T15:11:36.320+0300	[34mINFO[0m	logger/logger.go:54	Decoded metric {c_unk smth <nil> <nil>}
+2023-10-27T15:11:36.320+0300	[31mERROR[0m	logger/logger.go:59	wrong type smth
+2023-10-27T15:11:36.320+0300	[34mINFO[0m	logger/logger.go:45	incoming request	{"method": "POST", "path": "/value", "time": "71.542µs"}
+2023-10-27T15:11:36.320+0300	[34mINFO[0m	logger/logger.go:64	Send response with	{"status": 400, "size": 0}
+2023-10-27T15:22:45.509+0300	[34mINFO[0m	logger/logger.go:45	incoming request	{"method": "POST", "path": "/update/gauge/anotherGaugeMetric/4.2", "time": "2.013µs"}
+2023-10-27T15:22:45.509+0300	[34mINFO[0m	logger/logger.go:64	Send response with	{"status": 200, "size": 0}
+2023-10-27T15:22:45.512+0300	[34mINFO[0m	logger/logger.go:45	incoming request	{"method": "POST", "path": "/update/gauge/gaugeMetric/4.2", "time": "1.527µs"}
+2023-10-27T15:22:45.512+0300	[34mINFO[0m	logger/logger.go:64	Send response with	{"status": 200, "size": 0}
+2023-10-27T15:22:45.514+0300	[34mINFO[0m	logger/logger.go:45	incoming request	{"method": "POST", "path": "/update/gauge/anotherCounterMtric/A5C", "time": "3.91µs"}
+2023-10-27T15:22:45.514+0300	[34mINFO[0m	logger/logger.go:64	Send response with	{"status": 400, "size": 0}
+2023-10-27T15:22:45.516+0300	[34mINFO[0m	logger/logger.go:45	incoming request	{"method": "POST", "path": "/update/counter/anothercounterMetric/42", "time": "1.099µs"}
+2023-10-27T15:22:45.517+0300	[34mINFO[0m	logger/logger.go:64	Send response with	{"status": 200, "size": 0}
+2023-10-27T15:22:45.518+0300	[34mINFO[0m	logger/logger.go:45	incoming request	{"method": "POST", "path": "/update/counter/counterMetric/42", "time": "1.498µs"}
+2023-10-27T15:22:45.518+0300	[34mINFO[0m	logger/logger.go:64	Send response with	{"status": 200, "size": 0}
+2023-10-27T15:22:45.520+0300	[34mINFO[0m	logger/logger.go:45	incoming request	{"method": "POST", "path": "/update/counter/anothercounterMtric/A5C", "time": "6.341µs"}
+2023-10-27T15:22:45.520+0300	[34mINFO[0m	logger/logger.go:64	Send response with	{"status": 400, "size": 0}
+2023-10-27T15:22:45.522+0300	[34mINFO[0m	logger/logger.go:45	incoming request	{"method": "GET", "path": "/value/gauge/g", "time": "10.27µs"}
+2023-10-27T15:22:45.522+0300	[34mINFO[0m	logger/logger.go:64	Send response with	{"status": 200, "size": 3}
+2023-10-27T15:22:45.524+0300	[34mINFO[0m	logger/logger.go:45	incoming request	{"method": "GET", "path": "/value/gauge/M", "time": "8.197µs"}
+2023-10-27T15:22:45.524+0300	[34mINFO[0m	logger/logger.go:64	Send response with	{"status": 404, "size": 0}
+2023-10-27T15:22:45.525+0300	[34mINFO[0m	logger/logger.go:45	incoming request	{"method": "GET", "path": "/value/counter/c", "time": "2.695µs"}
+2023-10-27T15:22:45.526+0300	[34mINFO[0m	logger/logger.go:64	Send response with	{"status": 200, "size": 1}
+2023-10-27T15:22:45.527+0300	[34mINFO[0m	logger/logger.go:45	incoming request	{"method": "GET", "path": "/value/counter/M", "time": "8.52µs"}
+2023-10-27T15:22:45.527+0300	[34mINFO[0m	logger/logger.go:64	Send response with	{"status": 404, "size": 0}
+2023-10-27T15:22:45.528+0300	[34mINFO[0m	logger/logger.go:54	[entered ShowAllHandler]
+2023-10-27T15:22:45.528+0300	[34mINFO[0m	logger/logger.go:54	[method checked]
+2023-10-27T15:22:45.528+0300	[34mINFO[0m	logger/logger.go:45	incoming request	{"method": "GET", "path": "/", "time": "12.941µs"}
+2023-10-27T15:22:45.528+0300	[34mINFO[0m	logger/logger.go:64	Send response with	{"status": 200, "size": 109}
+2023-10-27T15:22:45.530+0300	[34mINFO[0m	logger/logger.go:45	incoming request	{"method": "POST", "path": "/another", "time": "19.346µs"}
+2023-10-27T15:22:45.530+0300	[34mINFO[0m	logger/logger.go:64	Send response with	{"status": 400, "size": 0}
+2023-10-27T15:22:45.532+0300	[34mINFO[0m	logger/logger.go:45	incoming request	{"method": "GET", "path": "/another", "time": "14.819µs"}
+2023-10-27T15:22:45.532+0300	[34mINFO[0m	logger/logger.go:64	Send response with	{"status": 400, "size": 0}
+2023-10-27T15:22:45.533+0300	[34mINFO[0m	logger/logger.go:54	[Entered JSONUpdHandler]
+2023-10-27T15:22:45.533+0300	[34mINFO[0m	logger/logger.go:45	incoming request	{"method": "POST", "path": "/update", "time": "145.998µs"}
+2023-10-27T15:22:45.533+0300	[34mINFO[0m	logger/logger.go:64	Send response with	{"status": 200, "size": 41}
+2023-10-27T15:22:45.535+0300	[34mINFO[0m	logger/logger.go:54	[Entered JSONValueHandler]
+2023-10-27T15:22:45.535+0300	[34mINFO[0m	logger/logger.go:54	[Method checked]
+2023-10-27T15:22:45.535+0300	[34mINFO[0m	logger/logger.go:54	[Decoded metric {g gauge <nil> <nil>}]
+2023-10-27T15:22:45.535+0300	[34mINFO[0m	logger/logger.go:45	incoming request	{"method": "POST", "path": "/value", "time": "94.19µs"}
+2023-10-27T15:22:45.535+0300	[34mINFO[0m	logger/logger.go:64	Send response with	{"status": 200, "size": 37}
+2023-10-27T15:22:45.537+0300	[34mINFO[0m	logger/logger.go:54	[Entered JSONUpdHandler]
+2023-10-27T15:22:45.537+0300	[34mINFO[0m	logger/logger.go:45	incoming request	{"method": "POST", "path": "/update", "time": "41.355µs"}
+2023-10-27T15:22:45.537+0300	[34mINFO[0m	logger/logger.go:64	Send response with	{"status": 200, "size": 41}
+2023-10-27T15:22:45.539+0300	[34mINFO[0m	logger/logger.go:54	[Entered JSONUpdHandler]
+2023-10-27T15:22:45.540+0300	[31mERROR[0m	logger/logger.go:59	[wrong type smth]
+2023-10-27T15:22:45.540+0300	[34mINFO[0m	logger/logger.go:45	incoming request	{"method": "POST", "path": "/update", "time": "61.815µs"}
+2023-10-27T15:22:45.540+0300	[34mINFO[0m	logger/logger.go:64	Send response with	{"status": 400, "size": 0}
+2023-10-27T15:22:45.542+0300	[34mINFO[0m	logger/logger.go:54	[Entered JSONUpdHandler]
+2023-10-27T15:22:45.542+0300	[34mINFO[0m	logger/logger.go:45	incoming request	{"method": "POST", "path": "/update", "time": "31.353µs"}
+2023-10-27T15:22:45.542+0300	[34mINFO[0m	logger/logger.go:64	Send response with	{"status": 200, "size": 37}
+2023-10-27T15:22:45.543+0300	[34mINFO[0m	logger/logger.go:54	[Entered JSONUpdHandler]
+2023-10-27T15:22:45.544+0300	[34mINFO[0m	logger/logger.go:45	incoming request	{"method": "POST", "path": "/update", "time": "47.888µs"}
+2023-10-27T15:22:45.544+0300	[34mINFO[0m	logger/logger.go:64	Send response with	{"status": 200, "size": 37}
+2023-10-27T15:22:45.546+0300	[34mINFO[0m	logger/logger.go:54	[Entered JSONValueHandler]
+2023-10-27T15:22:45.546+0300	[34mINFO[0m	logger/logger.go:54	[Method checked]
+2023-10-27T15:22:45.546+0300	[34mINFO[0m	logger/logger.go:54	[Decoded metric {c counter <nil> <nil>}]
+2023-10-27T15:22:45.546+0300	[34mINFO[0m	logger/logger.go:45	incoming request	{"method": "POST", "path": "/value", "time": "47.035µs"}
+2023-10-27T15:22:45.546+0300	[34mINFO[0m	logger/logger.go:64	Send response with	{"status": 200, "size": 37}
+2023-10-27T15:22:45.547+0300	[34mINFO[0m	logger/logger.go:54	[Entered JSONValueHandler]
+2023-10-27T15:22:45.547+0300	[34mINFO[0m	logger/logger.go:54	[Method checked]
+2023-10-27T15:22:45.547+0300	[34mINFO[0m	logger/logger.go:54	[Decoded metric {c_unk counter <nil> <nil>}]
+2023-10-27T15:22:45.547+0300	[34mINFO[0m	logger/logger.go:54	[Metrics on server: gaugeMetric, c, ]
+2023-10-27T15:22:45.547+0300	[31mERROR[0m	logger/logger.go:59	[Cann't find metric]
+2023-10-27T15:22:45.547+0300	[34mINFO[0m	logger/logger.go:45	incoming request	{"method": "POST", "path": "/value", "time": "65.359µs"}
+2023-10-27T15:22:45.547+0300	[34mINFO[0m	logger/logger.go:64	Send response with	{"status": 404, "size": 0}
+2023-10-27T15:22:45.549+0300	[34mINFO[0m	logger/logger.go:54	[Entered JSONValueHandler]
+2023-10-27T15:22:45.549+0300	[34mINFO[0m	logger/logger.go:54	[Method checked]
+2023-10-27T15:22:45.549+0300	[34mINFO[0m	logger/logger.go:54	[Decoded metric {g_unk gauge <nil> <nil>}]
+2023-10-27T15:22:45.549+0300	[34mINFO[0m	logger/logger.go:54	[Metrics on server: gaugeMetric, c, ]
+2023-10-27T15:22:45.549+0300	[31mERROR[0m	logger/logger.go:59	[Cann't find metric]
+2023-10-27T15:22:45.549+0300	[34mINFO[0m	logger/logger.go:45	incoming request	{"method": "POST", "path": "/value", "time": "100.181µs"}
+2023-10-27T15:22:45.549+0300	[34mINFO[0m	logger/logger.go:64	Send response with	{"status": 404, "size": 0}
+2023-10-27T15:22:45.551+0300	[34mINFO[0m	logger/logger.go:54	[Entered JSONValueHandler]
+2023-10-27T15:22:45.551+0300	[34mINFO[0m	logger/logger.go:54	[Method checked]
+2023-10-27T15:22:45.551+0300	[34mINFO[0m	logger/logger.go:54	[Decoded metric {c_unk smth <nil> <nil>}]
+2023-10-27T15:22:45.551+0300	[31mERROR[0m	logger/logger.go:59	[wrong type smth]
+2023-10-27T15:22:45.551+0300	[34mINFO[0m	logger/logger.go:45	incoming request	{"method": "POST", "path": "/value", "time": "59.481µs"}
+2023-10-27T15:22:45.551+0300	[34mINFO[0m	logger/logger.go:64	Send response with	{"status": 400, "size": 0}
+2023-10-27T15:22:46.731+0300	[34mINFO[0m	logger/logger.go:45	incoming request	{"method": "POST", "path": "/update/gauge/anotherGaugeMetric/4.2", "time": "2.448µs"}
+2023-10-27T15:22:46.731+0300	[34mINFO[0m	logger/logger.go:64	Send response with	{"status": 200, "size": 0}
+2023-10-27T15:22:46.738+0300	[34mINFO[0m	logger/logger.go:45	incoming request	{"method": "POST", "path": "/update/gauge/gaugeMetric/4.2", "time": "2.178µs"}
+2023-10-27T15:22:46.738+0300	[34mINFO[0m	logger/logger.go:64	Send response with	{"status": 200, "size": 0}
+2023-10-27T15:22:46.741+0300	[34mINFO[0m	logger/logger.go:45	incoming request	{"method": "POST", "path": "/update/gauge/anotherCounterMtric/A5C", "time": "5.341µs"}
+2023-10-27T15:22:46.741+0300	[34mINFO[0m	logger/logger.go:64	Send response with	{"status": 400, "size": 0}
+2023-10-27T15:22:46.744+0300	[34mINFO[0m	logger/logger.go:45	incoming request	{"method": "POST", "path": "/update/counter/anothercounterMetric/42", "time": "1.909µs"}
+2023-10-27T15:22:46.744+0300	[34mINFO[0m	logger/logger.go:64	Send response with	{"status": 200, "size": 0}
+2023-10-27T15:22:46.746+0300	[34mINFO[0m	logger/logger.go:45	incoming request	{"method": "POST", "path": "/update/counter/counterMetric/42", "time": "2.576µs"}
+2023-10-27T15:22:46.746+0300	[34mINFO[0m	logger/logger.go:64	Send response with	{"status": 200, "size": 0}
+2023-10-27T15:22:46.748+0300	[34mINFO[0m	logger/logger.go:45	incoming request	{"method": "POST", "path": "/update/counter/anothercounterMtric/A5C", "time": "5.088µs"}
+2023-10-27T15:22:46.748+0300	[34mINFO[0m	logger/logger.go:64	Send response with	{"status": 400, "size": 0}
+2023-10-27T15:22:46.750+0300	[34mINFO[0m	logger/logger.go:45	incoming request	{"method": "GET", "path": "/value/gauge/g", "time": "13.237µs"}
+2023-10-27T15:22:46.750+0300	[34mINFO[0m	logger/logger.go:64	Send response with	{"status": 200, "size": 3}
+2023-10-27T15:22:46.752+0300	[34mINFO[0m	logger/logger.go:45	incoming request	{"method": "GET", "path": "/value/gauge/M", "time": "9.241µs"}
+2023-10-27T15:22:46.752+0300	[34mINFO[0m	logger/logger.go:64	Send response with	{"status": 404, "size": 0}
+2023-10-27T15:22:46.754+0300	[34mINFO[0m	logger/logger.go:45	incoming request	{"method": "GET", "path": "/value/counter/c", "time": "3.034µs"}
+2023-10-27T15:22:46.754+0300	[34mINFO[0m	logger/logger.go:64	Send response with	{"status": 200, "size": 1}
+2023-10-27T15:22:46.755+0300	[34mINFO[0m	logger/logger.go:45	incoming request	{"method": "GET", "path": "/value/counter/M", "time": "6.534µs"}
+2023-10-27T15:22:46.755+0300	[34mINFO[0m	logger/logger.go:64	Send response with	{"status": 404, "size": 0}
+2023-10-27T15:22:46.757+0300	[34mINFO[0m	logger/logger.go:54	[entered ShowAllHandler]
+2023-10-27T15:22:46.757+0300	[34mINFO[0m	logger/logger.go:54	[method checked]
+2023-10-27T15:22:46.757+0300	[34mINFO[0m	logger/logger.go:45	incoming request	{"method": "GET", "path": "/", "time": "26.891µs"}
+2023-10-27T15:22:46.757+0300	[34mINFO[0m	logger/logger.go:64	Send response with	{"status": 200, "size": 109}
+2023-10-27T15:22:46.759+0300	[34mINFO[0m	logger/logger.go:45	incoming request	{"method": "POST", "path": "/another", "time": "12.336µs"}
+2023-10-27T15:22:46.759+0300	[34mINFO[0m	logger/logger.go:64	Send response with	{"status": 400, "size": 0}
+2023-10-27T15:22:46.761+0300	[34mINFO[0m	logger/logger.go:45	incoming request	{"method": "GET", "path": "/another", "time": "11.872µs"}
+2023-10-27T15:22:46.761+0300	[34mINFO[0m	logger/logger.go:64	Send response with	{"status": 400, "size": 0}
+2023-10-27T15:22:46.763+0300	[34mINFO[0m	logger/logger.go:54	[Entered JSONUpdHandler]
+2023-10-27T15:22:46.763+0300	[34mINFO[0m	logger/logger.go:45	incoming request	{"method": "POST", "path": "/update", "time": "310.915µs"}
+2023-10-27T15:22:46.763+0300	[34mINFO[0m	logger/logger.go:64	Send response with	{"status": 200, "size": 41}
+2023-10-27T15:22:46.765+0300	[34mINFO[0m	logger/logger.go:54	[Entered JSONValueHandler]
+2023-10-27T15:22:46.765+0300	[34mINFO[0m	logger/logger.go:54	[Method checked]
+2023-10-27T15:22:46.765+0300	[34mINFO[0m	logger/logger.go:54	[Decoded metric {g gauge <nil> <nil>}]
+2023-10-27T15:22:46.765+0300	[34mINFO[0m	logger/logger.go:45	incoming request	{"method": "POST", "path": "/value", "time": "129.738µs"}
+2023-10-27T15:22:46.765+0300	[34mINFO[0m	logger/logger.go:64	Send response with	{"status": 200, "size": 37}
+2023-10-27T15:22:46.767+0300	[34mINFO[0m	logger/logger.go:54	[Entered JSONUpdHandler]
+2023-10-27T15:22:46.768+0300	[34mINFO[0m	logger/logger.go:45	incoming request	{"method": "POST", "path": "/update", "time": "42.402µs"}
+2023-10-27T15:22:46.768+0300	[34mINFO[0m	logger/logger.go:64	Send response with	{"status": 200, "size": 41}
+2023-10-27T15:22:46.769+0300	[34mINFO[0m	logger/logger.go:54	[Entered JSONUpdHandler]
+2023-10-27T15:22:46.769+0300	[31mERROR[0m	logger/logger.go:59	[wrong type smth]
+2023-10-27T15:22:46.770+0300	[34mINFO[0m	logger/logger.go:45	incoming request	{"method": "POST", "path": "/update", "time": "47.302µs"}
+2023-10-27T15:22:46.770+0300	[34mINFO[0m	logger/logger.go:64	Send response with	{"status": 400, "size": 0}
+2023-10-27T15:22:46.771+0300	[34mINFO[0m	logger/logger.go:54	[Entered JSONUpdHandler]
+2023-10-27T15:22:46.771+0300	[34mINFO[0m	logger/logger.go:45	incoming request	{"method": "POST", "path": "/update", "time": "26.347µs"}
+2023-10-27T15:22:46.771+0300	[34mINFO[0m	logger/logger.go:64	Send response with	{"status": 200, "size": 37}
+2023-10-27T15:22:46.773+0300	[34mINFO[0m	logger/logger.go:54	[Entered JSONUpdHandler]
+2023-10-27T15:22:46.773+0300	[34mINFO[0m	logger/logger.go:45	incoming request	{"method": "POST", "path": "/update", "time": "34.574µs"}
+2023-10-27T15:22:46.773+0300	[34mINFO[0m	logger/logger.go:64	Send response with	{"status": 200, "size": 37}
+2023-10-27T15:22:46.775+0300	[34mINFO[0m	logger/logger.go:54	[Entered JSONValueHandler]
+2023-10-27T15:22:46.775+0300	[34mINFO[0m	logger/logger.go:54	[Method checked]
+2023-10-27T15:22:46.775+0300	[34mINFO[0m	logger/logger.go:54	[Decoded metric {c counter <nil> <nil>}]
+2023-10-27T15:22:46.775+0300	[34mINFO[0m	logger/logger.go:45	incoming request	{"method": "POST", "path": "/value", "time": "146.644µs"}
+2023-10-27T15:22:46.775+0300	[34mINFO[0m	logger/logger.go:64	Send response with	{"status": 200, "size": 37}
+2023-10-27T15:22:46.777+0300	[34mINFO[0m	logger/logger.go:54	[Entered JSONValueHandler]
+2023-10-27T15:22:46.777+0300	[34mINFO[0m	logger/logger.go:54	[Method checked]
+2023-10-27T15:22:46.777+0300	[34mINFO[0m	logger/logger.go:54	[Decoded metric {c_unk counter <nil> <nil>}]
+2023-10-27T15:22:46.777+0300	[34mINFO[0m	logger/logger.go:54	[Metrics on server: gaugeMetric, c, ]
+2023-10-27T15:22:46.777+0300	[31mERROR[0m	logger/logger.go:59	[Cann't find metric]
+2023-10-27T15:22:46.777+0300	[34mINFO[0m	logger/logger.go:45	incoming request	{"method": "POST", "path": "/value", "time": "101.682µs"}
+2023-10-27T15:22:46.777+0300	[34mINFO[0m	logger/logger.go:64	Send response with	{"status": 404, "size": 0}
+2023-10-27T15:22:46.779+0300	[34mINFO[0m	logger/logger.go:54	[Entered JSONValueHandler]
+2023-10-27T15:22:46.779+0300	[34mINFO[0m	logger/logger.go:54	[Method checked]
+2023-10-27T15:22:46.779+0300	[34mINFO[0m	logger/logger.go:54	[Decoded metric {g_unk gauge <nil> <nil>}]
+2023-10-27T15:22:46.779+0300	[34mINFO[0m	logger/logger.go:54	[Metrics on server: gaugeMetric, c, ]
+2023-10-27T15:22:46.779+0300	[31mERROR[0m	logger/logger.go:59	[Cann't find metric]
+2023-10-27T15:22:46.779+0300	[34mINFO[0m	logger/logger.go:45	incoming request	{"method": "POST", "path": "/value", "time": "79.775µs"}
+2023-10-27T15:22:46.779+0300	[34mINFO[0m	logger/logger.go:64	Send response with	{"status": 404, "size": 0}
+2023-10-27T15:22:46.781+0300	[34mINFO[0m	logger/logger.go:54	[Entered JSONValueHandler]
+2023-10-27T15:22:46.781+0300	[34mINFO[0m	logger/logger.go:54	[Method checked]
+2023-10-27T15:22:46.781+0300	[34mINFO[0m	logger/logger.go:54	[Decoded metric {c_unk smth <nil> <nil>}]
+2023-10-27T15:22:46.781+0300	[31mERROR[0m	logger/logger.go:59	[wrong type smth]
+2023-10-27T15:22:46.781+0300	[34mINFO[0m	logger/logger.go:45	incoming request	{"method": "POST", "path": "/value", "time": "103.14µs"}
+2023-10-27T15:22:46.781+0300	[34mINFO[0m	logger/logger.go:64	Send response with	{"status": 400, "size": 0}
+2023-10-27T15:22:47.123+0300	[34mINFO[0m	logger/logger.go:45	incoming request	{"method": "POST", "path": "/update/gauge/anotherGaugeMetric/4.2", "time": "1.921µs"}
+2023-10-27T15:22:47.123+0300	[34mINFO[0m	logger/logger.go:64	Send response with	{"status": 200, "size": 0}
+2023-10-27T15:22:47.142+0300	[34mINFO[0m	logger/logger.go:45	incoming request	{"method": "POST", "path": "/update/gauge/gaugeMetric/4.2", "time": "5.952µs"}
+2023-10-27T15:22:47.143+0300	[34mINFO[0m	logger/logger.go:64	Send response with	{"status": 200, "size": 0}
+2023-10-27T15:22:47.147+0300	[34mINFO[0m	logger/logger.go:45	incoming request	{"method": "POST", "path": "/update/gauge/anotherCounterMtric/A5C", "time": "12.585µs"}
+2023-10-27T15:22:47.147+0300	[34mINFO[0m	logger/logger.go:64	Send response with	{"status": 400, "size": 0}
+2023-10-27T15:22:47.158+0300	[34mINFO[0m	logger/logger.go:45	incoming request	{"method": "POST", "path": "/update/counter/anothercounterMetric/42", "time": "2.583µs"}
+2023-10-27T15:22:47.158+0300	[34mINFO[0m	logger/logger.go:64	Send response with	{"status": 200, "size": 0}
+2023-10-27T15:22:47.162+0300	[34mINFO[0m	logger/logger.go:45	incoming request	{"method": "POST", "path": "/update/counter/counterMetric/42", "time": "2.362µs"}
+2023-10-27T15:22:47.162+0300	[34mINFO[0m	logger/logger.go:64	Send response with	{"status": 200, "size": 0}
+2023-10-27T15:22:47.163+0300	[34mINFO[0m	logger/logger.go:45	incoming request	{"method": "POST", "path": "/update/counter/anothercounterMtric/A5C", "time": "5.542µs"}
+2023-10-27T15:22:47.164+0300	[34mINFO[0m	logger/logger.go:64	Send response with	{"status": 400, "size": 0}
+2023-10-27T15:22:47.166+0300	[34mINFO[0m	logger/logger.go:45	incoming request	{"method": "GET", "path": "/value/gauge/g", "time": "12.306µs"}
+2023-10-27T15:22:47.166+0300	[34mINFO[0m	logger/logger.go:64	Send response with	{"status": 200, "size": 3}
+2023-10-27T15:22:47.168+0300	[34mINFO[0m	logger/logger.go:45	incoming request	{"method": "GET", "path": "/value/gauge/M", "time": "3.386µs"}
+2023-10-27T15:22:47.168+0300	[34mINFO[0m	logger/logger.go:64	Send response with	{"status": 404, "size": 0}
+2023-10-27T15:22:47.169+0300	[34mINFO[0m	logger/logger.go:45	incoming request	{"method": "GET", "path": "/value/counter/c", "time": "2.554µs"}
+2023-10-27T15:22:47.169+0300	[34mINFO[0m	logger/logger.go:64	Send response with	{"status": 200, "size": 1}
+2023-10-27T15:22:47.171+0300	[34mINFO[0m	logger/logger.go:45	incoming request	{"method": "GET", "path": "/value/counter/M", "time": "10.935µs"}
+2023-10-27T15:22:47.171+0300	[34mINFO[0m	logger/logger.go:64	Send response with	{"status": 404, "size": 0}
+2023-10-27T15:22:47.173+0300	[34mINFO[0m	logger/logger.go:54	[entered ShowAllHandler]
+2023-10-27T15:22:47.173+0300	[34mINFO[0m	logger/logger.go:54	[method checked]
+2023-10-27T15:22:47.173+0300	[34mINFO[0m	logger/logger.go:45	incoming request	{"method": "GET", "path": "/", "time": "37.889µs"}
+2023-10-27T15:22:47.173+0300	[34mINFO[0m	logger/logger.go:64	Send response with	{"status": 200, "size": 109}
+2023-10-27T15:22:47.175+0300	[34mINFO[0m	logger/logger.go:45	incoming request	{"method": "POST", "path": "/another", "time": "6.554µs"}
+2023-10-27T15:22:47.175+0300	[34mINFO[0m	logger/logger.go:64	Send response with	{"status": 400, "size": 0}
+2023-10-27T15:22:47.177+0300	[34mINFO[0m	logger/logger.go:45	incoming request	{"method": "GET", "path": "/another", "time": "2.666µs"}
+2023-10-27T15:22:47.177+0300	[34mINFO[0m	logger/logger.go:64	Send response with	{"status": 400, "size": 0}
+2023-10-27T15:22:47.178+0300	[34mINFO[0m	logger/logger.go:54	[Entered JSONUpdHandler]
+2023-10-27T15:22:47.178+0300	[34mINFO[0m	logger/logger.go:45	incoming request	{"method": "POST", "path": "/update", "time": "88.953µs"}
+2023-10-27T15:22:47.178+0300	[34mINFO[0m	logger/logger.go:64	Send response with	{"status": 200, "size": 41}
+2023-10-27T15:22:47.180+0300	[34mINFO[0m	logger/logger.go:54	[Entered JSONValueHandler]
+2023-10-27T15:22:47.180+0300	[34mINFO[0m	logger/logger.go:54	[Method checked]
+2023-10-27T15:22:47.180+0300	[34mINFO[0m	logger/logger.go:54	[Decoded metric {g gauge <nil> <nil>}]
+2023-10-27T15:22:47.180+0300	[34mINFO[0m	logger/logger.go:45	incoming request	{"method": "POST", "path": "/value", "time": "26.768µs"}
+2023-10-27T15:22:47.180+0300	[34mINFO[0m	logger/logger.go:64	Send response with	{"status": 200, "size": 37}
+2023-10-27T15:22:47.182+0300	[34mINFO[0m	logger/logger.go:54	[Entered JSONUpdHandler]
+2023-10-27T15:22:47.182+0300	[34mINFO[0m	logger/logger.go:45	incoming request	{"method": "POST", "path": "/update", "time": "43.06µs"}
+2023-10-27T15:22:47.182+0300	[34mINFO[0m	logger/logger.go:64	Send response with	{"status": 200, "size": 41}
+2023-10-27T15:22:47.184+0300	[34mINFO[0m	logger/logger.go:54	[Entered JSONUpdHandler]
+2023-10-27T15:22:47.184+0300	[31mERROR[0m	logger/logger.go:59	[wrong type smth]
+2023-10-27T15:22:47.184+0300	[34mINFO[0m	logger/logger.go:45	incoming request	{"method": "POST", "path": "/update", "time": "64.614µs"}
+2023-10-27T15:22:47.184+0300	[34mINFO[0m	logger/logger.go:64	Send response with	{"status": 400, "size": 0}
+2023-10-27T15:22:47.186+0300	[34mINFO[0m	logger/logger.go:54	[Entered JSONUpdHandler]
+2023-10-27T15:22:47.186+0300	[34mINFO[0m	logger/logger.go:45	incoming request	{"method": "POST", "path": "/update", "time": "15.014µs"}
+2023-10-27T15:22:47.186+0300	[34mINFO[0m	logger/logger.go:64	Send response with	{"status": 200, "size": 37}
+2023-10-27T15:22:47.187+0300	[34mINFO[0m	logger/logger.go:54	[Entered JSONUpdHandler]
+2023-10-27T15:22:47.187+0300	[34mINFO[0m	logger/logger.go:45	incoming request	{"method": "POST", "path": "/update", "time": "16.555µs"}
+2023-10-27T15:22:47.187+0300	[34mINFO[0m	logger/logger.go:64	Send response with	{"status": 200, "size": 37}
+2023-10-27T15:22:47.189+0300	[34mINFO[0m	logger/logger.go:54	[Entered JSONValueHandler]
+2023-10-27T15:22:47.189+0300	[34mINFO[0m	logger/logger.go:54	[Method checked]
+2023-10-27T15:22:47.189+0300	[34mINFO[0m	logger/logger.go:54	[Decoded metric {c counter <nil> <nil>}]
+2023-10-27T15:22:47.189+0300	[34mINFO[0m	logger/logger.go:45	incoming request	{"method": "POST", "path": "/value", "time": "23.369µs"}
+2023-10-27T15:22:47.189+0300	[34mINFO[0m	logger/logger.go:64	Send response with	{"status": 200, "size": 37}
+2023-10-27T15:22:47.190+0300	[34mINFO[0m	logger/logger.go:54	[Entered JSONValueHandler]
+2023-10-27T15:22:47.190+0300	[34mINFO[0m	logger/logger.go:54	[Method checked]
+2023-10-27T15:22:47.190+0300	[34mINFO[0m	logger/logger.go:54	[Decoded metric {c_unk counter <nil> <nil>}]
+2023-10-27T15:22:47.190+0300	[34mINFO[0m	logger/logger.go:54	[Metrics on server: gaugeMetric, c, ]
+2023-10-27T15:22:47.190+0300	[31mERROR[0m	logger/logger.go:59	[Cann't find metric]
+2023-10-27T15:22:47.190+0300	[34mINFO[0m	logger/logger.go:45	incoming request	{"method": "POST", "path": "/value", "time": "27.675µs"}
+2023-10-27T15:22:47.190+0300	[34mINFO[0m	logger/logger.go:64	Send response with	{"status": 404, "size": 0}
+2023-10-27T15:22:47.191+0300	[34mINFO[0m	logger/logger.go:54	[Entered JSONValueHandler]
+2023-10-27T15:22:47.191+0300	[34mINFO[0m	logger/logger.go:54	[Method checked]
+2023-10-27T15:22:47.191+0300	[34mINFO[0m	logger/logger.go:54	[Decoded metric {g_unk gauge <nil> <nil>}]
+2023-10-27T15:22:47.191+0300	[34mINFO[0m	logger/logger.go:54	[Metrics on server: gaugeMetric, c, ]
+2023-10-27T15:22:47.191+0300	[31mERROR[0m	logger/logger.go:59	[Cann't find metric]
+2023-10-27T15:22:47.191+0300	[34mINFO[0m	logger/logger.go:45	incoming request	{"method": "POST", "path": "/value", "time": "24.604µs"}
+2023-10-27T15:22:47.191+0300	[34mINFO[0m	logger/logger.go:64	Send response with	{"status": 404, "size": 0}
+2023-10-27T15:22:47.193+0300	[34mINFO[0m	logger/logger.go:54	[Entered JSONValueHandler]
+2023-10-27T15:22:47.193+0300	[34mINFO[0m	logger/logger.go:54	[Method checked]
+2023-10-27T15:22:47.193+0300	[34mINFO[0m	logger/logger.go:54	[Decoded metric {c_unk smth <nil> <nil>}]
+2023-10-27T15:22:47.193+0300	[31mERROR[0m	logger/logger.go:59	[wrong type smth]
+2023-10-27T15:22:47.193+0300	[34mINFO[0m	logger/logger.go:45	incoming request	{"method": "POST", "path": "/value", "time": "37.033µs"}
+2023-10-27T15:22:47.193+0300	[34mINFO[0m	logger/logger.go:64	Send response with	{"status": 400, "size": 0}
+2023-10-27T15:22:47.374+0300	[34mINFO[0m	logger/logger.go:45	incoming request	{"method": "POST", "path": "/update/gauge/anotherGaugeMetric/4.2", "time": "2.557µs"}
+2023-10-27T15:22:47.374+0300	[34mINFO[0m	logger/logger.go:64	Send response with	{"status": 200, "size": 0}
+2023-10-27T15:22:47.376+0300	[34mINFO[0m	logger/logger.go:45	incoming request	{"method": "POST", "path": "/update/gauge/gaugeMetric/4.2", "time": "2.426µs"}
+2023-10-27T15:22:47.376+0300	[34mINFO[0m	logger/logger.go:64	Send response with	{"status": 200, "size": 0}
+2023-10-27T15:22:47.378+0300	[34mINFO[0m	logger/logger.go:45	incoming request	{"method": "POST", "path": "/update/gauge/anotherCounterMtric/A5C", "time": "5.75µs"}
+2023-10-27T15:22:47.378+0300	[34mINFO[0m	logger/logger.go:64	Send response with	{"status": 400, "size": 0}
+2023-10-27T15:22:47.381+0300	[34mINFO[0m	logger/logger.go:45	incoming request	{"method": "POST", "path": "/update/counter/anothercounterMetric/42", "time": "1.628µs"}
+2023-10-27T15:22:47.381+0300	[34mINFO[0m	logger/logger.go:64	Send response with	{"status": 200, "size": 0}
+2023-10-27T15:22:47.383+0300	[34mINFO[0m	logger/logger.go:45	incoming request	{"method": "POST", "path": "/update/counter/counterMetric/42", "time": "1.675µs"}
+2023-10-27T15:22:47.383+0300	[34mINFO[0m	logger/logger.go:64	Send response with	{"status": 200, "size": 0}
+2023-10-27T15:22:47.385+0300	[34mINFO[0m	logger/logger.go:45	incoming request	{"method": "POST", "path": "/update/counter/anothercounterMtric/A5C", "time": "4.043µs"}
+2023-10-27T15:22:47.385+0300	[34mINFO[0m	logger/logger.go:64	Send response with	{"status": 400, "size": 0}
+2023-10-27T15:22:47.387+0300	[34mINFO[0m	logger/logger.go:45	incoming request	{"method": "GET", "path": "/value/gauge/g", "time": "12.851µs"}
+2023-10-27T15:22:47.387+0300	[34mINFO[0m	logger/logger.go:64	Send response with	{"status": 200, "size": 3}
+2023-10-27T15:22:47.389+0300	[34mINFO[0m	logger/logger.go:45	incoming request	{"method": "GET", "path": "/value/gauge/M", "time": "6.437µs"}
+2023-10-27T15:22:47.389+0300	[34mINFO[0m	logger/logger.go:64	Send response with	{"status": 404, "size": 0}
+2023-10-27T15:22:47.391+0300	[34mINFO[0m	logger/logger.go:45	incoming request	{"method": "GET", "path": "/value/counter/c", "time": "3.34µs"}
+2023-10-27T15:22:47.391+0300	[34mINFO[0m	logger/logger.go:64	Send response with	{"status": 200, "size": 1}
+2023-10-27T15:22:47.392+0300	[34mINFO[0m	logger/logger.go:45	incoming request	{"method": "GET", "path": "/value/counter/M", "time": "5.28µs"}
+2023-10-27T15:22:47.392+0300	[34mINFO[0m	logger/logger.go:64	Send response with	{"status": 404, "size": 0}
+2023-10-27T15:22:47.394+0300	[34mINFO[0m	logger/logger.go:54	[entered ShowAllHandler]
+2023-10-27T15:22:47.394+0300	[34mINFO[0m	logger/logger.go:54	[method checked]
+2023-10-27T15:22:47.394+0300	[34mINFO[0m	logger/logger.go:45	incoming request	{"method": "GET", "path": "/", "time": "38.247µs"}
+2023-10-27T15:22:47.394+0300	[34mINFO[0m	logger/logger.go:64	Send response with	{"status": 200, "size": 109}
+2023-10-27T15:22:47.396+0300	[34mINFO[0m	logger/logger.go:45	incoming request	{"method": "POST", "path": "/another", "time": "6.554µs"}
+2023-10-27T15:22:47.396+0300	[34mINFO[0m	logger/logger.go:64	Send response with	{"status": 400, "size": 0}
+2023-10-27T15:22:47.398+0300	[34mINFO[0m	logger/logger.go:45	incoming request	{"method": "GET", "path": "/another", "time": "6.86µs"}
+2023-10-27T15:22:47.398+0300	[34mINFO[0m	logger/logger.go:64	Send response with	{"status": 400, "size": 0}
+2023-10-27T15:22:47.400+0300	[34mINFO[0m	logger/logger.go:54	[Entered JSONUpdHandler]
+2023-10-27T15:22:47.400+0300	[34mINFO[0m	logger/logger.go:45	incoming request	{"method": "POST", "path": "/update", "time": "205.758µs"}
+2023-10-27T15:22:47.400+0300	[34mINFO[0m	logger/logger.go:64	Send response with	{"status": 200, "size": 41}
+2023-10-27T15:22:47.402+0300	[34mINFO[0m	logger/logger.go:54	[Entered JSONValueHandler]
+2023-10-27T15:22:47.402+0300	[34mINFO[0m	logger/logger.go:54	[Method checked]
+2023-10-27T15:22:47.402+0300	[34mINFO[0m	logger/logger.go:54	[Decoded metric {g gauge <nil> <nil>}]
+2023-10-27T15:22:47.402+0300	[34mINFO[0m	logger/logger.go:45	incoming request	{"method": "POST", "path": "/value", "time": "76.901µs"}
+2023-10-27T15:22:47.402+0300	[34mINFO[0m	logger/logger.go:64	Send response with	{"status": 200, "size": 37}
+2023-10-27T15:22:47.404+0300	[34mINFO[0m	logger/logger.go:54	[Entered JSONUpdHandler]
+2023-10-27T15:22:47.404+0300	[34mINFO[0m	logger/logger.go:45	incoming request	{"method": "POST", "path": "/update", "time": "39.999µs"}
+2023-10-27T15:22:47.404+0300	[34mINFO[0m	logger/logger.go:64	Send response with	{"status": 200, "size": 41}
+2023-10-27T15:22:47.406+0300	[34mINFO[0m	logger/logger.go:54	[Entered JSONUpdHandler]
+2023-10-27T15:22:47.406+0300	[31mERROR[0m	logger/logger.go:59	[wrong type smth]
+2023-10-27T15:22:47.406+0300	[34mINFO[0m	logger/logger.go:45	incoming request	{"method": "POST", "path": "/update", "time": "26.375µs"}
+2023-10-27T15:22:47.406+0300	[34mINFO[0m	logger/logger.go:64	Send response with	{"status": 400, "size": 0}
+2023-10-27T15:22:47.408+0300	[34mINFO[0m	logger/logger.go:54	[Entered JSONUpdHandler]
+2023-10-27T15:22:47.408+0300	[34mINFO[0m	logger/logger.go:45	incoming request	{"method": "POST", "path": "/update", "time": "36.505µs"}
+2023-10-27T15:22:47.408+0300	[34mINFO[0m	logger/logger.go:64	Send response with	{"status": 200, "size": 37}
+2023-10-27T15:22:47.410+0300	[34mINFO[0m	logger/logger.go:54	[Entered JSONUpdHandler]
+2023-10-27T15:22:47.410+0300	[34mINFO[0m	logger/logger.go:45	incoming request	{"method": "POST", "path": "/update", "time": "28.513µs"}
+2023-10-27T15:22:47.410+0300	[34mINFO[0m	logger/logger.go:64	Send response with	{"status": 200, "size": 37}
+2023-10-27T15:22:47.413+0300	[34mINFO[0m	logger/logger.go:54	[Entered JSONValueHandler]
+2023-10-27T15:22:47.413+0300	[34mINFO[0m	logger/logger.go:54	[Method checked]
+2023-10-27T15:22:47.413+0300	[34mINFO[0m	logger/logger.go:54	[Decoded metric {c counter <nil> <nil>}]
+2023-10-27T15:22:47.413+0300	[34mINFO[0m	logger/logger.go:45	incoming request	{"method": "POST", "path": "/value", "time": "46.496µs"}
+2023-10-27T15:22:47.413+0300	[34mINFO[0m	logger/logger.go:64	Send response with	{"status": 200, "size": 37}
+2023-10-27T15:22:47.415+0300	[34mINFO[0m	logger/logger.go:54	[Entered JSONValueHandler]
+2023-10-27T15:22:47.415+0300	[34mINFO[0m	logger/logger.go:54	[Method checked]
+2023-10-27T15:22:47.415+0300	[34mINFO[0m	logger/logger.go:54	[Decoded metric {c_unk counter <nil> <nil>}]
+2023-10-27T15:22:47.415+0300	[34mINFO[0m	logger/logger.go:54	[Metrics on server: gaugeMetric, c, ]
+2023-10-27T15:22:47.415+0300	[31mERROR[0m	logger/logger.go:59	[Cann't find metric]
+2023-10-27T15:22:47.415+0300	[34mINFO[0m	logger/logger.go:45	incoming request	{"method": "POST", "path": "/value", "time": "92.315µs"}
+2023-10-27T15:22:47.415+0300	[34mINFO[0m	logger/logger.go:64	Send response with	{"status": 404, "size": 0}
+2023-10-27T15:22:47.417+0300	[34mINFO[0m	logger/logger.go:54	[Entered JSONValueHandler]
+2023-10-27T15:22:47.417+0300	[34mINFO[0m	logger/logger.go:54	[Method checked]
+2023-10-27T15:22:47.417+0300	[34mINFO[0m	logger/logger.go:54	[Decoded metric {g_unk gauge <nil> <nil>}]
+2023-10-27T15:22:47.417+0300	[34mINFO[0m	logger/logger.go:54	[Metrics on server: gaugeMetric, c, ]
+2023-10-27T15:22:47.417+0300	[31mERROR[0m	logger/logger.go:59	[Cann't find metric]
+2023-10-27T15:22:47.417+0300	[34mINFO[0m	logger/logger.go:45	incoming request	{"method": "POST", "path": "/value", "time": "106.528µs"}
+2023-10-27T15:22:47.417+0300	[34mINFO[0m	logger/logger.go:64	Send response with	{"status": 404, "size": 0}
+2023-10-27T15:22:47.419+0300	[34mINFO[0m	logger/logger.go:54	[Entered JSONValueHandler]
+2023-10-27T15:22:47.419+0300	[34mINFO[0m	logger/logger.go:54	[Method checked]
+2023-10-27T15:22:47.419+0300	[34mINFO[0m	logger/logger.go:54	[Decoded metric {c_unk smth <nil> <nil>}]
+2023-10-27T15:22:47.419+0300	[31mERROR[0m	logger/logger.go:59	[wrong type smth]
+2023-10-27T15:22:47.419+0300	[34mINFO[0m	logger/logger.go:45	incoming request	{"method": "POST", "path": "/value", "time": "65.026µs"}
+2023-10-27T15:22:47.419+0300	[34mINFO[0m	logger/logger.go:64	Send response with	{"status": 400, "size": 0}
+2023-10-27T15:22:47.663+0300	[34mINFO[0m	logger/logger.go:45	incoming request	{"method": "POST", "path": "/update/gauge/anotherGaugeMetric/4.2", "time": "1.474µs"}
+2023-10-27T15:22:47.663+0300	[34mINFO[0m	logger/logger.go:64	Send response with	{"status": 200, "size": 0}
+2023-10-27T15:22:47.678+0300	[34mINFO[0m	logger/logger.go:45	incoming request	{"method": "POST", "path": "/update/gauge/gaugeMetric/4.2", "time": "2.237µs"}
+2023-10-27T15:22:47.678+0300	[34mINFO[0m	logger/logger.go:64	Send response with	{"status": 200, "size": 0}
+2023-10-27T15:22:47.680+0300	[34mINFO[0m	logger/logger.go:45	incoming request	{"method": "POST", "path": "/update/gauge/anotherCounterMtric/A5C", "time": "6.135µs"}
+2023-10-27T15:22:47.680+0300	[34mINFO[0m	logger/logger.go:64	Send response with	{"status": 400, "size": 0}
+2023-10-27T15:22:47.682+0300	[34mINFO[0m	logger/logger.go:45	incoming request	{"method": "POST", "path": "/update/counter/anothercounterMetric/42", "time": "1.052µs"}
+2023-10-27T15:22:47.682+0300	[34mINFO[0m	logger/logger.go:64	Send response with	{"status": 200, "size": 0}
+2023-10-27T15:22:47.684+0300	[34mINFO[0m	logger/logger.go:45	incoming request	{"method": "POST", "path": "/update/counter/counterMetric/42", "time": "4.446µs"}
+2023-10-27T15:22:47.684+0300	[34mINFO[0m	logger/logger.go:64	Send response with	{"status": 200, "size": 0}
+2023-10-27T15:22:47.686+0300	[34mINFO[0m	logger/logger.go:45	incoming request	{"method": "POST", "path": "/update/counter/anothercounterMtric/A5C", "time": "9.648µs"}
+2023-10-27T15:22:47.686+0300	[34mINFO[0m	logger/logger.go:64	Send response with	{"status": 400, "size": 0}
+2023-10-27T15:22:47.690+0300	[34mINFO[0m	logger/logger.go:45	incoming request	{"method": "GET", "path": "/value/gauge/g", "time": "15.639µs"}
+2023-10-27T15:22:47.690+0300	[34mINFO[0m	logger/logger.go:64	Send response with	{"status": 200, "size": 3}
+2023-10-27T15:22:47.691+0300	[34mINFO[0m	logger/logger.go:45	incoming request	{"method": "GET", "path": "/value/gauge/M", "time": "4.203µs"}
+2023-10-27T15:22:47.691+0300	[34mINFO[0m	logger/logger.go:64	Send response with	{"status": 404, "size": 0}
+2023-10-27T15:22:47.693+0300	[34mINFO[0m	logger/logger.go:45	incoming request	{"method": "GET", "path": "/value/counter/c", "time": "3.448µs"}
+2023-10-27T15:22:47.693+0300	[34mINFO[0m	logger/logger.go:64	Send response with	{"status": 200, "size": 1}
+2023-10-27T15:22:47.696+0300	[34mINFO[0m	logger/logger.go:45	incoming request	{"method": "GET", "path": "/value/counter/M", "time": "7.27µs"}
+2023-10-27T15:22:47.696+0300	[34mINFO[0m	logger/logger.go:64	Send response with	{"status": 404, "size": 0}
+2023-10-27T15:22:47.698+0300	[34mINFO[0m	logger/logger.go:54	[entered ShowAllHandler]
+2023-10-27T15:22:47.698+0300	[34mINFO[0m	logger/logger.go:54	[method checked]
+2023-10-27T15:22:47.698+0300	[34mINFO[0m	logger/logger.go:45	incoming request	{"method": "GET", "path": "/", "time": "39.857µs"}
+2023-10-27T15:22:47.698+0300	[34mINFO[0m	logger/logger.go:64	Send response with	{"status": 200, "size": 109}
+2023-10-27T15:22:47.699+0300	[34mINFO[0m	logger/logger.go:45	incoming request	{"method": "POST", "path": "/another", "time": "8.711µs"}
+2023-10-27T15:22:47.699+0300	[34mINFO[0m	logger/logger.go:64	Send response with	{"status": 400, "size": 0}
+2023-10-27T15:22:47.701+0300	[34mINFO[0m	logger/logger.go:45	incoming request	{"method": "GET", "path": "/another", "time": "1.969µs"}
+2023-10-27T15:22:47.701+0300	[34mINFO[0m	logger/logger.go:64	Send response with	{"status": 400, "size": 0}
+2023-10-27T15:22:47.702+0300	[34mINFO[0m	logger/logger.go:54	[Entered JSONUpdHandler]
+2023-10-27T15:22:47.702+0300	[34mINFO[0m	logger/logger.go:45	incoming request	{"method": "POST", "path": "/update", "time": "83.587µs"}
+2023-10-27T15:22:47.702+0300	[34mINFO[0m	logger/logger.go:64	Send response with	{"status": 200, "size": 41}
+2023-10-27T15:22:47.704+0300	[34mINFO[0m	logger/logger.go:54	[Entered JSONValueHandler]
+2023-10-27T15:22:47.704+0300	[34mINFO[0m	logger/logger.go:54	[Method checked]
+2023-10-27T15:22:47.704+0300	[34mINFO[0m	logger/logger.go:54	[Decoded metric {g gauge <nil> <nil>}]
+2023-10-27T15:22:47.704+0300	[34mINFO[0m	logger/logger.go:45	incoming request	{"method": "POST", "path": "/value", "time": "29.902µs"}
+2023-10-27T15:22:47.704+0300	[34mINFO[0m	logger/logger.go:64	Send response with	{"status": 200, "size": 37}
+2023-10-27T15:22:47.705+0300	[34mINFO[0m	logger/logger.go:54	[Entered JSONUpdHandler]
+2023-10-27T15:22:47.705+0300	[34mINFO[0m	logger/logger.go:45	incoming request	{"method": "POST", "path": "/update", "time": "31.841µs"}
+2023-10-27T15:22:47.705+0300	[34mINFO[0m	logger/logger.go:64	Send response with	{"status": 200, "size": 41}
+2023-10-27T15:22:47.707+0300	[34mINFO[0m	logger/logger.go:54	[Entered JSONUpdHandler]
+2023-10-27T15:22:47.707+0300	[31mERROR[0m	logger/logger.go:59	[wrong type smth]
+2023-10-27T15:22:47.707+0300	[34mINFO[0m	logger/logger.go:45	incoming request	{"method": "POST", "path": "/update", "time": "28.095µs"}
+2023-10-27T15:22:47.707+0300	[34mINFO[0m	logger/logger.go:64	Send response with	{"status": 400, "size": 0}
+2023-10-27T15:22:47.708+0300	[34mINFO[0m	logger/logger.go:54	[Entered JSONUpdHandler]
+2023-10-27T15:22:47.708+0300	[34mINFO[0m	logger/logger.go:45	incoming request	{"method": "POST", "path": "/update", "time": "28.705µs"}
+2023-10-27T15:22:47.708+0300	[34mINFO[0m	logger/logger.go:64	Send response with	{"status": 200, "size": 37}
+2023-10-27T15:22:47.710+0300	[34mINFO[0m	logger/logger.go:54	[Entered JSONUpdHandler]
+2023-10-27T15:22:47.710+0300	[34mINFO[0m	logger/logger.go:45	incoming request	{"method": "POST", "path": "/update", "time": "15.226µs"}
+2023-10-27T15:22:47.710+0300	[34mINFO[0m	logger/logger.go:64	Send response with	{"status": 200, "size": 37}
+2023-10-27T15:22:47.711+0300	[34mINFO[0m	logger/logger.go:54	[Entered JSONValueHandler]
+2023-10-27T15:22:47.711+0300	[34mINFO[0m	logger/logger.go:54	[Method checked]
+2023-10-27T15:22:47.711+0300	[34mINFO[0m	logger/logger.go:54	[Decoded metric {c counter <nil> <nil>}]
+2023-10-27T15:22:47.711+0300	[34mINFO[0m	logger/logger.go:45	incoming request	{"method": "POST", "path": "/value", "time": "41.944µs"}
+2023-10-27T15:22:47.711+0300	[34mINFO[0m	logger/logger.go:64	Send response with	{"status": 200, "size": 37}
+2023-10-27T15:22:47.712+0300	[34mINFO[0m	logger/logger.go:54	[Entered JSONValueHandler]
+2023-10-27T15:22:47.712+0300	[34mINFO[0m	logger/logger.go:54	[Method checked]
+2023-10-27T15:22:47.712+0300	[34mINFO[0m	logger/logger.go:54	[Decoded metric {c_unk counter <nil> <nil>}]
+2023-10-27T15:22:47.712+0300	[34mINFO[0m	logger/logger.go:54	[Metrics on server: gaugeMetric, c, ]
+2023-10-27T15:22:47.712+0300	[31mERROR[0m	logger/logger.go:59	[Cann't find metric]
+2023-10-27T15:22:47.712+0300	[34mINFO[0m	logger/logger.go:45	incoming request	{"method": "POST", "path": "/value", "time": "28.54µs"}
+2023-10-27T15:22:47.712+0300	[34mINFO[0m	logger/logger.go:64	Send response with	{"status": 404, "size": 0}
+2023-10-27T15:22:47.714+0300	[34mINFO[0m	logger/logger.go:54	[Entered JSONValueHandler]
+2023-10-27T15:22:47.714+0300	[34mINFO[0m	logger/logger.go:54	[Method checked]
+2023-10-27T15:22:47.714+0300	[34mINFO[0m	logger/logger.go:54	[Decoded metric {g_unk gauge <nil> <nil>}]
+2023-10-27T15:22:47.714+0300	[34mINFO[0m	logger/logger.go:54	[Metrics on server: gaugeMetric, c, ]
+2023-10-27T15:22:47.714+0300	[31mERROR[0m	logger/logger.go:59	[Cann't find metric]
+2023-10-27T15:22:47.714+0300	[34mINFO[0m	logger/logger.go:45	incoming request	{"method": "POST", "path": "/value", "time": "46.724µs"}
+2023-10-27T15:22:47.714+0300	[34mINFO[0m	logger/logger.go:64	Send response with	{"status": 404, "size": 0}
+2023-10-27T15:22:47.716+0300	[34mINFO[0m	logger/logger.go:54	[Entered JSONValueHandler]
+2023-10-27T15:22:47.716+0300	[34mINFO[0m	logger/logger.go:54	[Method checked]
+2023-10-27T15:22:47.716+0300	[34mINFO[0m	logger/logger.go:54	[Decoded metric {c_unk smth <nil> <nil>}]
+2023-10-27T15:22:47.716+0300	[31mERROR[0m	logger/logger.go:59	[wrong type smth]
+2023-10-27T15:22:47.716+0300	[34mINFO[0m	logger/logger.go:45	incoming request	{"method": "POST", "path": "/value", "time": "87.703µs"}
+2023-10-27T15:22:47.716+0300	[34mINFO[0m	logger/logger.go:64	Send response with	{"status": 400, "size": 0}
+2023-10-27T15:22:47.894+0300	[34mINFO[0m	logger/logger.go:45	incoming request	{"method": "POST", "path": "/update/gauge/anotherGaugeMetric/4.2", "time": "2.112µs"}
+2023-10-27T15:22:47.894+0300	[34mINFO[0m	logger/logger.go:64	Send response with	{"status": 200, "size": 0}
+2023-10-27T15:22:47.904+0300	[34mINFO[0m	logger/logger.go:45	incoming request	{"method": "POST", "path": "/update/gauge/gaugeMetric/4.2", "time": "4.301µs"}
+2023-10-27T15:22:47.904+0300	[34mINFO[0m	logger/logger.go:64	Send response with	{"status": 200, "size": 0}
+2023-10-27T15:22:47.919+0300	[34mINFO[0m	logger/logger.go:45	incoming request	{"method": "POST", "path": "/update/gauge/anotherCounterMtric/A5C", "time": "19.716µs"}
+2023-10-27T15:22:47.919+0300	[34mINFO[0m	logger/logger.go:64	Send response with	{"status": 400, "size": 0}
+2023-10-27T15:22:47.929+0300	[34mINFO[0m	logger/logger.go:45	incoming request	{"method": "POST", "path": "/update/counter/anothercounterMetric/42", "time": "2.689µs"}
+2023-10-27T15:22:47.929+0300	[34mINFO[0m	logger/logger.go:64	Send response with	{"status": 200, "size": 0}
+2023-10-27T15:22:47.933+0300	[34mINFO[0m	logger/logger.go:45	incoming request	{"method": "POST", "path": "/update/counter/counterMetric/42", "time": "3.951µs"}
+2023-10-27T15:22:47.933+0300	[34mINFO[0m	logger/logger.go:64	Send response with	{"status": 200, "size": 0}
+2023-10-27T15:22:47.935+0300	[34mINFO[0m	logger/logger.go:45	incoming request	{"method": "POST", "path": "/update/counter/anothercounterMtric/A5C", "time": "11.95µs"}
+2023-10-27T15:22:47.935+0300	[34mINFO[0m	logger/logger.go:64	Send response with	{"status": 400, "size": 0}
+2023-10-27T15:22:47.940+0300	[34mINFO[0m	logger/logger.go:45	incoming request	{"method": "GET", "path": "/value/gauge/g", "time": "17.66µs"}
+2023-10-27T15:22:47.940+0300	[34mINFO[0m	logger/logger.go:64	Send response with	{"status": 200, "size": 3}
+2023-10-27T15:22:47.941+0300	[34mINFO[0m	logger/logger.go:45	incoming request	{"method": "GET", "path": "/value/gauge/M", "time": "8.486µs"}
+2023-10-27T15:22:47.941+0300	[34mINFO[0m	logger/logger.go:64	Send response with	{"status": 404, "size": 0}
+2023-10-27T15:22:47.943+0300	[34mINFO[0m	logger/logger.go:45	incoming request	{"method": "GET", "path": "/value/counter/c", "time": "6.194µs"}
+2023-10-27T15:22:47.943+0300	[34mINFO[0m	logger/logger.go:64	Send response with	{"status": 200, "size": 1}
+2023-10-27T15:22:47.945+0300	[34mINFO[0m	logger/logger.go:45	incoming request	{"method": "GET", "path": "/value/counter/M", "time": "8.055µs"}
+2023-10-27T15:22:47.945+0300	[34mINFO[0m	logger/logger.go:64	Send response with	{"status": 404, "size": 0}
+2023-10-27T15:22:47.947+0300	[34mINFO[0m	logger/logger.go:54	[entered ShowAllHandler]
+2023-10-27T15:22:47.947+0300	[34mINFO[0m	logger/logger.go:54	[method checked]
+2023-10-27T15:22:47.947+0300	[34mINFO[0m	logger/logger.go:45	incoming request	{"method": "GET", "path": "/", "time": "37.572µs"}
+2023-10-27T15:22:47.947+0300	[34mINFO[0m	logger/logger.go:64	Send response with	{"status": 200, "size": 109}
+2023-10-27T15:22:47.949+0300	[34mINFO[0m	logger/logger.go:45	incoming request	{"method": "POST", "path": "/another", "time": "5.858µs"}
+2023-10-27T15:22:47.949+0300	[34mINFO[0m	logger/logger.go:64	Send response with	{"status": 400, "size": 0}
+2023-10-27T15:22:47.952+0300	[34mINFO[0m	logger/logger.go:45	incoming request	{"method": "GET", "path": "/another", "time": "6.829µs"}
+2023-10-27T15:22:47.952+0300	[34mINFO[0m	logger/logger.go:64	Send response with	{"status": 400, "size": 0}
+2023-10-27T15:22:47.954+0300	[34mINFO[0m	logger/logger.go:54	[Entered JSONUpdHandler]
+2023-10-27T15:22:47.954+0300	[34mINFO[0m	logger/logger.go:45	incoming request	{"method": "POST", "path": "/update", "time": "280.545µs"}
+2023-10-27T15:22:47.954+0300	[34mINFO[0m	logger/logger.go:64	Send response with	{"status": 200, "size": 41}
+2023-10-27T15:22:47.956+0300	[34mINFO[0m	logger/logger.go:54	[Entered JSONValueHandler]
+2023-10-27T15:22:47.956+0300	[34mINFO[0m	logger/logger.go:54	[Method checked]
+2023-10-27T15:22:47.956+0300	[34mINFO[0m	logger/logger.go:54	[Decoded metric {g gauge <nil> <nil>}]
+2023-10-27T15:22:47.956+0300	[34mINFO[0m	logger/logger.go:45	incoming request	{"method": "POST", "path": "/value", "time": "73.757µs"}
+2023-10-27T15:22:47.956+0300	[34mINFO[0m	logger/logger.go:64	Send response with	{"status": 200, "size": 37}
+2023-10-27T15:22:47.958+0300	[34mINFO[0m	logger/logger.go:54	[Entered JSONUpdHandler]
+2023-10-27T15:22:47.958+0300	[34mINFO[0m	logger/logger.go:45	incoming request	{"method": "POST", "path": "/update", "time": "65.502µs"}
+2023-10-27T15:22:47.958+0300	[34mINFO[0m	logger/logger.go:64	Send response with	{"status": 200, "size": 41}
+2023-10-27T15:22:47.960+0300	[34mINFO[0m	logger/logger.go:54	[Entered JSONUpdHandler]
+2023-10-27T15:22:47.960+0300	[31mERROR[0m	logger/logger.go:59	[wrong type smth]
+2023-10-27T15:22:47.960+0300	[34mINFO[0m	logger/logger.go:45	incoming request	{"method": "POST", "path": "/update", "time": "45.283µs"}
+2023-10-27T15:22:47.960+0300	[34mINFO[0m	logger/logger.go:64	Send response with	{"status": 400, "size": 0}
+2023-10-27T15:22:47.962+0300	[34mINFO[0m	logger/logger.go:54	[Entered JSONUpdHandler]
+2023-10-27T15:22:47.962+0300	[34mINFO[0m	logger/logger.go:45	incoming request	{"method": "POST", "path": "/update", "time": "87.109µs"}
+2023-10-27T15:22:47.962+0300	[34mINFO[0m	logger/logger.go:64	Send response with	{"status": 200, "size": 37}
+2023-10-27T15:22:47.964+0300	[34mINFO[0m	logger/logger.go:54	[Entered JSONUpdHandler]
+2023-10-27T15:22:47.964+0300	[34mINFO[0m	logger/logger.go:45	incoming request	{"method": "POST", "path": "/update", "time": "46.834µs"}
+2023-10-27T15:22:47.964+0300	[34mINFO[0m	logger/logger.go:64	Send response with	{"status": 200, "size": 37}
+2023-10-27T15:22:47.966+0300	[34mINFO[0m	logger/logger.go:54	[Entered JSONValueHandler]
+2023-10-27T15:22:47.966+0300	[34mINFO[0m	logger/logger.go:54	[Method checked]
+2023-10-27T15:22:47.966+0300	[34mINFO[0m	logger/logger.go:54	[Decoded metric {c counter <nil> <nil>}]
+2023-10-27T15:22:47.966+0300	[34mINFO[0m	logger/logger.go:45	incoming request	{"method": "POST", "path": "/value", "time": "71.317µs"}
+2023-10-27T15:22:47.966+0300	[34mINFO[0m	logger/logger.go:64	Send response with	{"status": 200, "size": 37}
+2023-10-27T15:22:47.969+0300	[34mINFO[0m	logger/logger.go:54	[Entered JSONValueHandler]
+2023-10-27T15:22:47.969+0300	[34mINFO[0m	logger/logger.go:54	[Method checked]
+2023-10-27T15:22:47.969+0300	[34mINFO[0m	logger/logger.go:54	[Decoded metric {c_unk counter <nil> <nil>}]
+2023-10-27T15:22:47.969+0300	[34mINFO[0m	logger/logger.go:54	[Metrics on server: c, gaugeMetric, ]
+2023-10-27T15:22:47.969+0300	[31mERROR[0m	logger/logger.go:59	[Cann't find metric]
+2023-10-27T15:22:47.969+0300	[34mINFO[0m	logger/logger.go:45	incoming request	{"method": "POST", "path": "/value", "time": "140.772µs"}
+2023-10-27T15:22:47.969+0300	[34mINFO[0m	logger/logger.go:64	Send response with	{"status": 404, "size": 0}
+2023-10-27T15:22:47.971+0300	[34mINFO[0m	logger/logger.go:54	[Entered JSONValueHandler]
+2023-10-27T15:22:47.971+0300	[34mINFO[0m	logger/logger.go:54	[Method checked]
+2023-10-27T15:22:47.971+0300	[34mINFO[0m	logger/logger.go:54	[Decoded metric {g_unk gauge <nil> <nil>}]
+2023-10-27T15:22:47.971+0300	[34mINFO[0m	logger/logger.go:54	[Metrics on server: gaugeMetric, c, ]
+2023-10-27T15:22:47.971+0300	[31mERROR[0m	logger/logger.go:59	[Cann't find metric]
+2023-10-27T15:22:47.971+0300	[34mINFO[0m	logger/logger.go:45	incoming request	{"method": "POST", "path": "/value", "time": "92.299µs"}
+2023-10-27T15:22:47.971+0300	[34mINFO[0m	logger/logger.go:64	Send response with	{"status": 404, "size": 0}
+2023-10-27T15:22:47.973+0300	[34mINFO[0m	logger/logger.go:54	[Entered JSONValueHandler]
+2023-10-27T15:22:47.973+0300	[34mINFO[0m	logger/logger.go:54	[Method checked]
+2023-10-27T15:22:47.973+0300	[34mINFO[0m	logger/logger.go:54	[Decoded metric {c_unk smth <nil> <nil>}]
+2023-10-27T15:22:47.973+0300	[31mERROR[0m	logger/logger.go:59	[wrong type smth]
+2023-10-27T15:22:47.973+0300	[34mINFO[0m	logger/logger.go:45	incoming request	{"method": "POST", "path": "/value", "time": "82.858µs"}
+2023-10-27T15:22:47.973+0300	[34mINFO[0m	logger/logger.go:64	Send response with	{"status": 400, "size": 0}
+2023-10-27T15:22:48.329+0300	[34mINFO[0m	logger/logger.go:45	incoming request	{"method": "POST", "path": "/update/gauge/anotherGaugeMetric/4.2", "time": "1.943µs"}
+2023-10-27T15:22:48.329+0300	[34mINFO[0m	logger/logger.go:64	Send response with	{"status": 200, "size": 0}
+2023-10-27T15:22:48.331+0300	[34mINFO[0m	logger/logger.go:45	incoming request	{"method": "POST", "path": "/update/gauge/gaugeMetric/4.2", "time": "1.681µs"}
+2023-10-27T15:22:48.331+0300	[34mINFO[0m	logger/logger.go:64	Send response with	{"status": 200, "size": 0}
+2023-10-27T15:22:48.333+0300	[34mINFO[0m	logger/logger.go:45	incoming request	{"method": "POST", "path": "/update/gauge/anotherCounterMtric/A5C", "time": "4.342µs"}
+2023-10-27T15:22:48.333+0300	[34mINFO[0m	logger/logger.go:64	Send response with	{"status": 400, "size": 0}
+2023-10-27T15:22:48.336+0300	[34mINFO[0m	logger/logger.go:45	incoming request	{"method": "POST", "path": "/update/counter/anothercounterMetric/42", "time": "1.477µs"}
+2023-10-27T15:22:48.336+0300	[34mINFO[0m	logger/logger.go:64	Send response with	{"status": 200, "size": 0}
+2023-10-27T15:22:48.338+0300	[34mINFO[0m	logger/logger.go:45	incoming request	{"method": "POST", "path": "/update/counter/counterMetric/42", "time": "2.297µs"}
+2023-10-27T15:22:48.338+0300	[34mINFO[0m	logger/logger.go:64	Send response with	{"status": 200, "size": 0}
+2023-10-27T15:22:48.340+0300	[34mINFO[0m	logger/logger.go:45	incoming request	{"method": "POST", "path": "/update/counter/anothercounterMtric/A5C", "time": "5.56µs"}
+2023-10-27T15:22:48.340+0300	[34mINFO[0m	logger/logger.go:64	Send response with	{"status": 400, "size": 0}
+2023-10-27T15:22:48.343+0300	[34mINFO[0m	logger/logger.go:45	incoming request	{"method": "GET", "path": "/value/gauge/g", "time": "12.881µs"}
+2023-10-27T15:22:48.343+0300	[34mINFO[0m	logger/logger.go:64	Send response with	{"status": 200, "size": 3}
+2023-10-27T15:22:48.345+0300	[34mINFO[0m	logger/logger.go:45	incoming request	{"method": "GET", "path": "/value/gauge/M", "time": "6.834µs"}
+2023-10-27T15:22:48.345+0300	[34mINFO[0m	logger/logger.go:64	Send response with	{"status": 404, "size": 0}
+2023-10-27T15:22:48.347+0300	[34mINFO[0m	logger/logger.go:45	incoming request	{"method": "GET", "path": "/value/counter/c", "time": "3.297µs"}
+2023-10-27T15:22:48.347+0300	[34mINFO[0m	logger/logger.go:64	Send response with	{"status": 200, "size": 1}
+2023-10-27T15:22:48.349+0300	[34mINFO[0m	logger/logger.go:45	incoming request	{"method": "GET", "path": "/value/counter/M", "time": "7.839µs"}
+2023-10-27T15:22:48.349+0300	[34mINFO[0m	logger/logger.go:64	Send response with	{"status": 404, "size": 0}
+2023-10-27T15:22:48.351+0300	[34mINFO[0m	logger/logger.go:54	[entered ShowAllHandler]
+2023-10-27T15:22:48.351+0300	[34mINFO[0m	logger/logger.go:54	[method checked]
+2023-10-27T15:22:48.351+0300	[34mINFO[0m	logger/logger.go:45	incoming request	{"method": "GET", "path": "/", "time": "26.121µs"}
+2023-10-27T15:22:48.351+0300	[34mINFO[0m	logger/logger.go:64	Send response with	{"status": 200, "size": 109}
+2023-10-27T15:22:48.353+0300	[34mINFO[0m	logger/logger.go:45	incoming request	{"method": "POST", "path": "/another", "time": "6.587µs"}
+2023-10-27T15:22:48.354+0300	[34mINFO[0m	logger/logger.go:64	Send response with	{"status": 400, "size": 0}
+2023-10-27T15:22:48.356+0300	[34mINFO[0m	logger/logger.go:45	incoming request	{"method": "GET", "path": "/another", "time": "4.71µs"}
+2023-10-27T15:22:48.356+0300	[34mINFO[0m	logger/logger.go:64	Send response with	{"status": 400, "size": 0}
+2023-10-27T15:22:48.358+0300	[34mINFO[0m	logger/logger.go:54	[Entered JSONUpdHandler]
+2023-10-27T15:22:48.358+0300	[34mINFO[0m	logger/logger.go:45	incoming request	{"method": "POST", "path": "/update", "time": "173.084µs"}
+2023-10-27T15:22:48.358+0300	[34mINFO[0m	logger/logger.go:64	Send response with	{"status": 200, "size": 41}
+2023-10-27T15:22:48.361+0300	[34mINFO[0m	logger/logger.go:54	[Entered JSONValueHandler]
+2023-10-27T15:22:48.361+0300	[34mINFO[0m	logger/logger.go:54	[Method checked]
+2023-10-27T15:22:48.361+0300	[34mINFO[0m	logger/logger.go:54	[Decoded metric {g gauge <nil> <nil>}]
+2023-10-27T15:22:48.361+0300	[34mINFO[0m	logger/logger.go:45	incoming request	{"method": "POST", "path": "/value", "time": "70.654µs"}
+2023-10-27T15:22:48.361+0300	[34mINFO[0m	logger/logger.go:64	Send response with	{"status": 200, "size": 37}
+2023-10-27T15:22:48.364+0300	[34mINFO[0m	logger/logger.go:54	[Entered JSONUpdHandler]
+2023-10-27T15:22:48.364+0300	[34mINFO[0m	logger/logger.go:45	incoming request	{"method": "POST", "path": "/update", "time": "69.917µs"}
+2023-10-27T15:22:48.364+0300	[34mINFO[0m	logger/logger.go:64	Send response with	{"status": 200, "size": 41}
+2023-10-27T15:22:48.366+0300	[34mINFO[0m	logger/logger.go:54	[Entered JSONUpdHandler]
+2023-10-27T15:22:48.366+0300	[31mERROR[0m	logger/logger.go:59	[wrong type smth]
+2023-10-27T15:22:48.367+0300	[34mINFO[0m	logger/logger.go:45	incoming request	{"method": "POST", "path": "/update", "time": "58.625µs"}
+2023-10-27T15:22:48.367+0300	[34mINFO[0m	logger/logger.go:64	Send response with	{"status": 400, "size": 0}
+2023-10-27T15:22:48.369+0300	[34mINFO[0m	logger/logger.go:54	[Entered JSONUpdHandler]
+2023-10-27T15:22:48.369+0300	[34mINFO[0m	logger/logger.go:45	incoming request	{"method": "POST", "path": "/update", "time": "33.285µs"}
+2023-10-27T15:22:48.369+0300	[34mINFO[0m	logger/logger.go:64	Send response with	{"status": 200, "size": 37}
+2023-10-27T15:22:48.371+0300	[34mINFO[0m	logger/logger.go:54	[Entered JSONUpdHandler]
+2023-10-27T15:22:48.371+0300	[34mINFO[0m	logger/logger.go:45	incoming request	{"method": "POST", "path": "/update", "time": "40.212µs"}
+2023-10-27T15:22:48.371+0300	[34mINFO[0m	logger/logger.go:64	Send response with	{"status": 200, "size": 37}
+2023-10-27T15:22:48.373+0300	[34mINFO[0m	logger/logger.go:54	[Entered JSONValueHandler]
+2023-10-27T15:22:48.373+0300	[34mINFO[0m	logger/logger.go:54	[Method checked]
+2023-10-27T15:22:48.373+0300	[34mINFO[0m	logger/logger.go:54	[Decoded metric {c counter <nil> <nil>}]
+2023-10-27T15:22:48.373+0300	[34mINFO[0m	logger/logger.go:45	incoming request	{"method": "POST", "path": "/value", "time": "55.577µs"}
+2023-10-27T15:22:48.373+0300	[34mINFO[0m	logger/logger.go:64	Send response with	{"status": 200, "size": 37}
+2023-10-27T15:22:48.375+0300	[34mINFO[0m	logger/logger.go:54	[Entered JSONValueHandler]
+2023-10-27T15:22:48.375+0300	[34mINFO[0m	logger/logger.go:54	[Method checked]
+2023-10-27T15:22:48.375+0300	[34mINFO[0m	logger/logger.go:54	[Decoded metric {c_unk counter <nil> <nil>}]
+2023-10-27T15:22:48.375+0300	[34mINFO[0m	logger/logger.go:54	[Metrics on server: gaugeMetric, c, ]
+2023-10-27T15:22:48.375+0300	[31mERROR[0m	logger/logger.go:59	[Cann't find metric]
+2023-10-27T15:22:48.375+0300	[34mINFO[0m	logger/logger.go:45	incoming request	{"method": "POST", "path": "/value", "time": "78.177µs"}
+2023-10-27T15:22:48.375+0300	[34mINFO[0m	logger/logger.go:64	Send response with	{"status": 404, "size": 0}
+2023-10-27T15:22:48.378+0300	[34mINFO[0m	logger/logger.go:54	[Entered JSONValueHandler]
+2023-10-27T15:22:48.378+0300	[34mINFO[0m	logger/logger.go:54	[Method checked]
+2023-10-27T15:22:48.378+0300	[34mINFO[0m	logger/logger.go:54	[Decoded metric {g_unk gauge <nil> <nil>}]
+2023-10-27T15:22:48.378+0300	[34mINFO[0m	logger/logger.go:54	[Metrics on server: gaugeMetric, c, ]
+2023-10-27T15:22:48.378+0300	[31mERROR[0m	logger/logger.go:59	[Cann't find metric]
+2023-10-27T15:22:48.378+0300	[34mINFO[0m	logger/logger.go:45	incoming request	{"method": "POST", "path": "/value", "time": "64.472µs"}
+2023-10-27T15:22:48.378+0300	[34mINFO[0m	logger/logger.go:64	Send response with	{"status": 404, "size": 0}
+2023-10-27T15:22:48.380+0300	[34mINFO[0m	logger/logger.go:54	[Entered JSONValueHandler]
+2023-10-27T15:22:48.380+0300	[34mINFO[0m	logger/logger.go:54	[Method checked]
+2023-10-27T15:22:48.380+0300	[34mINFO[0m	logger/logger.go:54	[Decoded metric {c_unk smth <nil> <nil>}]
+2023-10-27T15:22:48.380+0300	[31mERROR[0m	logger/logger.go:59	[wrong type smth]
+2023-10-27T15:22:48.380+0300	[34mINFO[0m	logger/logger.go:45	incoming request	{"method": "POST", "path": "/value", "time": "52.662µs"}
+2023-10-27T15:22:48.380+0300	[34mINFO[0m	logger/logger.go:64	Send response with	{"status": 400, "size": 0}
+2023-10-27T15:22:49.248+0300	[34mINFO[0m	logger/logger.go:45	incoming request	{"method": "POST", "path": "/update/gauge/anotherGaugeMetric/4.2", "time": "3.522µs"}
+2023-10-27T15:22:49.248+0300	[34mINFO[0m	logger/logger.go:64	Send response with	{"status": 200, "size": 0}
+2023-10-27T15:22:49.260+0300	[34mINFO[0m	logger/logger.go:45	incoming request	{"method": "POST", "path": "/update/gauge/gaugeMetric/4.2", "time": "7.912µs"}
+2023-10-27T15:22:49.261+0300	[34mINFO[0m	logger/logger.go:64	Send response with	{"status": 200, "size": 0}
+2023-10-27T15:22:49.263+0300	[34mINFO[0m	logger/logger.go:45	incoming request	{"method": "POST", "path": "/update/gauge/anotherCounterMtric/A5C", "time": "18.384µs"}
+2023-10-27T15:22:49.264+0300	[34mINFO[0m	logger/logger.go:64	Send response with	{"status": 400, "size": 0}
+2023-10-27T15:22:49.268+0300	[34mINFO[0m	logger/logger.go:45	incoming request	{"method": "POST", "path": "/update/counter/anothercounterMetric/42", "time": "3.101µs"}
+2023-10-27T15:22:49.268+0300	[34mINFO[0m	logger/logger.go:64	Send response with	{"status": 200, "size": 0}
+2023-10-27T15:22:49.270+0300	[34mINFO[0m	logger/logger.go:45	incoming request	{"method": "POST", "path": "/update/counter/counterMetric/42", "time": "2.325µs"}
+2023-10-27T15:22:49.270+0300	[34mINFO[0m	logger/logger.go:64	Send response with	{"status": 200, "size": 0}
+2023-10-27T15:22:49.272+0300	[34mINFO[0m	logger/logger.go:45	incoming request	{"method": "POST", "path": "/update/counter/anothercounterMtric/A5C", "time": "9.819µs"}
+2023-10-27T15:22:49.272+0300	[34mINFO[0m	logger/logger.go:64	Send response with	{"status": 400, "size": 0}
+2023-10-27T15:22:49.275+0300	[34mINFO[0m	logger/logger.go:45	incoming request	{"method": "GET", "path": "/value/gauge/g", "time": "12.451µs"}
+2023-10-27T15:22:49.275+0300	[34mINFO[0m	logger/logger.go:64	Send response with	{"status": 200, "size": 3}
+2023-10-27T15:22:49.277+0300	[34mINFO[0m	logger/logger.go:45	incoming request	{"method": "GET", "path": "/value/gauge/M", "time": "4.782µs"}
+2023-10-27T15:22:49.277+0300	[34mINFO[0m	logger/logger.go:64	Send response with	{"status": 404, "size": 0}
+2023-10-27T15:22:49.278+0300	[34mINFO[0m	logger/logger.go:45	incoming request	{"method": "GET", "path": "/value/counter/c", "time": "1.969µs"}
+2023-10-27T15:22:49.278+0300	[34mINFO[0m	logger/logger.go:64	Send response with	{"status": 200, "size": 1}
+2023-10-27T15:22:49.280+0300	[34mINFO[0m	logger/logger.go:45	incoming request	{"method": "GET", "path": "/value/counter/M", "time": "8.451µs"}
+2023-10-27T15:22:49.280+0300	[34mINFO[0m	logger/logger.go:64	Send response with	{"status": 404, "size": 0}
+2023-10-27T15:22:49.281+0300	[34mINFO[0m	logger/logger.go:54	[entered ShowAllHandler]
+2023-10-27T15:22:49.282+0300	[34mINFO[0m	logger/logger.go:54	[method checked]
+2023-10-27T15:22:49.282+0300	[34mINFO[0m	logger/logger.go:45	incoming request	{"method": "GET", "path": "/", "time": "28.89µs"}
+2023-10-27T15:22:49.282+0300	[34mINFO[0m	logger/logger.go:64	Send response with	{"status": 200, "size": 109}
+2023-10-27T15:22:49.283+0300	[34mINFO[0m	logger/logger.go:45	incoming request	{"method": "POST", "path": "/another", "time": "6.33µs"}
+2023-10-27T15:22:49.284+0300	[34mINFO[0m	logger/logger.go:64	Send response with	{"status": 400, "size": 0}
+2023-10-27T15:22:49.285+0300	[34mINFO[0m	logger/logger.go:45	incoming request	{"method": "GET", "path": "/another", "time": "5.365µs"}
+2023-10-27T15:22:49.285+0300	[34mINFO[0m	logger/logger.go:64	Send response with	{"status": 400, "size": 0}
+2023-10-27T15:22:49.288+0300	[34mINFO[0m	logger/logger.go:54	[Entered JSONUpdHandler]
+2023-10-27T15:22:49.288+0300	[34mINFO[0m	logger/logger.go:45	incoming request	{"method": "POST", "path": "/update", "time": "205.636µs"}
+2023-10-27T15:22:49.288+0300	[34mINFO[0m	logger/logger.go:64	Send response with	{"status": 200, "size": 41}
+2023-10-27T15:22:49.290+0300	[34mINFO[0m	logger/logger.go:54	[Entered JSONValueHandler]
+2023-10-27T15:22:49.290+0300	[34mINFO[0m	logger/logger.go:54	[Method checked]
+2023-10-27T15:22:49.290+0300	[34mINFO[0m	logger/logger.go:54	[Decoded metric {g gauge <nil> <nil>}]
+2023-10-27T15:22:49.290+0300	[34mINFO[0m	logger/logger.go:45	incoming request	{"method": "POST", "path": "/value", "time": "52.921µs"}
+2023-10-27T15:22:49.290+0300	[34mINFO[0m	logger/logger.go:64	Send response with	{"status": 200, "size": 37}
+2023-10-27T15:22:49.292+0300	[34mINFO[0m	logger/logger.go:54	[Entered JSONUpdHandler]
+2023-10-27T15:22:49.292+0300	[34mINFO[0m	logger/logger.go:45	incoming request	{"method": "POST", "path": "/update", "time": "49.719µs"}
+2023-10-27T15:22:49.292+0300	[34mINFO[0m	logger/logger.go:64	Send response with	{"status": 200, "size": 41}
+2023-10-27T15:22:49.294+0300	[34mINFO[0m	logger/logger.go:54	[Entered JSONUpdHandler]
+2023-10-27T15:22:49.294+0300	[31mERROR[0m	logger/logger.go:59	[wrong type smth]
+2023-10-27T15:22:49.294+0300	[34mINFO[0m	logger/logger.go:45	incoming request	{"method": "POST", "path": "/update", "time": "48.975µs"}
+2023-10-27T15:22:49.294+0300	[34mINFO[0m	logger/logger.go:64	Send response with	{"status": 400, "size": 0}
+2023-10-27T15:22:49.296+0300	[34mINFO[0m	logger/logger.go:54	[Entered JSONUpdHandler]
+2023-10-27T15:22:49.296+0300	[34mINFO[0m	logger/logger.go:45	incoming request	{"method": "POST", "path": "/update", "time": "43.004µs"}
+2023-10-27T15:22:49.296+0300	[34mINFO[0m	logger/logger.go:64	Send response with	{"status": 200, "size": 37}
+2023-10-27T15:22:49.298+0300	[34mINFO[0m	logger/logger.go:54	[Entered JSONUpdHandler]
+2023-10-27T15:22:49.298+0300	[34mINFO[0m	logger/logger.go:45	incoming request	{"method": "POST", "path": "/update", "time": "37.173µs"}
+2023-10-27T15:22:49.298+0300	[34mINFO[0m	logger/logger.go:64	Send response with	{"status": 200, "size": 37}
+2023-10-27T15:22:49.300+0300	[34mINFO[0m	logger/logger.go:54	[Entered JSONValueHandler]
+2023-10-27T15:22:49.300+0300	[34mINFO[0m	logger/logger.go:54	[Method checked]
+2023-10-27T15:22:49.300+0300	[34mINFO[0m	logger/logger.go:54	[Decoded metric {c counter <nil> <nil>}]
+2023-10-27T15:22:49.300+0300	[34mINFO[0m	logger/logger.go:45	incoming request	{"method": "POST", "path": "/value", "time": "52.512µs"}
+2023-10-27T15:22:49.300+0300	[34mINFO[0m	logger/logger.go:64	Send response with	{"status": 200, "size": 37}
+2023-10-27T15:22:49.302+0300	[34mINFO[0m	logger/logger.go:54	[Entered JSONValueHandler]
+2023-10-27T15:22:49.302+0300	[34mINFO[0m	logger/logger.go:54	[Method checked]
+2023-10-27T15:22:49.302+0300	[34mINFO[0m	logger/logger.go:54	[Decoded metric {c_unk counter <nil> <nil>}]
+2023-10-27T15:22:49.302+0300	[34mINFO[0m	logger/logger.go:54	[Metrics on server: gaugeMetric, c, ]
+2023-10-27T15:22:49.302+0300	[31mERROR[0m	logger/logger.go:59	[Cann't find metric]
+2023-10-27T15:22:49.302+0300	[34mINFO[0m	logger/logger.go:45	incoming request	{"method": "POST", "path": "/value", "time": "89.493µs"}
+2023-10-27T15:22:49.302+0300	[34mINFO[0m	logger/logger.go:64	Send response with	{"status": 404, "size": 0}
+2023-10-27T15:22:49.304+0300	[34mINFO[0m	logger/logger.go:54	[Entered JSONValueHandler]
+2023-10-27T15:22:49.304+0300	[34mINFO[0m	logger/logger.go:54	[Method checked]
+2023-10-27T15:22:49.304+0300	[34mINFO[0m	logger/logger.go:54	[Decoded metric {g_unk gauge <nil> <nil>}]
+2023-10-27T15:22:49.304+0300	[34mINFO[0m	logger/logger.go:54	[Metrics on server: gaugeMetric, c, ]
+2023-10-27T15:22:49.304+0300	[31mERROR[0m	logger/logger.go:59	[Cann't find metric]
+2023-10-27T15:22:49.304+0300	[34mINFO[0m	logger/logger.go:45	incoming request	{"method": "POST", "path": "/value", "time": "69.582µs"}
+2023-10-27T15:22:49.304+0300	[34mINFO[0m	logger/logger.go:64	Send response with	{"status": 404, "size": 0}
+2023-10-27T15:22:49.307+0300	[34mINFO[0m	logger/logger.go:54	[Entered JSONValueHandler]
+2023-10-27T15:22:49.307+0300	[34mINFO[0m	logger/logger.go:54	[Method checked]
+2023-10-27T15:22:49.307+0300	[34mINFO[0m	logger/logger.go:54	[Decoded metric {c_unk smth <nil> <nil>}]
+2023-10-27T15:22:49.307+0300	[31mERROR[0m	logger/logger.go:59	[wrong type smth]
+2023-10-27T15:22:49.307+0300	[34mINFO[0m	logger/logger.go:45	incoming request	{"method": "POST", "path": "/value", "time": "73.931µs"}
+2023-10-27T15:22:49.307+0300	[34mINFO[0m	logger/logger.go:64	Send response with	{"status": 400, "size": 0}
+2023-10-27T15:22:49.658+0300	[34mINFO[0m	logger/logger.go:45	incoming request	{"method": "POST", "path": "/update/gauge/anotherGaugeMetric/4.2", "time": "2.527µs"}
+2023-10-27T15:22:49.658+0300	[34mINFO[0m	logger/logger.go:64	Send response with	{"status": 200, "size": 0}
+2023-10-27T15:22:49.660+0300	[34mINFO[0m	logger/logger.go:45	incoming request	{"method": "POST", "path": "/update/gauge/gaugeMetric/4.2", "time": "2.026µs"}
+2023-10-27T15:22:49.660+0300	[34mINFO[0m	logger/logger.go:64	Send response with	{"status": 200, "size": 0}
+2023-10-27T15:22:49.662+0300	[34mINFO[0m	logger/logger.go:45	incoming request	{"method": "POST", "path": "/update/gauge/anotherCounterMtric/A5C", "time": "5.681µs"}
+2023-10-27T15:22:49.662+0300	[34mINFO[0m	logger/logger.go:64	Send response with	{"status": 400, "size": 0}
+2023-10-27T15:22:49.664+0300	[34mINFO[0m	logger/logger.go:45	incoming request	{"method": "POST", "path": "/update/counter/anothercounterMetric/42", "time": "1.82µs"}
+2023-10-27T15:22:49.664+0300	[34mINFO[0m	logger/logger.go:64	Send response with	{"status": 200, "size": 0}
+2023-10-27T15:22:49.666+0300	[34mINFO[0m	logger/logger.go:45	incoming request	{"method": "POST", "path": "/update/counter/counterMetric/42", "time": "2.975µs"}
+2023-10-27T15:22:49.666+0300	[34mINFO[0m	logger/logger.go:64	Send response with	{"status": 200, "size": 0}
+2023-10-27T15:22:49.668+0300	[34mINFO[0m	logger/logger.go:45	incoming request	{"method": "POST", "path": "/update/counter/anothercounterMtric/A5C", "time": "9.682µs"}
+2023-10-27T15:22:49.668+0300	[34mINFO[0m	logger/logger.go:64	Send response with	{"status": 400, "size": 0}
+2023-10-27T15:22:49.671+0300	[34mINFO[0m	logger/logger.go:45	incoming request	{"method": "GET", "path": "/value/gauge/g", "time": "8.693µs"}
+2023-10-27T15:22:49.671+0300	[34mINFO[0m	logger/logger.go:64	Send response with	{"status": 200, "size": 3}
+2023-10-27T15:22:49.672+0300	[34mINFO[0m	logger/logger.go:45	incoming request	{"method": "GET", "path": "/value/gauge/M", "time": "3.569µs"}
+2023-10-27T15:22:49.672+0300	[34mINFO[0m	logger/logger.go:64	Send response with	{"status": 404, "size": 0}
+2023-10-27T15:22:49.674+0300	[34mINFO[0m	logger/logger.go:45	incoming request	{"method": "GET", "path": "/value/counter/c", "time": "2.024µs"}
+2023-10-27T15:22:49.674+0300	[34mINFO[0m	logger/logger.go:64	Send response with	{"status": 200, "size": 1}
+2023-10-27T15:22:49.675+0300	[34mINFO[0m	logger/logger.go:45	incoming request	{"method": "GET", "path": "/value/counter/M", "time": "3.806µs"}
+2023-10-27T15:22:49.675+0300	[34mINFO[0m	logger/logger.go:64	Send response with	{"status": 404, "size": 0}
+2023-10-27T15:22:49.677+0300	[34mINFO[0m	logger/logger.go:54	[entered ShowAllHandler]
+2023-10-27T15:22:49.677+0300	[34mINFO[0m	logger/logger.go:54	[method checked]
+2023-10-27T15:22:49.677+0300	[34mINFO[0m	logger/logger.go:45	incoming request	{"method": "GET", "path": "/", "time": "11.337µs"}
+2023-10-27T15:22:49.677+0300	[34mINFO[0m	logger/logger.go:64	Send response with	{"status": 200, "size": 109}
+2023-10-27T15:22:49.678+0300	[34mINFO[0m	logger/logger.go:45	incoming request	{"method": "POST", "path": "/another", "time": "3.838µs"}
+2023-10-27T15:22:49.678+0300	[34mINFO[0m	logger/logger.go:64	Send response with	{"status": 400, "size": 0}
+2023-10-27T15:22:49.680+0300	[34mINFO[0m	logger/logger.go:45	incoming request	{"method": "GET", "path": "/another", "time": "3.265µs"}
+2023-10-27T15:22:49.680+0300	[34mINFO[0m	logger/logger.go:64	Send response with	{"status": 400, "size": 0}
+2023-10-27T15:22:49.681+0300	[34mINFO[0m	logger/logger.go:54	[Entered JSONUpdHandler]
+2023-10-27T15:22:49.681+0300	[34mINFO[0m	logger/logger.go:45	incoming request	{"method": "POST", "path": "/update", "time": "91.729µs"}
+2023-10-27T15:22:49.681+0300	[34mINFO[0m	logger/logger.go:64	Send response with	{"status": 200, "size": 41}
+2023-10-27T15:22:49.683+0300	[34mINFO[0m	logger/logger.go:54	[Entered JSONValueHandler]
+2023-10-27T15:22:49.683+0300	[34mINFO[0m	logger/logger.go:54	[Method checked]
+2023-10-27T15:22:49.683+0300	[34mINFO[0m	logger/logger.go:54	[Decoded metric {g gauge <nil> <nil>}]
+2023-10-27T15:22:49.683+0300	[34mINFO[0m	logger/logger.go:45	incoming request	{"method": "POST", "path": "/value", "time": "35.46µs"}
+2023-10-27T15:22:49.683+0300	[34mINFO[0m	logger/logger.go:64	Send response with	{"status": 200, "size": 37}
+2023-10-27T15:22:49.685+0300	[34mINFO[0m	logger/logger.go:54	[Entered JSONUpdHandler]
+2023-10-27T15:22:49.685+0300	[34mINFO[0m	logger/logger.go:45	incoming request	{"method": "POST", "path": "/update", "time": "30.688µs"}
+2023-10-27T15:22:49.685+0300	[34mINFO[0m	logger/logger.go:64	Send response with	{"status": 200, "size": 41}
+2023-10-27T15:22:49.687+0300	[34mINFO[0m	logger/logger.go:54	[Entered JSONUpdHandler]
+2023-10-27T15:22:49.687+0300	[31mERROR[0m	logger/logger.go:59	[wrong type smth]
+2023-10-27T15:22:49.687+0300	[34mINFO[0m	logger/logger.go:45	incoming request	{"method": "POST", "path": "/update", "time": "43.202µs"}
+2023-10-27T15:22:49.687+0300	[34mINFO[0m	logger/logger.go:64	Send response with	{"status": 400, "size": 0}
+2023-10-27T15:22:49.689+0300	[34mINFO[0m	logger/logger.go:54	[Entered JSONUpdHandler]
+2023-10-27T15:22:49.689+0300	[34mINFO[0m	logger/logger.go:45	incoming request	{"method": "POST", "path": "/update", "time": "26.364µs"}
+2023-10-27T15:22:49.689+0300	[34mINFO[0m	logger/logger.go:64	Send response with	{"status": 200, "size": 37}
+2023-10-27T15:22:49.690+0300	[34mINFO[0m	logger/logger.go:54	[Entered JSONUpdHandler]
+2023-10-27T15:22:49.690+0300	[34mINFO[0m	logger/logger.go:45	incoming request	{"method": "POST", "path": "/update", "time": "24.707µs"}
+2023-10-27T15:22:49.690+0300	[34mINFO[0m	logger/logger.go:64	Send response with	{"status": 200, "size": 37}
+2023-10-27T15:22:49.692+0300	[34mINFO[0m	logger/logger.go:54	[Entered JSONValueHandler]
+2023-10-27T15:22:49.692+0300	[34mINFO[0m	logger/logger.go:54	[Method checked]
+2023-10-27T15:22:49.692+0300	[34mINFO[0m	logger/logger.go:54	[Decoded metric {c counter <nil> <nil>}]
+2023-10-27T15:22:49.692+0300	[34mINFO[0m	logger/logger.go:45	incoming request	{"method": "POST", "path": "/value", "time": "23.068µs"}
+2023-10-27T15:22:49.692+0300	[34mINFO[0m	logger/logger.go:64	Send response with	{"status": 200, "size": 37}
+2023-10-27T15:22:49.693+0300	[34mINFO[0m	logger/logger.go:54	[Entered JSONValueHandler]
+2023-10-27T15:22:49.693+0300	[34mINFO[0m	logger/logger.go:54	[Method checked]
+2023-10-27T15:22:49.693+0300	[34mINFO[0m	logger/logger.go:54	[Decoded metric {c_unk counter <nil> <nil>}]
+2023-10-27T15:22:49.693+0300	[34mINFO[0m	logger/logger.go:54	[Metrics on server: gaugeMetric, c, ]
+2023-10-27T15:22:49.693+0300	[31mERROR[0m	logger/logger.go:59	[Cann't find metric]
+2023-10-27T15:22:49.693+0300	[34mINFO[0m	logger/logger.go:45	incoming request	{"method": "POST", "path": "/value", "time": "59.809µs"}
+2023-10-27T15:22:49.693+0300	[34mINFO[0m	logger/logger.go:64	Send response with	{"status": 404, "size": 0}
+2023-10-27T15:22:49.695+0300	[34mINFO[0m	logger/logger.go:54	[Entered JSONValueHandler]
+2023-10-27T15:22:49.695+0300	[34mINFO[0m	logger/logger.go:54	[Method checked]
+2023-10-27T15:22:49.695+0300	[34mINFO[0m	logger/logger.go:54	[Decoded metric {g_unk gauge <nil> <nil>}]
+2023-10-27T15:22:49.695+0300	[34mINFO[0m	logger/logger.go:54	[Metrics on server: gaugeMetric, c, ]
+2023-10-27T15:22:49.695+0300	[31mERROR[0m	logger/logger.go:59	[Cann't find metric]
+2023-10-27T15:22:49.695+0300	[34mINFO[0m	logger/logger.go:45	incoming request	{"method": "POST", "path": "/value", "time": "57.235µs"}
+2023-10-27T15:22:49.695+0300	[34mINFO[0m	logger/logger.go:64	Send response with	{"status": 404, "size": 0}
+2023-10-27T15:22:49.696+0300	[34mINFO[0m	logger/logger.go:54	[Entered JSONValueHandler]
+2023-10-27T15:22:49.696+0300	[34mINFO[0m	logger/logger.go:54	[Method checked]
+2023-10-27T15:22:49.696+0300	[34mINFO[0m	logger/logger.go:54	[Decoded metric {c_unk smth <nil> <nil>}]
+2023-10-27T15:22:49.696+0300	[31mERROR[0m	logger/logger.go:59	[wrong type smth]
+2023-10-27T15:22:49.696+0300	[34mINFO[0m	logger/logger.go:45	incoming request	{"method": "POST", "path": "/value", "time": "43.883µs"}
+2023-10-27T15:22:49.696+0300	[34mINFO[0m	logger/logger.go:64	Send response with	{"status": 400, "size": 0}
+2023-10-27T15:22:49.802+0300	[34mINFO[0m	logger/logger.go:45	incoming request	{"method": "POST", "path": "/update/gauge/anotherGaugeMetric/4.2", "time": "1.647µs"}
+2023-10-27T15:22:49.802+0300	[34mINFO[0m	logger/logger.go:64	Send response with	{"status": 200, "size": 0}
+2023-10-27T15:22:49.804+0300	[34mINFO[0m	logger/logger.go:45	incoming request	{"method": "POST", "path": "/update/gauge/gaugeMetric/4.2", "time": "1.196µs"}
+2023-10-27T15:22:49.804+0300	[34mINFO[0m	logger/logger.go:64	Send response with	{"status": 200, "size": 0}
+2023-10-27T15:22:49.805+0300	[34mINFO[0m	logger/logger.go:45	incoming request	{"method": "POST", "path": "/update/gauge/anotherCounterMtric/A5C", "time": "2.963µs"}
+2023-10-27T15:22:49.805+0300	[34mINFO[0m	logger/logger.go:64	Send response with	{"status": 400, "size": 0}
+2023-10-27T15:22:49.807+0300	[34mINFO[0m	logger/logger.go:45	incoming request	{"method": "POST", "path": "/update/counter/anothercounterMetric/42", "time": "1.272µs"}
+2023-10-27T15:22:49.807+0300	[34mINFO[0m	logger/logger.go:64	Send response with	{"status": 200, "size": 0}
+2023-10-27T15:22:49.809+0300	[34mINFO[0m	logger/logger.go:45	incoming request	{"method": "POST", "path": "/update/counter/counterMetric/42", "time": "1.108µs"}
+2023-10-27T15:22:49.809+0300	[34mINFO[0m	logger/logger.go:64	Send response with	{"status": 200, "size": 0}
+2023-10-27T15:22:49.810+0300	[34mINFO[0m	logger/logger.go:45	incoming request	{"method": "POST", "path": "/update/counter/anothercounterMtric/A5C", "time": "5.257µs"}
+2023-10-27T15:22:49.810+0300	[34mINFO[0m	logger/logger.go:64	Send response with	{"status": 400, "size": 0}
+2023-10-27T15:22:49.812+0300	[34mINFO[0m	logger/logger.go:45	incoming request	{"method": "GET", "path": "/value/gauge/g", "time": "8.816µs"}
+2023-10-27T15:22:49.812+0300	[34mINFO[0m	logger/logger.go:64	Send response with	{"status": 200, "size": 3}
+2023-10-27T15:22:49.814+0300	[34mINFO[0m	logger/logger.go:45	incoming request	{"method": "GET", "path": "/value/gauge/M", "time": "4.069µs"}
+2023-10-27T15:22:49.814+0300	[34mINFO[0m	logger/logger.go:64	Send response with	{"status": 404, "size": 0}
+2023-10-27T15:22:49.815+0300	[34mINFO[0m	logger/logger.go:45	incoming request	{"method": "GET", "path": "/value/counter/c", "time": "19.24µs"}
+2023-10-27T15:22:49.815+0300	[34mINFO[0m	logger/logger.go:64	Send response with	{"status": 200, "size": 1}
+2023-10-27T15:22:49.816+0300	[34mINFO[0m	logger/logger.go:45	incoming request	{"method": "GET", "path": "/value/counter/M", "time": "7.759µs"}
+2023-10-27T15:22:49.817+0300	[34mINFO[0m	logger/logger.go:64	Send response with	{"status": 404, "size": 0}
+2023-10-27T15:22:49.818+0300	[34mINFO[0m	logger/logger.go:54	[entered ShowAllHandler]
+2023-10-27T15:22:49.818+0300	[34mINFO[0m	logger/logger.go:54	[method checked]
+2023-10-27T15:22:49.818+0300	[34mINFO[0m	logger/logger.go:45	incoming request	{"method": "GET", "path": "/", "time": "28.437µs"}
+2023-10-27T15:22:49.818+0300	[34mINFO[0m	logger/logger.go:64	Send response with	{"status": 200, "size": 109}
+2023-10-27T15:22:49.820+0300	[34mINFO[0m	logger/logger.go:45	incoming request	{"method": "POST", "path": "/another", "time": "6.872µs"}
+2023-10-27T15:22:49.820+0300	[34mINFO[0m	logger/logger.go:64	Send response with	{"status": 400, "size": 0}
+2023-10-27T15:22:49.822+0300	[34mINFO[0m	logger/logger.go:45	incoming request	{"method": "GET", "path": "/another", "time": "6.461µs"}
+2023-10-27T15:22:49.822+0300	[34mINFO[0m	logger/logger.go:64	Send response with	{"status": 400, "size": 0}
+2023-10-27T15:22:49.824+0300	[34mINFO[0m	logger/logger.go:54	[Entered JSONUpdHandler]
+2023-10-27T15:22:49.824+0300	[34mINFO[0m	logger/logger.go:45	incoming request	{"method": "POST", "path": "/update", "time": "120.87µs"}
+2023-10-27T15:22:49.824+0300	[34mINFO[0m	logger/logger.go:64	Send response with	{"status": 200, "size": 41}
+2023-10-27T15:22:49.825+0300	[34mINFO[0m	logger/logger.go:54	[Entered JSONValueHandler]
+2023-10-27T15:22:49.825+0300	[34mINFO[0m	logger/logger.go:54	[Method checked]
+2023-10-27T15:22:49.825+0300	[34mINFO[0m	logger/logger.go:54	[Decoded metric {g gauge <nil> <nil>}]
+2023-10-27T15:22:49.825+0300	[34mINFO[0m	logger/logger.go:45	incoming request	{"method": "POST", "path": "/value", "time": "45.488µs"}
+2023-10-27T15:22:49.825+0300	[34mINFO[0m	logger/logger.go:64	Send response with	{"status": 200, "size": 37}
+2023-10-27T15:22:49.827+0300	[34mINFO[0m	logger/logger.go:54	[Entered JSONUpdHandler]
+2023-10-27T15:22:49.827+0300	[34mINFO[0m	logger/logger.go:45	incoming request	{"method": "POST", "path": "/update", "time": "45.172µs"}
+2023-10-27T15:22:49.827+0300	[34mINFO[0m	logger/logger.go:64	Send response with	{"status": 200, "size": 41}
+2023-10-27T15:22:49.829+0300	[34mINFO[0m	logger/logger.go:54	[Entered JSONUpdHandler]
+2023-10-27T15:22:49.829+0300	[31mERROR[0m	logger/logger.go:59	[wrong type smth]
+2023-10-27T15:22:49.829+0300	[34mINFO[0m	logger/logger.go:45	incoming request	{"method": "POST", "path": "/update", "time": "40.894µs"}
+2023-10-27T15:22:49.829+0300	[34mINFO[0m	logger/logger.go:64	Send response with	{"status": 400, "size": 0}
+2023-10-27T15:22:49.831+0300	[34mINFO[0m	logger/logger.go:54	[Entered JSONUpdHandler]
+2023-10-27T15:22:49.831+0300	[34mINFO[0m	logger/logger.go:45	incoming request	{"method": "POST", "path": "/update", "time": "49.85µs"}
+2023-10-27T15:22:49.831+0300	[34mINFO[0m	logger/logger.go:64	Send response with	{"status": 200, "size": 37}
+2023-10-27T15:22:49.833+0300	[34mINFO[0m	logger/logger.go:54	[Entered JSONUpdHandler]
+2023-10-27T15:22:49.833+0300	[34mINFO[0m	logger/logger.go:45	incoming request	{"method": "POST", "path": "/update", "time": "15.095µs"}
+2023-10-27T15:22:49.833+0300	[34mINFO[0m	logger/logger.go:64	Send response with	{"status": 200, "size": 37}
+2023-10-27T15:22:49.834+0300	[34mINFO[0m	logger/logger.go:54	[Entered JSONValueHandler]
+2023-10-27T15:22:49.834+0300	[34mINFO[0m	logger/logger.go:54	[Method checked]
+2023-10-27T15:22:49.834+0300	[34mINFO[0m	logger/logger.go:54	[Decoded metric {c counter <nil> <nil>}]
+2023-10-27T15:22:49.834+0300	[34mINFO[0m	logger/logger.go:45	incoming request	{"method": "POST", "path": "/value", "time": "21.598µs"}
+2023-10-27T15:22:49.834+0300	[34mINFO[0m	logger/logger.go:64	Send response with	{"status": 200, "size": 37}
+2023-10-27T15:22:49.836+0300	[34mINFO[0m	logger/logger.go:54	[Entered JSONValueHandler]
+2023-10-27T15:22:49.836+0300	[34mINFO[0m	logger/logger.go:54	[Method checked]
+2023-10-27T15:22:49.836+0300	[34mINFO[0m	logger/logger.go:54	[Decoded metric {c_unk counter <nil> <nil>}]
+2023-10-27T15:22:49.836+0300	[34mINFO[0m	logger/logger.go:54	[Metrics on server: gaugeMetric, c, ]
+2023-10-27T15:22:49.836+0300	[31mERROR[0m	logger/logger.go:59	[Cann't find metric]
+2023-10-27T15:22:49.836+0300	[34mINFO[0m	logger/logger.go:45	incoming request	{"method": "POST", "path": "/value", "time": "24.456µs"}
+2023-10-27T15:22:49.836+0300	[34mINFO[0m	logger/logger.go:64	Send response with	{"status": 404, "size": 0}
+2023-10-27T15:22:49.837+0300	[34mINFO[0m	logger/logger.go:54	[Entered JSONValueHandler]
+2023-10-27T15:22:49.837+0300	[34mINFO[0m	logger/logger.go:54	[Method checked]
+2023-10-27T15:22:49.837+0300	[34mINFO[0m	logger/logger.go:54	[Decoded metric {g_unk gauge <nil> <nil>}]
+2023-10-27T15:22:49.837+0300	[34mINFO[0m	logger/logger.go:54	[Metrics on server: gaugeMetric, c, ]
+2023-10-27T15:22:49.837+0300	[31mERROR[0m	logger/logger.go:59	[Cann't find metric]
+2023-10-27T15:22:49.837+0300	[34mINFO[0m	logger/logger.go:45	incoming request	{"method": "POST", "path": "/value", "time": "55.803µs"}
+2023-10-27T15:22:49.837+0300	[34mINFO[0m	logger/logger.go:64	Send response with	{"status": 404, "size": 0}
+2023-10-27T15:22:49.839+0300	[34mINFO[0m	logger/logger.go:54	[Entered JSONValueHandler]
+2023-10-27T15:22:49.839+0300	[34mINFO[0m	logger/logger.go:54	[Method checked]
+2023-10-27T15:22:49.839+0300	[34mINFO[0m	logger/logger.go:54	[Decoded metric {c_unk smth <nil> <nil>}]
+2023-10-27T15:22:49.839+0300	[31mERROR[0m	logger/logger.go:59	[wrong type smth]
+2023-10-27T15:22:49.839+0300	[34mINFO[0m	logger/logger.go:45	incoming request	{"method": "POST", "path": "/value", "time": "45.385µs"}
+2023-10-27T15:22:49.839+0300	[34mINFO[0m	logger/logger.go:64	Send response with	{"status": 400, "size": 0}
+2023-10-27T15:22:50.021+0300	[34mINFO[0m	logger/logger.go:45	incoming request	{"method": "POST", "path": "/update/gauge/anotherGaugeMetric/4.2", "time": "2.663µs"}
+2023-10-27T15:22:50.021+0300	[34mINFO[0m	logger/logger.go:64	Send response with	{"status": 200, "size": 0}
+2023-10-27T15:22:50.028+0300	[34mINFO[0m	logger/logger.go:45	incoming request	{"method": "POST", "path": "/update/gauge/gaugeMetric/4.2", "time": "4.57µs"}
+2023-10-27T15:22:50.028+0300	[34mINFO[0m	logger/logger.go:64	Send response with	{"status": 200, "size": 0}
+2023-10-27T15:22:50.034+0300	[34mINFO[0m	logger/logger.go:45	incoming request	{"method": "POST", "path": "/update/gauge/anotherCounterMtric/A5C", "time": "16.39µs"}
+2023-10-27T15:22:50.034+0300	[34mINFO[0m	logger/logger.go:64	Send response with	{"status": 400, "size": 0}
+2023-10-27T15:22:50.039+0300	[34mINFO[0m	logger/logger.go:45	incoming request	{"method": "POST", "path": "/update/counter/anothercounterMetric/42", "time": "2.395µs"}
+2023-10-27T15:22:50.039+0300	[34mINFO[0m	logger/logger.go:64	Send response with	{"status": 200, "size": 0}
+2023-10-27T15:22:50.041+0300	[34mINFO[0m	logger/logger.go:45	incoming request	{"method": "POST", "path": "/update/counter/counterMetric/42", "time": "2.692µs"}
+2023-10-27T15:22:50.041+0300	[34mINFO[0m	logger/logger.go:64	Send response with	{"status": 200, "size": 0}
+2023-10-27T15:22:50.043+0300	[34mINFO[0m	logger/logger.go:45	incoming request	{"method": "POST", "path": "/update/counter/anothercounterMtric/A5C", "time": "6.993µs"}
+2023-10-27T15:22:50.043+0300	[34mINFO[0m	logger/logger.go:64	Send response with	{"status": 400, "size": 0}
+2023-10-27T15:22:50.047+0300	[34mINFO[0m	logger/logger.go:45	incoming request	{"method": "GET", "path": "/value/gauge/g", "time": "25.953µs"}
+2023-10-27T15:22:50.048+0300	[34mINFO[0m	logger/logger.go:64	Send response with	{"status": 200, "size": 3}
+2023-10-27T15:22:50.050+0300	[34mINFO[0m	logger/logger.go:45	incoming request	{"method": "GET", "path": "/value/gauge/M", "time": "9.521µs"}
+2023-10-27T15:22:50.050+0300	[34mINFO[0m	logger/logger.go:64	Send response with	{"status": 404, "size": 0}
+2023-10-27T15:22:50.052+0300	[34mINFO[0m	logger/logger.go:45	incoming request	{"method": "GET", "path": "/value/counter/c", "time": "6.301µs"}
+2023-10-27T15:22:50.052+0300	[34mINFO[0m	logger/logger.go:64	Send response with	{"status": 200, "size": 1}
+2023-10-27T15:22:50.054+0300	[34mINFO[0m	logger/logger.go:45	incoming request	{"method": "GET", "path": "/value/counter/M", "time": "7.956µs"}
+2023-10-27T15:22:50.054+0300	[34mINFO[0m	logger/logger.go:64	Send response with	{"status": 404, "size": 0}
+2023-10-27T15:22:50.056+0300	[34mINFO[0m	logger/logger.go:54	[entered ShowAllHandler]
+2023-10-27T15:22:50.056+0300	[34mINFO[0m	logger/logger.go:54	[method checked]
+2023-10-27T15:22:50.056+0300	[34mINFO[0m	logger/logger.go:45	incoming request	{"method": "GET", "path": "/", "time": "26.542µs"}
+2023-10-27T15:22:50.056+0300	[34mINFO[0m	logger/logger.go:64	Send response with	{"status": 200, "size": 109}
+2023-10-27T15:22:50.058+0300	[34mINFO[0m	logger/logger.go:45	incoming request	{"method": "POST", "path": "/another", "time": "5.605µs"}
+2023-10-27T15:22:50.058+0300	[34mINFO[0m	logger/logger.go:64	Send response with	{"status": 400, "size": 0}
+2023-10-27T15:22:50.060+0300	[34mINFO[0m	logger/logger.go:45	incoming request	{"method": "GET", "path": "/another", "time": "7.687µs"}
+2023-10-27T15:22:50.060+0300	[34mINFO[0m	logger/logger.go:64	Send response with	{"status": 400, "size": 0}
+2023-10-27T15:22:50.063+0300	[34mINFO[0m	logger/logger.go:54	[Entered JSONUpdHandler]
+2023-10-27T15:22:50.063+0300	[34mINFO[0m	logger/logger.go:45	incoming request	{"method": "POST", "path": "/update", "time": "368.406µs"}
+2023-10-27T15:22:50.063+0300	[34mINFO[0m	logger/logger.go:64	Send response with	{"status": 200, "size": 41}
+2023-10-27T15:22:50.065+0300	[34mINFO[0m	logger/logger.go:54	[Entered JSONValueHandler]
+2023-10-27T15:22:50.065+0300	[34mINFO[0m	logger/logger.go:54	[Method checked]
+2023-10-27T15:22:50.066+0300	[34mINFO[0m	logger/logger.go:54	[Decoded metric {g gauge <nil> <nil>}]
+2023-10-27T15:22:50.066+0300	[34mINFO[0m	logger/logger.go:45	incoming request	{"method": "POST", "path": "/value", "time": "86.042µs"}
+2023-10-27T15:22:50.066+0300	[34mINFO[0m	logger/logger.go:64	Send response with	{"status": 200, "size": 37}
+2023-10-27T15:22:50.068+0300	[34mINFO[0m	logger/logger.go:54	[Entered JSONUpdHandler]
+2023-10-27T15:22:50.068+0300	[34mINFO[0m	logger/logger.go:45	incoming request	{"method": "POST", "path": "/update", "time": "27.691µs"}
+2023-10-27T15:22:50.068+0300	[34mINFO[0m	logger/logger.go:64	Send response with	{"status": 200, "size": 41}
+2023-10-27T15:22:50.070+0300	[34mINFO[0m	logger/logger.go:54	[Entered JSONUpdHandler]
+2023-10-27T15:22:50.070+0300	[31mERROR[0m	logger/logger.go:59	[wrong type smth]
+2023-10-27T15:22:50.070+0300	[34mINFO[0m	logger/logger.go:45	incoming request	{"method": "POST", "path": "/update", "time": "38.96µs"}
+2023-10-27T15:22:50.070+0300	[34mINFO[0m	logger/logger.go:64	Send response with	{"status": 400, "size": 0}
+2023-10-27T15:22:50.072+0300	[34mINFO[0m	logger/logger.go:54	[Entered JSONUpdHandler]
+2023-10-27T15:22:50.072+0300	[34mINFO[0m	logger/logger.go:45	incoming request	{"method": "POST", "path": "/update", "time": "35.586µs"}
+2023-10-27T15:22:50.072+0300	[34mINFO[0m	logger/logger.go:64	Send response with	{"status": 200, "size": 37}
+2023-10-27T15:22:50.074+0300	[34mINFO[0m	logger/logger.go:54	[Entered JSONUpdHandler]
+2023-10-27T15:22:50.074+0300	[34mINFO[0m	logger/logger.go:45	incoming request	{"method": "POST", "path": "/update", "time": "48.414µs"}
+2023-10-27T15:22:50.074+0300	[34mINFO[0m	logger/logger.go:64	Send response with	{"status": 200, "size": 37}
+2023-10-27T15:22:50.077+0300	[34mINFO[0m	logger/logger.go:54	[Entered JSONValueHandler]
+2023-10-27T15:22:50.077+0300	[34mINFO[0m	logger/logger.go:54	[Method checked]
+2023-10-27T15:22:50.077+0300	[34mINFO[0m	logger/logger.go:54	[Decoded metric {c counter <nil> <nil>}]
+2023-10-27T15:22:50.077+0300	[34mINFO[0m	logger/logger.go:45	incoming request	{"method": "POST", "path": "/value", "time": "57.803µs"}
+2023-10-27T15:22:50.077+0300	[34mINFO[0m	logger/logger.go:64	Send response with	{"status": 200, "size": 37}
+2023-10-27T15:22:50.079+0300	[34mINFO[0m	logger/logger.go:54	[Entered JSONValueHandler]
+2023-10-27T15:22:50.079+0300	[34mINFO[0m	logger/logger.go:54	[Method checked]
+2023-10-27T15:22:50.079+0300	[34mINFO[0m	logger/logger.go:54	[Decoded metric {c_unk counter <nil> <nil>}]
+2023-10-27T15:22:50.079+0300	[34mINFO[0m	logger/logger.go:54	[Metrics on server: gaugeMetric, c, ]
+2023-10-27T15:22:50.079+0300	[31mERROR[0m	logger/logger.go:59	[Cann't find metric]
+2023-10-27T15:22:50.079+0300	[34mINFO[0m	logger/logger.go:45	incoming request	{"method": "POST", "path": "/value", "time": "48.03µs"}
+2023-10-27T15:22:50.079+0300	[34mINFO[0m	logger/logger.go:64	Send response with	{"status": 404, "size": 0}
+2023-10-27T15:22:50.081+0300	[34mINFO[0m	logger/logger.go:54	[Entered JSONValueHandler]
+2023-10-27T15:22:50.081+0300	[34mINFO[0m	logger/logger.go:54	[Method checked]
+2023-10-27T15:22:50.081+0300	[34mINFO[0m	logger/logger.go:54	[Decoded metric {g_unk gauge <nil> <nil>}]
+2023-10-27T15:22:50.081+0300	[34mINFO[0m	logger/logger.go:54	[Metrics on server: gaugeMetric, c, ]
+2023-10-27T15:22:50.081+0300	[31mERROR[0m	logger/logger.go:59	[Cann't find metric]
+2023-10-27T15:22:50.081+0300	[34mINFO[0m	logger/logger.go:45	incoming request	{"method": "POST", "path": "/value", "time": "71.156µs"}
+2023-10-27T15:22:50.081+0300	[34mINFO[0m	logger/logger.go:64	Send response with	{"status": 404, "size": 0}
+2023-10-27T15:22:50.087+0300	[34mINFO[0m	logger/logger.go:54	[Entered JSONValueHandler]
+2023-10-27T15:22:50.087+0300	[34mINFO[0m	logger/logger.go:54	[Method checked]
+2023-10-27T15:22:50.087+0300	[34mINFO[0m	logger/logger.go:54	[Decoded metric {c_unk smth <nil> <nil>}]
+2023-10-27T15:22:50.087+0300	[31mERROR[0m	logger/logger.go:59	[wrong type smth]
+2023-10-27T15:22:50.087+0300	[34mINFO[0m	logger/logger.go:45	incoming request	{"method": "POST", "path": "/value", "time": "71.317µs"}
+2023-10-27T15:22:50.087+0300	[34mINFO[0m	logger/logger.go:64	Send response with	{"status": 400, "size": 0}
+2023-10-27T15:26:52.776+0300	[34mINFO[0m	logger/logger.go:45	incoming request	{"method": "POST", "path": "/update/gauge/anotherGaugeMetric/4.2", "time": "1.869µs"}
+2023-10-27T15:26:52.776+0300	[34mINFO[0m	logger/logger.go:64	Send response with	{"status": 200, "size": 0}
+2023-10-27T15:26:52.778+0300	[34mINFO[0m	logger/logger.go:45	incoming request	{"method": "POST", "path": "/update/gauge/gaugeMetric/4.2", "time": "1.382µs"}
+2023-10-27T15:26:52.778+0300	[34mINFO[0m	logger/logger.go:64	Send response with	{"status": 200, "size": 0}
+2023-10-27T15:26:52.780+0300	[34mINFO[0m	logger/logger.go:45	incoming request	{"method": "POST", "path": "/update/gauge/anotherCounterMtric/A5C", "time": "3.547µs"}
+2023-10-27T15:26:52.780+0300	[34mINFO[0m	logger/logger.go:64	Send response with	{"status": 400, "size": 0}
+2023-10-27T15:26:52.782+0300	[34mINFO[0m	logger/logger.go:45	incoming request	{"method": "POST", "path": "/update/counter/anothercounterMetric/42", "time": "1.225µs"}
+2023-10-27T15:26:52.782+0300	[34mINFO[0m	logger/logger.go:64	Send response with	{"status": 200, "size": 0}
+2023-10-27T15:26:52.784+0300	[34mINFO[0m	logger/logger.go:45	incoming request	{"method": "POST", "path": "/update/counter/counterMetric/42", "time": "1.45µs"}
+2023-10-27T15:26:52.784+0300	[34mINFO[0m	logger/logger.go:64	Send response with	{"status": 200, "size": 0}
+2023-10-27T15:26:52.785+0300	[34mINFO[0m	logger/logger.go:45	incoming request	{"method": "POST", "path": "/update/counter/anothercounterMtric/A5C", "time": "3.503µs"}
+2023-10-27T15:26:52.785+0300	[34mINFO[0m	logger/logger.go:64	Send response with	{"status": 400, "size": 0}
+2023-10-27T15:26:52.787+0300	[34mINFO[0m	logger/logger.go:45	incoming request	{"method": "GET", "path": "/value/gauge/g", "time": "10.11µs"}
+2023-10-27T15:26:52.787+0300	[34mINFO[0m	logger/logger.go:64	Send response with	{"status": 200, "size": 3}
+2023-10-27T15:26:52.789+0300	[34mINFO[0m	logger/logger.go:45	incoming request	{"method": "GET", "path": "/value/gauge/M", "time": "10.345µs"}
+2023-10-27T15:26:52.789+0300	[34mINFO[0m	logger/logger.go:64	Send response with	{"status": 404, "size": 0}
+2023-10-27T15:26:52.791+0300	[34mINFO[0m	logger/logger.go:45	incoming request	{"method": "GET", "path": "/value/counter/c", "time": "2.924µs"}
+2023-10-27T15:26:52.791+0300	[34mINFO[0m	logger/logger.go:64	Send response with	{"status": 200, "size": 1}
+2023-10-27T15:26:52.792+0300	[34mINFO[0m	logger/logger.go:45	incoming request	{"method": "GET", "path": "/value/counter/M", "time": "4.39µs"}
+2023-10-27T15:26:52.793+0300	[34mINFO[0m	logger/logger.go:64	Send response with	{"status": 404, "size": 0}
+2023-10-27T15:26:52.794+0300	[34mINFO[0m	logger/logger.go:54	entered ShowAllHandler
+2023-10-27T15:26:52.794+0300	[34mINFO[0m	logger/logger.go:54	method checked
+2023-10-27T15:26:52.794+0300	[34mINFO[0m	logger/logger.go:54	Metrics collected
+2023-10-27T15:26:52.794+0300	[34mINFO[0m	logger/logger.go:45	incoming request	{"method": "GET", "path": "/", "time": "24.901µs"}
+2023-10-27T15:26:52.794+0300	[34mINFO[0m	logger/logger.go:64	Send response with	{"status": 200, "size": 109}
+2023-10-27T15:26:52.796+0300	[34mINFO[0m	logger/logger.go:45	incoming request	{"method": "POST", "path": "/another", "time": "3.361µs"}
+2023-10-27T15:26:52.796+0300	[34mINFO[0m	logger/logger.go:64	Send response with	{"status": 400, "size": 0}
+2023-10-27T15:26:52.797+0300	[34mINFO[0m	logger/logger.go:45	incoming request	{"method": "GET", "path": "/another", "time": "3.734µs"}
+2023-10-27T15:26:52.797+0300	[34mINFO[0m	logger/logger.go:64	Send response with	{"status": 400, "size": 0}
+2023-10-27T15:26:52.799+0300	[34mINFO[0m	logger/logger.go:54	Entered JSONUpdHandler
+2023-10-27T15:26:52.799+0300	[34mINFO[0m	logger/logger.go:45	incoming request	{"method": "POST", "path": "/update", "time": "267.537µs"}
+2023-10-27T15:26:52.799+0300	[34mINFO[0m	logger/logger.go:64	Send response with	{"status": 200, "size": 41}
+2023-10-27T15:26:52.801+0300	[34mINFO[0m	logger/logger.go:54	Entered JSONValueHandler
+2023-10-27T15:26:52.801+0300	[34mINFO[0m	logger/logger.go:54	Method checked
+2023-10-27T15:26:52.801+0300	[34mINFO[0m	logger/logger.go:54	Decoded metric {g gauge <nil> <nil>}
+2023-10-27T15:26:52.801+0300	[34mINFO[0m	logger/logger.go:45	incoming request	{"method": "POST", "path": "/value", "time": "90.4µs"}
+2023-10-27T15:26:52.801+0300	[34mINFO[0m	logger/logger.go:64	Send response with	{"status": 200, "size": 37}
+2023-10-27T15:26:52.803+0300	[34mINFO[0m	logger/logger.go:54	Entered JSONUpdHandler
+2023-10-27T15:26:52.803+0300	[34mINFO[0m	logger/logger.go:45	incoming request	{"method": "POST", "path": "/update", "time": "34.22µs"}
+2023-10-27T15:26:52.803+0300	[34mINFO[0m	logger/logger.go:64	Send response with	{"status": 200, "size": 41}
+2023-10-27T15:26:52.804+0300	[34mINFO[0m	logger/logger.go:54	Entered JSONUpdHandler
+2023-10-27T15:26:52.804+0300	[31mERROR[0m	logger/logger.go:59	wrong type smth
+2023-10-27T15:26:52.804+0300	[34mINFO[0m	logger/logger.go:45	incoming request	{"method": "POST", "path": "/update", "time": "34.571µs"}
+2023-10-27T15:26:52.804+0300	[34mINFO[0m	logger/logger.go:64	Send response with	{"status": 400, "size": 0}
+2023-10-27T15:26:52.806+0300	[34mINFO[0m	logger/logger.go:54	Entered JSONUpdHandler
+2023-10-27T15:26:52.806+0300	[34mINFO[0m	logger/logger.go:45	incoming request	{"method": "POST", "path": "/update", "time": "30.058µs"}
+2023-10-27T15:26:52.806+0300	[34mINFO[0m	logger/logger.go:64	Send response with	{"status": 200, "size": 37}
+2023-10-27T15:26:52.808+0300	[34mINFO[0m	logger/logger.go:54	Entered JSONUpdHandler
+2023-10-27T15:26:52.808+0300	[34mINFO[0m	logger/logger.go:45	incoming request	{"method": "POST", "path": "/update", "time": "27.921µs"}
+2023-10-27T15:26:52.808+0300	[34mINFO[0m	logger/logger.go:64	Send response with	{"status": 200, "size": 37}
+2023-10-27T15:26:52.810+0300	[34mINFO[0m	logger/logger.go:54	Entered JSONValueHandler
+2023-10-27T15:26:52.810+0300	[34mINFO[0m	logger/logger.go:54	Method checked
+2023-10-27T15:26:52.810+0300	[34mINFO[0m	logger/logger.go:54	Decoded metric {c counter <nil> <nil>}
+2023-10-27T15:26:52.810+0300	[34mINFO[0m	logger/logger.go:45	incoming request	{"method": "POST", "path": "/value", "time": "70µs"}
+2023-10-27T15:26:52.810+0300	[34mINFO[0m	logger/logger.go:64	Send response with	{"status": 200, "size": 37}
+2023-10-27T15:26:52.812+0300	[34mINFO[0m	logger/logger.go:54	Entered JSONValueHandler
+2023-10-27T15:26:52.812+0300	[34mINFO[0m	logger/logger.go:54	Method checked
+2023-10-27T15:26:52.812+0300	[34mINFO[0m	logger/logger.go:54	Decoded metric {c_unk counter <nil> <nil>}
+2023-10-27T15:26:52.812+0300	[34mINFO[0m	logger/logger.go:54	Metrics on server: gaugeMetric, c, 
+2023-10-27T15:26:52.812+0300	[31mERROR[0m	logger/logger.go:59	Cann't find metric
+2023-10-27T15:26:52.812+0300	[34mINFO[0m	logger/logger.go:45	incoming request	{"method": "POST", "path": "/value", "time": "83.003µs"}
+2023-10-27T15:26:52.812+0300	[34mINFO[0m	logger/logger.go:64	Send response with	{"status": 404, "size": 0}
+2023-10-27T15:26:52.813+0300	[34mINFO[0m	logger/logger.go:54	Entered JSONValueHandler
+2023-10-27T15:26:52.813+0300	[34mINFO[0m	logger/logger.go:54	Method checked
+2023-10-27T15:26:52.813+0300	[34mINFO[0m	logger/logger.go:54	Decoded metric {g_unk gauge <nil> <nil>}
+2023-10-27T15:26:52.813+0300	[34mINFO[0m	logger/logger.go:54	Metrics on server: gaugeMetric, c, 
+2023-10-27T15:26:52.813+0300	[31mERROR[0m	logger/logger.go:59	Cann't find metric
+2023-10-27T15:26:52.813+0300	[34mINFO[0m	logger/logger.go:45	incoming request	{"method": "POST", "path": "/value", "time": "36.029µs"}
+2023-10-27T15:26:52.813+0300	[34mINFO[0m	logger/logger.go:64	Send response with	{"status": 404, "size": 0}
+2023-10-27T15:26:52.815+0300	[34mINFO[0m	logger/logger.go:54	Entered JSONValueHandler
+2023-10-27T15:26:52.815+0300	[34mINFO[0m	logger/logger.go:54	Method checked
+2023-10-27T15:26:52.815+0300	[34mINFO[0m	logger/logger.go:54	Decoded metric {c_unk smth <nil> <nil>}
+2023-10-27T15:26:52.815+0300	[31mERROR[0m	logger/logger.go:59	wrong type smth
+2023-10-27T15:26:52.815+0300	[34mINFO[0m	logger/logger.go:45	incoming request	{"method": "POST", "path": "/value", "time": "38.309µs"}
+2023-10-27T15:26:52.815+0300	[34mINFO[0m	logger/logger.go:64	Send response with	{"status": 400, "size": 0}

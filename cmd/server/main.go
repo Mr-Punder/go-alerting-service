@@ -26,7 +26,7 @@ func run(conf *config.Config) error {
 
 	storage := new(storage.MemStorage)
 
-	zapLogger.Info(fmt.Sprintf("Started server on %s", conf.FlagRunAddr))
+	zapLogger.Info(fmt.Sprintf("Starting server on %s", conf.FlagRunAddr))
 	return http.ListenAndServe(conf.FlagRunAddr, handlers.MetricRouter(storage, zapLogger))
 
 }

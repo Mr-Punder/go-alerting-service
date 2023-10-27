@@ -23,9 +23,15 @@ func main() {
 	}
 }
 
-func sendMetrics(metrics []metrics.Metrics, addres string) error {
+type simpleLogger interface {
+	Info(mes string)
+	Error(mes string)
+}
+
+func sendMetrics(metrics []metrics.Metrics, addres string, logger simpleLogger) error {
 	init := fmt.Sprintf("%s/update", addres)
 	client := resty.New()
+	logger.Info("client initialized")
 
 	for _, metric := range metrics {
 		url := init
@@ -33,13 +39,40 @@ func sendMetrics(metrics []metrics.Metrics, addres string) error {
 		if err != nil {
 			panic(err)
 		}
+		if metric.MType == "gauge" {
+			logger.Info(fmt.Sprintf("metric to encode %s %s %f", metric.ID, metric.MType, *metric.Value))
+		} else {
+			logger.Info(fmt.Sprintf("metric to encode %s %s %d", metric.ID, metric.MType, *metric.Delta))
+
+		}
+		logger.Info(fmt.Sprintf("Metric %s encoded to %s", metric.ID, body))
 
 		resp, err := client.R().SetHeader("Content-Type", "application/json").SetBody(body).Post(url)
+		logger.Info(fmt.Sprintf("Send request, err : %v", err))
+
+		retries := 3
+		for i := 0; i < retries; i++ {
+			if err != nil {
+
+				time.Sleep(5 * time.Second)
+				resp, err = client.R().SetHeader("Content-Type", "application/json").SetBody(body).Post(url)
+				logger.Info("Repeat request")
+				if err != nil {
+					i++
+				} else {
+					break
+				}
+			}
+		}
 
 		if err != nil {
+
+			logger.Error(fmt.Sprintf("sending error %e", err))
 			return err
 		}
 		if resp.StatusCode() != http.StatusOK {
+			logger.Error(fmt.Sprintf("Unexpected code %d", resp.StatusCode()))
+
 			return fmt.Errorf("unexpected status code: %d", resp.StatusCode())
 		}
 	}
@@ -55,6 +88,8 @@ func run() error {
 	reportTicker := time.NewTicker(config.ReportInterval)
 	defer pollTicker.Stop()
 	defer reportTicker.Stop()
+	//time.Sleep(11 * time.Second)
+	zapLogger.Info("agent started")
 
 	metric := Collect()
 	zapLogger.Info("metrics collected")
@@ -65,8 +100,8 @@ func run() error {
 
 		case <-reportTicker.C:
 			address := "http://" + config.ServerAddress
-			zapLogger.Info(fmt.Sprintf("metrics sent to %s", address))
-			err := sendMetrics(metric, address)
+			zapLogger.Info(fmt.Sprintf("sending metrics to %s", address))
+			err := sendMetrics(metric, address, zapLogger)
 			if err != nil {
 				return err
 			}
@@ -81,151 +116,181 @@ func Collect() []metrics.Metrics {
 	memStats := runtime.MemStats{}
 	runtime.ReadMemStats(&memStats)
 
+	Alloc := float64(memStats.Alloc)
+	BuckHashSys := float64(memStats.BuckHashSys)
+	Frees := float64(memStats.Frees)
+	GCCPUFraction := memStats.GCCPUFraction
+	GCSys := float64(memStats.GCSys)
+	HeapAlloc := float64(memStats.HeapAlloc)
+	HeapIdle := float64(memStats.HeapIdle)
+	HeapInuse := float64(memStats.HeapInuse)
+	HeapObjects := float64(memStats.HeapObjects)
+	HeapReleased := float64(memStats.HeapReleased)
+	HeapSys := float64(memStats.HeapSys)
+	LastGC := float64(memStats.LastGC)
+	Lookups := float64(memStats.Lookups)
+	MCacheInuse := float64(memStats.MCacheInuse)
+	MCacheSys := float64(memStats.MCacheSys)
+	MSpanInuse := float64(memStats.MSpanInuse)
+	MSpanSys := float64(memStats.MSpanSys)
+	Mallocs := float64(memStats.Mallocs)
+	NextGC := float64(memStats.NextGC)
+	NumForcedGC := float64(memStats.NumForcedGC)
+	NumGC := float64(uint64(memStats.NumGC))
+	OtherSys := float64(memStats.OtherSys)
+	PauseTotalNs := float64(memStats.PauseTotalNs)
+	StackInuse := float64(memStats.StackInuse)
+	StackSys := float64(memStats.StackSys)
+	Sys := float64(memStats.Sys)
+	TotalAlloc := float64(memStats.TotalAlloc)
+	var PollCount int64 = 1
+	RandomValue := rand.Float64()
+
 	return []metrics.Metrics{
 		{
 			ID:    "Alloc",
 			MType: "gauge",
-			Value: float64(memStats.Alloc),
+			Value: &Alloc,
 		},
 		{
 			ID:    "BuckHashSys",
 			MType: "gauge",
-			Value: float64(memStats.BuckHashSys),
+			Value: &BuckHashSys,
 		},
 		{
 			ID:    "Frees",
 			MType: "gauge",
-			Value: float64(memStats.Frees),
+			Value: &Frees,
 		},
 		{
 			ID:    "GCCPUFraction",
 			MType: "gauge",
-			Value: memStats.GCCPUFraction,
+			Value: &GCCPUFraction,
 		},
 		{
 			ID:    "GCSys",
 			MType: "gauge",
-			Value: float64(memStats.GCSys),
+			Value: &GCSys,
 		},
 		{
 			ID:    "HeapAlloc",
 			MType: "gauge",
-			Value: float64(memStats.HeapAlloc),
+			Value: &HeapAlloc,
 		},
 		{
 			ID:    "HeapIdle",
 			MType: "gauge",
-			Value: float64(memStats.HeapIdle),
+			Value: &HeapIdle,
 		},
 		{
 			ID:    "HeapInuse",
 			MType: "gauge",
-			Value: float64(memStats.HeapInuse),
+			Value: &HeapInuse,
 		},
 		{
 			ID:    "HeapObjects",
 			MType: "gauge",
-			Value: float64(memStats.HeapObjects),
+			Value: &HeapObjects,
 		},
 		{
 			ID:    "HeapReleased",
 			MType: "gauge",
-			Value: float64(memStats.HeapReleased),
+			Value: &HeapReleased,
 		},
 		{
 			ID:    "HeapSys",
 			MType: "gauge",
-			Value: float64(memStats.HeapSys),
+			Value: &HeapSys,
 		},
 		{
 			ID:    "LastGC",
 			MType: "gauge",
-			Value: float64(memStats.LastGC),
+			Value: &LastGC,
 		},
 		{
 			ID:    "Lookups",
 			MType: "gauge",
-			Value: float64(memStats.Lookups),
+			Value: &Lookups,
 		},
 		{
 			ID:    "MCacheInuse",
 			MType: "gauge",
-			Value: float64(memStats.MCacheInuse),
+			Value: &MCacheInuse,
 		},
 		{
 			ID:    "MCacheSys",
 			MType: "gauge",
-			Value: float64(memStats.MCacheSys),
+			Value: &MCacheSys,
 		},
 		{
 			ID:    "MSpanInuse",
 			MType: "gauge",
-			Value: float64(memStats.MSpanInuse),
+			Value: &MSpanInuse,
 		},
 		{
 			ID:    "MSpanSys",
 			MType: "gauge",
-			Value: float64(memStats.MSpanSys),
+			Value: &MSpanSys,
 		},
 		{
 			ID:    "Mallocs",
 			MType: "gauge",
-			Value: float64(memStats.Mallocs),
+			Value: &Mallocs,
 		},
 		{
-			ID:    "NextGfloat64C",
+			ID:    "NextGC",
 			MType: "gauge",
-			Value: float64(memStats.NextGC),
+			Value: &NextGC,
 		},
 		{
 			ID:    "NumForcedGC",
 			MType: "gauge",
-			Value: float64(memStats.NumForcedGC),
+			Value: &NumForcedGC,
 		},
 		{
 			ID:    "NumGC",
 			MType: "gauge",
-			Value: float64(uint64(memStats.NumGC)),
+			Value: &NumGC,
 		},
 		{
 			ID:    "OtherSys",
 			MType: "gauge",
-			Value: float64(memStats.OtherSys),
+			Value: &OtherSys,
 		},
 		{
 			ID:    "PauseTotalNs",
 			MType: "gauge",
-			Value: float64(memStats.PauseTotalNs),
+			Value: &PauseTotalNs,
 		},
 		{
 			ID:    "StackInuse",
 			MType: "gauge",
-			Value: float64(memStats.StackInuse),
+			Value: &StackInuse,
 		},
 		{
 			ID:    "StackSys",
 			MType: "gauge",
-			Value: float64(memStats.StackSys),
+			Value: &StackSys,
 		},
 		{
 			ID:    "Sys",
 			MType: "gauge",
-			Value: float64(memStats.Sys),
+			Value: &Sys,
 		},
 		{
 			ID:    "TotalAlloc",
 			MType: "gauge",
-			Value: float64(memStats.TotalAlloc),
+			Value: &TotalAlloc,
 		},
 		{
 			ID:    "PollCount",
 			MType: "counter",
-			Delta: 1,
+			Delta: &PollCount,
 		},
 		{
 			ID:    "RandomValue",
 			MType: "gauge",
-			Value: rand.Float64(),
+			Value: &RandomValue,
 		},
 	}
 }

@@ -36,6 +36,9 @@ func testRequest(t *testing.T, ts *httptest.Server, method, path string, sentbod
 
 func TestMetricRouter(t *testing.T) {
 
+	simpleValue := func() *float64 { var v float64 = 1.5; return &v }
+	simpleDelta := func() *int64 { var d int64 = 2; return &d }
+
 	tests := []struct {
 		name        string
 		method      string
@@ -56,12 +59,12 @@ func TestMetricRouter(t *testing.T) {
 				"gaugeMetric": {
 					ID:    "gaugeMetric",
 					MType: "gauge",
-					Value: 1.5,
+					Value: simpleValue(),
 				},
 				"counterMetric": {
 					ID:    "counterMetric",
 					MType: "counter",
-					Delta: 2,
+					Delta: simpleDelta(),
 				},
 			},
 			wantHeaders: map[string]string{},
@@ -76,12 +79,12 @@ func TestMetricRouter(t *testing.T) {
 				"gaugeMetric": {
 					ID:    "gaugeMetric",
 					MType: "gauge",
-					Value: 1.5,
+					Value: simpleValue(),
 				},
 				"counterMetric": {
 					ID:    "counterMetric",
 					MType: "counter",
-					Delta: 2,
+					Delta: simpleDelta(),
 				},
 			},
 			sentHeaders: map[string]string{},
@@ -96,12 +99,12 @@ func TestMetricRouter(t *testing.T) {
 				"gaugeMetric": {
 					ID:    "gaugeMetric",
 					MType: "gauge",
-					Value: 1.5,
+					Value: simpleValue(),
 				},
 				"counterMetric": {
 					ID:    "counterMetric",
 					MType: "counter",
-					Delta: 2,
+					Delta: simpleDelta(),
 				},
 			},
 			sentHeaders: map[string]string{},
@@ -116,12 +119,12 @@ func TestMetricRouter(t *testing.T) {
 				"gaugeMetric": {
 					ID:    "gaugeMetric",
 					MType: "gauge",
-					Value: 1.5,
+					Value: simpleValue(),
 				},
 				"counterMetric": {
 					ID:    "counterMetric",
 					MType: "counter",
-					Delta: 2,
+					Delta: simpleDelta(),
 				},
 			},
 			sentHeaders: map[string]string{},
@@ -136,12 +139,12 @@ func TestMetricRouter(t *testing.T) {
 				"gaugeMetric": {
 					ID:    "gaugeMetric",
 					MType: "gauge",
-					Value: 1.5,
+					Value: simpleValue(),
 				},
 				"counterMetric": {
 					ID:    "counterMetric",
 					MType: "counter",
-					Delta: 2,
+					Delta: simpleDelta(),
 				},
 			},
 			sentHeaders: map[string]string{},
@@ -156,12 +159,12 @@ func TestMetricRouter(t *testing.T) {
 				"gaugeMetric": {
 					ID:    "gaugeMetric",
 					MType: "gauge",
-					Value: 1.5,
+					Value: simpleValue(),
 				},
 				"counterMetric": {
 					ID:    "counterMetric",
 					MType: "counter",
-					Delta: 2,
+					Delta: simpleDelta(),
 				},
 			},
 			sentHeaders: map[string]string{},
@@ -176,12 +179,12 @@ func TestMetricRouter(t *testing.T) {
 				"gaugeMetric": {
 					ID:    "gaugeMetric",
 					MType: "gauge",
-					Value: 1.5,
+					Value: simpleValue(),
 				},
 				"counterMetric": {
 					ID:    "counterMetric",
 					MType: "counter",
-					Delta: 2,
+					Delta: simpleDelta(),
 				},
 			},
 			sentHeaders: map[string]string{},
@@ -196,12 +199,12 @@ func TestMetricRouter(t *testing.T) {
 				"gaugeMetric": {
 					ID:    "gaugeMetric",
 					MType: "gauge",
-					Value: 1.5,
+					Value: simpleValue(),
 				},
 				"counterMetric": {
 					ID:    "counterMetric",
 					MType: "counter",
-					Delta: 2,
+					Delta: simpleDelta(),
 				},
 			},
 			sentHeaders: map[string]string{},
@@ -216,12 +219,12 @@ func TestMetricRouter(t *testing.T) {
 				"gaugeMetric": {
 					ID:    "gaugeMetric",
 					MType: "gauge",
-					Value: 1.5,
+					Value: simpleValue(),
 				},
 				"counterMetric": {
 					ID:    "counterMetric",
 					MType: "counter",
-					Delta: 2,
+					Delta: simpleDelta(),
 				},
 			},
 			sentHeaders: map[string]string{},
@@ -236,12 +239,12 @@ func TestMetricRouter(t *testing.T) {
 				"gaugeMetric": {
 					ID:    "gaugeMetric",
 					MType: "gauge",
-					Value: 1.5,
+					Value: simpleValue(),
 				},
 				"counterMetric": {
 					ID:    "counterMetric",
 					MType: "counter",
-					Delta: 2,
+					Delta: simpleDelta(),
 				},
 			},
 			sentHeaders: map[string]string{},
@@ -256,12 +259,12 @@ func TestMetricRouter(t *testing.T) {
 				"g": {
 					ID:    "g",
 					MType: "gauge",
-					Value: 1.5,
+					Value: simpleValue(),
 				},
 				"counterMetric": {
 					ID:    "counterMetric",
 					MType: "counter",
-					Delta: 2,
+					Delta: simpleDelta(),
 				},
 			},
 			sentHeaders: map[string]string{},
@@ -277,12 +280,12 @@ func TestMetricRouter(t *testing.T) {
 				"gaugeMetric": {
 					ID:    "gaugeMetric",
 					MType: "gauge",
-					Value: 1.5,
+					Value: simpleValue(),
 				},
 				"counterMetric": {
 					ID:    "counterMetric",
 					MType: "counter",
-					Delta: 2,
+					Delta: simpleDelta(),
 				},
 			},
 			sentHeaders: map[string]string{},
@@ -298,12 +301,12 @@ func TestMetricRouter(t *testing.T) {
 				"gaugeMetric": {
 					ID:    "gaugeMetric",
 					MType: "gauge",
-					Value: 1.5,
+					Value: simpleValue(),
 				},
 				"c": {
 					ID:    "c",
 					MType: "counter",
-					Delta: 2,
+					Delta: simpleDelta(),
 				},
 			},
 			sentHeaders: map[string]string{},
@@ -319,12 +322,12 @@ func TestMetricRouter(t *testing.T) {
 				"gaugeMetric": {
 					ID:    "gaugeMetric",
 					MType: "gauge",
-					Value: 1.5,
+					Value: simpleValue(),
 				},
 				"counterMetric": {
 					ID:    "counterMetric",
 					MType: "counter",
-					Delta: 2,
+					Delta: simpleDelta(),
 				},
 			},
 			sentHeaders: map[string]string{},
@@ -340,12 +343,12 @@ func TestMetricRouter(t *testing.T) {
 				"gaugeMetric": {
 					ID:    "gaugeMetric",
 					MType: "gauge",
-					Value: 1.5,
+					Value: simpleValue(),
 				},
 				"counterMetric": {
 					ID:    "counterMetric",
 					MType: "counter",
-					Delta: 2,
+					Delta: simpleDelta(),
 				},
 			},
 			sentHeaders: map[string]string{},
@@ -365,12 +368,12 @@ func TestMetricRouter(t *testing.T) {
 				"gaugeMetric": {
 					ID:    "gaugeMetric",
 					MType: "gauge",
-					Value: 1.5,
+					Value: simpleValue(),
 				},
 				"counterMetric": {
 					ID:    "counterMetric",
 					MType: "counter",
-					Delta: 2,
+					Delta: simpleDelta(),
 				},
 			},
 			sentHeaders: map[string]string{},
@@ -385,12 +388,12 @@ func TestMetricRouter(t *testing.T) {
 				"gaugeMetric": {
 					ID:    "gaugeMetric",
 					MType: "gauge",
-					Value: 1.5,
+					Value: simpleValue(),
 				},
 				"counterMetric": {
 					ID:    "counterMetric",
 					MType: "counter",
-					Delta: 2,
+					Delta: simpleDelta(),
 				},
 			},
 			sentHeaders: map[string]string{},
@@ -401,21 +404,21 @@ func TestMetricRouter(t *testing.T) {
 			method:      http.MethodPost,
 			wantCode:    200,
 			uri:         "/update",
-			sentBody:    `{"id":"g_new","m_type":"gauge","value":5.2}`,
+			sentBody:    `{"id":"g_new","type":"gauge","value":5.2}`,
 			sentHeaders: map[string]string{"Content-Type": "application/json"},
 			metrics: map[string]metrics.Metrics{
 				"g": {
 					ID:    "g",
 					MType: "gauge",
-					Value: 1.5,
+					Value: simpleValue(),
 				},
 				"c": {
 					ID:    "c",
 					MType: "counter",
-					Delta: 2,
+					Delta: simpleDelta(),
 				},
 			},
-			wantBody:    `{"id":"g_new","m_type":"gauge","value":5.2}`,
+			wantBody:    `{"id":"g_new","type":"gauge","value":5.2}`,
 			wantHeaders: map[string]string{"Content-Type": "application/json"},
 		},
 		{
@@ -423,21 +426,21 @@ func TestMetricRouter(t *testing.T) {
 			method:      http.MethodPost,
 			wantCode:    200,
 			uri:         "/value",
-			sentBody:    `{"id":"g","m_type":"gauge"}`,
+			sentBody:    `{"id":"g","type":"gauge"}`,
 			sentHeaders: map[string]string{"Content-Type": "application/json"},
 			metrics: map[string]metrics.Metrics{
 				"g": {
 					ID:    "g",
 					MType: "gauge",
-					Value: 1.5,
+					Value: simpleValue(),
 				},
 				"c": {
 					ID:    "c",
 					MType: "counter",
-					Delta: 2,
+					Delta: simpleDelta(),
 				},
 			},
-			wantBody:    `{"id":"g","m_type":"gauge","value":1.5}`,
+			wantBody:    `{"id":"g","type":"gauge","value":1.5}`,
 			wantHeaders: map[string]string{"Content-Type": "application/json"},
 		},
 		{
@@ -445,21 +448,21 @@ func TestMetricRouter(t *testing.T) {
 			method:      http.MethodPost,
 			wantCode:    200,
 			uri:         "/update",
-			sentBody:    `{"id":"c_new","m_type":"counter","delta":5}`,
+			sentBody:    `{"id":"c_new","type":"counter","delta":5}`,
 			sentHeaders: map[string]string{"Content-Type": "application/json"},
 			metrics: map[string]metrics.Metrics{
 				"gaugeMetric": {
 					ID:    "gaugeMetric",
 					MType: "gauge",
-					Value: 1.5,
+					Value: simpleValue(),
 				},
 				"c": {
 					ID:    "c",
 					MType: "counter",
-					Delta: 2,
+					Delta: simpleDelta(),
 				},
 			},
-			wantBody:    `{"id":"c_new","m_type":"counter","delta":5}`,
+			wantBody:    `{"id":"c_new","type":"counter","delta":5}`,
 			wantHeaders: map[string]string{"Content-Type": "application/json"},
 		},
 		{
@@ -467,18 +470,18 @@ func TestMetricRouter(t *testing.T) {
 			method:      http.MethodPost,
 			wantCode:    http.StatusBadRequest,
 			uri:         "/update",
-			sentBody:    `{"id":"c_new","m_type":"smth","delta":5}`,
+			sentBody:    `{"id":"c_new","type":"smth","delta":5}`,
 			sentHeaders: map[string]string{"Content-Type": "application/json"},
 			metrics: map[string]metrics.Metrics{
 				"gaugeMetric": {
 					ID:    "gaugeMetric",
 					MType: "gauge",
-					Value: 1.5,
+					Value: simpleValue(),
 				},
 				"c": {
 					ID:    "c",
 					MType: "counter",
-					Delta: 2,
+					Delta: simpleDelta(),
 				},
 			},
 			wantBody:    "",
@@ -489,21 +492,21 @@ func TestMetricRouter(t *testing.T) {
 			method:      http.MethodPost,
 			wantCode:    200,
 			uri:         "/update",
-			sentBody:    `{"id":"c","m_type":"counter","delta":5}`,
+			sentBody:    `{"id":"c","type":"counter","delta":5}`,
 			sentHeaders: map[string]string{"Content-Type": "application/json"},
 			metrics: map[string]metrics.Metrics{
 				"gaugeMetric": {
 					ID:    "gaugeMetric",
 					MType: "gauge",
-					Value: 1.5,
+					Value: simpleValue(),
 				},
 				"c": {
 					ID:    "c",
 					MType: "counter",
-					Delta: 2,
+					Delta: simpleDelta(),
 				},
 			},
-			wantBody:    `{"id":"c","m_type":"counter","delta":7}`,
+			wantBody:    `{"id":"c","type":"counter","delta":7}`,
 			wantHeaders: map[string]string{"Content-Type": "application/json"},
 		},
 		{
@@ -511,21 +514,21 @@ func TestMetricRouter(t *testing.T) {
 			method:      http.MethodPost,
 			wantCode:    200,
 			uri:         "/update",
-			sentBody:    `{"id":"g","m_type":"gauge","value":5.2}`,
+			sentBody:    `{"id":"g","type":"gauge","value":5.2}`,
 			sentHeaders: map[string]string{"Content-Type": "application/json"},
 			metrics: map[string]metrics.Metrics{
 				"g": {
 					ID:    "g",
 					MType: "gauge",
-					Value: 1.5,
+					Value: simpleValue(),
 				},
 				"c": {
 					ID:    "c",
 					MType: "counter",
-					Delta: 2,
+					Delta: simpleDelta(),
 				},
 			},
-			wantBody:    `{"id":"g","m_type":"gauge","value":5.2}`,
+			wantBody:    `{"id":"g","type":"gauge","value":5.2}`,
 			wantHeaders: map[string]string{"Content-Type": "application/json"},
 		},
 		{
@@ -533,21 +536,21 @@ func TestMetricRouter(t *testing.T) {
 			method:      http.MethodPost,
 			wantCode:    200,
 			uri:         "/value",
-			sentBody:    `{"id":"c","m_type":"counter"}`,
+			sentBody:    `{"id":"c","type":"counter"}`,
 			sentHeaders: map[string]string{"Content-Type": "application/json"},
 			metrics: map[string]metrics.Metrics{
 				"gaugeMetric": {
 					ID:    "gaugeMetric",
 					MType: "gauge",
-					Value: 1.5,
+					Value: simpleValue(),
 				},
 				"c": {
 					ID:    "c",
 					MType: "counter",
-					Delta: 2,
+					Delta: simpleDelta(),
 				},
 			},
-			wantBody:    `{"id":"c","m_type":"counter","delta":2}`,
+			wantBody:    `{"id":"c","type":"counter","delta":2}`,
 			wantHeaders: map[string]string{"Content-Type": "application/json"},
 		},
 		{
@@ -555,18 +558,18 @@ func TestMetricRouter(t *testing.T) {
 			method:      http.MethodPost,
 			wantCode:    http.StatusNotFound,
 			uri:         "/value",
-			sentBody:    `{"id":"c_unk","m_type":"counter"}`,
+			sentBody:    `{"id":"c_unk","type":"counter"}`,
 			sentHeaders: map[string]string{"Content-Type": "application/json"},
 			metrics: map[string]metrics.Metrics{
 				"gaugeMetric": {
 					ID:    "gaugeMetric",
 					MType: "gauge",
-					Value: 1.5,
+					Value: simpleValue(),
 				},
 				"c": {
 					ID:    "c",
 					MType: "counter",
-					Delta: 2,
+					Delta: simpleDelta(),
 				},
 			},
 			wantBody:    "",
@@ -577,18 +580,18 @@ func TestMetricRouter(t *testing.T) {
 			method:      http.MethodPost,
 			wantCode:    http.StatusNotFound,
 			uri:         "/value",
-			sentBody:    `{"id":"g_unk","m_type":"gauge"}`,
+			sentBody:    `{"id":"g_unk","type":"gauge"}`,
 			sentHeaders: map[string]string{"Content-Type": "application/json"},
 			metrics: map[string]metrics.Metrics{
 				"gaugeMetric": {
 					ID:    "gaugeMetric",
 					MType: "gauge",
-					Value: 1.5,
+					Value: simpleValue(),
 				},
 				"c": {
 					ID:    "c",
 					MType: "counter",
-					Delta: 2,
+					Delta: simpleDelta(),
 				},
 			},
 			wantBody:    "",
@@ -599,18 +602,18 @@ func TestMetricRouter(t *testing.T) {
 			method:      http.MethodPost,
 			wantCode:    http.StatusBadRequest,
 			uri:         "/value",
-			sentBody:    `{"id":"c_unk","m_type":"smth"}`,
+			sentBody:    `{"id":"c_unk","type":"smth"}`,
 			sentHeaders: map[string]string{"Content-Type": "application/json"},
 			metrics: map[string]metrics.Metrics{
 				"gaugeMetric": {
 					ID:    "gaugeMetric",
 					MType: "gauge",
-					Value: 1.5,
+					Value: simpleValue(),
 				},
 				"c": {
 					ID:    "c",
 					MType: "counter",
-					Delta: 2,
+					Delta: simpleDelta(),
 				},
 			},
 			wantBody:    "",
@@ -620,7 +623,7 @@ func TestMetricRouter(t *testing.T) {
 	for _, tt := range tests {
 		t.Run(tt.name, func(t *testing.T) {
 			stor := &storage.MemStorage{Storage: tt.metrics}
-			Log, err := logger.NewLogZap("error", "stdoout", "stderr")
+			Log, err := logger.NewLogZap("info", "./log.txt", "stderr")
 			require.NoError(t, err)
 
 			ts := httptest.NewServer(MetricRouter(stor, Log))

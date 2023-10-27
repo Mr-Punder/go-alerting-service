@@ -1,0 +1,3435 @@
+2023-10-27T10:36:44.187+0300	ERROR	logger/logger.go:55	wrong type
+github.com/Mr-Punder/go-alerting-service/internal/logger.(*LogHTTPZap).Error
+	/home/goomer/dev/go-alerting-service/internal/logger/logger.go:55
+github.com/Mr-Punder/go-alerting-service/internal/handlers.(*Handler).JSONUpdHandler
+	/home/goomer/dev/go-alerting-service/internal/handlers/handlers.go:118
+net/http.HandlerFunc.ServeHTTP
+	/usr/local/go/src/net/http/server.go:2136
+github.com/go-chi/chi/v5.(*Mux).routeHTTP
+	/home/goomer/go/pkg/mod/github.com/go-chi/chi/v5@v5.0.10/mux.go:444
+net/http.HandlerFunc.ServeHTTP
+	/usr/local/go/src/net/http/server.go:2136
+github.com/go-chi/chi/v5.(*Mux).ServeHTTP
+	/home/goomer/go/pkg/mod/github.com/go-chi/chi/v5@v5.0.10/mux.go:73
+github.com/go-chi/chi/v5.(*Mux).Mount.func1
+	/home/goomer/go/pkg/mod/github.com/go-chi/chi/v5@v5.0.10/mux.go:316
+net/http.HandlerFunc.ServeHTTP
+	/usr/local/go/src/net/http/server.go:2136
+github.com/go-chi/chi/v5.(*Mux).routeHTTP
+	/home/goomer/go/pkg/mod/github.com/go-chi/chi/v5@v5.0.10/mux.go:444
+net/http.HandlerFunc.ServeHTTP
+	/usr/local/go/src/net/http/server.go:2136
+github.com/go-chi/chi/v5.(*Mux).ServeHTTP
+	/home/goomer/go/pkg/mod/github.com/go-chi/chi/v5@v5.0.10/mux.go:90
+net/http.serverHandler.ServeHTTP
+	/usr/local/go/src/net/http/server.go:2938
+net/http.(*conn).serve
+	/usr/local/go/src/net/http/server.go:2009
+2023-10-27T10:36:44.192+0300	ERROR	logger/logger.go:55	Cann't find metric
+github.com/Mr-Punder/go-alerting-service/internal/logger.(*LogHTTPZap).Error
+	/home/goomer/dev/go-alerting-service/internal/logger/logger.go:55
+github.com/Mr-Punder/go-alerting-service/internal/handlers.(*Handler).JSONValueHandler
+	/home/goomer/dev/go-alerting-service/internal/handlers/handlers.go:192
+net/http.HandlerFunc.ServeHTTP
+	/usr/local/go/src/net/http/server.go:2136
+github.com/go-chi/chi/v5.(*Mux).routeHTTP
+	/home/goomer/go/pkg/mod/github.com/go-chi/chi/v5@v5.0.10/mux.go:444
+net/http.HandlerFunc.ServeHTTP
+	/usr/local/go/src/net/http/server.go:2136
+github.com/go-chi/chi/v5.(*Mux).ServeHTTP
+	/home/goomer/go/pkg/mod/github.com/go-chi/chi/v5@v5.0.10/mux.go:73
+github.com/go-chi/chi/v5.(*Mux).Mount.func1
+	/home/goomer/go/pkg/mod/github.com/go-chi/chi/v5@v5.0.10/mux.go:316
+net/http.HandlerFunc.ServeHTTP
+	/usr/local/go/src/net/http/server.go:2136
+github.com/go-chi/chi/v5.(*Mux).routeHTTP
+	/home/goomer/go/pkg/mod/github.com/go-chi/chi/v5@v5.0.10/mux.go:444
+net/http.HandlerFunc.ServeHTTP
+	/usr/local/go/src/net/http/server.go:2136
+github.com/go-chi/chi/v5.(*Mux).ServeHTTP
+	/home/goomer/go/pkg/mod/github.com/go-chi/chi/v5@v5.0.10/mux.go:90
+net/http.serverHandler.ServeHTTP
+	/usr/local/go/src/net/http/server.go:2938
+net/http.(*conn).serve
+	/usr/local/go/src/net/http/server.go:2009
+2023-10-27T10:36:44.193+0300	ERROR	logger/logger.go:55	Cann't find metric
+github.com/Mr-Punder/go-alerting-service/internal/logger.(*LogHTTPZap).Error
+	/home/goomer/dev/go-alerting-service/internal/logger/logger.go:55
+github.com/Mr-Punder/go-alerting-service/internal/handlers.(*Handler).JSONValueHandler
+	/home/goomer/dev/go-alerting-service/internal/handlers/handlers.go:192
+net/http.HandlerFunc.ServeHTTP
+	/usr/local/go/src/net/http/server.go:2136
+github.com/go-chi/chi/v5.(*Mux).routeHTTP
+	/home/goomer/go/pkg/mod/github.com/go-chi/chi/v5@v5.0.10/mux.go:444
+net/http.HandlerFunc.ServeHTTP
+	/usr/local/go/src/net/http/server.go:2136
+github.com/go-chi/chi/v5.(*Mux).ServeHTTP
+	/home/goomer/go/pkg/mod/github.com/go-chi/chi/v5@v5.0.10/mux.go:73
+github.com/go-chi/chi/v5.(*Mux).Mount.func1
+	/home/goomer/go/pkg/mod/github.com/go-chi/chi/v5@v5.0.10/mux.go:316
+net/http.HandlerFunc.ServeHTTP
+	/usr/local/go/src/net/http/server.go:2136
+github.com/go-chi/chi/v5.(*Mux).routeHTTP
+	/home/goomer/go/pkg/mod/github.com/go-chi/chi/v5@v5.0.10/mux.go:444
+net/http.HandlerFunc.ServeHTTP
+	/usr/local/go/src/net/http/server.go:2136
+github.com/go-chi/chi/v5.(*Mux).ServeHTTP
+	/home/goomer/go/pkg/mod/github.com/go-chi/chi/v5@v5.0.10/mux.go:90
+net/http.serverHandler.ServeHTTP
+	/usr/local/go/src/net/http/server.go:2938
+net/http.(*conn).serve
+	/usr/local/go/src/net/http/server.go:2009
+2023-10-27T10:36:44.195+0300	ERROR	logger/logger.go:55	wrong type
+github.com/Mr-Punder/go-alerting-service/internal/logger.(*LogHTTPZap).Error
+	/home/goomer/dev/go-alerting-service/internal/logger/logger.go:55
+github.com/Mr-Punder/go-alerting-service/internal/handlers.(*Handler).JSONValueHandler
+	/home/goomer/dev/go-alerting-service/internal/handlers/handlers.go:183
+net/http.HandlerFunc.ServeHTTP
+	/usr/local/go/src/net/http/server.go:2136
+github.com/go-chi/chi/v5.(*Mux).routeHTTP
+	/home/goomer/go/pkg/mod/github.com/go-chi/chi/v5@v5.0.10/mux.go:444
+net/http.HandlerFunc.ServeHTTP
+	/usr/local/go/src/net/http/server.go:2136
+github.com/go-chi/chi/v5.(*Mux).ServeHTTP
+	/home/goomer/go/pkg/mod/github.com/go-chi/chi/v5@v5.0.10/mux.go:73
+github.com/go-chi/chi/v5.(*Mux).Mount.func1
+	/home/goomer/go/pkg/mod/github.com/go-chi/chi/v5@v5.0.10/mux.go:316
+net/http.HandlerFunc.ServeHTTP
+	/usr/local/go/src/net/http/server.go:2136
+github.com/go-chi/chi/v5.(*Mux).routeHTTP
+	/home/goomer/go/pkg/mod/github.com/go-chi/chi/v5@v5.0.10/mux.go:444
+net/http.HandlerFunc.ServeHTTP
+	/usr/local/go/src/net/http/server.go:2136
+github.com/go-chi/chi/v5.(*Mux).ServeHTTP
+	/home/goomer/go/pkg/mod/github.com/go-chi/chi/v5@v5.0.10/mux.go:90
+net/http.serverHandler.ServeHTTP
+	/usr/local/go/src/net/http/server.go:2938
+net/http.(*conn).serve
+	/usr/local/go/src/net/http/server.go:2009
+2023-10-27T10:37:04.622+0300	ERROR	logger/logger.go:55	wrong type
+github.com/Mr-Punder/go-alerting-service/internal/logger.(*LogHTTPZap).Error
+	/home/goomer/dev/go-alerting-service/internal/logger/logger.go:55
+github.com/Mr-Punder/go-alerting-service/internal/handlers.(*Handler).JSONUpdHandler
+	/home/goomer/dev/go-alerting-service/internal/handlers/handlers.go:118
+net/http.HandlerFunc.ServeHTTP
+	/usr/local/go/src/net/http/server.go:2136
+github.com/go-chi/chi/v5.(*Mux).routeHTTP
+	/home/goomer/go/pkg/mod/github.com/go-chi/chi/v5@v5.0.10/mux.go:444
+net/http.HandlerFunc.ServeHTTP
+	/usr/local/go/src/net/http/server.go:2136
+github.com/go-chi/chi/v5.(*Mux).ServeHTTP
+	/home/goomer/go/pkg/mod/github.com/go-chi/chi/v5@v5.0.10/mux.go:73
+github.com/go-chi/chi/v5.(*Mux).Mount.func1
+	/home/goomer/go/pkg/mod/github.com/go-chi/chi/v5@v5.0.10/mux.go:316
+net/http.HandlerFunc.ServeHTTP
+	/usr/local/go/src/net/http/server.go:2136
+github.com/go-chi/chi/v5.(*Mux).routeHTTP
+	/home/goomer/go/pkg/mod/github.com/go-chi/chi/v5@v5.0.10/mux.go:444
+net/http.HandlerFunc.ServeHTTP
+	/usr/local/go/src/net/http/server.go:2136
+github.com/go-chi/chi/v5.(*Mux).ServeHTTP
+	/home/goomer/go/pkg/mod/github.com/go-chi/chi/v5@v5.0.10/mux.go:90
+net/http.serverHandler.ServeHTTP
+	/usr/local/go/src/net/http/server.go:2938
+net/http.(*conn).serve
+	/usr/local/go/src/net/http/server.go:2009
+2023-10-27T10:37:04.627+0300	ERROR	logger/logger.go:55	Cann't find metric
+github.com/Mr-Punder/go-alerting-service/internal/logger.(*LogHTTPZap).Error
+	/home/goomer/dev/go-alerting-service/internal/logger/logger.go:55
+github.com/Mr-Punder/go-alerting-service/internal/handlers.(*Handler).JSONValueHandler
+	/home/goomer/dev/go-alerting-service/internal/handlers/handlers.go:192
+net/http.HandlerFunc.ServeHTTP
+	/usr/local/go/src/net/http/server.go:2136
+github.com/go-chi/chi/v5.(*Mux).routeHTTP
+	/home/goomer/go/pkg/mod/github.com/go-chi/chi/v5@v5.0.10/mux.go:444
+net/http.HandlerFunc.ServeHTTP
+	/usr/local/go/src/net/http/server.go:2136
+github.com/go-chi/chi/v5.(*Mux).ServeHTTP
+	/home/goomer/go/pkg/mod/github.com/go-chi/chi/v5@v5.0.10/mux.go:73
+github.com/go-chi/chi/v5.(*Mux).Mount.func1
+	/home/goomer/go/pkg/mod/github.com/go-chi/chi/v5@v5.0.10/mux.go:316
+net/http.HandlerFunc.ServeHTTP
+	/usr/local/go/src/net/http/server.go:2136
+github.com/go-chi/chi/v5.(*Mux).routeHTTP
+	/home/goomer/go/pkg/mod/github.com/go-chi/chi/v5@v5.0.10/mux.go:444
+net/http.HandlerFunc.ServeHTTP
+	/usr/local/go/src/net/http/server.go:2136
+github.com/go-chi/chi/v5.(*Mux).ServeHTTP
+	/home/goomer/go/pkg/mod/github.com/go-chi/chi/v5@v5.0.10/mux.go:90
+net/http.serverHandler.ServeHTTP
+	/usr/local/go/src/net/http/server.go:2938
+net/http.(*conn).serve
+	/usr/local/go/src/net/http/server.go:2009
+2023-10-27T10:37:04.629+0300	ERROR	logger/logger.go:55	Cann't find metric
+github.com/Mr-Punder/go-alerting-service/internal/logger.(*LogHTTPZap).Error
+	/home/goomer/dev/go-alerting-service/internal/logger/logger.go:55
+github.com/Mr-Punder/go-alerting-service/internal/handlers.(*Handler).JSONValueHandler
+	/home/goomer/dev/go-alerting-service/internal/handlers/handlers.go:192
+net/http.HandlerFunc.ServeHTTP
+	/usr/local/go/src/net/http/server.go:2136
+github.com/go-chi/chi/v5.(*Mux).routeHTTP
+	/home/goomer/go/pkg/mod/github.com/go-chi/chi/v5@v5.0.10/mux.go:444
+net/http.HandlerFunc.ServeHTTP
+	/usr/local/go/src/net/http/server.go:2136
+github.com/go-chi/chi/v5.(*Mux).ServeHTTP
+	/home/goomer/go/pkg/mod/github.com/go-chi/chi/v5@v5.0.10/mux.go:73
+github.com/go-chi/chi/v5.(*Mux).Mount.func1
+	/home/goomer/go/pkg/mod/github.com/go-chi/chi/v5@v5.0.10/mux.go:316
+net/http.HandlerFunc.ServeHTTP
+	/usr/local/go/src/net/http/server.go:2136
+github.com/go-chi/chi/v5.(*Mux).routeHTTP
+	/home/goomer/go/pkg/mod/github.com/go-chi/chi/v5@v5.0.10/mux.go:444
+net/http.HandlerFunc.ServeHTTP
+	/usr/local/go/src/net/http/server.go:2136
+github.com/go-chi/chi/v5.(*Mux).ServeHTTP
+	/home/goomer/go/pkg/mod/github.com/go-chi/chi/v5@v5.0.10/mux.go:90
+net/http.serverHandler.ServeHTTP
+	/usr/local/go/src/net/http/server.go:2938
+net/http.(*conn).serve
+	/usr/local/go/src/net/http/server.go:2009
+2023-10-27T10:37:04.631+0300	ERROR	logger/logger.go:55	wrong type
+github.com/Mr-Punder/go-alerting-service/internal/logger.(*LogHTTPZap).Error
+	/home/goomer/dev/go-alerting-service/internal/logger/logger.go:55
+github.com/Mr-Punder/go-alerting-service/internal/handlers.(*Handler).JSONValueHandler
+	/home/goomer/dev/go-alerting-service/internal/handlers/handlers.go:183
+net/http.HandlerFunc.ServeHTTP
+	/usr/local/go/src/net/http/server.go:2136
+github.com/go-chi/chi/v5.(*Mux).routeHTTP
+	/home/goomer/go/pkg/mod/github.com/go-chi/chi/v5@v5.0.10/mux.go:444
+net/http.HandlerFunc.ServeHTTP
+	/usr/local/go/src/net/http/server.go:2136
+github.com/go-chi/chi/v5.(*Mux).ServeHTTP
+	/home/goomer/go/pkg/mod/github.com/go-chi/chi/v5@v5.0.10/mux.go:73
+github.com/go-chi/chi/v5.(*Mux).Mount.func1
+	/home/goomer/go/pkg/mod/github.com/go-chi/chi/v5@v5.0.10/mux.go:316
+net/http.HandlerFunc.ServeHTTP
+	/usr/local/go/src/net/http/server.go:2136
+github.com/go-chi/chi/v5.(*Mux).routeHTTP
+	/home/goomer/go/pkg/mod/github.com/go-chi/chi/v5@v5.0.10/mux.go:444
+net/http.HandlerFunc.ServeHTTP
+	/usr/local/go/src/net/http/server.go:2136
+github.com/go-chi/chi/v5.(*Mux).ServeHTTP
+	/home/goomer/go/pkg/mod/github.com/go-chi/chi/v5@v5.0.10/mux.go:90
+net/http.serverHandler.ServeHTTP
+	/usr/local/go/src/net/http/server.go:2938
+net/http.(*conn).serve
+	/usr/local/go/src/net/http/server.go:2009
+2023-10-27T10:41:31.874+0300	ERROR	logger/logger.go:55	wrong type
+github.com/Mr-Punder/go-alerting-service/internal/logger.(*LogHTTPZap).Error
+	/home/goomer/dev/go-alerting-service/internal/logger/logger.go:55
+github.com/Mr-Punder/go-alerting-service/internal/handlers.(*Handler).JSONUpdHandler
+	/home/goomer/dev/go-alerting-service/internal/handlers/handlers.go:118
+net/http.HandlerFunc.ServeHTTP
+	/usr/local/go/src/net/http/server.go:2136
+github.com/go-chi/chi/v5.(*Mux).routeHTTP
+	/home/goomer/go/pkg/mod/github.com/go-chi/chi/v5@v5.0.10/mux.go:444
+net/http.HandlerFunc.ServeHTTP
+	/usr/local/go/src/net/http/server.go:2136
+github.com/go-chi/chi/v5.(*Mux).ServeHTTP
+	/home/goomer/go/pkg/mod/github.com/go-chi/chi/v5@v5.0.10/mux.go:73
+github.com/go-chi/chi/v5.(*Mux).Mount.func1
+	/home/goomer/go/pkg/mod/github.com/go-chi/chi/v5@v5.0.10/mux.go:316
+net/http.HandlerFunc.ServeHTTP
+	/usr/local/go/src/net/http/server.go:2136
+github.com/go-chi/chi/v5.(*Mux).routeHTTP
+	/home/goomer/go/pkg/mod/github.com/go-chi/chi/v5@v5.0.10/mux.go:444
+net/http.HandlerFunc.ServeHTTP
+	/usr/local/go/src/net/http/server.go:2136
+github.com/go-chi/chi/v5.(*Mux).ServeHTTP
+	/home/goomer/go/pkg/mod/github.com/go-chi/chi/v5@v5.0.10/mux.go:90
+net/http.serverHandler.ServeHTTP
+	/usr/local/go/src/net/http/server.go:2938
+net/http.(*conn).serve
+	/usr/local/go/src/net/http/server.go:2009
+2023-10-27T10:41:31.876+0300	ERROR	logger/logger.go:55	Cann't find metric
+github.com/Mr-Punder/go-alerting-service/internal/logger.(*LogHTTPZap).Error
+	/home/goomer/dev/go-alerting-service/internal/logger/logger.go:55
+github.com/Mr-Punder/go-alerting-service/internal/handlers.(*Handler).JSONValueHandler
+	/home/goomer/dev/go-alerting-service/internal/handlers/handlers.go:192
+net/http.HandlerFunc.ServeHTTP
+	/usr/local/go/src/net/http/server.go:2136
+github.com/go-chi/chi/v5.(*Mux).routeHTTP
+	/home/goomer/go/pkg/mod/github.com/go-chi/chi/v5@v5.0.10/mux.go:444
+net/http.HandlerFunc.ServeHTTP
+	/usr/local/go/src/net/http/server.go:2136
+github.com/go-chi/chi/v5.(*Mux).ServeHTTP
+	/home/goomer/go/pkg/mod/github.com/go-chi/chi/v5@v5.0.10/mux.go:73
+github.com/go-chi/chi/v5.(*Mux).Mount.func1
+	/home/goomer/go/pkg/mod/github.com/go-chi/chi/v5@v5.0.10/mux.go:316
+net/http.HandlerFunc.ServeHTTP
+	/usr/local/go/src/net/http/server.go:2136
+github.com/go-chi/chi/v5.(*Mux).routeHTTP
+	/home/goomer/go/pkg/mod/github.com/go-chi/chi/v5@v5.0.10/mux.go:444
+net/http.HandlerFunc.ServeHTTP
+	/usr/local/go/src/net/http/server.go:2136
+github.com/go-chi/chi/v5.(*Mux).ServeHTTP
+	/home/goomer/go/pkg/mod/github.com/go-chi/chi/v5@v5.0.10/mux.go:90
+net/http.serverHandler.ServeHTTP
+	/usr/local/go/src/net/http/server.go:2938
+net/http.(*conn).serve
+	/usr/local/go/src/net/http/server.go:2009
+2023-10-27T10:41:31.878+0300	ERROR	logger/logger.go:55	Cann't find metric
+github.com/Mr-Punder/go-alerting-service/internal/logger.(*LogHTTPZap).Error
+	/home/goomer/dev/go-alerting-service/internal/logger/logger.go:55
+github.com/Mr-Punder/go-alerting-service/internal/handlers.(*Handler).JSONValueHandler
+	/home/goomer/dev/go-alerting-service/internal/handlers/handlers.go:192
+net/http.HandlerFunc.ServeHTTP
+	/usr/local/go/src/net/http/server.go:2136
+github.com/go-chi/chi/v5.(*Mux).routeHTTP
+	/home/goomer/go/pkg/mod/github.com/go-chi/chi/v5@v5.0.10/mux.go:444
+net/http.HandlerFunc.ServeHTTP
+	/usr/local/go/src/net/http/server.go:2136
+github.com/go-chi/chi/v5.(*Mux).ServeHTTP
+	/home/goomer/go/pkg/mod/github.com/go-chi/chi/v5@v5.0.10/mux.go:73
+github.com/go-chi/chi/v5.(*Mux).Mount.func1
+	/home/goomer/go/pkg/mod/github.com/go-chi/chi/v5@v5.0.10/mux.go:316
+net/http.HandlerFunc.ServeHTTP
+	/usr/local/go/src/net/http/server.go:2136
+github.com/go-chi/chi/v5.(*Mux).routeHTTP
+	/home/goomer/go/pkg/mod/github.com/go-chi/chi/v5@v5.0.10/mux.go:444
+net/http.HandlerFunc.ServeHTTP
+	/usr/local/go/src/net/http/server.go:2136
+github.com/go-chi/chi/v5.(*Mux).ServeHTTP
+	/home/goomer/go/pkg/mod/github.com/go-chi/chi/v5@v5.0.10/mux.go:90
+net/http.serverHandler.ServeHTTP
+	/usr/local/go/src/net/http/server.go:2938
+net/http.(*conn).serve
+	/usr/local/go/src/net/http/server.go:2009
+2023-10-27T10:41:31.880+0300	ERROR	logger/logger.go:55	wrong type
+github.com/Mr-Punder/go-alerting-service/internal/logger.(*LogHTTPZap).Error
+	/home/goomer/dev/go-alerting-service/internal/logger/logger.go:55
+github.com/Mr-Punder/go-alerting-service/internal/handlers.(*Handler).JSONValueHandler
+	/home/goomer/dev/go-alerting-service/internal/handlers/handlers.go:183
+net/http.HandlerFunc.ServeHTTP
+	/usr/local/go/src/net/http/server.go:2136
+github.com/go-chi/chi/v5.(*Mux).routeHTTP
+	/home/goomer/go/pkg/mod/github.com/go-chi/chi/v5@v5.0.10/mux.go:444
+net/http.HandlerFunc.ServeHTTP
+	/usr/local/go/src/net/http/server.go:2136
+github.com/go-chi/chi/v5.(*Mux).ServeHTTP
+	/home/goomer/go/pkg/mod/github.com/go-chi/chi/v5@v5.0.10/mux.go:73
+github.com/go-chi/chi/v5.(*Mux).Mount.func1
+	/home/goomer/go/pkg/mod/github.com/go-chi/chi/v5@v5.0.10/mux.go:316
+net/http.HandlerFunc.ServeHTTP
+	/usr/local/go/src/net/http/server.go:2136
+github.com/go-chi/chi/v5.(*Mux).routeHTTP
+	/home/goomer/go/pkg/mod/github.com/go-chi/chi/v5@v5.0.10/mux.go:444
+net/http.HandlerFunc.ServeHTTP
+	/usr/local/go/src/net/http/server.go:2136
+github.com/go-chi/chi/v5.(*Mux).ServeHTTP
+	/home/goomer/go/pkg/mod/github.com/go-chi/chi/v5@v5.0.10/mux.go:90
+net/http.serverHandler.ServeHTTP
+	/usr/local/go/src/net/http/server.go:2938
+net/http.(*conn).serve
+	/usr/local/go/src/net/http/server.go:2009
+2023-10-27T10:44:35.018+0300	ERROR	logger/logger.go:55	wrong type
+github.com/Mr-Punder/go-alerting-service/internal/logger.(*LogHTTPZap).Error
+	/home/goomer/dev/go-alerting-service/internal/logger/logger.go:55
+github.com/Mr-Punder/go-alerting-service/internal/handlers.(*Handler).JSONUpdHandler
+	/home/goomer/dev/go-alerting-service/internal/handlers/handlers.go:118
+net/http.HandlerFunc.ServeHTTP
+	/usr/local/go/src/net/http/server.go:2136
+github.com/go-chi/chi/v5.(*Mux).routeHTTP
+	/home/goomer/go/pkg/mod/github.com/go-chi/chi/v5@v5.0.10/mux.go:444
+net/http.HandlerFunc.ServeHTTP
+	/usr/local/go/src/net/http/server.go:2136
+github.com/go-chi/chi/v5.(*Mux).ServeHTTP
+	/home/goomer/go/pkg/mod/github.com/go-chi/chi/v5@v5.0.10/mux.go:73
+github.com/go-chi/chi/v5.(*Mux).Mount.func1
+	/home/goomer/go/pkg/mod/github.com/go-chi/chi/v5@v5.0.10/mux.go:316
+net/http.HandlerFunc.ServeHTTP
+	/usr/local/go/src/net/http/server.go:2136
+github.com/go-chi/chi/v5.(*Mux).routeHTTP
+	/home/goomer/go/pkg/mod/github.com/go-chi/chi/v5@v5.0.10/mux.go:444
+net/http.HandlerFunc.ServeHTTP
+	/usr/local/go/src/net/http/server.go:2136
+github.com/go-chi/chi/v5.(*Mux).ServeHTTP
+	/home/goomer/go/pkg/mod/github.com/go-chi/chi/v5@v5.0.10/mux.go:90
+net/http.serverHandler.ServeHTTP
+	/usr/local/go/src/net/http/server.go:2938
+net/http.(*conn).serve
+	/usr/local/go/src/net/http/server.go:2009
+2023-10-27T10:44:35.022+0300	ERROR	logger/logger.go:55	Cann't find metric
+github.com/Mr-Punder/go-alerting-service/internal/logger.(*LogHTTPZap).Error
+	/home/goomer/dev/go-alerting-service/internal/logger/logger.go:55
+github.com/Mr-Punder/go-alerting-service/internal/handlers.(*Handler).JSONValueHandler
+	/home/goomer/dev/go-alerting-service/internal/handlers/handlers.go:192
+net/http.HandlerFunc.ServeHTTP
+	/usr/local/go/src/net/http/server.go:2136
+github.com/go-chi/chi/v5.(*Mux).routeHTTP
+	/home/goomer/go/pkg/mod/github.com/go-chi/chi/v5@v5.0.10/mux.go:444
+net/http.HandlerFunc.ServeHTTP
+	/usr/local/go/src/net/http/server.go:2136
+github.com/go-chi/chi/v5.(*Mux).ServeHTTP
+	/home/goomer/go/pkg/mod/github.com/go-chi/chi/v5@v5.0.10/mux.go:73
+github.com/go-chi/chi/v5.(*Mux).Mount.func1
+	/home/goomer/go/pkg/mod/github.com/go-chi/chi/v5@v5.0.10/mux.go:316
+net/http.HandlerFunc.ServeHTTP
+	/usr/local/go/src/net/http/server.go:2136
+github.com/go-chi/chi/v5.(*Mux).routeHTTP
+	/home/goomer/go/pkg/mod/github.com/go-chi/chi/v5@v5.0.10/mux.go:444
+net/http.HandlerFunc.ServeHTTP
+	/usr/local/go/src/net/http/server.go:2136
+github.com/go-chi/chi/v5.(*Mux).ServeHTTP
+	/home/goomer/go/pkg/mod/github.com/go-chi/chi/v5@v5.0.10/mux.go:90
+net/http.serverHandler.ServeHTTP
+	/usr/local/go/src/net/http/server.go:2938
+net/http.(*conn).serve
+	/usr/local/go/src/net/http/server.go:2009
+2023-10-27T10:44:35.024+0300	ERROR	logger/logger.go:55	Cann't find metric
+github.com/Mr-Punder/go-alerting-service/internal/logger.(*LogHTTPZap).Error
+	/home/goomer/dev/go-alerting-service/internal/logger/logger.go:55
+github.com/Mr-Punder/go-alerting-service/internal/handlers.(*Handler).JSONValueHandler
+	/home/goomer/dev/go-alerting-service/internal/handlers/handlers.go:192
+net/http.HandlerFunc.ServeHTTP
+	/usr/local/go/src/net/http/server.go:2136
+github.com/go-chi/chi/v5.(*Mux).routeHTTP
+	/home/goomer/go/pkg/mod/github.com/go-chi/chi/v5@v5.0.10/mux.go:444
+net/http.HandlerFunc.ServeHTTP
+	/usr/local/go/src/net/http/server.go:2136
+github.com/go-chi/chi/v5.(*Mux).ServeHTTP
+	/home/goomer/go/pkg/mod/github.com/go-chi/chi/v5@v5.0.10/mux.go:73
+github.com/go-chi/chi/v5.(*Mux).Mount.func1
+	/home/goomer/go/pkg/mod/github.com/go-chi/chi/v5@v5.0.10/mux.go:316
+net/http.HandlerFunc.ServeHTTP
+	/usr/local/go/src/net/http/server.go:2136
+github.com/go-chi/chi/v5.(*Mux).routeHTTP
+	/home/goomer/go/pkg/mod/github.com/go-chi/chi/v5@v5.0.10/mux.go:444
+net/http.HandlerFunc.ServeHTTP
+	/usr/local/go/src/net/http/server.go:2136
+github.com/go-chi/chi/v5.(*Mux).ServeHTTP
+	/home/goomer/go/pkg/mod/github.com/go-chi/chi/v5@v5.0.10/mux.go:90
+net/http.serverHandler.ServeHTTP
+	/usr/local/go/src/net/http/server.go:2938
+net/http.(*conn).serve
+	/usr/local/go/src/net/http/server.go:2009
+2023-10-27T10:44:35.026+0300	ERROR	logger/logger.go:55	wrong type
+github.com/Mr-Punder/go-alerting-service/internal/logger.(*LogHTTPZap).Error
+	/home/goomer/dev/go-alerting-service/internal/logger/logger.go:55
+github.com/Mr-Punder/go-alerting-service/internal/handlers.(*Handler).JSONValueHandler
+	/home/goomer/dev/go-alerting-service/internal/handlers/handlers.go:183
+net/http.HandlerFunc.ServeHTTP
+	/usr/local/go/src/net/http/server.go:2136
+github.com/go-chi/chi/v5.(*Mux).routeHTTP
+	/home/goomer/go/pkg/mod/github.com/go-chi/chi/v5@v5.0.10/mux.go:444
+net/http.HandlerFunc.ServeHTTP
+	/usr/local/go/src/net/http/server.go:2136
+github.com/go-chi/chi/v5.(*Mux).ServeHTTP
+	/home/goomer/go/pkg/mod/github.com/go-chi/chi/v5@v5.0.10/mux.go:73
+github.com/go-chi/chi/v5.(*Mux).Mount.func1
+	/home/goomer/go/pkg/mod/github.com/go-chi/chi/v5@v5.0.10/mux.go:316
+net/http.HandlerFunc.ServeHTTP
+	/usr/local/go/src/net/http/server.go:2136
+github.com/go-chi/chi/v5.(*Mux).routeHTTP
+	/home/goomer/go/pkg/mod/github.com/go-chi/chi/v5@v5.0.10/mux.go:444
+net/http.HandlerFunc.ServeHTTP
+	/usr/local/go/src/net/http/server.go:2136
+github.com/go-chi/chi/v5.(*Mux).ServeHTTP
+	/home/goomer/go/pkg/mod/github.com/go-chi/chi/v5@v5.0.10/mux.go:90
+net/http.serverHandler.ServeHTTP
+	/usr/local/go/src/net/http/server.go:2938
+net/http.(*conn).serve
+	/usr/local/go/src/net/http/server.go:2009
+2023-10-27T10:45:31.133+0300	ERROR	logger/logger.go:55	wrong type
+github.com/Mr-Punder/go-alerting-service/internal/logger.(*LogHTTPZap).Error
+	/home/goomer/dev/go-alerting-service/internal/logger/logger.go:55
+github.com/Mr-Punder/go-alerting-service/internal/handlers.(*Handler).JSONUpdHandler
+	/home/goomer/dev/go-alerting-service/internal/handlers/handlers.go:118
+net/http.HandlerFunc.ServeHTTP
+	/usr/local/go/src/net/http/server.go:2136
+github.com/go-chi/chi/v5.(*Mux).routeHTTP
+	/home/goomer/go/pkg/mod/github.com/go-chi/chi/v5@v5.0.10/mux.go:444
+net/http.HandlerFunc.ServeHTTP
+	/usr/local/go/src/net/http/server.go:2136
+github.com/go-chi/chi/v5.(*Mux).ServeHTTP
+	/home/goomer/go/pkg/mod/github.com/go-chi/chi/v5@v5.0.10/mux.go:73
+github.com/go-chi/chi/v5.(*Mux).Mount.func1
+	/home/goomer/go/pkg/mod/github.com/go-chi/chi/v5@v5.0.10/mux.go:316
+net/http.HandlerFunc.ServeHTTP
+	/usr/local/go/src/net/http/server.go:2136
+github.com/go-chi/chi/v5.(*Mux).routeHTTP
+	/home/goomer/go/pkg/mod/github.com/go-chi/chi/v5@v5.0.10/mux.go:444
+net/http.HandlerFunc.ServeHTTP
+	/usr/local/go/src/net/http/server.go:2136
+github.com/go-chi/chi/v5.(*Mux).ServeHTTP
+	/home/goomer/go/pkg/mod/github.com/go-chi/chi/v5@v5.0.10/mux.go:90
+net/http.serverHandler.ServeHTTP
+	/usr/local/go/src/net/http/server.go:2938
+net/http.(*conn).serve
+	/usr/local/go/src/net/http/server.go:2009
+2023-10-27T10:45:31.138+0300	ERROR	logger/logger.go:55	Cann't find metric
+github.com/Mr-Punder/go-alerting-service/internal/logger.(*LogHTTPZap).Error
+	/home/goomer/dev/go-alerting-service/internal/logger/logger.go:55
+github.com/Mr-Punder/go-alerting-service/internal/handlers.(*Handler).JSONValueHandler
+	/home/goomer/dev/go-alerting-service/internal/handlers/handlers.go:192
+net/http.HandlerFunc.ServeHTTP
+	/usr/local/go/src/net/http/server.go:2136
+github.com/go-chi/chi/v5.(*Mux).routeHTTP
+	/home/goomer/go/pkg/mod/github.com/go-chi/chi/v5@v5.0.10/mux.go:444
+net/http.HandlerFunc.ServeHTTP
+	/usr/local/go/src/net/http/server.go:2136
+github.com/go-chi/chi/v5.(*Mux).ServeHTTP
+	/home/goomer/go/pkg/mod/github.com/go-chi/chi/v5@v5.0.10/mux.go:73
+github.com/go-chi/chi/v5.(*Mux).Mount.func1
+	/home/goomer/go/pkg/mod/github.com/go-chi/chi/v5@v5.0.10/mux.go:316
+net/http.HandlerFunc.ServeHTTP
+	/usr/local/go/src/net/http/server.go:2136
+github.com/go-chi/chi/v5.(*Mux).routeHTTP
+	/home/goomer/go/pkg/mod/github.com/go-chi/chi/v5@v5.0.10/mux.go:444
+net/http.HandlerFunc.ServeHTTP
+	/usr/local/go/src/net/http/server.go:2136
+github.com/go-chi/chi/v5.(*Mux).ServeHTTP
+	/home/goomer/go/pkg/mod/github.com/go-chi/chi/v5@v5.0.10/mux.go:90
+net/http.serverHandler.ServeHTTP
+	/usr/local/go/src/net/http/server.go:2938
+net/http.(*conn).serve
+	/usr/local/go/src/net/http/server.go:2009
+2023-10-27T10:45:31.141+0300	ERROR	logger/logger.go:55	Cann't find metric
+github.com/Mr-Punder/go-alerting-service/internal/logger.(*LogHTTPZap).Error
+	/home/goomer/dev/go-alerting-service/internal/logger/logger.go:55
+github.com/Mr-Punder/go-alerting-service/internal/handlers.(*Handler).JSONValueHandler
+	/home/goomer/dev/go-alerting-service/internal/handlers/handlers.go:192
+net/http.HandlerFunc.ServeHTTP
+	/usr/local/go/src/net/http/server.go:2136
+github.com/go-chi/chi/v5.(*Mux).routeHTTP
+	/home/goomer/go/pkg/mod/github.com/go-chi/chi/v5@v5.0.10/mux.go:444
+net/http.HandlerFunc.ServeHTTP
+	/usr/local/go/src/net/http/server.go:2136
+github.com/go-chi/chi/v5.(*Mux).ServeHTTP
+	/home/goomer/go/pkg/mod/github.com/go-chi/chi/v5@v5.0.10/mux.go:73
+github.com/go-chi/chi/v5.(*Mux).Mount.func1
+	/home/goomer/go/pkg/mod/github.com/go-chi/chi/v5@v5.0.10/mux.go:316
+net/http.HandlerFunc.ServeHTTP
+	/usr/local/go/src/net/http/server.go:2136
+github.com/go-chi/chi/v5.(*Mux).routeHTTP
+	/home/goomer/go/pkg/mod/github.com/go-chi/chi/v5@v5.0.10/mux.go:444
+net/http.HandlerFunc.ServeHTTP
+	/usr/local/go/src/net/http/server.go:2136
+github.com/go-chi/chi/v5.(*Mux).ServeHTTP
+	/home/goomer/go/pkg/mod/github.com/go-chi/chi/v5@v5.0.10/mux.go:90
+net/http.serverHandler.ServeHTTP
+	/usr/local/go/src/net/http/server.go:2938
+net/http.(*conn).serve
+	/usr/local/go/src/net/http/server.go:2009
+2023-10-27T10:45:31.143+0300	ERROR	logger/logger.go:55	wrong type
+github.com/Mr-Punder/go-alerting-service/internal/logger.(*LogHTTPZap).Error
+	/home/goomer/dev/go-alerting-service/internal/logger/logger.go:55
+github.com/Mr-Punder/go-alerting-service/internal/handlers.(*Handler).JSONValueHandler
+	/home/goomer/dev/go-alerting-service/internal/handlers/handlers.go:183
+net/http.HandlerFunc.ServeHTTP
+	/usr/local/go/src/net/http/server.go:2136
+github.com/go-chi/chi/v5.(*Mux).routeHTTP
+	/home/goomer/go/pkg/mod/github.com/go-chi/chi/v5@v5.0.10/mux.go:444
+net/http.HandlerFunc.ServeHTTP
+	/usr/local/go/src/net/http/server.go:2136
+github.com/go-chi/chi/v5.(*Mux).ServeHTTP
+	/home/goomer/go/pkg/mod/github.com/go-chi/chi/v5@v5.0.10/mux.go:73
+github.com/go-chi/chi/v5.(*Mux).Mount.func1
+	/home/goomer/go/pkg/mod/github.com/go-chi/chi/v5@v5.0.10/mux.go:316
+net/http.HandlerFunc.ServeHTTP
+	/usr/local/go/src/net/http/server.go:2136
+github.com/go-chi/chi/v5.(*Mux).routeHTTP
+	/home/goomer/go/pkg/mod/github.com/go-chi/chi/v5@v5.0.10/mux.go:444
+net/http.HandlerFunc.ServeHTTP
+	/usr/local/go/src/net/http/server.go:2136
+github.com/go-chi/chi/v5.(*Mux).ServeHTTP
+	/home/goomer/go/pkg/mod/github.com/go-chi/chi/v5@v5.0.10/mux.go:90
+net/http.serverHandler.ServeHTTP
+	/usr/local/go/src/net/http/server.go:2938
+net/http.(*conn).serve
+	/usr/local/go/src/net/http/server.go:2009
+2023-10-27T10:50:05.609+0300	ERROR	logger/logger.go:55	wrong type
+github.com/Mr-Punder/go-alerting-service/internal/logger.(*LogHTTPZap).Error
+	/home/goomer/dev/go-alerting-service/internal/logger/logger.go:55
+github.com/Mr-Punder/go-alerting-service/internal/handlers.(*Handler).JSONUpdHandler
+	/home/goomer/dev/go-alerting-service/internal/handlers/handlers.go:118
+net/http.HandlerFunc.ServeHTTP
+	/usr/local/go/src/net/http/server.go:2136
+github.com/go-chi/chi/v5.(*Mux).routeHTTP
+	/home/goomer/go/pkg/mod/github.com/go-chi/chi/v5@v5.0.10/mux.go:444
+net/http.HandlerFunc.ServeHTTP
+	/usr/local/go/src/net/http/server.go:2136
+github.com/go-chi/chi/v5.(*Mux).ServeHTTP
+	/home/goomer/go/pkg/mod/github.com/go-chi/chi/v5@v5.0.10/mux.go:73
+github.com/go-chi/chi/v5.(*Mux).Mount.func1
+	/home/goomer/go/pkg/mod/github.com/go-chi/chi/v5@v5.0.10/mux.go:316
+net/http.HandlerFunc.ServeHTTP
+	/usr/local/go/src/net/http/server.go:2136
+github.com/go-chi/chi/v5.(*Mux).routeHTTP
+	/home/goomer/go/pkg/mod/github.com/go-chi/chi/v5@v5.0.10/mux.go:444
+net/http.HandlerFunc.ServeHTTP
+	/usr/local/go/src/net/http/server.go:2136
+github.com/go-chi/chi/v5.(*Mux).ServeHTTP
+	/home/goomer/go/pkg/mod/github.com/go-chi/chi/v5@v5.0.10/mux.go:90
+net/http.serverHandler.ServeHTTP
+	/usr/local/go/src/net/http/server.go:2938
+net/http.(*conn).serve
+	/usr/local/go/src/net/http/server.go:2009
+2023-10-27T10:50:05.615+0300	ERROR	logger/logger.go:55	Cann't find metric
+github.com/Mr-Punder/go-alerting-service/internal/logger.(*LogHTTPZap).Error
+	/home/goomer/dev/go-alerting-service/internal/logger/logger.go:55
+github.com/Mr-Punder/go-alerting-service/internal/handlers.(*Handler).JSONValueHandler
+	/home/goomer/dev/go-alerting-service/internal/handlers/handlers.go:192
+net/http.HandlerFunc.ServeHTTP
+	/usr/local/go/src/net/http/server.go:2136
+github.com/go-chi/chi/v5.(*Mux).routeHTTP
+	/home/goomer/go/pkg/mod/github.com/go-chi/chi/v5@v5.0.10/mux.go:444
+net/http.HandlerFunc.ServeHTTP
+	/usr/local/go/src/net/http/server.go:2136
+github.com/go-chi/chi/v5.(*Mux).ServeHTTP
+	/home/goomer/go/pkg/mod/github.com/go-chi/chi/v5@v5.0.10/mux.go:73
+github.com/go-chi/chi/v5.(*Mux).Mount.func1
+	/home/goomer/go/pkg/mod/github.com/go-chi/chi/v5@v5.0.10/mux.go:316
+net/http.HandlerFunc.ServeHTTP
+	/usr/local/go/src/net/http/server.go:2136
+github.com/go-chi/chi/v5.(*Mux).routeHTTP
+	/home/goomer/go/pkg/mod/github.com/go-chi/chi/v5@v5.0.10/mux.go:444
+net/http.HandlerFunc.ServeHTTP
+	/usr/local/go/src/net/http/server.go:2136
+github.com/go-chi/chi/v5.(*Mux).ServeHTTP
+	/home/goomer/go/pkg/mod/github.com/go-chi/chi/v5@v5.0.10/mux.go:90
+net/http.serverHandler.ServeHTTP
+	/usr/local/go/src/net/http/server.go:2938
+net/http.(*conn).serve
+	/usr/local/go/src/net/http/server.go:2009
+2023-10-27T10:50:05.617+0300	ERROR	logger/logger.go:55	Cann't find metric
+github.com/Mr-Punder/go-alerting-service/internal/logger.(*LogHTTPZap).Error
+	/home/goomer/dev/go-alerting-service/internal/logger/logger.go:55
+github.com/Mr-Punder/go-alerting-service/internal/handlers.(*Handler).JSONValueHandler
+	/home/goomer/dev/go-alerting-service/internal/handlers/handlers.go:192
+net/http.HandlerFunc.ServeHTTP
+	/usr/local/go/src/net/http/server.go:2136
+github.com/go-chi/chi/v5.(*Mux).routeHTTP
+	/home/goomer/go/pkg/mod/github.com/go-chi/chi/v5@v5.0.10/mux.go:444
+net/http.HandlerFunc.ServeHTTP
+	/usr/local/go/src/net/http/server.go:2136
+github.com/go-chi/chi/v5.(*Mux).ServeHTTP
+	/home/goomer/go/pkg/mod/github.com/go-chi/chi/v5@v5.0.10/mux.go:73
+github.com/go-chi/chi/v5.(*Mux).Mount.func1
+	/home/goomer/go/pkg/mod/github.com/go-chi/chi/v5@v5.0.10/mux.go:316
+net/http.HandlerFunc.ServeHTTP
+	/usr/local/go/src/net/http/server.go:2136
+github.com/go-chi/chi/v5.(*Mux).routeHTTP
+	/home/goomer/go/pkg/mod/github.com/go-chi/chi/v5@v5.0.10/mux.go:444
+net/http.HandlerFunc.ServeHTTP
+	/usr/local/go/src/net/http/server.go:2136
+github.com/go-chi/chi/v5.(*Mux).ServeHTTP
+	/home/goomer/go/pkg/mod/github.com/go-chi/chi/v5@v5.0.10/mux.go:90
+net/http.serverHandler.ServeHTTP
+	/usr/local/go/src/net/http/server.go:2938
+net/http.(*conn).serve
+	/usr/local/go/src/net/http/server.go:2009
+2023-10-27T10:50:05.619+0300	ERROR	logger/logger.go:55	wrong type
+github.com/Mr-Punder/go-alerting-service/internal/logger.(*LogHTTPZap).Error
+	/home/goomer/dev/go-alerting-service/internal/logger/logger.go:55
+github.com/Mr-Punder/go-alerting-service/internal/handlers.(*Handler).JSONValueHandler
+	/home/goomer/dev/go-alerting-service/internal/handlers/handlers.go:183
+net/http.HandlerFunc.ServeHTTP
+	/usr/local/go/src/net/http/server.go:2136
+github.com/go-chi/chi/v5.(*Mux).routeHTTP
+	/home/goomer/go/pkg/mod/github.com/go-chi/chi/v5@v5.0.10/mux.go:444
+net/http.HandlerFunc.ServeHTTP
+	/usr/local/go/src/net/http/server.go:2136
+github.com/go-chi/chi/v5.(*Mux).ServeHTTP
+	/home/goomer/go/pkg/mod/github.com/go-chi/chi/v5@v5.0.10/mux.go:73
+github.com/go-chi/chi/v5.(*Mux).Mount.func1
+	/home/goomer/go/pkg/mod/github.com/go-chi/chi/v5@v5.0.10/mux.go:316
+net/http.HandlerFunc.ServeHTTP
+	/usr/local/go/src/net/http/server.go:2136
+github.com/go-chi/chi/v5.(*Mux).routeHTTP
+	/home/goomer/go/pkg/mod/github.com/go-chi/chi/v5@v5.0.10/mux.go:444
+net/http.HandlerFunc.ServeHTTP
+	/usr/local/go/src/net/http/server.go:2136
+github.com/go-chi/chi/v5.(*Mux).ServeHTTP
+	/home/goomer/go/pkg/mod/github.com/go-chi/chi/v5@v5.0.10/mux.go:90
+net/http.serverHandler.ServeHTTP
+	/usr/local/go/src/net/http/server.go:2938
+net/http.(*conn).serve
+	/usr/local/go/src/net/http/server.go:2009
+2023-10-27T10:51:19.930+0300	ERROR	logger/logger.go:55	wrong type
+github.com/Mr-Punder/go-alerting-service/internal/logger.(*LogHTTPZap).Error
+	/home/goomer/dev/go-alerting-service/internal/logger/logger.go:55
+github.com/Mr-Punder/go-alerting-service/internal/handlers.(*Handler).JSONUpdHandler
+	/home/goomer/dev/go-alerting-service/internal/handlers/handlers.go:118
+net/http.HandlerFunc.ServeHTTP
+	/usr/local/go/src/net/http/server.go:2136
+github.com/go-chi/chi/v5.(*Mux).routeHTTP
+	/home/goomer/go/pkg/mod/github.com/go-chi/chi/v5@v5.0.10/mux.go:444
+net/http.HandlerFunc.ServeHTTP
+	/usr/local/go/src/net/http/server.go:2136
+github.com/go-chi/chi/v5.(*Mux).ServeHTTP
+	/home/goomer/go/pkg/mod/github.com/go-chi/chi/v5@v5.0.10/mux.go:73
+github.com/go-chi/chi/v5.(*Mux).Mount.func1
+	/home/goomer/go/pkg/mod/github.com/go-chi/chi/v5@v5.0.10/mux.go:316
+net/http.HandlerFunc.ServeHTTP
+	/usr/local/go/src/net/http/server.go:2136
+github.com/go-chi/chi/v5.(*Mux).routeHTTP
+	/home/goomer/go/pkg/mod/github.com/go-chi/chi/v5@v5.0.10/mux.go:444
+net/http.HandlerFunc.ServeHTTP
+	/usr/local/go/src/net/http/server.go:2136
+github.com/go-chi/chi/v5.(*Mux).ServeHTTP
+	/home/goomer/go/pkg/mod/github.com/go-chi/chi/v5@v5.0.10/mux.go:90
+net/http.serverHandler.ServeHTTP
+	/usr/local/go/src/net/http/server.go:2938
+net/http.(*conn).serve
+	/usr/local/go/src/net/http/server.go:2009
+2023-10-27T10:51:19.933+0300	ERROR	logger/logger.go:55	Cann't find metric
+github.com/Mr-Punder/go-alerting-service/internal/logger.(*LogHTTPZap).Error
+	/home/goomer/dev/go-alerting-service/internal/logger/logger.go:55
+github.com/Mr-Punder/go-alerting-service/internal/handlers.(*Handler).JSONValueHandler
+	/home/goomer/dev/go-alerting-service/internal/handlers/handlers.go:192
+net/http.HandlerFunc.ServeHTTP
+	/usr/local/go/src/net/http/server.go:2136
+github.com/go-chi/chi/v5.(*Mux).routeHTTP
+	/home/goomer/go/pkg/mod/github.com/go-chi/chi/v5@v5.0.10/mux.go:444
+net/http.HandlerFunc.ServeHTTP
+	/usr/local/go/src/net/http/server.go:2136
+github.com/go-chi/chi/v5.(*Mux).ServeHTTP
+	/home/goomer/go/pkg/mod/github.com/go-chi/chi/v5@v5.0.10/mux.go:73
+github.com/go-chi/chi/v5.(*Mux).Mount.func1
+	/home/goomer/go/pkg/mod/github.com/go-chi/chi/v5@v5.0.10/mux.go:316
+net/http.HandlerFunc.ServeHTTP
+	/usr/local/go/src/net/http/server.go:2136
+github.com/go-chi/chi/v5.(*Mux).routeHTTP
+	/home/goomer/go/pkg/mod/github.com/go-chi/chi/v5@v5.0.10/mux.go:444
+net/http.HandlerFunc.ServeHTTP
+	/usr/local/go/src/net/http/server.go:2136
+github.com/go-chi/chi/v5.(*Mux).ServeHTTP
+	/home/goomer/go/pkg/mod/github.com/go-chi/chi/v5@v5.0.10/mux.go:90
+net/http.serverHandler.ServeHTTP
+	/usr/local/go/src/net/http/server.go:2938
+net/http.(*conn).serve
+	/usr/local/go/src/net/http/server.go:2009
+2023-10-27T10:51:19.934+0300	ERROR	logger/logger.go:55	Cann't find metric
+github.com/Mr-Punder/go-alerting-service/internal/logger.(*LogHTTPZap).Error
+	/home/goomer/dev/go-alerting-service/internal/logger/logger.go:55
+github.com/Mr-Punder/go-alerting-service/internal/handlers.(*Handler).JSONValueHandler
+	/home/goomer/dev/go-alerting-service/internal/handlers/handlers.go:192
+net/http.HandlerFunc.ServeHTTP
+	/usr/local/go/src/net/http/server.go:2136
+github.com/go-chi/chi/v5.(*Mux).routeHTTP
+	/home/goomer/go/pkg/mod/github.com/go-chi/chi/v5@v5.0.10/mux.go:444
+net/http.HandlerFunc.ServeHTTP
+	/usr/local/go/src/net/http/server.go:2136
+github.com/go-chi/chi/v5.(*Mux).ServeHTTP
+	/home/goomer/go/pkg/mod/github.com/go-chi/chi/v5@v5.0.10/mux.go:73
+github.com/go-chi/chi/v5.(*Mux).Mount.func1
+	/home/goomer/go/pkg/mod/github.com/go-chi/chi/v5@v5.0.10/mux.go:316
+net/http.HandlerFunc.ServeHTTP
+	/usr/local/go/src/net/http/server.go:2136
+github.com/go-chi/chi/v5.(*Mux).routeHTTP
+	/home/goomer/go/pkg/mod/github.com/go-chi/chi/v5@v5.0.10/mux.go:444
+net/http.HandlerFunc.ServeHTTP
+	/usr/local/go/src/net/http/server.go:2136
+github.com/go-chi/chi/v5.(*Mux).ServeHTTP
+	/home/goomer/go/pkg/mod/github.com/go-chi/chi/v5@v5.0.10/mux.go:90
+net/http.serverHandler.ServeHTTP
+	/usr/local/go/src/net/http/server.go:2938
+net/http.(*conn).serve
+	/usr/local/go/src/net/http/server.go:2009
+2023-10-27T10:51:19.936+0300	ERROR	logger/logger.go:55	wrong type
+github.com/Mr-Punder/go-alerting-service/internal/logger.(*LogHTTPZap).Error
+	/home/goomer/dev/go-alerting-service/internal/logger/logger.go:55
+github.com/Mr-Punder/go-alerting-service/internal/handlers.(*Handler).JSONValueHandler
+	/home/goomer/dev/go-alerting-service/internal/handlers/handlers.go:183
+net/http.HandlerFunc.ServeHTTP
+	/usr/local/go/src/net/http/server.go:2136
+github.com/go-chi/chi/v5.(*Mux).routeHTTP
+	/home/goomer/go/pkg/mod/github.com/go-chi/chi/v5@v5.0.10/mux.go:444
+net/http.HandlerFunc.ServeHTTP
+	/usr/local/go/src/net/http/server.go:2136
+github.com/go-chi/chi/v5.(*Mux).ServeHTTP
+	/home/goomer/go/pkg/mod/github.com/go-chi/chi/v5@v5.0.10/mux.go:73
+github.com/go-chi/chi/v5.(*Mux).Mount.func1
+	/home/goomer/go/pkg/mod/github.com/go-chi/chi/v5@v5.0.10/mux.go:316
+net/http.HandlerFunc.ServeHTTP
+	/usr/local/go/src/net/http/server.go:2136
+github.com/go-chi/chi/v5.(*Mux).routeHTTP
+	/home/goomer/go/pkg/mod/github.com/go-chi/chi/v5@v5.0.10/mux.go:444
+net/http.HandlerFunc.ServeHTTP
+	/usr/local/go/src/net/http/server.go:2136
+github.com/go-chi/chi/v5.(*Mux).ServeHTTP
+	/home/goomer/go/pkg/mod/github.com/go-chi/chi/v5@v5.0.10/mux.go:90
+net/http.serverHandler.ServeHTTP
+	/usr/local/go/src/net/http/server.go:2938
+net/http.(*conn).serve
+	/usr/local/go/src/net/http/server.go:2009
+2023-10-27T10:52:46.448+0300	ERROR	logger/logger.go:55	wrong type
+github.com/Mr-Punder/go-alerting-service/internal/logger.(*LogHTTPZap).Error
+	/home/goomer/dev/go-alerting-service/internal/logger/logger.go:55
+github.com/Mr-Punder/go-alerting-service/internal/handlers.(*Handler).JSONUpdHandler
+	/home/goomer/dev/go-alerting-service/internal/handlers/handlers.go:118
+net/http.HandlerFunc.ServeHTTP
+	/usr/local/go/src/net/http/server.go:2136
+github.com/go-chi/chi/v5.(*Mux).routeHTTP
+	/home/goomer/go/pkg/mod/github.com/go-chi/chi/v5@v5.0.10/mux.go:444
+net/http.HandlerFunc.ServeHTTP
+	/usr/local/go/src/net/http/server.go:2136
+github.com/go-chi/chi/v5.(*Mux).ServeHTTP
+	/home/goomer/go/pkg/mod/github.com/go-chi/chi/v5@v5.0.10/mux.go:73
+github.com/go-chi/chi/v5.(*Mux).Mount.func1
+	/home/goomer/go/pkg/mod/github.com/go-chi/chi/v5@v5.0.10/mux.go:316
+net/http.HandlerFunc.ServeHTTP
+	/usr/local/go/src/net/http/server.go:2136
+github.com/go-chi/chi/v5.(*Mux).routeHTTP
+	/home/goomer/go/pkg/mod/github.com/go-chi/chi/v5@v5.0.10/mux.go:444
+net/http.HandlerFunc.ServeHTTP
+	/usr/local/go/src/net/http/server.go:2136
+github.com/go-chi/chi/v5.(*Mux).ServeHTTP
+	/home/goomer/go/pkg/mod/github.com/go-chi/chi/v5@v5.0.10/mux.go:90
+net/http.serverHandler.ServeHTTP
+	/usr/local/go/src/net/http/server.go:2938
+net/http.(*conn).serve
+	/usr/local/go/src/net/http/server.go:2009
+2023-10-27T10:52:46.451+0300	ERROR	logger/logger.go:55	Cann't find metric
+github.com/Mr-Punder/go-alerting-service/internal/logger.(*LogHTTPZap).Error
+	/home/goomer/dev/go-alerting-service/internal/logger/logger.go:55
+github.com/Mr-Punder/go-alerting-service/internal/handlers.(*Handler).JSONValueHandler
+	/home/goomer/dev/go-alerting-service/internal/handlers/handlers.go:192
+net/http.HandlerFunc.ServeHTTP
+	/usr/local/go/src/net/http/server.go:2136
+github.com/go-chi/chi/v5.(*Mux).routeHTTP
+	/home/goomer/go/pkg/mod/github.com/go-chi/chi/v5@v5.0.10/mux.go:444
+net/http.HandlerFunc.ServeHTTP
+	/usr/local/go/src/net/http/server.go:2136
+github.com/go-chi/chi/v5.(*Mux).ServeHTTP
+	/home/goomer/go/pkg/mod/github.com/go-chi/chi/v5@v5.0.10/mux.go:73
+github.com/go-chi/chi/v5.(*Mux).Mount.func1
+	/home/goomer/go/pkg/mod/github.com/go-chi/chi/v5@v5.0.10/mux.go:316
+net/http.HandlerFunc.ServeHTTP
+	/usr/local/go/src/net/http/server.go:2136
+github.com/go-chi/chi/v5.(*Mux).routeHTTP
+	/home/goomer/go/pkg/mod/github.com/go-chi/chi/v5@v5.0.10/mux.go:444
+net/http.HandlerFunc.ServeHTTP
+	/usr/local/go/src/net/http/server.go:2136
+github.com/go-chi/chi/v5.(*Mux).ServeHTTP
+	/home/goomer/go/pkg/mod/github.com/go-chi/chi/v5@v5.0.10/mux.go:90
+net/http.serverHandler.ServeHTTP
+	/usr/local/go/src/net/http/server.go:2938
+net/http.(*conn).serve
+	/usr/local/go/src/net/http/server.go:2009
+2023-10-27T10:52:46.453+0300	ERROR	logger/logger.go:55	Cann't find metric
+github.com/Mr-Punder/go-alerting-service/internal/logger.(*LogHTTPZap).Error
+	/home/goomer/dev/go-alerting-service/internal/logger/logger.go:55
+github.com/Mr-Punder/go-alerting-service/internal/handlers.(*Handler).JSONValueHandler
+	/home/goomer/dev/go-alerting-service/internal/handlers/handlers.go:192
+net/http.HandlerFunc.ServeHTTP
+	/usr/local/go/src/net/http/server.go:2136
+github.com/go-chi/chi/v5.(*Mux).routeHTTP
+	/home/goomer/go/pkg/mod/github.com/go-chi/chi/v5@v5.0.10/mux.go:444
+net/http.HandlerFunc.ServeHTTP
+	/usr/local/go/src/net/http/server.go:2136
+github.com/go-chi/chi/v5.(*Mux).ServeHTTP
+	/home/goomer/go/pkg/mod/github.com/go-chi/chi/v5@v5.0.10/mux.go:73
+github.com/go-chi/chi/v5.(*Mux).Mount.func1
+	/home/goomer/go/pkg/mod/github.com/go-chi/chi/v5@v5.0.10/mux.go:316
+net/http.HandlerFunc.ServeHTTP
+	/usr/local/go/src/net/http/server.go:2136
+github.com/go-chi/chi/v5.(*Mux).routeHTTP
+	/home/goomer/go/pkg/mod/github.com/go-chi/chi/v5@v5.0.10/mux.go:444
+net/http.HandlerFunc.ServeHTTP
+	/usr/local/go/src/net/http/server.go:2136
+github.com/go-chi/chi/v5.(*Mux).ServeHTTP
+	/home/goomer/go/pkg/mod/github.com/go-chi/chi/v5@v5.0.10/mux.go:90
+net/http.serverHandler.ServeHTTP
+	/usr/local/go/src/net/http/server.go:2938
+net/http.(*conn).serve
+	/usr/local/go/src/net/http/server.go:2009
+2023-10-27T10:52:46.456+0300	ERROR	logger/logger.go:55	wrong type
+github.com/Mr-Punder/go-alerting-service/internal/logger.(*LogHTTPZap).Error
+	/home/goomer/dev/go-alerting-service/internal/logger/logger.go:55
+github.com/Mr-Punder/go-alerting-service/internal/handlers.(*Handler).JSONValueHandler
+	/home/goomer/dev/go-alerting-service/internal/handlers/handlers.go:183
+net/http.HandlerFunc.ServeHTTP
+	/usr/local/go/src/net/http/server.go:2136
+github.com/go-chi/chi/v5.(*Mux).routeHTTP
+	/home/goomer/go/pkg/mod/github.com/go-chi/chi/v5@v5.0.10/mux.go:444
+net/http.HandlerFunc.ServeHTTP
+	/usr/local/go/src/net/http/server.go:2136
+github.com/go-chi/chi/v5.(*Mux).ServeHTTP
+	/home/goomer/go/pkg/mod/github.com/go-chi/chi/v5@v5.0.10/mux.go:73
+github.com/go-chi/chi/v5.(*Mux).Mount.func1
+	/home/goomer/go/pkg/mod/github.com/go-chi/chi/v5@v5.0.10/mux.go:316
+net/http.HandlerFunc.ServeHTTP
+	/usr/local/go/src/net/http/server.go:2136
+github.com/go-chi/chi/v5.(*Mux).routeHTTP
+	/home/goomer/go/pkg/mod/github.com/go-chi/chi/v5@v5.0.10/mux.go:444
+net/http.HandlerFunc.ServeHTTP
+	/usr/local/go/src/net/http/server.go:2136
+github.com/go-chi/chi/v5.(*Mux).ServeHTTP
+	/home/goomer/go/pkg/mod/github.com/go-chi/chi/v5@v5.0.10/mux.go:90
+net/http.serverHandler.ServeHTTP
+	/usr/local/go/src/net/http/server.go:2938
+net/http.(*conn).serve
+	/usr/local/go/src/net/http/server.go:2009
+2023-10-27T10:53:11.485+0300	ERROR	logger/logger.go:55	wrong type
+github.com/Mr-Punder/go-alerting-service/internal/logger.(*LogHTTPZap).Error
+	/home/goomer/dev/go-alerting-service/internal/logger/logger.go:55
+github.com/Mr-Punder/go-alerting-service/internal/handlers.(*Handler).JSONUpdHandler
+	/home/goomer/dev/go-alerting-service/internal/handlers/handlers.go:118
+net/http.HandlerFunc.ServeHTTP
+	/usr/local/go/src/net/http/server.go:2136
+github.com/go-chi/chi/v5.(*Mux).routeHTTP
+	/home/goomer/go/pkg/mod/github.com/go-chi/chi/v5@v5.0.10/mux.go:444
+net/http.HandlerFunc.ServeHTTP
+	/usr/local/go/src/net/http/server.go:2136
+github.com/go-chi/chi/v5.(*Mux).ServeHTTP
+	/home/goomer/go/pkg/mod/github.com/go-chi/chi/v5@v5.0.10/mux.go:73
+github.com/go-chi/chi/v5.(*Mux).Mount.func1
+	/home/goomer/go/pkg/mod/github.com/go-chi/chi/v5@v5.0.10/mux.go:316
+net/http.HandlerFunc.ServeHTTP
+	/usr/local/go/src/net/http/server.go:2136
+github.com/go-chi/chi/v5.(*Mux).routeHTTP
+	/home/goomer/go/pkg/mod/github.com/go-chi/chi/v5@v5.0.10/mux.go:444
+net/http.HandlerFunc.ServeHTTP
+	/usr/local/go/src/net/http/server.go:2136
+github.com/go-chi/chi/v5.(*Mux).ServeHTTP
+	/home/goomer/go/pkg/mod/github.com/go-chi/chi/v5@v5.0.10/mux.go:90
+net/http.serverHandler.ServeHTTP
+	/usr/local/go/src/net/http/server.go:2938
+net/http.(*conn).serve
+	/usr/local/go/src/net/http/server.go:2009
+2023-10-27T10:53:11.490+0300	ERROR	logger/logger.go:55	Cann't find metric
+github.com/Mr-Punder/go-alerting-service/internal/logger.(*LogHTTPZap).Error
+	/home/goomer/dev/go-alerting-service/internal/logger/logger.go:55
+github.com/Mr-Punder/go-alerting-service/internal/handlers.(*Handler).JSONValueHandler
+	/home/goomer/dev/go-alerting-service/internal/handlers/handlers.go:192
+net/http.HandlerFunc.ServeHTTP
+	/usr/local/go/src/net/http/server.go:2136
+github.com/go-chi/chi/v5.(*Mux).routeHTTP
+	/home/goomer/go/pkg/mod/github.com/go-chi/chi/v5@v5.0.10/mux.go:444
+net/http.HandlerFunc.ServeHTTP
+	/usr/local/go/src/net/http/server.go:2136
+github.com/go-chi/chi/v5.(*Mux).ServeHTTP
+	/home/goomer/go/pkg/mod/github.com/go-chi/chi/v5@v5.0.10/mux.go:73
+github.com/go-chi/chi/v5.(*Mux).Mount.func1
+	/home/goomer/go/pkg/mod/github.com/go-chi/chi/v5@v5.0.10/mux.go:316
+net/http.HandlerFunc.ServeHTTP
+	/usr/local/go/src/net/http/server.go:2136
+github.com/go-chi/chi/v5.(*Mux).routeHTTP
+	/home/goomer/go/pkg/mod/github.com/go-chi/chi/v5@v5.0.10/mux.go:444
+net/http.HandlerFunc.ServeHTTP
+	/usr/local/go/src/net/http/server.go:2136
+github.com/go-chi/chi/v5.(*Mux).ServeHTTP
+	/home/goomer/go/pkg/mod/github.com/go-chi/chi/v5@v5.0.10/mux.go:90
+net/http.serverHandler.ServeHTTP
+	/usr/local/go/src/net/http/server.go:2938
+net/http.(*conn).serve
+	/usr/local/go/src/net/http/server.go:2009
+2023-10-27T10:53:11.492+0300	ERROR	logger/logger.go:55	Cann't find metric
+github.com/Mr-Punder/go-alerting-service/internal/logger.(*LogHTTPZap).Error
+	/home/goomer/dev/go-alerting-service/internal/logger/logger.go:55
+github.com/Mr-Punder/go-alerting-service/internal/handlers.(*Handler).JSONValueHandler
+	/home/goomer/dev/go-alerting-service/internal/handlers/handlers.go:192
+net/http.HandlerFunc.ServeHTTP
+	/usr/local/go/src/net/http/server.go:2136
+github.com/go-chi/chi/v5.(*Mux).routeHTTP
+	/home/goomer/go/pkg/mod/github.com/go-chi/chi/v5@v5.0.10/mux.go:444
+net/http.HandlerFunc.ServeHTTP
+	/usr/local/go/src/net/http/server.go:2136
+github.com/go-chi/chi/v5.(*Mux).ServeHTTP
+	/home/goomer/go/pkg/mod/github.com/go-chi/chi/v5@v5.0.10/mux.go:73
+github.com/go-chi/chi/v5.(*Mux).Mount.func1
+	/home/goomer/go/pkg/mod/github.com/go-chi/chi/v5@v5.0.10/mux.go:316
+net/http.HandlerFunc.ServeHTTP
+	/usr/local/go/src/net/http/server.go:2136
+github.com/go-chi/chi/v5.(*Mux).routeHTTP
+	/home/goomer/go/pkg/mod/github.com/go-chi/chi/v5@v5.0.10/mux.go:444
+net/http.HandlerFunc.ServeHTTP
+	/usr/local/go/src/net/http/server.go:2136
+github.com/go-chi/chi/v5.(*Mux).ServeHTTP
+	/home/goomer/go/pkg/mod/github.com/go-chi/chi/v5@v5.0.10/mux.go:90
+net/http.serverHandler.ServeHTTP
+	/usr/local/go/src/net/http/server.go:2938
+net/http.(*conn).serve
+	/usr/local/go/src/net/http/server.go:2009
+2023-10-27T10:53:11.493+0300	ERROR	logger/logger.go:55	wrong type
+github.com/Mr-Punder/go-alerting-service/internal/logger.(*LogHTTPZap).Error
+	/home/goomer/dev/go-alerting-service/internal/logger/logger.go:55
+github.com/Mr-Punder/go-alerting-service/internal/handlers.(*Handler).JSONValueHandler
+	/home/goomer/dev/go-alerting-service/internal/handlers/handlers.go:183
+net/http.HandlerFunc.ServeHTTP
+	/usr/local/go/src/net/http/server.go:2136
+github.com/go-chi/chi/v5.(*Mux).routeHTTP
+	/home/goomer/go/pkg/mod/github.com/go-chi/chi/v5@v5.0.10/mux.go:444
+net/http.HandlerFunc.ServeHTTP
+	/usr/local/go/src/net/http/server.go:2136
+github.com/go-chi/chi/v5.(*Mux).ServeHTTP
+	/home/goomer/go/pkg/mod/github.com/go-chi/chi/v5@v5.0.10/mux.go:73
+github.com/go-chi/chi/v5.(*Mux).Mount.func1
+	/home/goomer/go/pkg/mod/github.com/go-chi/chi/v5@v5.0.10/mux.go:316
+net/http.HandlerFunc.ServeHTTP
+	/usr/local/go/src/net/http/server.go:2136
+github.com/go-chi/chi/v5.(*Mux).routeHTTP
+	/home/goomer/go/pkg/mod/github.com/go-chi/chi/v5@v5.0.10/mux.go:444
+net/http.HandlerFunc.ServeHTTP
+	/usr/local/go/src/net/http/server.go:2136
+github.com/go-chi/chi/v5.(*Mux).ServeHTTP
+	/home/goomer/go/pkg/mod/github.com/go-chi/chi/v5@v5.0.10/mux.go:90
+net/http.serverHandler.ServeHTTP
+	/usr/local/go/src/net/http/server.go:2938
+net/http.(*conn).serve
+	/usr/local/go/src/net/http/server.go:2009
+2023-10-27T11:05:45.858+0300	ERROR	logger/logger.go:55	wrong type
+github.com/Mr-Punder/go-alerting-service/internal/logger.(*LogHTTPZap).Error
+	/home/goomer/dev/go-alerting-service/internal/logger/logger.go:55
+github.com/Mr-Punder/go-alerting-service/internal/handlers.(*Handler).JSONUpdHandler
+	/home/goomer/dev/go-alerting-service/internal/handlers/handlers.go:118
+net/http.HandlerFunc.ServeHTTP
+	/usr/local/go/src/net/http/server.go:2136
+github.com/go-chi/chi/v5.(*Mux).routeHTTP
+	/home/goomer/go/pkg/mod/github.com/go-chi/chi/v5@v5.0.10/mux.go:444
+net/http.HandlerFunc.ServeHTTP
+	/usr/local/go/src/net/http/server.go:2136
+github.com/go-chi/chi/v5.(*Mux).ServeHTTP
+	/home/goomer/go/pkg/mod/github.com/go-chi/chi/v5@v5.0.10/mux.go:73
+github.com/go-chi/chi/v5.(*Mux).Mount.func1
+	/home/goomer/go/pkg/mod/github.com/go-chi/chi/v5@v5.0.10/mux.go:316
+net/http.HandlerFunc.ServeHTTP
+	/usr/local/go/src/net/http/server.go:2136
+github.com/go-chi/chi/v5.(*Mux).routeHTTP
+	/home/goomer/go/pkg/mod/github.com/go-chi/chi/v5@v5.0.10/mux.go:444
+net/http.HandlerFunc.ServeHTTP
+	/usr/local/go/src/net/http/server.go:2136
+github.com/go-chi/chi/v5.(*Mux).ServeHTTP
+	/home/goomer/go/pkg/mod/github.com/go-chi/chi/v5@v5.0.10/mux.go:90
+net/http.serverHandler.ServeHTTP
+	/usr/local/go/src/net/http/server.go:2938
+net/http.(*conn).serve
+	/usr/local/go/src/net/http/server.go:2009
+2023-10-27T11:05:45.861+0300	ERROR	logger/logger.go:55	Cann't find metric
+github.com/Mr-Punder/go-alerting-service/internal/logger.(*LogHTTPZap).Error
+	/home/goomer/dev/go-alerting-service/internal/logger/logger.go:55
+github.com/Mr-Punder/go-alerting-service/internal/handlers.(*Handler).JSONValueHandler
+	/home/goomer/dev/go-alerting-service/internal/handlers/handlers.go:192
+net/http.HandlerFunc.ServeHTTP
+	/usr/local/go/src/net/http/server.go:2136
+github.com/go-chi/chi/v5.(*Mux).routeHTTP
+	/home/goomer/go/pkg/mod/github.com/go-chi/chi/v5@v5.0.10/mux.go:444
+net/http.HandlerFunc.ServeHTTP
+	/usr/local/go/src/net/http/server.go:2136
+github.com/go-chi/chi/v5.(*Mux).ServeHTTP
+	/home/goomer/go/pkg/mod/github.com/go-chi/chi/v5@v5.0.10/mux.go:73
+github.com/go-chi/chi/v5.(*Mux).Mount.func1
+	/home/goomer/go/pkg/mod/github.com/go-chi/chi/v5@v5.0.10/mux.go:316
+net/http.HandlerFunc.ServeHTTP
+	/usr/local/go/src/net/http/server.go:2136
+github.com/go-chi/chi/v5.(*Mux).routeHTTP
+	/home/goomer/go/pkg/mod/github.com/go-chi/chi/v5@v5.0.10/mux.go:444
+net/http.HandlerFunc.ServeHTTP
+	/usr/local/go/src/net/http/server.go:2136
+github.com/go-chi/chi/v5.(*Mux).ServeHTTP
+	/home/goomer/go/pkg/mod/github.com/go-chi/chi/v5@v5.0.10/mux.go:90
+net/http.serverHandler.ServeHTTP
+	/usr/local/go/src/net/http/server.go:2938
+net/http.(*conn).serve
+	/usr/local/go/src/net/http/server.go:2009
+2023-10-27T11:05:45.863+0300	ERROR	logger/logger.go:55	Cann't find metric
+github.com/Mr-Punder/go-alerting-service/internal/logger.(*LogHTTPZap).Error
+	/home/goomer/dev/go-alerting-service/internal/logger/logger.go:55
+github.com/Mr-Punder/go-alerting-service/internal/handlers.(*Handler).JSONValueHandler
+	/home/goomer/dev/go-alerting-service/internal/handlers/handlers.go:192
+net/http.HandlerFunc.ServeHTTP
+	/usr/local/go/src/net/http/server.go:2136
+github.com/go-chi/chi/v5.(*Mux).routeHTTP
+	/home/goomer/go/pkg/mod/github.com/go-chi/chi/v5@v5.0.10/mux.go:444
+net/http.HandlerFunc.ServeHTTP
+	/usr/local/go/src/net/http/server.go:2136
+github.com/go-chi/chi/v5.(*Mux).ServeHTTP
+	/home/goomer/go/pkg/mod/github.com/go-chi/chi/v5@v5.0.10/mux.go:73
+github.com/go-chi/chi/v5.(*Mux).Mount.func1
+	/home/goomer/go/pkg/mod/github.com/go-chi/chi/v5@v5.0.10/mux.go:316
+net/http.HandlerFunc.ServeHTTP
+	/usr/local/go/src/net/http/server.go:2136
+github.com/go-chi/chi/v5.(*Mux).routeHTTP
+	/home/goomer/go/pkg/mod/github.com/go-chi/chi/v5@v5.0.10/mux.go:444
+net/http.HandlerFunc.ServeHTTP
+	/usr/local/go/src/net/http/server.go:2136
+github.com/go-chi/chi/v5.(*Mux).ServeHTTP
+	/home/goomer/go/pkg/mod/github.com/go-chi/chi/v5@v5.0.10/mux.go:90
+net/http.serverHandler.ServeHTTP
+	/usr/local/go/src/net/http/server.go:2938
+net/http.(*conn).serve
+	/usr/local/go/src/net/http/server.go:2009
+2023-10-27T11:05:45.865+0300	ERROR	logger/logger.go:55	wrong type
+github.com/Mr-Punder/go-alerting-service/internal/logger.(*LogHTTPZap).Error
+	/home/goomer/dev/go-alerting-service/internal/logger/logger.go:55
+github.com/Mr-Punder/go-alerting-service/internal/handlers.(*Handler).JSONValueHandler
+	/home/goomer/dev/go-alerting-service/internal/handlers/handlers.go:183
+net/http.HandlerFunc.ServeHTTP
+	/usr/local/go/src/net/http/server.go:2136
+github.com/go-chi/chi/v5.(*Mux).routeHTTP
+	/home/goomer/go/pkg/mod/github.com/go-chi/chi/v5@v5.0.10/mux.go:444
+net/http.HandlerFunc.ServeHTTP
+	/usr/local/go/src/net/http/server.go:2136
+github.com/go-chi/chi/v5.(*Mux).ServeHTTP
+	/home/goomer/go/pkg/mod/github.com/go-chi/chi/v5@v5.0.10/mux.go:73
+github.com/go-chi/chi/v5.(*Mux).Mount.func1
+	/home/goomer/go/pkg/mod/github.com/go-chi/chi/v5@v5.0.10/mux.go:316
+net/http.HandlerFunc.ServeHTTP
+	/usr/local/go/src/net/http/server.go:2136
+github.com/go-chi/chi/v5.(*Mux).routeHTTP
+	/home/goomer/go/pkg/mod/github.com/go-chi/chi/v5@v5.0.10/mux.go:444
+net/http.HandlerFunc.ServeHTTP
+	/usr/local/go/src/net/http/server.go:2136
+github.com/go-chi/chi/v5.(*Mux).ServeHTTP
+	/home/goomer/go/pkg/mod/github.com/go-chi/chi/v5@v5.0.10/mux.go:90
+net/http.serverHandler.ServeHTTP
+	/usr/local/go/src/net/http/server.go:2938
+net/http.(*conn).serve
+	/usr/local/go/src/net/http/server.go:2009
+2023-10-27T11:09:00.915+0300	ERROR	logger/logger.go:55	wrong type
+github.com/Mr-Punder/go-alerting-service/internal/logger.(*LogHTTPZap).Error
+	/home/goomer/dev/go-alerting-service/internal/logger/logger.go:55
+github.com/Mr-Punder/go-alerting-service/internal/handlers.(*Handler).JSONUpdHandler
+	/home/goomer/dev/go-alerting-service/internal/handlers/handlers.go:118
+net/http.HandlerFunc.ServeHTTP
+	/usr/local/go/src/net/http/server.go:2136
+github.com/go-chi/chi/v5.(*Mux).routeHTTP
+	/home/goomer/go/pkg/mod/github.com/go-chi/chi/v5@v5.0.10/mux.go:444
+net/http.HandlerFunc.ServeHTTP
+	/usr/local/go/src/net/http/server.go:2136
+github.com/go-chi/chi/v5.(*Mux).ServeHTTP
+	/home/goomer/go/pkg/mod/github.com/go-chi/chi/v5@v5.0.10/mux.go:73
+github.com/go-chi/chi/v5.(*Mux).Mount.func1
+	/home/goomer/go/pkg/mod/github.com/go-chi/chi/v5@v5.0.10/mux.go:316
+net/http.HandlerFunc.ServeHTTP
+	/usr/local/go/src/net/http/server.go:2136
+github.com/go-chi/chi/v5.(*Mux).routeHTTP
+	/home/goomer/go/pkg/mod/github.com/go-chi/chi/v5@v5.0.10/mux.go:444
+net/http.HandlerFunc.ServeHTTP
+	/usr/local/go/src/net/http/server.go:2136
+github.com/go-chi/chi/v5.(*Mux).ServeHTTP
+	/home/goomer/go/pkg/mod/github.com/go-chi/chi/v5@v5.0.10/mux.go:90
+net/http.serverHandler.ServeHTTP
+	/usr/local/go/src/net/http/server.go:2938
+net/http.(*conn).serve
+	/usr/local/go/src/net/http/server.go:2009
+2023-10-27T11:09:00.919+0300	ERROR	logger/logger.go:55	Cann't find metric
+github.com/Mr-Punder/go-alerting-service/internal/logger.(*LogHTTPZap).Error
+	/home/goomer/dev/go-alerting-service/internal/logger/logger.go:55
+github.com/Mr-Punder/go-alerting-service/internal/handlers.(*Handler).JSONValueHandler
+	/home/goomer/dev/go-alerting-service/internal/handlers/handlers.go:192
+net/http.HandlerFunc.ServeHTTP
+	/usr/local/go/src/net/http/server.go:2136
+github.com/go-chi/chi/v5.(*Mux).routeHTTP
+	/home/goomer/go/pkg/mod/github.com/go-chi/chi/v5@v5.0.10/mux.go:444
+net/http.HandlerFunc.ServeHTTP
+	/usr/local/go/src/net/http/server.go:2136
+github.com/go-chi/chi/v5.(*Mux).ServeHTTP
+	/home/goomer/go/pkg/mod/github.com/go-chi/chi/v5@v5.0.10/mux.go:73
+github.com/go-chi/chi/v5.(*Mux).Mount.func1
+	/home/goomer/go/pkg/mod/github.com/go-chi/chi/v5@v5.0.10/mux.go:316
+net/http.HandlerFunc.ServeHTTP
+	/usr/local/go/src/net/http/server.go:2136
+github.com/go-chi/chi/v5.(*Mux).routeHTTP
+	/home/goomer/go/pkg/mod/github.com/go-chi/chi/v5@v5.0.10/mux.go:444
+net/http.HandlerFunc.ServeHTTP
+	/usr/local/go/src/net/http/server.go:2136
+github.com/go-chi/chi/v5.(*Mux).ServeHTTP
+	/home/goomer/go/pkg/mod/github.com/go-chi/chi/v5@v5.0.10/mux.go:90
+net/http.serverHandler.ServeHTTP
+	/usr/local/go/src/net/http/server.go:2938
+net/http.(*conn).serve
+	/usr/local/go/src/net/http/server.go:2009
+2023-10-27T11:09:00.922+0300	ERROR	logger/logger.go:55	Cann't find metric
+github.com/Mr-Punder/go-alerting-service/internal/logger.(*LogHTTPZap).Error
+	/home/goomer/dev/go-alerting-service/internal/logger/logger.go:55
+github.com/Mr-Punder/go-alerting-service/internal/handlers.(*Handler).JSONValueHandler
+	/home/goomer/dev/go-alerting-service/internal/handlers/handlers.go:192
+net/http.HandlerFunc.ServeHTTP
+	/usr/local/go/src/net/http/server.go:2136
+github.com/go-chi/chi/v5.(*Mux).routeHTTP
+	/home/goomer/go/pkg/mod/github.com/go-chi/chi/v5@v5.0.10/mux.go:444
+net/http.HandlerFunc.ServeHTTP
+	/usr/local/go/src/net/http/server.go:2136
+github.com/go-chi/chi/v5.(*Mux).ServeHTTP
+	/home/goomer/go/pkg/mod/github.com/go-chi/chi/v5@v5.0.10/mux.go:73
+github.com/go-chi/chi/v5.(*Mux).Mount.func1
+	/home/goomer/go/pkg/mod/github.com/go-chi/chi/v5@v5.0.10/mux.go:316
+net/http.HandlerFunc.ServeHTTP
+	/usr/local/go/src/net/http/server.go:2136
+github.com/go-chi/chi/v5.(*Mux).routeHTTP
+	/home/goomer/go/pkg/mod/github.com/go-chi/chi/v5@v5.0.10/mux.go:444
+net/http.HandlerFunc.ServeHTTP
+	/usr/local/go/src/net/http/server.go:2136
+github.com/go-chi/chi/v5.(*Mux).ServeHTTP
+	/home/goomer/go/pkg/mod/github.com/go-chi/chi/v5@v5.0.10/mux.go:90
+net/http.serverHandler.ServeHTTP
+	/usr/local/go/src/net/http/server.go:2938
+net/http.(*conn).serve
+	/usr/local/go/src/net/http/server.go:2009
+2023-10-27T11:09:00.924+0300	ERROR	logger/logger.go:55	wrong type
+github.com/Mr-Punder/go-alerting-service/internal/logger.(*LogHTTPZap).Error
+	/home/goomer/dev/go-alerting-service/internal/logger/logger.go:55
+github.com/Mr-Punder/go-alerting-service/internal/handlers.(*Handler).JSONValueHandler
+	/home/goomer/dev/go-alerting-service/internal/handlers/handlers.go:183
+net/http.HandlerFunc.ServeHTTP
+	/usr/local/go/src/net/http/server.go:2136
+github.com/go-chi/chi/v5.(*Mux).routeHTTP
+	/home/goomer/go/pkg/mod/github.com/go-chi/chi/v5@v5.0.10/mux.go:444
+net/http.HandlerFunc.ServeHTTP
+	/usr/local/go/src/net/http/server.go:2136
+github.com/go-chi/chi/v5.(*Mux).ServeHTTP
+	/home/goomer/go/pkg/mod/github.com/go-chi/chi/v5@v5.0.10/mux.go:73
+github.com/go-chi/chi/v5.(*Mux).Mount.func1
+	/home/goomer/go/pkg/mod/github.com/go-chi/chi/v5@v5.0.10/mux.go:316
+net/http.HandlerFunc.ServeHTTP
+	/usr/local/go/src/net/http/server.go:2136
+github.com/go-chi/chi/v5.(*Mux).routeHTTP
+	/home/goomer/go/pkg/mod/github.com/go-chi/chi/v5@v5.0.10/mux.go:444
+net/http.HandlerFunc.ServeHTTP
+	/usr/local/go/src/net/http/server.go:2136
+github.com/go-chi/chi/v5.(*Mux).ServeHTTP
+	/home/goomer/go/pkg/mod/github.com/go-chi/chi/v5@v5.0.10/mux.go:90
+net/http.serverHandler.ServeHTTP
+	/usr/local/go/src/net/http/server.go:2938
+net/http.(*conn).serve
+	/usr/local/go/src/net/http/server.go:2009
+2023-10-27T11:10:05.464+0300	ERROR	logger/logger.go:55	wrong type
+github.com/Mr-Punder/go-alerting-service/internal/logger.(*LogHTTPZap).Error
+	/home/goomer/dev/go-alerting-service/internal/logger/logger.go:55
+github.com/Mr-Punder/go-alerting-service/internal/handlers.(*Handler).JSONUpdHandler
+	/home/goomer/dev/go-alerting-service/internal/handlers/handlers.go:118
+net/http.HandlerFunc.ServeHTTP
+	/usr/local/go/src/net/http/server.go:2136
+github.com/go-chi/chi/v5.(*Mux).routeHTTP
+	/home/goomer/go/pkg/mod/github.com/go-chi/chi/v5@v5.0.10/mux.go:444
+net/http.HandlerFunc.ServeHTTP
+	/usr/local/go/src/net/http/server.go:2136
+github.com/go-chi/chi/v5.(*Mux).ServeHTTP
+	/home/goomer/go/pkg/mod/github.com/go-chi/chi/v5@v5.0.10/mux.go:73
+github.com/go-chi/chi/v5.(*Mux).Mount.func1
+	/home/goomer/go/pkg/mod/github.com/go-chi/chi/v5@v5.0.10/mux.go:316
+net/http.HandlerFunc.ServeHTTP
+	/usr/local/go/src/net/http/server.go:2136
+github.com/go-chi/chi/v5.(*Mux).routeHTTP
+	/home/goomer/go/pkg/mod/github.com/go-chi/chi/v5@v5.0.10/mux.go:444
+net/http.HandlerFunc.ServeHTTP
+	/usr/local/go/src/net/http/server.go:2136
+github.com/go-chi/chi/v5.(*Mux).ServeHTTP
+	/home/goomer/go/pkg/mod/github.com/go-chi/chi/v5@v5.0.10/mux.go:90
+net/http.serverHandler.ServeHTTP
+	/usr/local/go/src/net/http/server.go:2938
+net/http.(*conn).serve
+	/usr/local/go/src/net/http/server.go:2009
+2023-10-27T11:10:05.470+0300	ERROR	logger/logger.go:55	Cann't find metric
+github.com/Mr-Punder/go-alerting-service/internal/logger.(*LogHTTPZap).Error
+	/home/goomer/dev/go-alerting-service/internal/logger/logger.go:55
+github.com/Mr-Punder/go-alerting-service/internal/handlers.(*Handler).JSONValueHandler
+	/home/goomer/dev/go-alerting-service/internal/handlers/handlers.go:192
+net/http.HandlerFunc.ServeHTTP
+	/usr/local/go/src/net/http/server.go:2136
+github.com/go-chi/chi/v5.(*Mux).routeHTTP
+	/home/goomer/go/pkg/mod/github.com/go-chi/chi/v5@v5.0.10/mux.go:444
+net/http.HandlerFunc.ServeHTTP
+	/usr/local/go/src/net/http/server.go:2136
+github.com/go-chi/chi/v5.(*Mux).ServeHTTP
+	/home/goomer/go/pkg/mod/github.com/go-chi/chi/v5@v5.0.10/mux.go:73
+github.com/go-chi/chi/v5.(*Mux).Mount.func1
+	/home/goomer/go/pkg/mod/github.com/go-chi/chi/v5@v5.0.10/mux.go:316
+net/http.HandlerFunc.ServeHTTP
+	/usr/local/go/src/net/http/server.go:2136
+github.com/go-chi/chi/v5.(*Mux).routeHTTP
+	/home/goomer/go/pkg/mod/github.com/go-chi/chi/v5@v5.0.10/mux.go:444
+net/http.HandlerFunc.ServeHTTP
+	/usr/local/go/src/net/http/server.go:2136
+github.com/go-chi/chi/v5.(*Mux).ServeHTTP
+	/home/goomer/go/pkg/mod/github.com/go-chi/chi/v5@v5.0.10/mux.go:90
+net/http.serverHandler.ServeHTTP
+	/usr/local/go/src/net/http/server.go:2938
+net/http.(*conn).serve
+	/usr/local/go/src/net/http/server.go:2009
+2023-10-27T11:10:05.472+0300	ERROR	logger/logger.go:55	Cann't find metric
+github.com/Mr-Punder/go-alerting-service/internal/logger.(*LogHTTPZap).Error
+	/home/goomer/dev/go-alerting-service/internal/logger/logger.go:55
+github.com/Mr-Punder/go-alerting-service/internal/handlers.(*Handler).JSONValueHandler
+	/home/goomer/dev/go-alerting-service/internal/handlers/handlers.go:192
+net/http.HandlerFunc.ServeHTTP
+	/usr/local/go/src/net/http/server.go:2136
+github.com/go-chi/chi/v5.(*Mux).routeHTTP
+	/home/goomer/go/pkg/mod/github.com/go-chi/chi/v5@v5.0.10/mux.go:444
+net/http.HandlerFunc.ServeHTTP
+	/usr/local/go/src/net/http/server.go:2136
+github.com/go-chi/chi/v5.(*Mux).ServeHTTP
+	/home/goomer/go/pkg/mod/github.com/go-chi/chi/v5@v5.0.10/mux.go:73
+github.com/go-chi/chi/v5.(*Mux).Mount.func1
+	/home/goomer/go/pkg/mod/github.com/go-chi/chi/v5@v5.0.10/mux.go:316
+net/http.HandlerFunc.ServeHTTP
+	/usr/local/go/src/net/http/server.go:2136
+github.com/go-chi/chi/v5.(*Mux).routeHTTP
+	/home/goomer/go/pkg/mod/github.com/go-chi/chi/v5@v5.0.10/mux.go:444
+net/http.HandlerFunc.ServeHTTP
+	/usr/local/go/src/net/http/server.go:2136
+github.com/go-chi/chi/v5.(*Mux).ServeHTTP
+	/home/goomer/go/pkg/mod/github.com/go-chi/chi/v5@v5.0.10/mux.go:90
+net/http.serverHandler.ServeHTTP
+	/usr/local/go/src/net/http/server.go:2938
+net/http.(*conn).serve
+	/usr/local/go/src/net/http/server.go:2009
+2023-10-27T11:10:05.475+0300	ERROR	logger/logger.go:55	wrong type
+github.com/Mr-Punder/go-alerting-service/internal/logger.(*LogHTTPZap).Error
+	/home/goomer/dev/go-alerting-service/internal/logger/logger.go:55
+github.com/Mr-Punder/go-alerting-service/internal/handlers.(*Handler).JSONValueHandler
+	/home/goomer/dev/go-alerting-service/internal/handlers/handlers.go:183
+net/http.HandlerFunc.ServeHTTP
+	/usr/local/go/src/net/http/server.go:2136
+github.com/go-chi/chi/v5.(*Mux).routeHTTP
+	/home/goomer/go/pkg/mod/github.com/go-chi/chi/v5@v5.0.10/mux.go:444
+net/http.HandlerFunc.ServeHTTP
+	/usr/local/go/src/net/http/server.go:2136
+github.com/go-chi/chi/v5.(*Mux).ServeHTTP
+	/home/goomer/go/pkg/mod/github.com/go-chi/chi/v5@v5.0.10/mux.go:73
+github.com/go-chi/chi/v5.(*Mux).Mount.func1
+	/home/goomer/go/pkg/mod/github.com/go-chi/chi/v5@v5.0.10/mux.go:316
+net/http.HandlerFunc.ServeHTTP
+	/usr/local/go/src/net/http/server.go:2136
+github.com/go-chi/chi/v5.(*Mux).routeHTTP
+	/home/goomer/go/pkg/mod/github.com/go-chi/chi/v5@v5.0.10/mux.go:444
+net/http.HandlerFunc.ServeHTTP
+	/usr/local/go/src/net/http/server.go:2136
+github.com/go-chi/chi/v5.(*Mux).ServeHTTP
+	/home/goomer/go/pkg/mod/github.com/go-chi/chi/v5@v5.0.10/mux.go:90
+net/http.serverHandler.ServeHTTP
+	/usr/local/go/src/net/http/server.go:2938
+net/http.(*conn).serve
+	/usr/local/go/src/net/http/server.go:2009
+2023-10-27T11:10:40.120+0300	ERROR	logger/logger.go:55	wrong type
+github.com/Mr-Punder/go-alerting-service/internal/logger.(*LogHTTPZap).Error
+	/home/goomer/dev/go-alerting-service/internal/logger/logger.go:55
+github.com/Mr-Punder/go-alerting-service/internal/handlers.(*Handler).JSONUpdHandler
+	/home/goomer/dev/go-alerting-service/internal/handlers/handlers.go:118
+net/http.HandlerFunc.ServeHTTP
+	/usr/local/go/src/net/http/server.go:2136
+github.com/go-chi/chi/v5.(*Mux).routeHTTP
+	/home/goomer/go/pkg/mod/github.com/go-chi/chi/v5@v5.0.10/mux.go:444
+net/http.HandlerFunc.ServeHTTP
+	/usr/local/go/src/net/http/server.go:2136
+github.com/go-chi/chi/v5.(*Mux).ServeHTTP
+	/home/goomer/go/pkg/mod/github.com/go-chi/chi/v5@v5.0.10/mux.go:73
+github.com/go-chi/chi/v5.(*Mux).Mount.func1
+	/home/goomer/go/pkg/mod/github.com/go-chi/chi/v5@v5.0.10/mux.go:316
+net/http.HandlerFunc.ServeHTTP
+	/usr/local/go/src/net/http/server.go:2136
+github.com/go-chi/chi/v5.(*Mux).routeHTTP
+	/home/goomer/go/pkg/mod/github.com/go-chi/chi/v5@v5.0.10/mux.go:444
+net/http.HandlerFunc.ServeHTTP
+	/usr/local/go/src/net/http/server.go:2136
+github.com/go-chi/chi/v5.(*Mux).ServeHTTP
+	/home/goomer/go/pkg/mod/github.com/go-chi/chi/v5@v5.0.10/mux.go:90
+net/http.serverHandler.ServeHTTP
+	/usr/local/go/src/net/http/server.go:2938
+net/http.(*conn).serve
+	/usr/local/go/src/net/http/server.go:2009
+2023-10-27T11:10:40.125+0300	ERROR	logger/logger.go:55	Cann't find metric
+github.com/Mr-Punder/go-alerting-service/internal/logger.(*LogHTTPZap).Error
+	/home/goomer/dev/go-alerting-service/internal/logger/logger.go:55
+github.com/Mr-Punder/go-alerting-service/internal/handlers.(*Handler).JSONValueHandler
+	/home/goomer/dev/go-alerting-service/internal/handlers/handlers.go:192
+net/http.HandlerFunc.ServeHTTP
+	/usr/local/go/src/net/http/server.go:2136
+github.com/go-chi/chi/v5.(*Mux).routeHTTP
+	/home/goomer/go/pkg/mod/github.com/go-chi/chi/v5@v5.0.10/mux.go:444
+net/http.HandlerFunc.ServeHTTP
+	/usr/local/go/src/net/http/server.go:2136
+github.com/go-chi/chi/v5.(*Mux).ServeHTTP
+	/home/goomer/go/pkg/mod/github.com/go-chi/chi/v5@v5.0.10/mux.go:73
+github.com/go-chi/chi/v5.(*Mux).Mount.func1
+	/home/goomer/go/pkg/mod/github.com/go-chi/chi/v5@v5.0.10/mux.go:316
+net/http.HandlerFunc.ServeHTTP
+	/usr/local/go/src/net/http/server.go:2136
+github.com/go-chi/chi/v5.(*Mux).routeHTTP
+	/home/goomer/go/pkg/mod/github.com/go-chi/chi/v5@v5.0.10/mux.go:444
+net/http.HandlerFunc.ServeHTTP
+	/usr/local/go/src/net/http/server.go:2136
+github.com/go-chi/chi/v5.(*Mux).ServeHTTP
+	/home/goomer/go/pkg/mod/github.com/go-chi/chi/v5@v5.0.10/mux.go:90
+net/http.serverHandler.ServeHTTP
+	/usr/local/go/src/net/http/server.go:2938
+net/http.(*conn).serve
+	/usr/local/go/src/net/http/server.go:2009
+2023-10-27T11:10:40.127+0300	ERROR	logger/logger.go:55	Cann't find metric
+github.com/Mr-Punder/go-alerting-service/internal/logger.(*LogHTTPZap).Error
+	/home/goomer/dev/go-alerting-service/internal/logger/logger.go:55
+github.com/Mr-Punder/go-alerting-service/internal/handlers.(*Handler).JSONValueHandler
+	/home/goomer/dev/go-alerting-service/internal/handlers/handlers.go:192
+net/http.HandlerFunc.ServeHTTP
+	/usr/local/go/src/net/http/server.go:2136
+github.com/go-chi/chi/v5.(*Mux).routeHTTP
+	/home/goomer/go/pkg/mod/github.com/go-chi/chi/v5@v5.0.10/mux.go:444
+net/http.HandlerFunc.ServeHTTP
+	/usr/local/go/src/net/http/server.go:2136
+github.com/go-chi/chi/v5.(*Mux).ServeHTTP
+	/home/goomer/go/pkg/mod/github.com/go-chi/chi/v5@v5.0.10/mux.go:73
+github.com/go-chi/chi/v5.(*Mux).Mount.func1
+	/home/goomer/go/pkg/mod/github.com/go-chi/chi/v5@v5.0.10/mux.go:316
+net/http.HandlerFunc.ServeHTTP
+	/usr/local/go/src/net/http/server.go:2136
+github.com/go-chi/chi/v5.(*Mux).routeHTTP
+	/home/goomer/go/pkg/mod/github.com/go-chi/chi/v5@v5.0.10/mux.go:444
+net/http.HandlerFunc.ServeHTTP
+	/usr/local/go/src/net/http/server.go:2136
+github.com/go-chi/chi/v5.(*Mux).ServeHTTP
+	/home/goomer/go/pkg/mod/github.com/go-chi/chi/v5@v5.0.10/mux.go:90
+net/http.serverHandler.ServeHTTP
+	/usr/local/go/src/net/http/server.go:2938
+net/http.(*conn).serve
+	/usr/local/go/src/net/http/server.go:2009
+2023-10-27T11:10:40.129+0300	ERROR	logger/logger.go:55	wrong type
+github.com/Mr-Punder/go-alerting-service/internal/logger.(*LogHTTPZap).Error
+	/home/goomer/dev/go-alerting-service/internal/logger/logger.go:55
+github.com/Mr-Punder/go-alerting-service/internal/handlers.(*Handler).JSONValueHandler
+	/home/goomer/dev/go-alerting-service/internal/handlers/handlers.go:183
+net/http.HandlerFunc.ServeHTTP
+	/usr/local/go/src/net/http/server.go:2136
+github.com/go-chi/chi/v5.(*Mux).routeHTTP
+	/home/goomer/go/pkg/mod/github.com/go-chi/chi/v5@v5.0.10/mux.go:444
+net/http.HandlerFunc.ServeHTTP
+	/usr/local/go/src/net/http/server.go:2136
+github.com/go-chi/chi/v5.(*Mux).ServeHTTP
+	/home/goomer/go/pkg/mod/github.com/go-chi/chi/v5@v5.0.10/mux.go:73
+github.com/go-chi/chi/v5.(*Mux).Mount.func1
+	/home/goomer/go/pkg/mod/github.com/go-chi/chi/v5@v5.0.10/mux.go:316
+net/http.HandlerFunc.ServeHTTP
+	/usr/local/go/src/net/http/server.go:2136
+github.com/go-chi/chi/v5.(*Mux).routeHTTP
+	/home/goomer/go/pkg/mod/github.com/go-chi/chi/v5@v5.0.10/mux.go:444
+net/http.HandlerFunc.ServeHTTP
+	/usr/local/go/src/net/http/server.go:2136
+github.com/go-chi/chi/v5.(*Mux).ServeHTTP
+	/home/goomer/go/pkg/mod/github.com/go-chi/chi/v5@v5.0.10/mux.go:90
+net/http.serverHandler.ServeHTTP
+	/usr/local/go/src/net/http/server.go:2938
+net/http.(*conn).serve
+	/usr/local/go/src/net/http/server.go:2009
+2023-10-27T11:11:55.097+0300	ERROR	logger/logger.go:55	wrong type
+github.com/Mr-Punder/go-alerting-service/internal/logger.(*LogHTTPZap).Error
+	/home/goomer/dev/go-alerting-service/internal/logger/logger.go:55
+github.com/Mr-Punder/go-alerting-service/internal/handlers.(*Handler).JSONUpdHandler
+	/home/goomer/dev/go-alerting-service/internal/handlers/handlers.go:118
+net/http.HandlerFunc.ServeHTTP
+	/usr/local/go/src/net/http/server.go:2136
+github.com/go-chi/chi/v5.(*Mux).routeHTTP
+	/home/goomer/go/pkg/mod/github.com/go-chi/chi/v5@v5.0.10/mux.go:444
+net/http.HandlerFunc.ServeHTTP
+	/usr/local/go/src/net/http/server.go:2136
+github.com/go-chi/chi/v5.(*Mux).ServeHTTP
+	/home/goomer/go/pkg/mod/github.com/go-chi/chi/v5@v5.0.10/mux.go:73
+github.com/go-chi/chi/v5.(*Mux).Mount.func1
+	/home/goomer/go/pkg/mod/github.com/go-chi/chi/v5@v5.0.10/mux.go:316
+net/http.HandlerFunc.ServeHTTP
+	/usr/local/go/src/net/http/server.go:2136
+github.com/go-chi/chi/v5.(*Mux).routeHTTP
+	/home/goomer/go/pkg/mod/github.com/go-chi/chi/v5@v5.0.10/mux.go:444
+net/http.HandlerFunc.ServeHTTP
+	/usr/local/go/src/net/http/server.go:2136
+github.com/go-chi/chi/v5.(*Mux).ServeHTTP
+	/home/goomer/go/pkg/mod/github.com/go-chi/chi/v5@v5.0.10/mux.go:90
+net/http.serverHandler.ServeHTTP
+	/usr/local/go/src/net/http/server.go:2938
+net/http.(*conn).serve
+	/usr/local/go/src/net/http/server.go:2009
+2023-10-27T11:11:55.101+0300	ERROR	logger/logger.go:55	Cann't find metric
+github.com/Mr-Punder/go-alerting-service/internal/logger.(*LogHTTPZap).Error
+	/home/goomer/dev/go-alerting-service/internal/logger/logger.go:55
+github.com/Mr-Punder/go-alerting-service/internal/handlers.(*Handler).JSONValueHandler
+	/home/goomer/dev/go-alerting-service/internal/handlers/handlers.go:192
+net/http.HandlerFunc.ServeHTTP
+	/usr/local/go/src/net/http/server.go:2136
+github.com/go-chi/chi/v5.(*Mux).routeHTTP
+	/home/goomer/go/pkg/mod/github.com/go-chi/chi/v5@v5.0.10/mux.go:444
+net/http.HandlerFunc.ServeHTTP
+	/usr/local/go/src/net/http/server.go:2136
+github.com/go-chi/chi/v5.(*Mux).ServeHTTP
+	/home/goomer/go/pkg/mod/github.com/go-chi/chi/v5@v5.0.10/mux.go:73
+github.com/go-chi/chi/v5.(*Mux).Mount.func1
+	/home/goomer/go/pkg/mod/github.com/go-chi/chi/v5@v5.0.10/mux.go:316
+net/http.HandlerFunc.ServeHTTP
+	/usr/local/go/src/net/http/server.go:2136
+github.com/go-chi/chi/v5.(*Mux).routeHTTP
+	/home/goomer/go/pkg/mod/github.com/go-chi/chi/v5@v5.0.10/mux.go:444
+net/http.HandlerFunc.ServeHTTP
+	/usr/local/go/src/net/http/server.go:2136
+github.com/go-chi/chi/v5.(*Mux).ServeHTTP
+	/home/goomer/go/pkg/mod/github.com/go-chi/chi/v5@v5.0.10/mux.go:90
+net/http.serverHandler.ServeHTTP
+	/usr/local/go/src/net/http/server.go:2938
+net/http.(*conn).serve
+	/usr/local/go/src/net/http/server.go:2009
+2023-10-27T11:11:55.102+0300	ERROR	logger/logger.go:55	Cann't find metric
+github.com/Mr-Punder/go-alerting-service/internal/logger.(*LogHTTPZap).Error
+	/home/goomer/dev/go-alerting-service/internal/logger/logger.go:55
+github.com/Mr-Punder/go-alerting-service/internal/handlers.(*Handler).JSONValueHandler
+	/home/goomer/dev/go-alerting-service/internal/handlers/handlers.go:192
+net/http.HandlerFunc.ServeHTTP
+	/usr/local/go/src/net/http/server.go:2136
+github.com/go-chi/chi/v5.(*Mux).routeHTTP
+	/home/goomer/go/pkg/mod/github.com/go-chi/chi/v5@v5.0.10/mux.go:444
+net/http.HandlerFunc.ServeHTTP
+	/usr/local/go/src/net/http/server.go:2136
+github.com/go-chi/chi/v5.(*Mux).ServeHTTP
+	/home/goomer/go/pkg/mod/github.com/go-chi/chi/v5@v5.0.10/mux.go:73
+github.com/go-chi/chi/v5.(*Mux).Mount.func1
+	/home/goomer/go/pkg/mod/github.com/go-chi/chi/v5@v5.0.10/mux.go:316
+net/http.HandlerFunc.ServeHTTP
+	/usr/local/go/src/net/http/server.go:2136
+github.com/go-chi/chi/v5.(*Mux).routeHTTP
+	/home/goomer/go/pkg/mod/github.com/go-chi/chi/v5@v5.0.10/mux.go:444
+net/http.HandlerFunc.ServeHTTP
+	/usr/local/go/src/net/http/server.go:2136
+github.com/go-chi/chi/v5.(*Mux).ServeHTTP
+	/home/goomer/go/pkg/mod/github.com/go-chi/chi/v5@v5.0.10/mux.go:90
+net/http.serverHandler.ServeHTTP
+	/usr/local/go/src/net/http/server.go:2938
+net/http.(*conn).serve
+	/usr/local/go/src/net/http/server.go:2009
+2023-10-27T11:11:55.105+0300	ERROR	logger/logger.go:55	wrong type
+github.com/Mr-Punder/go-alerting-service/internal/logger.(*LogHTTPZap).Error
+	/home/goomer/dev/go-alerting-service/internal/logger/logger.go:55
+github.com/Mr-Punder/go-alerting-service/internal/handlers.(*Handler).JSONValueHandler
+	/home/goomer/dev/go-alerting-service/internal/handlers/handlers.go:183
+net/http.HandlerFunc.ServeHTTP
+	/usr/local/go/src/net/http/server.go:2136
+github.com/go-chi/chi/v5.(*Mux).routeHTTP
+	/home/goomer/go/pkg/mod/github.com/go-chi/chi/v5@v5.0.10/mux.go:444
+net/http.HandlerFunc.ServeHTTP
+	/usr/local/go/src/net/http/server.go:2136
+github.com/go-chi/chi/v5.(*Mux).ServeHTTP
+	/home/goomer/go/pkg/mod/github.com/go-chi/chi/v5@v5.0.10/mux.go:73
+github.com/go-chi/chi/v5.(*Mux).Mount.func1
+	/home/goomer/go/pkg/mod/github.com/go-chi/chi/v5@v5.0.10/mux.go:316
+net/http.HandlerFunc.ServeHTTP
+	/usr/local/go/src/net/http/server.go:2136
+github.com/go-chi/chi/v5.(*Mux).routeHTTP
+	/home/goomer/go/pkg/mod/github.com/go-chi/chi/v5@v5.0.10/mux.go:444
+net/http.HandlerFunc.ServeHTTP
+	/usr/local/go/src/net/http/server.go:2136
+github.com/go-chi/chi/v5.(*Mux).ServeHTTP
+	/home/goomer/go/pkg/mod/github.com/go-chi/chi/v5@v5.0.10/mux.go:90
+net/http.serverHandler.ServeHTTP
+	/usr/local/go/src/net/http/server.go:2938
+net/http.(*conn).serve
+	/usr/local/go/src/net/http/server.go:2009
+2023-10-27T11:12:19.972+0300	ERROR	logger/logger.go:55	wrong type
+github.com/Mr-Punder/go-alerting-service/internal/logger.(*LogHTTPZap).Error
+	/home/goomer/dev/go-alerting-service/internal/logger/logger.go:55
+github.com/Mr-Punder/go-alerting-service/internal/handlers.(*Handler).JSONUpdHandler
+	/home/goomer/dev/go-alerting-service/internal/handlers/handlers.go:118
+net/http.HandlerFunc.ServeHTTP
+	/usr/local/go/src/net/http/server.go:2136
+github.com/go-chi/chi/v5.(*Mux).routeHTTP
+	/home/goomer/go/pkg/mod/github.com/go-chi/chi/v5@v5.0.10/mux.go:444
+net/http.HandlerFunc.ServeHTTP
+	/usr/local/go/src/net/http/server.go:2136
+github.com/go-chi/chi/v5.(*Mux).ServeHTTP
+	/home/goomer/go/pkg/mod/github.com/go-chi/chi/v5@v5.0.10/mux.go:73
+github.com/go-chi/chi/v5.(*Mux).Mount.func1
+	/home/goomer/go/pkg/mod/github.com/go-chi/chi/v5@v5.0.10/mux.go:316
+net/http.HandlerFunc.ServeHTTP
+	/usr/local/go/src/net/http/server.go:2136
+github.com/go-chi/chi/v5.(*Mux).routeHTTP
+	/home/goomer/go/pkg/mod/github.com/go-chi/chi/v5@v5.0.10/mux.go:444
+net/http.HandlerFunc.ServeHTTP
+	/usr/local/go/src/net/http/server.go:2136
+github.com/go-chi/chi/v5.(*Mux).ServeHTTP
+	/home/goomer/go/pkg/mod/github.com/go-chi/chi/v5@v5.0.10/mux.go:90
+net/http.serverHandler.ServeHTTP
+	/usr/local/go/src/net/http/server.go:2938
+net/http.(*conn).serve
+	/usr/local/go/src/net/http/server.go:2009
+2023-10-27T11:12:19.979+0300	ERROR	logger/logger.go:55	Cann't find metric
+github.com/Mr-Punder/go-alerting-service/internal/logger.(*LogHTTPZap).Error
+	/home/goomer/dev/go-alerting-service/internal/logger/logger.go:55
+github.com/Mr-Punder/go-alerting-service/internal/handlers.(*Handler).JSONValueHandler
+	/home/goomer/dev/go-alerting-service/internal/handlers/handlers.go:192
+net/http.HandlerFunc.ServeHTTP
+	/usr/local/go/src/net/http/server.go:2136
+github.com/go-chi/chi/v5.(*Mux).routeHTTP
+	/home/goomer/go/pkg/mod/github.com/go-chi/chi/v5@v5.0.10/mux.go:444
+net/http.HandlerFunc.ServeHTTP
+	/usr/local/go/src/net/http/server.go:2136
+github.com/go-chi/chi/v5.(*Mux).ServeHTTP
+	/home/goomer/go/pkg/mod/github.com/go-chi/chi/v5@v5.0.10/mux.go:73
+github.com/go-chi/chi/v5.(*Mux).Mount.func1
+	/home/goomer/go/pkg/mod/github.com/go-chi/chi/v5@v5.0.10/mux.go:316
+net/http.HandlerFunc.ServeHTTP
+	/usr/local/go/src/net/http/server.go:2136
+github.com/go-chi/chi/v5.(*Mux).routeHTTP
+	/home/goomer/go/pkg/mod/github.com/go-chi/chi/v5@v5.0.10/mux.go:444
+net/http.HandlerFunc.ServeHTTP
+	/usr/local/go/src/net/http/server.go:2136
+github.com/go-chi/chi/v5.(*Mux).ServeHTTP
+	/home/goomer/go/pkg/mod/github.com/go-chi/chi/v5@v5.0.10/mux.go:90
+net/http.serverHandler.ServeHTTP
+	/usr/local/go/src/net/http/server.go:2938
+net/http.(*conn).serve
+	/usr/local/go/src/net/http/server.go:2009
+2023-10-27T11:12:19.981+0300	ERROR	logger/logger.go:55	Cann't find metric
+github.com/Mr-Punder/go-alerting-service/internal/logger.(*LogHTTPZap).Error
+	/home/goomer/dev/go-alerting-service/internal/logger/logger.go:55
+github.com/Mr-Punder/go-alerting-service/internal/handlers.(*Handler).JSONValueHandler
+	/home/goomer/dev/go-alerting-service/internal/handlers/handlers.go:192
+net/http.HandlerFunc.ServeHTTP
+	/usr/local/go/src/net/http/server.go:2136
+github.com/go-chi/chi/v5.(*Mux).routeHTTP
+	/home/goomer/go/pkg/mod/github.com/go-chi/chi/v5@v5.0.10/mux.go:444
+net/http.HandlerFunc.ServeHTTP
+	/usr/local/go/src/net/http/server.go:2136
+github.com/go-chi/chi/v5.(*Mux).ServeHTTP
+	/home/goomer/go/pkg/mod/github.com/go-chi/chi/v5@v5.0.10/mux.go:73
+github.com/go-chi/chi/v5.(*Mux).Mount.func1
+	/home/goomer/go/pkg/mod/github.com/go-chi/chi/v5@v5.0.10/mux.go:316
+net/http.HandlerFunc.ServeHTTP
+	/usr/local/go/src/net/http/server.go:2136
+github.com/go-chi/chi/v5.(*Mux).routeHTTP
+	/home/goomer/go/pkg/mod/github.com/go-chi/chi/v5@v5.0.10/mux.go:444
+net/http.HandlerFunc.ServeHTTP
+	/usr/local/go/src/net/http/server.go:2136
+github.com/go-chi/chi/v5.(*Mux).ServeHTTP
+	/home/goomer/go/pkg/mod/github.com/go-chi/chi/v5@v5.0.10/mux.go:90
+net/http.serverHandler.ServeHTTP
+	/usr/local/go/src/net/http/server.go:2938
+net/http.(*conn).serve
+	/usr/local/go/src/net/http/server.go:2009
+2023-10-27T11:12:19.983+0300	ERROR	logger/logger.go:55	wrong type
+github.com/Mr-Punder/go-alerting-service/internal/logger.(*LogHTTPZap).Error
+	/home/goomer/dev/go-alerting-service/internal/logger/logger.go:55
+github.com/Mr-Punder/go-alerting-service/internal/handlers.(*Handler).JSONValueHandler
+	/home/goomer/dev/go-alerting-service/internal/handlers/handlers.go:183
+net/http.HandlerFunc.ServeHTTP
+	/usr/local/go/src/net/http/server.go:2136
+github.com/go-chi/chi/v5.(*Mux).routeHTTP
+	/home/goomer/go/pkg/mod/github.com/go-chi/chi/v5@v5.0.10/mux.go:444
+net/http.HandlerFunc.ServeHTTP
+	/usr/local/go/src/net/http/server.go:2136
+github.com/go-chi/chi/v5.(*Mux).ServeHTTP
+	/home/goomer/go/pkg/mod/github.com/go-chi/chi/v5@v5.0.10/mux.go:73
+github.com/go-chi/chi/v5.(*Mux).Mount.func1
+	/home/goomer/go/pkg/mod/github.com/go-chi/chi/v5@v5.0.10/mux.go:316
+net/http.HandlerFunc.ServeHTTP
+	/usr/local/go/src/net/http/server.go:2136
+github.com/go-chi/chi/v5.(*Mux).routeHTTP
+	/home/goomer/go/pkg/mod/github.com/go-chi/chi/v5@v5.0.10/mux.go:444
+net/http.HandlerFunc.ServeHTTP
+	/usr/local/go/src/net/http/server.go:2136
+github.com/go-chi/chi/v5.(*Mux).ServeHTTP
+	/home/goomer/go/pkg/mod/github.com/go-chi/chi/v5@v5.0.10/mux.go:90
+net/http.serverHandler.ServeHTTP
+	/usr/local/go/src/net/http/server.go:2938
+net/http.(*conn).serve
+	/usr/local/go/src/net/http/server.go:2009
+2023-10-27T11:12:21.309+0300	ERROR	logger/logger.go:55	wrong type
+github.com/Mr-Punder/go-alerting-service/internal/logger.(*LogHTTPZap).Error
+	/home/goomer/dev/go-alerting-service/internal/logger/logger.go:55
+github.com/Mr-Punder/go-alerting-service/internal/handlers.(*Handler).JSONUpdHandler
+	/home/goomer/dev/go-alerting-service/internal/handlers/handlers.go:118
+net/http.HandlerFunc.ServeHTTP
+	/usr/local/go/src/net/http/server.go:2136
+github.com/go-chi/chi/v5.(*Mux).routeHTTP
+	/home/goomer/go/pkg/mod/github.com/go-chi/chi/v5@v5.0.10/mux.go:444
+net/http.HandlerFunc.ServeHTTP
+	/usr/local/go/src/net/http/server.go:2136
+github.com/go-chi/chi/v5.(*Mux).ServeHTTP
+	/home/goomer/go/pkg/mod/github.com/go-chi/chi/v5@v5.0.10/mux.go:73
+github.com/go-chi/chi/v5.(*Mux).Mount.func1
+	/home/goomer/go/pkg/mod/github.com/go-chi/chi/v5@v5.0.10/mux.go:316
+net/http.HandlerFunc.ServeHTTP
+	/usr/local/go/src/net/http/server.go:2136
+github.com/go-chi/chi/v5.(*Mux).routeHTTP
+	/home/goomer/go/pkg/mod/github.com/go-chi/chi/v5@v5.0.10/mux.go:444
+net/http.HandlerFunc.ServeHTTP
+	/usr/local/go/src/net/http/server.go:2136
+github.com/go-chi/chi/v5.(*Mux).ServeHTTP
+	/home/goomer/go/pkg/mod/github.com/go-chi/chi/v5@v5.0.10/mux.go:90
+net/http.serverHandler.ServeHTTP
+	/usr/local/go/src/net/http/server.go:2938
+net/http.(*conn).serve
+	/usr/local/go/src/net/http/server.go:2009
+2023-10-27T11:12:21.311+0300	ERROR	logger/logger.go:55	Cann't find metric
+github.com/Mr-Punder/go-alerting-service/internal/logger.(*LogHTTPZap).Error
+	/home/goomer/dev/go-alerting-service/internal/logger/logger.go:55
+github.com/Mr-Punder/go-alerting-service/internal/handlers.(*Handler).JSONValueHandler
+	/home/goomer/dev/go-alerting-service/internal/handlers/handlers.go:192
+net/http.HandlerFunc.ServeHTTP
+	/usr/local/go/src/net/http/server.go:2136
+github.com/go-chi/chi/v5.(*Mux).routeHTTP
+	/home/goomer/go/pkg/mod/github.com/go-chi/chi/v5@v5.0.10/mux.go:444
+net/http.HandlerFunc.ServeHTTP
+	/usr/local/go/src/net/http/server.go:2136
+github.com/go-chi/chi/v5.(*Mux).ServeHTTP
+	/home/goomer/go/pkg/mod/github.com/go-chi/chi/v5@v5.0.10/mux.go:73
+github.com/go-chi/chi/v5.(*Mux).Mount.func1
+	/home/goomer/go/pkg/mod/github.com/go-chi/chi/v5@v5.0.10/mux.go:316
+net/http.HandlerFunc.ServeHTTP
+	/usr/local/go/src/net/http/server.go:2136
+github.com/go-chi/chi/v5.(*Mux).routeHTTP
+	/home/goomer/go/pkg/mod/github.com/go-chi/chi/v5@v5.0.10/mux.go:444
+net/http.HandlerFunc.ServeHTTP
+	/usr/local/go/src/net/http/server.go:2136
+github.com/go-chi/chi/v5.(*Mux).ServeHTTP
+	/home/goomer/go/pkg/mod/github.com/go-chi/chi/v5@v5.0.10/mux.go:90
+net/http.serverHandler.ServeHTTP
+	/usr/local/go/src/net/http/server.go:2938
+net/http.(*conn).serve
+	/usr/local/go/src/net/http/server.go:2009
+2023-10-27T11:12:21.313+0300	ERROR	logger/logger.go:55	Cann't find metric
+github.com/Mr-Punder/go-alerting-service/internal/logger.(*LogHTTPZap).Error
+	/home/goomer/dev/go-alerting-service/internal/logger/logger.go:55
+github.com/Mr-Punder/go-alerting-service/internal/handlers.(*Handler).JSONValueHandler
+	/home/goomer/dev/go-alerting-service/internal/handlers/handlers.go:192
+net/http.HandlerFunc.ServeHTTP
+	/usr/local/go/src/net/http/server.go:2136
+github.com/go-chi/chi/v5.(*Mux).routeHTTP
+	/home/goomer/go/pkg/mod/github.com/go-chi/chi/v5@v5.0.10/mux.go:444
+net/http.HandlerFunc.ServeHTTP
+	/usr/local/go/src/net/http/server.go:2136
+github.com/go-chi/chi/v5.(*Mux).ServeHTTP
+	/home/goomer/go/pkg/mod/github.com/go-chi/chi/v5@v5.0.10/mux.go:73
+github.com/go-chi/chi/v5.(*Mux).Mount.func1
+	/home/goomer/go/pkg/mod/github.com/go-chi/chi/v5@v5.0.10/mux.go:316
+net/http.HandlerFunc.ServeHTTP
+	/usr/local/go/src/net/http/server.go:2136
+github.com/go-chi/chi/v5.(*Mux).routeHTTP
+	/home/goomer/go/pkg/mod/github.com/go-chi/chi/v5@v5.0.10/mux.go:444
+net/http.HandlerFunc.ServeHTTP
+	/usr/local/go/src/net/http/server.go:2136
+github.com/go-chi/chi/v5.(*Mux).ServeHTTP
+	/home/goomer/go/pkg/mod/github.com/go-chi/chi/v5@v5.0.10/mux.go:90
+net/http.serverHandler.ServeHTTP
+	/usr/local/go/src/net/http/server.go:2938
+net/http.(*conn).serve
+	/usr/local/go/src/net/http/server.go:2009
+2023-10-27T11:12:21.314+0300	ERROR	logger/logger.go:55	wrong type
+github.com/Mr-Punder/go-alerting-service/internal/logger.(*LogHTTPZap).Error
+	/home/goomer/dev/go-alerting-service/internal/logger/logger.go:55
+github.com/Mr-Punder/go-alerting-service/internal/handlers.(*Handler).JSONValueHandler
+	/home/goomer/dev/go-alerting-service/internal/handlers/handlers.go:183
+net/http.HandlerFunc.ServeHTTP
+	/usr/local/go/src/net/http/server.go:2136
+github.com/go-chi/chi/v5.(*Mux).routeHTTP
+	/home/goomer/go/pkg/mod/github.com/go-chi/chi/v5@v5.0.10/mux.go:444
+net/http.HandlerFunc.ServeHTTP
+	/usr/local/go/src/net/http/server.go:2136
+github.com/go-chi/chi/v5.(*Mux).ServeHTTP
+	/home/goomer/go/pkg/mod/github.com/go-chi/chi/v5@v5.0.10/mux.go:73
+github.com/go-chi/chi/v5.(*Mux).Mount.func1
+	/home/goomer/go/pkg/mod/github.com/go-chi/chi/v5@v5.0.10/mux.go:316
+net/http.HandlerFunc.ServeHTTP
+	/usr/local/go/src/net/http/server.go:2136
+github.com/go-chi/chi/v5.(*Mux).routeHTTP
+	/home/goomer/go/pkg/mod/github.com/go-chi/chi/v5@v5.0.10/mux.go:444
+net/http.HandlerFunc.ServeHTTP
+	/usr/local/go/src/net/http/server.go:2136
+github.com/go-chi/chi/v5.(*Mux).ServeHTTP
+	/home/goomer/go/pkg/mod/github.com/go-chi/chi/v5@v5.0.10/mux.go:90
+net/http.serverHandler.ServeHTTP
+	/usr/local/go/src/net/http/server.go:2938
+net/http.(*conn).serve
+	/usr/local/go/src/net/http/server.go:2009
+2023-10-27T11:12:22.361+0300	ERROR	logger/logger.go:55	wrong type
+github.com/Mr-Punder/go-alerting-service/internal/logger.(*LogHTTPZap).Error
+	/home/goomer/dev/go-alerting-service/internal/logger/logger.go:55
+github.com/Mr-Punder/go-alerting-service/internal/handlers.(*Handler).JSONUpdHandler
+	/home/goomer/dev/go-alerting-service/internal/handlers/handlers.go:118
+net/http.HandlerFunc.ServeHTTP
+	/usr/local/go/src/net/http/server.go:2136
+github.com/go-chi/chi/v5.(*Mux).routeHTTP
+	/home/goomer/go/pkg/mod/github.com/go-chi/chi/v5@v5.0.10/mux.go:444
+net/http.HandlerFunc.ServeHTTP
+	/usr/local/go/src/net/http/server.go:2136
+github.com/go-chi/chi/v5.(*Mux).ServeHTTP
+	/home/goomer/go/pkg/mod/github.com/go-chi/chi/v5@v5.0.10/mux.go:73
+github.com/go-chi/chi/v5.(*Mux).Mount.func1
+	/home/goomer/go/pkg/mod/github.com/go-chi/chi/v5@v5.0.10/mux.go:316
+net/http.HandlerFunc.ServeHTTP
+	/usr/local/go/src/net/http/server.go:2136
+github.com/go-chi/chi/v5.(*Mux).routeHTTP
+	/home/goomer/go/pkg/mod/github.com/go-chi/chi/v5@v5.0.10/mux.go:444
+net/http.HandlerFunc.ServeHTTP
+	/usr/local/go/src/net/http/server.go:2136
+github.com/go-chi/chi/v5.(*Mux).ServeHTTP
+	/home/goomer/go/pkg/mod/github.com/go-chi/chi/v5@v5.0.10/mux.go:90
+net/http.serverHandler.ServeHTTP
+	/usr/local/go/src/net/http/server.go:2938
+net/http.(*conn).serve
+	/usr/local/go/src/net/http/server.go:2009
+2023-10-27T11:12:22.365+0300	ERROR	logger/logger.go:55	Cann't find metric
+github.com/Mr-Punder/go-alerting-service/internal/logger.(*LogHTTPZap).Error
+	/home/goomer/dev/go-alerting-service/internal/logger/logger.go:55
+github.com/Mr-Punder/go-alerting-service/internal/handlers.(*Handler).JSONValueHandler
+	/home/goomer/dev/go-alerting-service/internal/handlers/handlers.go:192
+net/http.HandlerFunc.ServeHTTP
+	/usr/local/go/src/net/http/server.go:2136
+github.com/go-chi/chi/v5.(*Mux).routeHTTP
+	/home/goomer/go/pkg/mod/github.com/go-chi/chi/v5@v5.0.10/mux.go:444
+net/http.HandlerFunc.ServeHTTP
+	/usr/local/go/src/net/http/server.go:2136
+github.com/go-chi/chi/v5.(*Mux).ServeHTTP
+	/home/goomer/go/pkg/mod/github.com/go-chi/chi/v5@v5.0.10/mux.go:73
+github.com/go-chi/chi/v5.(*Mux).Mount.func1
+	/home/goomer/go/pkg/mod/github.com/go-chi/chi/v5@v5.0.10/mux.go:316
+net/http.HandlerFunc.ServeHTTP
+	/usr/local/go/src/net/http/server.go:2136
+github.com/go-chi/chi/v5.(*Mux).routeHTTP
+	/home/goomer/go/pkg/mod/github.com/go-chi/chi/v5@v5.0.10/mux.go:444
+net/http.HandlerFunc.ServeHTTP
+	/usr/local/go/src/net/http/server.go:2136
+github.com/go-chi/chi/v5.(*Mux).ServeHTTP
+	/home/goomer/go/pkg/mod/github.com/go-chi/chi/v5@v5.0.10/mux.go:90
+net/http.serverHandler.ServeHTTP
+	/usr/local/go/src/net/http/server.go:2938
+net/http.(*conn).serve
+	/usr/local/go/src/net/http/server.go:2009
+2023-10-27T11:12:22.368+0300	ERROR	logger/logger.go:55	Cann't find metric
+github.com/Mr-Punder/go-alerting-service/internal/logger.(*LogHTTPZap).Error
+	/home/goomer/dev/go-alerting-service/internal/logger/logger.go:55
+github.com/Mr-Punder/go-alerting-service/internal/handlers.(*Handler).JSONValueHandler
+	/home/goomer/dev/go-alerting-service/internal/handlers/handlers.go:192
+net/http.HandlerFunc.ServeHTTP
+	/usr/local/go/src/net/http/server.go:2136
+github.com/go-chi/chi/v5.(*Mux).routeHTTP
+	/home/goomer/go/pkg/mod/github.com/go-chi/chi/v5@v5.0.10/mux.go:444
+net/http.HandlerFunc.ServeHTTP
+	/usr/local/go/src/net/http/server.go:2136
+github.com/go-chi/chi/v5.(*Mux).ServeHTTP
+	/home/goomer/go/pkg/mod/github.com/go-chi/chi/v5@v5.0.10/mux.go:73
+github.com/go-chi/chi/v5.(*Mux).Mount.func1
+	/home/goomer/go/pkg/mod/github.com/go-chi/chi/v5@v5.0.10/mux.go:316
+net/http.HandlerFunc.ServeHTTP
+	/usr/local/go/src/net/http/server.go:2136
+github.com/go-chi/chi/v5.(*Mux).routeHTTP
+	/home/goomer/go/pkg/mod/github.com/go-chi/chi/v5@v5.0.10/mux.go:444
+net/http.HandlerFunc.ServeHTTP
+	/usr/local/go/src/net/http/server.go:2136
+github.com/go-chi/chi/v5.(*Mux).ServeHTTP
+	/home/goomer/go/pkg/mod/github.com/go-chi/chi/v5@v5.0.10/mux.go:90
+net/http.serverHandler.ServeHTTP
+	/usr/local/go/src/net/http/server.go:2938
+net/http.(*conn).serve
+	/usr/local/go/src/net/http/server.go:2009
+2023-10-27T11:12:22.371+0300	ERROR	logger/logger.go:55	wrong type
+github.com/Mr-Punder/go-alerting-service/internal/logger.(*LogHTTPZap).Error
+	/home/goomer/dev/go-alerting-service/internal/logger/logger.go:55
+github.com/Mr-Punder/go-alerting-service/internal/handlers.(*Handler).JSONValueHandler
+	/home/goomer/dev/go-alerting-service/internal/handlers/handlers.go:183
+net/http.HandlerFunc.ServeHTTP
+	/usr/local/go/src/net/http/server.go:2136
+github.com/go-chi/chi/v5.(*Mux).routeHTTP
+	/home/goomer/go/pkg/mod/github.com/go-chi/chi/v5@v5.0.10/mux.go:444
+net/http.HandlerFunc.ServeHTTP
+	/usr/local/go/src/net/http/server.go:2136
+github.com/go-chi/chi/v5.(*Mux).ServeHTTP
+	/home/goomer/go/pkg/mod/github.com/go-chi/chi/v5@v5.0.10/mux.go:73
+github.com/go-chi/chi/v5.(*Mux).Mount.func1
+	/home/goomer/go/pkg/mod/github.com/go-chi/chi/v5@v5.0.10/mux.go:316
+net/http.HandlerFunc.ServeHTTP
+	/usr/local/go/src/net/http/server.go:2136
+github.com/go-chi/chi/v5.(*Mux).routeHTTP
+	/home/goomer/go/pkg/mod/github.com/go-chi/chi/v5@v5.0.10/mux.go:444
+net/http.HandlerFunc.ServeHTTP
+	/usr/local/go/src/net/http/server.go:2136
+github.com/go-chi/chi/v5.(*Mux).ServeHTTP
+	/home/goomer/go/pkg/mod/github.com/go-chi/chi/v5@v5.0.10/mux.go:90
+net/http.serverHandler.ServeHTTP
+	/usr/local/go/src/net/http/server.go:2938
+net/http.(*conn).serve
+	/usr/local/go/src/net/http/server.go:2009
+2023-10-27T11:12:31.669+0300	ERROR	logger/logger.go:55	wrong type
+github.com/Mr-Punder/go-alerting-service/internal/logger.(*LogHTTPZap).Error
+	/home/goomer/dev/go-alerting-service/internal/logger/logger.go:55
+github.com/Mr-Punder/go-alerting-service/internal/handlers.(*Handler).JSONUpdHandler
+	/home/goomer/dev/go-alerting-service/internal/handlers/handlers.go:118
+net/http.HandlerFunc.ServeHTTP
+	/usr/local/go/src/net/http/server.go:2136
+github.com/go-chi/chi/v5.(*Mux).routeHTTP
+	/home/goomer/go/pkg/mod/github.com/go-chi/chi/v5@v5.0.10/mux.go:444
+net/http.HandlerFunc.ServeHTTP
+	/usr/local/go/src/net/http/server.go:2136
+github.com/go-chi/chi/v5.(*Mux).ServeHTTP
+	/home/goomer/go/pkg/mod/github.com/go-chi/chi/v5@v5.0.10/mux.go:73
+github.com/go-chi/chi/v5.(*Mux).Mount.func1
+	/home/goomer/go/pkg/mod/github.com/go-chi/chi/v5@v5.0.10/mux.go:316
+net/http.HandlerFunc.ServeHTTP
+	/usr/local/go/src/net/http/server.go:2136
+github.com/go-chi/chi/v5.(*Mux).routeHTTP
+	/home/goomer/go/pkg/mod/github.com/go-chi/chi/v5@v5.0.10/mux.go:444
+net/http.HandlerFunc.ServeHTTP
+	/usr/local/go/src/net/http/server.go:2136
+github.com/go-chi/chi/v5.(*Mux).ServeHTTP
+	/home/goomer/go/pkg/mod/github.com/go-chi/chi/v5@v5.0.10/mux.go:90
+net/http.serverHandler.ServeHTTP
+	/usr/local/go/src/net/http/server.go:2938
+net/http.(*conn).serve
+	/usr/local/go/src/net/http/server.go:2009
+2023-10-27T11:12:31.672+0300	ERROR	logger/logger.go:55	Cann't find metric
+github.com/Mr-Punder/go-alerting-service/internal/logger.(*LogHTTPZap).Error
+	/home/goomer/dev/go-alerting-service/internal/logger/logger.go:55
+github.com/Mr-Punder/go-alerting-service/internal/handlers.(*Handler).JSONValueHandler
+	/home/goomer/dev/go-alerting-service/internal/handlers/handlers.go:192
+net/http.HandlerFunc.ServeHTTP
+	/usr/local/go/src/net/http/server.go:2136
+github.com/go-chi/chi/v5.(*Mux).routeHTTP
+	/home/goomer/go/pkg/mod/github.com/go-chi/chi/v5@v5.0.10/mux.go:444
+net/http.HandlerFunc.ServeHTTP
+	/usr/local/go/src/net/http/server.go:2136
+github.com/go-chi/chi/v5.(*Mux).ServeHTTP
+	/home/goomer/go/pkg/mod/github.com/go-chi/chi/v5@v5.0.10/mux.go:73
+github.com/go-chi/chi/v5.(*Mux).Mount.func1
+	/home/goomer/go/pkg/mod/github.com/go-chi/chi/v5@v5.0.10/mux.go:316
+net/http.HandlerFunc.ServeHTTP
+	/usr/local/go/src/net/http/server.go:2136
+github.com/go-chi/chi/v5.(*Mux).routeHTTP
+	/home/goomer/go/pkg/mod/github.com/go-chi/chi/v5@v5.0.10/mux.go:444
+net/http.HandlerFunc.ServeHTTP
+	/usr/local/go/src/net/http/server.go:2136
+github.com/go-chi/chi/v5.(*Mux).ServeHTTP
+	/home/goomer/go/pkg/mod/github.com/go-chi/chi/v5@v5.0.10/mux.go:90
+net/http.serverHandler.ServeHTTP
+	/usr/local/go/src/net/http/server.go:2938
+net/http.(*conn).serve
+	/usr/local/go/src/net/http/server.go:2009
+2023-10-27T11:12:31.673+0300	ERROR	logger/logger.go:55	Cann't find metric
+github.com/Mr-Punder/go-alerting-service/internal/logger.(*LogHTTPZap).Error
+	/home/goomer/dev/go-alerting-service/internal/logger/logger.go:55
+github.com/Mr-Punder/go-alerting-service/internal/handlers.(*Handler).JSONValueHandler
+	/home/goomer/dev/go-alerting-service/internal/handlers/handlers.go:192
+net/http.HandlerFunc.ServeHTTP
+	/usr/local/go/src/net/http/server.go:2136
+github.com/go-chi/chi/v5.(*Mux).routeHTTP
+	/home/goomer/go/pkg/mod/github.com/go-chi/chi/v5@v5.0.10/mux.go:444
+net/http.HandlerFunc.ServeHTTP
+	/usr/local/go/src/net/http/server.go:2136
+github.com/go-chi/chi/v5.(*Mux).ServeHTTP
+	/home/goomer/go/pkg/mod/github.com/go-chi/chi/v5@v5.0.10/mux.go:73
+github.com/go-chi/chi/v5.(*Mux).Mount.func1
+	/home/goomer/go/pkg/mod/github.com/go-chi/chi/v5@v5.0.10/mux.go:316
+net/http.HandlerFunc.ServeHTTP
+	/usr/local/go/src/net/http/server.go:2136
+github.com/go-chi/chi/v5.(*Mux).routeHTTP
+	/home/goomer/go/pkg/mod/github.com/go-chi/chi/v5@v5.0.10/mux.go:444
+net/http.HandlerFunc.ServeHTTP
+	/usr/local/go/src/net/http/server.go:2136
+github.com/go-chi/chi/v5.(*Mux).ServeHTTP
+	/home/goomer/go/pkg/mod/github.com/go-chi/chi/v5@v5.0.10/mux.go:90
+net/http.serverHandler.ServeHTTP
+	/usr/local/go/src/net/http/server.go:2938
+net/http.(*conn).serve
+	/usr/local/go/src/net/http/server.go:2009
+2023-10-27T11:12:31.674+0300	ERROR	logger/logger.go:55	wrong type
+github.com/Mr-Punder/go-alerting-service/internal/logger.(*LogHTTPZap).Error
+	/home/goomer/dev/go-alerting-service/internal/logger/logger.go:55
+github.com/Mr-Punder/go-alerting-service/internal/handlers.(*Handler).JSONValueHandler
+	/home/goomer/dev/go-alerting-service/internal/handlers/handlers.go:183
+net/http.HandlerFunc.ServeHTTP
+	/usr/local/go/src/net/http/server.go:2136
+github.com/go-chi/chi/v5.(*Mux).routeHTTP
+	/home/goomer/go/pkg/mod/github.com/go-chi/chi/v5@v5.0.10/mux.go:444
+net/http.HandlerFunc.ServeHTTP
+	/usr/local/go/src/net/http/server.go:2136
+github.com/go-chi/chi/v5.(*Mux).ServeHTTP
+	/home/goomer/go/pkg/mod/github.com/go-chi/chi/v5@v5.0.10/mux.go:73
+github.com/go-chi/chi/v5.(*Mux).Mount.func1
+	/home/goomer/go/pkg/mod/github.com/go-chi/chi/v5@v5.0.10/mux.go:316
+net/http.HandlerFunc.ServeHTTP
+	/usr/local/go/src/net/http/server.go:2136
+github.com/go-chi/chi/v5.(*Mux).routeHTTP
+	/home/goomer/go/pkg/mod/github.com/go-chi/chi/v5@v5.0.10/mux.go:444
+net/http.HandlerFunc.ServeHTTP
+	/usr/local/go/src/net/http/server.go:2136
+github.com/go-chi/chi/v5.(*Mux).ServeHTTP
+	/home/goomer/go/pkg/mod/github.com/go-chi/chi/v5@v5.0.10/mux.go:90
+net/http.serverHandler.ServeHTTP
+	/usr/local/go/src/net/http/server.go:2938
+net/http.(*conn).serve
+	/usr/local/go/src/net/http/server.go:2009
+2023-10-27T11:13:56.521+0300	ERROR	logger/logger.go:55	wrong type
+github.com/Mr-Punder/go-alerting-service/internal/logger.(*LogHTTPZap).Error
+	/home/goomer/dev/go-alerting-service/internal/logger/logger.go:55
+github.com/Mr-Punder/go-alerting-service/internal/handlers.(*Handler).JSONUpdHandler
+	/home/goomer/dev/go-alerting-service/internal/handlers/handlers.go:118
+net/http.HandlerFunc.ServeHTTP
+	/usr/local/go/src/net/http/server.go:2136
+github.com/go-chi/chi/v5.(*Mux).routeHTTP
+	/home/goomer/go/pkg/mod/github.com/go-chi/chi/v5@v5.0.10/mux.go:444
+net/http.HandlerFunc.ServeHTTP
+	/usr/local/go/src/net/http/server.go:2136
+github.com/go-chi/chi/v5.(*Mux).ServeHTTP
+	/home/goomer/go/pkg/mod/github.com/go-chi/chi/v5@v5.0.10/mux.go:73
+github.com/go-chi/chi/v5.(*Mux).Mount.func1
+	/home/goomer/go/pkg/mod/github.com/go-chi/chi/v5@v5.0.10/mux.go:316
+net/http.HandlerFunc.ServeHTTP
+	/usr/local/go/src/net/http/server.go:2136
+github.com/go-chi/chi/v5.(*Mux).routeHTTP
+	/home/goomer/go/pkg/mod/github.com/go-chi/chi/v5@v5.0.10/mux.go:444
+net/http.HandlerFunc.ServeHTTP
+	/usr/local/go/src/net/http/server.go:2136
+github.com/go-chi/chi/v5.(*Mux).ServeHTTP
+	/home/goomer/go/pkg/mod/github.com/go-chi/chi/v5@v5.0.10/mux.go:90
+net/http.serverHandler.ServeHTTP
+	/usr/local/go/src/net/http/server.go:2938
+net/http.(*conn).serve
+	/usr/local/go/src/net/http/server.go:2009
+2023-10-27T11:13:56.527+0300	ERROR	logger/logger.go:55	Cann't find metric
+github.com/Mr-Punder/go-alerting-service/internal/logger.(*LogHTTPZap).Error
+	/home/goomer/dev/go-alerting-service/internal/logger/logger.go:55
+github.com/Mr-Punder/go-alerting-service/internal/handlers.(*Handler).JSONValueHandler
+	/home/goomer/dev/go-alerting-service/internal/handlers/handlers.go:192
+net/http.HandlerFunc.ServeHTTP
+	/usr/local/go/src/net/http/server.go:2136
+github.com/go-chi/chi/v5.(*Mux).routeHTTP
+	/home/goomer/go/pkg/mod/github.com/go-chi/chi/v5@v5.0.10/mux.go:444
+net/http.HandlerFunc.ServeHTTP
+	/usr/local/go/src/net/http/server.go:2136
+github.com/go-chi/chi/v5.(*Mux).ServeHTTP
+	/home/goomer/go/pkg/mod/github.com/go-chi/chi/v5@v5.0.10/mux.go:73
+github.com/go-chi/chi/v5.(*Mux).Mount.func1
+	/home/goomer/go/pkg/mod/github.com/go-chi/chi/v5@v5.0.10/mux.go:316
+net/http.HandlerFunc.ServeHTTP
+	/usr/local/go/src/net/http/server.go:2136
+github.com/go-chi/chi/v5.(*Mux).routeHTTP
+	/home/goomer/go/pkg/mod/github.com/go-chi/chi/v5@v5.0.10/mux.go:444
+net/http.HandlerFunc.ServeHTTP
+	/usr/local/go/src/net/http/server.go:2136
+github.com/go-chi/chi/v5.(*Mux).ServeHTTP
+	/home/goomer/go/pkg/mod/github.com/go-chi/chi/v5@v5.0.10/mux.go:90
+net/http.serverHandler.ServeHTTP
+	/usr/local/go/src/net/http/server.go:2938
+net/http.(*conn).serve
+	/usr/local/go/src/net/http/server.go:2009
+2023-10-27T11:13:56.529+0300	ERROR	logger/logger.go:55	Cann't find metric
+github.com/Mr-Punder/go-alerting-service/internal/logger.(*LogHTTPZap).Error
+	/home/goomer/dev/go-alerting-service/internal/logger/logger.go:55
+github.com/Mr-Punder/go-alerting-service/internal/handlers.(*Handler).JSONValueHandler
+	/home/goomer/dev/go-alerting-service/internal/handlers/handlers.go:192
+net/http.HandlerFunc.ServeHTTP
+	/usr/local/go/src/net/http/server.go:2136
+github.com/go-chi/chi/v5.(*Mux).routeHTTP
+	/home/goomer/go/pkg/mod/github.com/go-chi/chi/v5@v5.0.10/mux.go:444
+net/http.HandlerFunc.ServeHTTP
+	/usr/local/go/src/net/http/server.go:2136
+github.com/go-chi/chi/v5.(*Mux).ServeHTTP
+	/home/goomer/go/pkg/mod/github.com/go-chi/chi/v5@v5.0.10/mux.go:73
+github.com/go-chi/chi/v5.(*Mux).Mount.func1
+	/home/goomer/go/pkg/mod/github.com/go-chi/chi/v5@v5.0.10/mux.go:316
+net/http.HandlerFunc.ServeHTTP
+	/usr/local/go/src/net/http/server.go:2136
+github.com/go-chi/chi/v5.(*Mux).routeHTTP
+	/home/goomer/go/pkg/mod/github.com/go-chi/chi/v5@v5.0.10/mux.go:444
+net/http.HandlerFunc.ServeHTTP
+	/usr/local/go/src/net/http/server.go:2136
+github.com/go-chi/chi/v5.(*Mux).ServeHTTP
+	/home/goomer/go/pkg/mod/github.com/go-chi/chi/v5@v5.0.10/mux.go:90
+net/http.serverHandler.ServeHTTP
+	/usr/local/go/src/net/http/server.go:2938
+net/http.(*conn).serve
+	/usr/local/go/src/net/http/server.go:2009
+2023-10-27T11:13:56.531+0300	ERROR	logger/logger.go:55	wrong type
+github.com/Mr-Punder/go-alerting-service/internal/logger.(*LogHTTPZap).Error
+	/home/goomer/dev/go-alerting-service/internal/logger/logger.go:55
+github.com/Mr-Punder/go-alerting-service/internal/handlers.(*Handler).JSONValueHandler
+	/home/goomer/dev/go-alerting-service/internal/handlers/handlers.go:183
+net/http.HandlerFunc.ServeHTTP
+	/usr/local/go/src/net/http/server.go:2136
+github.com/go-chi/chi/v5.(*Mux).routeHTTP
+	/home/goomer/go/pkg/mod/github.com/go-chi/chi/v5@v5.0.10/mux.go:444
+net/http.HandlerFunc.ServeHTTP
+	/usr/local/go/src/net/http/server.go:2136
+github.com/go-chi/chi/v5.(*Mux).ServeHTTP
+	/home/goomer/go/pkg/mod/github.com/go-chi/chi/v5@v5.0.10/mux.go:73
+github.com/go-chi/chi/v5.(*Mux).Mount.func1
+	/home/goomer/go/pkg/mod/github.com/go-chi/chi/v5@v5.0.10/mux.go:316
+net/http.HandlerFunc.ServeHTTP
+	/usr/local/go/src/net/http/server.go:2136
+github.com/go-chi/chi/v5.(*Mux).routeHTTP
+	/home/goomer/go/pkg/mod/github.com/go-chi/chi/v5@v5.0.10/mux.go:444
+net/http.HandlerFunc.ServeHTTP
+	/usr/local/go/src/net/http/server.go:2136
+github.com/go-chi/chi/v5.(*Mux).ServeHTTP
+	/home/goomer/go/pkg/mod/github.com/go-chi/chi/v5@v5.0.10/mux.go:90
+net/http.serverHandler.ServeHTTP
+	/usr/local/go/src/net/http/server.go:2938
+net/http.(*conn).serve
+	/usr/local/go/src/net/http/server.go:2009
+2023-10-27T11:14:47.104+0300	ERROR	logger/logger.go:55	wrong type
+github.com/Mr-Punder/go-alerting-service/internal/logger.(*LogHTTPZap).Error
+	/home/goomer/dev/go-alerting-service/internal/logger/logger.go:55
+github.com/Mr-Punder/go-alerting-service/internal/handlers.(*Handler).JSONUpdHandler
+	/home/goomer/dev/go-alerting-service/internal/handlers/handlers.go:118
+net/http.HandlerFunc.ServeHTTP
+	/usr/local/go/src/net/http/server.go:2136
+github.com/go-chi/chi/v5.(*Mux).routeHTTP
+	/home/goomer/go/pkg/mod/github.com/go-chi/chi/v5@v5.0.10/mux.go:444
+net/http.HandlerFunc.ServeHTTP
+	/usr/local/go/src/net/http/server.go:2136
+github.com/go-chi/chi/v5.(*Mux).ServeHTTP
+	/home/goomer/go/pkg/mod/github.com/go-chi/chi/v5@v5.0.10/mux.go:73
+github.com/go-chi/chi/v5.(*Mux).Mount.func1
+	/home/goomer/go/pkg/mod/github.com/go-chi/chi/v5@v5.0.10/mux.go:316
+net/http.HandlerFunc.ServeHTTP
+	/usr/local/go/src/net/http/server.go:2136
+github.com/go-chi/chi/v5.(*Mux).routeHTTP
+	/home/goomer/go/pkg/mod/github.com/go-chi/chi/v5@v5.0.10/mux.go:444
+net/http.HandlerFunc.ServeHTTP
+	/usr/local/go/src/net/http/server.go:2136
+github.com/go-chi/chi/v5.(*Mux).ServeHTTP
+	/home/goomer/go/pkg/mod/github.com/go-chi/chi/v5@v5.0.10/mux.go:90
+net/http.serverHandler.ServeHTTP
+	/usr/local/go/src/net/http/server.go:2938
+net/http.(*conn).serve
+	/usr/local/go/src/net/http/server.go:2009
+2023-10-27T11:14:47.108+0300	ERROR	logger/logger.go:55	Cann't find metric
+github.com/Mr-Punder/go-alerting-service/internal/logger.(*LogHTTPZap).Error
+	/home/goomer/dev/go-alerting-service/internal/logger/logger.go:55
+github.com/Mr-Punder/go-alerting-service/internal/handlers.(*Handler).JSONValueHandler
+	/home/goomer/dev/go-alerting-service/internal/handlers/handlers.go:192
+net/http.HandlerFunc.ServeHTTP
+	/usr/local/go/src/net/http/server.go:2136
+github.com/go-chi/chi/v5.(*Mux).routeHTTP
+	/home/goomer/go/pkg/mod/github.com/go-chi/chi/v5@v5.0.10/mux.go:444
+net/http.HandlerFunc.ServeHTTP
+	/usr/local/go/src/net/http/server.go:2136
+github.com/go-chi/chi/v5.(*Mux).ServeHTTP
+	/home/goomer/go/pkg/mod/github.com/go-chi/chi/v5@v5.0.10/mux.go:73
+github.com/go-chi/chi/v5.(*Mux).Mount.func1
+	/home/goomer/go/pkg/mod/github.com/go-chi/chi/v5@v5.0.10/mux.go:316
+net/http.HandlerFunc.ServeHTTP
+	/usr/local/go/src/net/http/server.go:2136
+github.com/go-chi/chi/v5.(*Mux).routeHTTP
+	/home/goomer/go/pkg/mod/github.com/go-chi/chi/v5@v5.0.10/mux.go:444
+net/http.HandlerFunc.ServeHTTP
+	/usr/local/go/src/net/http/server.go:2136
+github.com/go-chi/chi/v5.(*Mux).ServeHTTP
+	/home/goomer/go/pkg/mod/github.com/go-chi/chi/v5@v5.0.10/mux.go:90
+net/http.serverHandler.ServeHTTP
+	/usr/local/go/src/net/http/server.go:2938
+net/http.(*conn).serve
+	/usr/local/go/src/net/http/server.go:2009
+2023-10-27T11:14:47.109+0300	ERROR	logger/logger.go:55	Cann't find metric
+github.com/Mr-Punder/go-alerting-service/internal/logger.(*LogHTTPZap).Error
+	/home/goomer/dev/go-alerting-service/internal/logger/logger.go:55
+github.com/Mr-Punder/go-alerting-service/internal/handlers.(*Handler).JSONValueHandler
+	/home/goomer/dev/go-alerting-service/internal/handlers/handlers.go:192
+net/http.HandlerFunc.ServeHTTP
+	/usr/local/go/src/net/http/server.go:2136
+github.com/go-chi/chi/v5.(*Mux).routeHTTP
+	/home/goomer/go/pkg/mod/github.com/go-chi/chi/v5@v5.0.10/mux.go:444
+net/http.HandlerFunc.ServeHTTP
+	/usr/local/go/src/net/http/server.go:2136
+github.com/go-chi/chi/v5.(*Mux).ServeHTTP
+	/home/goomer/go/pkg/mod/github.com/go-chi/chi/v5@v5.0.10/mux.go:73
+github.com/go-chi/chi/v5.(*Mux).Mount.func1
+	/home/goomer/go/pkg/mod/github.com/go-chi/chi/v5@v5.0.10/mux.go:316
+net/http.HandlerFunc.ServeHTTP
+	/usr/local/go/src/net/http/server.go:2136
+github.com/go-chi/chi/v5.(*Mux).routeHTTP
+	/home/goomer/go/pkg/mod/github.com/go-chi/chi/v5@v5.0.10/mux.go:444
+net/http.HandlerFunc.ServeHTTP
+	/usr/local/go/src/net/http/server.go:2136
+github.com/go-chi/chi/v5.(*Mux).ServeHTTP
+	/home/goomer/go/pkg/mod/github.com/go-chi/chi/v5@v5.0.10/mux.go:90
+net/http.serverHandler.ServeHTTP
+	/usr/local/go/src/net/http/server.go:2938
+net/http.(*conn).serve
+	/usr/local/go/src/net/http/server.go:2009
+2023-10-27T11:14:47.110+0300	ERROR	logger/logger.go:55	wrong type
+github.com/Mr-Punder/go-alerting-service/internal/logger.(*LogHTTPZap).Error
+	/home/goomer/dev/go-alerting-service/internal/logger/logger.go:55
+github.com/Mr-Punder/go-alerting-service/internal/handlers.(*Handler).JSONValueHandler
+	/home/goomer/dev/go-alerting-service/internal/handlers/handlers.go:183
+net/http.HandlerFunc.ServeHTTP
+	/usr/local/go/src/net/http/server.go:2136
+github.com/go-chi/chi/v5.(*Mux).routeHTTP
+	/home/goomer/go/pkg/mod/github.com/go-chi/chi/v5@v5.0.10/mux.go:444
+net/http.HandlerFunc.ServeHTTP
+	/usr/local/go/src/net/http/server.go:2136
+github.com/go-chi/chi/v5.(*Mux).ServeHTTP
+	/home/goomer/go/pkg/mod/github.com/go-chi/chi/v5@v5.0.10/mux.go:73
+github.com/go-chi/chi/v5.(*Mux).Mount.func1
+	/home/goomer/go/pkg/mod/github.com/go-chi/chi/v5@v5.0.10/mux.go:316
+net/http.HandlerFunc.ServeHTTP
+	/usr/local/go/src/net/http/server.go:2136
+github.com/go-chi/chi/v5.(*Mux).routeHTTP
+	/home/goomer/go/pkg/mod/github.com/go-chi/chi/v5@v5.0.10/mux.go:444
+net/http.HandlerFunc.ServeHTTP
+	/usr/local/go/src/net/http/server.go:2136
+github.com/go-chi/chi/v5.(*Mux).ServeHTTP
+	/home/goomer/go/pkg/mod/github.com/go-chi/chi/v5@v5.0.10/mux.go:90
+net/http.serverHandler.ServeHTTP
+	/usr/local/go/src/net/http/server.go:2938
+net/http.(*conn).serve
+	/usr/local/go/src/net/http/server.go:2009
+2023-10-27T11:17:59.973+0300	ERROR	logger/logger.go:55	wrong type
+github.com/Mr-Punder/go-alerting-service/internal/logger.(*LogHTTPZap).Error
+	/home/goomer/dev/go-alerting-service/internal/logger/logger.go:55
+github.com/Mr-Punder/go-alerting-service/internal/handlers.(*Handler).JSONUpdHandler
+	/home/goomer/dev/go-alerting-service/internal/handlers/handlers.go:118
+net/http.HandlerFunc.ServeHTTP
+	/usr/local/go/src/net/http/server.go:2136
+github.com/go-chi/chi/v5.(*Mux).routeHTTP
+	/home/goomer/go/pkg/mod/github.com/go-chi/chi/v5@v5.0.10/mux.go:444
+net/http.HandlerFunc.ServeHTTP
+	/usr/local/go/src/net/http/server.go:2136
+github.com/go-chi/chi/v5.(*Mux).ServeHTTP
+	/home/goomer/go/pkg/mod/github.com/go-chi/chi/v5@v5.0.10/mux.go:73
+github.com/go-chi/chi/v5.(*Mux).Mount.func1
+	/home/goomer/go/pkg/mod/github.com/go-chi/chi/v5@v5.0.10/mux.go:316
+net/http.HandlerFunc.ServeHTTP
+	/usr/local/go/src/net/http/server.go:2136
+github.com/go-chi/chi/v5.(*Mux).routeHTTP
+	/home/goomer/go/pkg/mod/github.com/go-chi/chi/v5@v5.0.10/mux.go:444
+net/http.HandlerFunc.ServeHTTP
+	/usr/local/go/src/net/http/server.go:2136
+github.com/go-chi/chi/v5.(*Mux).ServeHTTP
+	/home/goomer/go/pkg/mod/github.com/go-chi/chi/v5@v5.0.10/mux.go:90
+net/http.serverHandler.ServeHTTP
+	/usr/local/go/src/net/http/server.go:2938
+net/http.(*conn).serve
+	/usr/local/go/src/net/http/server.go:2009
+2023-10-27T11:17:59.978+0300	ERROR	logger/logger.go:55	Cann't find metric
+github.com/Mr-Punder/go-alerting-service/internal/logger.(*LogHTTPZap).Error
+	/home/goomer/dev/go-alerting-service/internal/logger/logger.go:55
+github.com/Mr-Punder/go-alerting-service/internal/handlers.(*Handler).JSONValueHandler
+	/home/goomer/dev/go-alerting-service/internal/handlers/handlers.go:192
+net/http.HandlerFunc.ServeHTTP
+	/usr/local/go/src/net/http/server.go:2136
+github.com/go-chi/chi/v5.(*Mux).routeHTTP
+	/home/goomer/go/pkg/mod/github.com/go-chi/chi/v5@v5.0.10/mux.go:444
+net/http.HandlerFunc.ServeHTTP
+	/usr/local/go/src/net/http/server.go:2136
+github.com/go-chi/chi/v5.(*Mux).ServeHTTP
+	/home/goomer/go/pkg/mod/github.com/go-chi/chi/v5@v5.0.10/mux.go:73
+github.com/go-chi/chi/v5.(*Mux).Mount.func1
+	/home/goomer/go/pkg/mod/github.com/go-chi/chi/v5@v5.0.10/mux.go:316
+net/http.HandlerFunc.ServeHTTP
+	/usr/local/go/src/net/http/server.go:2136
+github.com/go-chi/chi/v5.(*Mux).routeHTTP
+	/home/goomer/go/pkg/mod/github.com/go-chi/chi/v5@v5.0.10/mux.go:444
+net/http.HandlerFunc.ServeHTTP
+	/usr/local/go/src/net/http/server.go:2136
+github.com/go-chi/chi/v5.(*Mux).ServeHTTP
+	/home/goomer/go/pkg/mod/github.com/go-chi/chi/v5@v5.0.10/mux.go:90
+net/http.serverHandler.ServeHTTP
+	/usr/local/go/src/net/http/server.go:2938
+net/http.(*conn).serve
+	/usr/local/go/src/net/http/server.go:2009
+2023-10-27T11:17:59.980+0300	ERROR	logger/logger.go:55	Cann't find metric
+github.com/Mr-Punder/go-alerting-service/internal/logger.(*LogHTTPZap).Error
+	/home/goomer/dev/go-alerting-service/internal/logger/logger.go:55
+github.com/Mr-Punder/go-alerting-service/internal/handlers.(*Handler).JSONValueHandler
+	/home/goomer/dev/go-alerting-service/internal/handlers/handlers.go:192
+net/http.HandlerFunc.ServeHTTP
+	/usr/local/go/src/net/http/server.go:2136
+github.com/go-chi/chi/v5.(*Mux).routeHTTP
+	/home/goomer/go/pkg/mod/github.com/go-chi/chi/v5@v5.0.10/mux.go:444
+net/http.HandlerFunc.ServeHTTP
+	/usr/local/go/src/net/http/server.go:2136
+github.com/go-chi/chi/v5.(*Mux).ServeHTTP
+	/home/goomer/go/pkg/mod/github.com/go-chi/chi/v5@v5.0.10/mux.go:73
+github.com/go-chi/chi/v5.(*Mux).Mount.func1
+	/home/goomer/go/pkg/mod/github.com/go-chi/chi/v5@v5.0.10/mux.go:316
+net/http.HandlerFunc.ServeHTTP
+	/usr/local/go/src/net/http/server.go:2136
+github.com/go-chi/chi/v5.(*Mux).routeHTTP
+	/home/goomer/go/pkg/mod/github.com/go-chi/chi/v5@v5.0.10/mux.go:444
+net/http.HandlerFunc.ServeHTTP
+	/usr/local/go/src/net/http/server.go:2136
+github.com/go-chi/chi/v5.(*Mux).ServeHTTP
+	/home/goomer/go/pkg/mod/github.com/go-chi/chi/v5@v5.0.10/mux.go:90
+net/http.serverHandler.ServeHTTP
+	/usr/local/go/src/net/http/server.go:2938
+net/http.(*conn).serve
+	/usr/local/go/src/net/http/server.go:2009
+2023-10-27T11:17:59.982+0300	ERROR	logger/logger.go:55	wrong type
+github.com/Mr-Punder/go-alerting-service/internal/logger.(*LogHTTPZap).Error
+	/home/goomer/dev/go-alerting-service/internal/logger/logger.go:55
+github.com/Mr-Punder/go-alerting-service/internal/handlers.(*Handler).JSONValueHandler
+	/home/goomer/dev/go-alerting-service/internal/handlers/handlers.go:183
+net/http.HandlerFunc.ServeHTTP
+	/usr/local/go/src/net/http/server.go:2136
+github.com/go-chi/chi/v5.(*Mux).routeHTTP
+	/home/goomer/go/pkg/mod/github.com/go-chi/chi/v5@v5.0.10/mux.go:444
+net/http.HandlerFunc.ServeHTTP
+	/usr/local/go/src/net/http/server.go:2136
+github.com/go-chi/chi/v5.(*Mux).ServeHTTP
+	/home/goomer/go/pkg/mod/github.com/go-chi/chi/v5@v5.0.10/mux.go:73
+github.com/go-chi/chi/v5.(*Mux).Mount.func1
+	/home/goomer/go/pkg/mod/github.com/go-chi/chi/v5@v5.0.10/mux.go:316
+net/http.HandlerFunc.ServeHTTP
+	/usr/local/go/src/net/http/server.go:2136
+github.com/go-chi/chi/v5.(*Mux).routeHTTP
+	/home/goomer/go/pkg/mod/github.com/go-chi/chi/v5@v5.0.10/mux.go:444
+net/http.HandlerFunc.ServeHTTP
+	/usr/local/go/src/net/http/server.go:2136
+github.com/go-chi/chi/v5.(*Mux).ServeHTTP
+	/home/goomer/go/pkg/mod/github.com/go-chi/chi/v5@v5.0.10/mux.go:90
+net/http.serverHandler.ServeHTTP
+	/usr/local/go/src/net/http/server.go:2938
+net/http.(*conn).serve
+	/usr/local/go/src/net/http/server.go:2009
+2023-10-27T11:21:59.276+0300	ERROR	logger/logger.go:55	wrong type
+github.com/Mr-Punder/go-alerting-service/internal/logger.(*LogHTTPZap).Error
+	/home/goomer/dev/go-alerting-service/internal/logger/logger.go:55
+github.com/Mr-Punder/go-alerting-service/internal/handlers.(*Handler).JSONUpdHandler
+	/home/goomer/dev/go-alerting-service/internal/handlers/handlers.go:118
+net/http.HandlerFunc.ServeHTTP
+	/usr/local/go/src/net/http/server.go:2136
+github.com/go-chi/chi/v5.(*Mux).routeHTTP
+	/home/goomer/go/pkg/mod/github.com/go-chi/chi/v5@v5.0.10/mux.go:444
+net/http.HandlerFunc.ServeHTTP
+	/usr/local/go/src/net/http/server.go:2136
+github.com/go-chi/chi/v5.(*Mux).ServeHTTP
+	/home/goomer/go/pkg/mod/github.com/go-chi/chi/v5@v5.0.10/mux.go:73
+github.com/go-chi/chi/v5.(*Mux).Mount.func1
+	/home/goomer/go/pkg/mod/github.com/go-chi/chi/v5@v5.0.10/mux.go:316
+net/http.HandlerFunc.ServeHTTP
+	/usr/local/go/src/net/http/server.go:2136
+github.com/go-chi/chi/v5.(*Mux).routeHTTP
+	/home/goomer/go/pkg/mod/github.com/go-chi/chi/v5@v5.0.10/mux.go:444
+net/http.HandlerFunc.ServeHTTP
+	/usr/local/go/src/net/http/server.go:2136
+github.com/go-chi/chi/v5.(*Mux).ServeHTTP
+	/home/goomer/go/pkg/mod/github.com/go-chi/chi/v5@v5.0.10/mux.go:90
+net/http.serverHandler.ServeHTTP
+	/usr/local/go/src/net/http/server.go:2938
+net/http.(*conn).serve
+	/usr/local/go/src/net/http/server.go:2009
+2023-10-27T11:21:59.280+0300	ERROR	logger/logger.go:55	Cann't find metric
+github.com/Mr-Punder/go-alerting-service/internal/logger.(*LogHTTPZap).Error
+	/home/goomer/dev/go-alerting-service/internal/logger/logger.go:55
+github.com/Mr-Punder/go-alerting-service/internal/handlers.(*Handler).JSONValueHandler
+	/home/goomer/dev/go-alerting-service/internal/handlers/handlers.go:192
+net/http.HandlerFunc.ServeHTTP
+	/usr/local/go/src/net/http/server.go:2136
+github.com/go-chi/chi/v5.(*Mux).routeHTTP
+	/home/goomer/go/pkg/mod/github.com/go-chi/chi/v5@v5.0.10/mux.go:444
+net/http.HandlerFunc.ServeHTTP
+	/usr/local/go/src/net/http/server.go:2136
+github.com/go-chi/chi/v5.(*Mux).ServeHTTP
+	/home/goomer/go/pkg/mod/github.com/go-chi/chi/v5@v5.0.10/mux.go:73
+github.com/go-chi/chi/v5.(*Mux).Mount.func1
+	/home/goomer/go/pkg/mod/github.com/go-chi/chi/v5@v5.0.10/mux.go:316
+net/http.HandlerFunc.ServeHTTP
+	/usr/local/go/src/net/http/server.go:2136
+github.com/go-chi/chi/v5.(*Mux).routeHTTP
+	/home/goomer/go/pkg/mod/github.com/go-chi/chi/v5@v5.0.10/mux.go:444
+net/http.HandlerFunc.ServeHTTP
+	/usr/local/go/src/net/http/server.go:2136
+github.com/go-chi/chi/v5.(*Mux).ServeHTTP
+	/home/goomer/go/pkg/mod/github.com/go-chi/chi/v5@v5.0.10/mux.go:90
+net/http.serverHandler.ServeHTTP
+	/usr/local/go/src/net/http/server.go:2938
+net/http.(*conn).serve
+	/usr/local/go/src/net/http/server.go:2009
+2023-10-27T11:21:59.282+0300	ERROR	logger/logger.go:55	Cann't find metric
+github.com/Mr-Punder/go-alerting-service/internal/logger.(*LogHTTPZap).Error
+	/home/goomer/dev/go-alerting-service/internal/logger/logger.go:55
+github.com/Mr-Punder/go-alerting-service/internal/handlers.(*Handler).JSONValueHandler
+	/home/goomer/dev/go-alerting-service/internal/handlers/handlers.go:192
+net/http.HandlerFunc.ServeHTTP
+	/usr/local/go/src/net/http/server.go:2136
+github.com/go-chi/chi/v5.(*Mux).routeHTTP
+	/home/goomer/go/pkg/mod/github.com/go-chi/chi/v5@v5.0.10/mux.go:444
+net/http.HandlerFunc.ServeHTTP
+	/usr/local/go/src/net/http/server.go:2136
+github.com/go-chi/chi/v5.(*Mux).ServeHTTP
+	/home/goomer/go/pkg/mod/github.com/go-chi/chi/v5@v5.0.10/mux.go:73
+github.com/go-chi/chi/v5.(*Mux).Mount.func1
+	/home/goomer/go/pkg/mod/github.com/go-chi/chi/v5@v5.0.10/mux.go:316
+net/http.HandlerFunc.ServeHTTP
+	/usr/local/go/src/net/http/server.go:2136
+github.com/go-chi/chi/v5.(*Mux).routeHTTP
+	/home/goomer/go/pkg/mod/github.com/go-chi/chi/v5@v5.0.10/mux.go:444
+net/http.HandlerFunc.ServeHTTP
+	/usr/local/go/src/net/http/server.go:2136
+github.com/go-chi/chi/v5.(*Mux).ServeHTTP
+	/home/goomer/go/pkg/mod/github.com/go-chi/chi/v5@v5.0.10/mux.go:90
+net/http.serverHandler.ServeHTTP
+	/usr/local/go/src/net/http/server.go:2938
+net/http.(*conn).serve
+	/usr/local/go/src/net/http/server.go:2009
+2023-10-27T11:21:59.283+0300	ERROR	logger/logger.go:55	wrong type
+github.com/Mr-Punder/go-alerting-service/internal/logger.(*LogHTTPZap).Error
+	/home/goomer/dev/go-alerting-service/internal/logger/logger.go:55
+github.com/Mr-Punder/go-alerting-service/internal/handlers.(*Handler).JSONValueHandler
+	/home/goomer/dev/go-alerting-service/internal/handlers/handlers.go:183
+net/http.HandlerFunc.ServeHTTP
+	/usr/local/go/src/net/http/server.go:2136
+github.com/go-chi/chi/v5.(*Mux).routeHTTP
+	/home/goomer/go/pkg/mod/github.com/go-chi/chi/v5@v5.0.10/mux.go:444
+net/http.HandlerFunc.ServeHTTP
+	/usr/local/go/src/net/http/server.go:2136
+github.com/go-chi/chi/v5.(*Mux).ServeHTTP
+	/home/goomer/go/pkg/mod/github.com/go-chi/chi/v5@v5.0.10/mux.go:73
+github.com/go-chi/chi/v5.(*Mux).Mount.func1
+	/home/goomer/go/pkg/mod/github.com/go-chi/chi/v5@v5.0.10/mux.go:316
+net/http.HandlerFunc.ServeHTTP
+	/usr/local/go/src/net/http/server.go:2136
+github.com/go-chi/chi/v5.(*Mux).routeHTTP
+	/home/goomer/go/pkg/mod/github.com/go-chi/chi/v5@v5.0.10/mux.go:444
+net/http.HandlerFunc.ServeHTTP
+	/usr/local/go/src/net/http/server.go:2136
+github.com/go-chi/chi/v5.(*Mux).ServeHTTP
+	/home/goomer/go/pkg/mod/github.com/go-chi/chi/v5@v5.0.10/mux.go:90
+net/http.serverHandler.ServeHTTP
+	/usr/local/go/src/net/http/server.go:2938
+net/http.(*conn).serve
+	/usr/local/go/src/net/http/server.go:2009
+2023-10-27T11:24:15.256+0300	ERROR	logger/logger.go:55	wrong type
+github.com/Mr-Punder/go-alerting-service/internal/logger.(*LogHTTPZap).Error
+	/home/goomer/dev/go-alerting-service/internal/logger/logger.go:55
+github.com/Mr-Punder/go-alerting-service/internal/handlers.(*Handler).JSONUpdHandler
+	/home/goomer/dev/go-alerting-service/internal/handlers/handlers.go:118
+net/http.HandlerFunc.ServeHTTP
+	/usr/local/go/src/net/http/server.go:2136
+github.com/go-chi/chi/v5.(*Mux).routeHTTP
+	/home/goomer/go/pkg/mod/github.com/go-chi/chi/v5@v5.0.10/mux.go:444
+net/http.HandlerFunc.ServeHTTP
+	/usr/local/go/src/net/http/server.go:2136
+github.com/go-chi/chi/v5.(*Mux).ServeHTTP
+	/home/goomer/go/pkg/mod/github.com/go-chi/chi/v5@v5.0.10/mux.go:73
+github.com/go-chi/chi/v5.(*Mux).Mount.func1
+	/home/goomer/go/pkg/mod/github.com/go-chi/chi/v5@v5.0.10/mux.go:316
+net/http.HandlerFunc.ServeHTTP
+	/usr/local/go/src/net/http/server.go:2136
+github.com/go-chi/chi/v5.(*Mux).routeHTTP
+	/home/goomer/go/pkg/mod/github.com/go-chi/chi/v5@v5.0.10/mux.go:444
+net/http.HandlerFunc.ServeHTTP
+	/usr/local/go/src/net/http/server.go:2136
+github.com/go-chi/chi/v5.(*Mux).ServeHTTP
+	/home/goomer/go/pkg/mod/github.com/go-chi/chi/v5@v5.0.10/mux.go:90
+net/http.serverHandler.ServeHTTP
+	/usr/local/go/src/net/http/server.go:2938
+net/http.(*conn).serve
+	/usr/local/go/src/net/http/server.go:2009
+2023-10-27T11:24:15.259+0300	ERROR	logger/logger.go:55	Cann't find metric
+github.com/Mr-Punder/go-alerting-service/internal/logger.(*LogHTTPZap).Error
+	/home/goomer/dev/go-alerting-service/internal/logger/logger.go:55
+github.com/Mr-Punder/go-alerting-service/internal/handlers.(*Handler).JSONValueHandler
+	/home/goomer/dev/go-alerting-service/internal/handlers/handlers.go:192
+net/http.HandlerFunc.ServeHTTP
+	/usr/local/go/src/net/http/server.go:2136
+github.com/go-chi/chi/v5.(*Mux).routeHTTP
+	/home/goomer/go/pkg/mod/github.com/go-chi/chi/v5@v5.0.10/mux.go:444
+net/http.HandlerFunc.ServeHTTP
+	/usr/local/go/src/net/http/server.go:2136
+github.com/go-chi/chi/v5.(*Mux).ServeHTTP
+	/home/goomer/go/pkg/mod/github.com/go-chi/chi/v5@v5.0.10/mux.go:73
+github.com/go-chi/chi/v5.(*Mux).Mount.func1
+	/home/goomer/go/pkg/mod/github.com/go-chi/chi/v5@v5.0.10/mux.go:316
+net/http.HandlerFunc.ServeHTTP
+	/usr/local/go/src/net/http/server.go:2136
+github.com/go-chi/chi/v5.(*Mux).routeHTTP
+	/home/goomer/go/pkg/mod/github.com/go-chi/chi/v5@v5.0.10/mux.go:444
+net/http.HandlerFunc.ServeHTTP
+	/usr/local/go/src/net/http/server.go:2136
+github.com/go-chi/chi/v5.(*Mux).ServeHTTP
+	/home/goomer/go/pkg/mod/github.com/go-chi/chi/v5@v5.0.10/mux.go:90
+net/http.serverHandler.ServeHTTP
+	/usr/local/go/src/net/http/server.go:2938
+net/http.(*conn).serve
+	/usr/local/go/src/net/http/server.go:2009
+2023-10-27T11:24:15.260+0300	ERROR	logger/logger.go:55	Cann't find metric
+github.com/Mr-Punder/go-alerting-service/internal/logger.(*LogHTTPZap).Error
+	/home/goomer/dev/go-alerting-service/internal/logger/logger.go:55
+github.com/Mr-Punder/go-alerting-service/internal/handlers.(*Handler).JSONValueHandler
+	/home/goomer/dev/go-alerting-service/internal/handlers/handlers.go:192
+net/http.HandlerFunc.ServeHTTP
+	/usr/local/go/src/net/http/server.go:2136
+github.com/go-chi/chi/v5.(*Mux).routeHTTP
+	/home/goomer/go/pkg/mod/github.com/go-chi/chi/v5@v5.0.10/mux.go:444
+net/http.HandlerFunc.ServeHTTP
+	/usr/local/go/src/net/http/server.go:2136
+github.com/go-chi/chi/v5.(*Mux).ServeHTTP
+	/home/goomer/go/pkg/mod/github.com/go-chi/chi/v5@v5.0.10/mux.go:73
+github.com/go-chi/chi/v5.(*Mux).Mount.func1
+	/home/goomer/go/pkg/mod/github.com/go-chi/chi/v5@v5.0.10/mux.go:316
+net/http.HandlerFunc.ServeHTTP
+	/usr/local/go/src/net/http/server.go:2136
+github.com/go-chi/chi/v5.(*Mux).routeHTTP
+	/home/goomer/go/pkg/mod/github.com/go-chi/chi/v5@v5.0.10/mux.go:444
+net/http.HandlerFunc.ServeHTTP
+	/usr/local/go/src/net/http/server.go:2136
+github.com/go-chi/chi/v5.(*Mux).ServeHTTP
+	/home/goomer/go/pkg/mod/github.com/go-chi/chi/v5@v5.0.10/mux.go:90
+net/http.serverHandler.ServeHTTP
+	/usr/local/go/src/net/http/server.go:2938
+net/http.(*conn).serve
+	/usr/local/go/src/net/http/server.go:2009
+2023-10-27T11:24:15.262+0300	ERROR	logger/logger.go:55	wrong type
+github.com/Mr-Punder/go-alerting-service/internal/logger.(*LogHTTPZap).Error
+	/home/goomer/dev/go-alerting-service/internal/logger/logger.go:55
+github.com/Mr-Punder/go-alerting-service/internal/handlers.(*Handler).JSONValueHandler
+	/home/goomer/dev/go-alerting-service/internal/handlers/handlers.go:183
+net/http.HandlerFunc.ServeHTTP
+	/usr/local/go/src/net/http/server.go:2136
+github.com/go-chi/chi/v5.(*Mux).routeHTTP
+	/home/goomer/go/pkg/mod/github.com/go-chi/chi/v5@v5.0.10/mux.go:444
+net/http.HandlerFunc.ServeHTTP
+	/usr/local/go/src/net/http/server.go:2136
+github.com/go-chi/chi/v5.(*Mux).ServeHTTP
+	/home/goomer/go/pkg/mod/github.com/go-chi/chi/v5@v5.0.10/mux.go:73
+github.com/go-chi/chi/v5.(*Mux).Mount.func1
+	/home/goomer/go/pkg/mod/github.com/go-chi/chi/v5@v5.0.10/mux.go:316
+net/http.HandlerFunc.ServeHTTP
+	/usr/local/go/src/net/http/server.go:2136
+github.com/go-chi/chi/v5.(*Mux).routeHTTP
+	/home/goomer/go/pkg/mod/github.com/go-chi/chi/v5@v5.0.10/mux.go:444
+net/http.HandlerFunc.ServeHTTP
+	/usr/local/go/src/net/http/server.go:2136
+github.com/go-chi/chi/v5.(*Mux).ServeHTTP
+	/home/goomer/go/pkg/mod/github.com/go-chi/chi/v5@v5.0.10/mux.go:90
+net/http.serverHandler.ServeHTTP
+	/usr/local/go/src/net/http/server.go:2938
+net/http.(*conn).serve
+	/usr/local/go/src/net/http/server.go:2009
+2023-10-27T11:27:30.349+0300	ERROR	logger/logger.go:55	wrong type
+github.com/Mr-Punder/go-alerting-service/internal/logger.(*LogHTTPZap).Error
+	/home/goomer/dev/go-alerting-service/internal/logger/logger.go:55
+github.com/Mr-Punder/go-alerting-service/internal/handlers.(*Handler).JSONUpdHandler
+	/home/goomer/dev/go-alerting-service/internal/handlers/handlers.go:118
+net/http.HandlerFunc.ServeHTTP
+	/usr/local/go/src/net/http/server.go:2136
+github.com/go-chi/chi/v5.(*Mux).routeHTTP
+	/home/goomer/go/pkg/mod/github.com/go-chi/chi/v5@v5.0.10/mux.go:444
+net/http.HandlerFunc.ServeHTTP
+	/usr/local/go/src/net/http/server.go:2136
+github.com/go-chi/chi/v5.(*Mux).ServeHTTP
+	/home/goomer/go/pkg/mod/github.com/go-chi/chi/v5@v5.0.10/mux.go:73
+github.com/go-chi/chi/v5.(*Mux).Mount.func1
+	/home/goomer/go/pkg/mod/github.com/go-chi/chi/v5@v5.0.10/mux.go:316
+net/http.HandlerFunc.ServeHTTP
+	/usr/local/go/src/net/http/server.go:2136
+github.com/go-chi/chi/v5.(*Mux).routeHTTP
+	/home/goomer/go/pkg/mod/github.com/go-chi/chi/v5@v5.0.10/mux.go:444
+net/http.HandlerFunc.ServeHTTP
+	/usr/local/go/src/net/http/server.go:2136
+github.com/go-chi/chi/v5.(*Mux).ServeHTTP
+	/home/goomer/go/pkg/mod/github.com/go-chi/chi/v5@v5.0.10/mux.go:90
+net/http.serverHandler.ServeHTTP
+	/usr/local/go/src/net/http/server.go:2938
+net/http.(*conn).serve
+	/usr/local/go/src/net/http/server.go:2009
+2023-10-27T11:27:30.355+0300	ERROR	logger/logger.go:55	Cann't find metric
+github.com/Mr-Punder/go-alerting-service/internal/logger.(*LogHTTPZap).Error
+	/home/goomer/dev/go-alerting-service/internal/logger/logger.go:55
+github.com/Mr-Punder/go-alerting-service/internal/handlers.(*Handler).JSONValueHandler
+	/home/goomer/dev/go-alerting-service/internal/handlers/handlers.go:192
+net/http.HandlerFunc.ServeHTTP
+	/usr/local/go/src/net/http/server.go:2136
+github.com/go-chi/chi/v5.(*Mux).routeHTTP
+	/home/goomer/go/pkg/mod/github.com/go-chi/chi/v5@v5.0.10/mux.go:444
+net/http.HandlerFunc.ServeHTTP
+	/usr/local/go/src/net/http/server.go:2136
+github.com/go-chi/chi/v5.(*Mux).ServeHTTP
+	/home/goomer/go/pkg/mod/github.com/go-chi/chi/v5@v5.0.10/mux.go:73
+github.com/go-chi/chi/v5.(*Mux).Mount.func1
+	/home/goomer/go/pkg/mod/github.com/go-chi/chi/v5@v5.0.10/mux.go:316
+net/http.HandlerFunc.ServeHTTP
+	/usr/local/go/src/net/http/server.go:2136
+github.com/go-chi/chi/v5.(*Mux).routeHTTP
+	/home/goomer/go/pkg/mod/github.com/go-chi/chi/v5@v5.0.10/mux.go:444
+net/http.HandlerFunc.ServeHTTP
+	/usr/local/go/src/net/http/server.go:2136
+github.com/go-chi/chi/v5.(*Mux).ServeHTTP
+	/home/goomer/go/pkg/mod/github.com/go-chi/chi/v5@v5.0.10/mux.go:90
+net/http.serverHandler.ServeHTTP
+	/usr/local/go/src/net/http/server.go:2938
+net/http.(*conn).serve
+	/usr/local/go/src/net/http/server.go:2009
+2023-10-27T11:27:30.357+0300	ERROR	logger/logger.go:55	Cann't find metric
+github.com/Mr-Punder/go-alerting-service/internal/logger.(*LogHTTPZap).Error
+	/home/goomer/dev/go-alerting-service/internal/logger/logger.go:55
+github.com/Mr-Punder/go-alerting-service/internal/handlers.(*Handler).JSONValueHandler
+	/home/goomer/dev/go-alerting-service/internal/handlers/handlers.go:192
+net/http.HandlerFunc.ServeHTTP
+	/usr/local/go/src/net/http/server.go:2136
+github.com/go-chi/chi/v5.(*Mux).routeHTTP
+	/home/goomer/go/pkg/mod/github.com/go-chi/chi/v5@v5.0.10/mux.go:444
+net/http.HandlerFunc.ServeHTTP
+	/usr/local/go/src/net/http/server.go:2136
+github.com/go-chi/chi/v5.(*Mux).ServeHTTP
+	/home/goomer/go/pkg/mod/github.com/go-chi/chi/v5@v5.0.10/mux.go:73
+github.com/go-chi/chi/v5.(*Mux).Mount.func1
+	/home/goomer/go/pkg/mod/github.com/go-chi/chi/v5@v5.0.10/mux.go:316
+net/http.HandlerFunc.ServeHTTP
+	/usr/local/go/src/net/http/server.go:2136
+github.com/go-chi/chi/v5.(*Mux).routeHTTP
+	/home/goomer/go/pkg/mod/github.com/go-chi/chi/v5@v5.0.10/mux.go:444
+net/http.HandlerFunc.ServeHTTP
+	/usr/local/go/src/net/http/server.go:2136
+github.com/go-chi/chi/v5.(*Mux).ServeHTTP
+	/home/goomer/go/pkg/mod/github.com/go-chi/chi/v5@v5.0.10/mux.go:90
+net/http.serverHandler.ServeHTTP
+	/usr/local/go/src/net/http/server.go:2938
+net/http.(*conn).serve
+	/usr/local/go/src/net/http/server.go:2009
+2023-10-27T11:27:30.359+0300	ERROR	logger/logger.go:55	wrong type
+github.com/Mr-Punder/go-alerting-service/internal/logger.(*LogHTTPZap).Error
+	/home/goomer/dev/go-alerting-service/internal/logger/logger.go:55
+github.com/Mr-Punder/go-alerting-service/internal/handlers.(*Handler).JSONValueHandler
+	/home/goomer/dev/go-alerting-service/internal/handlers/handlers.go:183
+net/http.HandlerFunc.ServeHTTP
+	/usr/local/go/src/net/http/server.go:2136
+github.com/go-chi/chi/v5.(*Mux).routeHTTP
+	/home/goomer/go/pkg/mod/github.com/go-chi/chi/v5@v5.0.10/mux.go:444
+net/http.HandlerFunc.ServeHTTP
+	/usr/local/go/src/net/http/server.go:2136
+github.com/go-chi/chi/v5.(*Mux).ServeHTTP
+	/home/goomer/go/pkg/mod/github.com/go-chi/chi/v5@v5.0.10/mux.go:73
+github.com/go-chi/chi/v5.(*Mux).Mount.func1
+	/home/goomer/go/pkg/mod/github.com/go-chi/chi/v5@v5.0.10/mux.go:316
+net/http.HandlerFunc.ServeHTTP
+	/usr/local/go/src/net/http/server.go:2136
+github.com/go-chi/chi/v5.(*Mux).routeHTTP
+	/home/goomer/go/pkg/mod/github.com/go-chi/chi/v5@v5.0.10/mux.go:444
+net/http.HandlerFunc.ServeHTTP
+	/usr/local/go/src/net/http/server.go:2136
+github.com/go-chi/chi/v5.(*Mux).ServeHTTP
+	/home/goomer/go/pkg/mod/github.com/go-chi/chi/v5@v5.0.10/mux.go:90
+net/http.serverHandler.ServeHTTP
+	/usr/local/go/src/net/http/server.go:2938
+net/http.(*conn).serve
+	/usr/local/go/src/net/http/server.go:2009
+2023-10-27T11:27:40.271+0300	ERROR	logger/logger.go:55	wrong type
+github.com/Mr-Punder/go-alerting-service/internal/logger.(*LogHTTPZap).Error
+	/home/goomer/dev/go-alerting-service/internal/logger/logger.go:55
+github.com/Mr-Punder/go-alerting-service/internal/handlers.(*Handler).JSONUpdHandler
+	/home/goomer/dev/go-alerting-service/internal/handlers/handlers.go:118
+net/http.HandlerFunc.ServeHTTP
+	/usr/local/go/src/net/http/server.go:2136
+github.com/go-chi/chi/v5.(*Mux).routeHTTP
+	/home/goomer/go/pkg/mod/github.com/go-chi/chi/v5@v5.0.10/mux.go:444
+net/http.HandlerFunc.ServeHTTP
+	/usr/local/go/src/net/http/server.go:2136
+github.com/go-chi/chi/v5.(*Mux).ServeHTTP
+	/home/goomer/go/pkg/mod/github.com/go-chi/chi/v5@v5.0.10/mux.go:73
+github.com/go-chi/chi/v5.(*Mux).Mount.func1
+	/home/goomer/go/pkg/mod/github.com/go-chi/chi/v5@v5.0.10/mux.go:316
+net/http.HandlerFunc.ServeHTTP
+	/usr/local/go/src/net/http/server.go:2136
+github.com/go-chi/chi/v5.(*Mux).routeHTTP
+	/home/goomer/go/pkg/mod/github.com/go-chi/chi/v5@v5.0.10/mux.go:444
+net/http.HandlerFunc.ServeHTTP
+	/usr/local/go/src/net/http/server.go:2136
+github.com/go-chi/chi/v5.(*Mux).ServeHTTP
+	/home/goomer/go/pkg/mod/github.com/go-chi/chi/v5@v5.0.10/mux.go:90
+net/http.serverHandler.ServeHTTP
+	/usr/local/go/src/net/http/server.go:2938
+net/http.(*conn).serve
+	/usr/local/go/src/net/http/server.go:2009
+2023-10-27T11:27:40.276+0300	ERROR	logger/logger.go:55	Cann't find metric
+github.com/Mr-Punder/go-alerting-service/internal/logger.(*LogHTTPZap).Error
+	/home/goomer/dev/go-alerting-service/internal/logger/logger.go:55
+github.com/Mr-Punder/go-alerting-service/internal/handlers.(*Handler).JSONValueHandler
+	/home/goomer/dev/go-alerting-service/internal/handlers/handlers.go:192
+net/http.HandlerFunc.ServeHTTP
+	/usr/local/go/src/net/http/server.go:2136
+github.com/go-chi/chi/v5.(*Mux).routeHTTP
+	/home/goomer/go/pkg/mod/github.com/go-chi/chi/v5@v5.0.10/mux.go:444
+net/http.HandlerFunc.ServeHTTP
+	/usr/local/go/src/net/http/server.go:2136
+github.com/go-chi/chi/v5.(*Mux).ServeHTTP
+	/home/goomer/go/pkg/mod/github.com/go-chi/chi/v5@v5.0.10/mux.go:73
+github.com/go-chi/chi/v5.(*Mux).Mount.func1
+	/home/goomer/go/pkg/mod/github.com/go-chi/chi/v5@v5.0.10/mux.go:316
+net/http.HandlerFunc.ServeHTTP
+	/usr/local/go/src/net/http/server.go:2136
+github.com/go-chi/chi/v5.(*Mux).routeHTTP
+	/home/goomer/go/pkg/mod/github.com/go-chi/chi/v5@v5.0.10/mux.go:444
+net/http.HandlerFunc.ServeHTTP
+	/usr/local/go/src/net/http/server.go:2136
+github.com/go-chi/chi/v5.(*Mux).ServeHTTP
+	/home/goomer/go/pkg/mod/github.com/go-chi/chi/v5@v5.0.10/mux.go:90
+net/http.serverHandler.ServeHTTP
+	/usr/local/go/src/net/http/server.go:2938
+net/http.(*conn).serve
+	/usr/local/go/src/net/http/server.go:2009
+2023-10-27T11:27:40.277+0300	ERROR	logger/logger.go:55	Cann't find metric
+github.com/Mr-Punder/go-alerting-service/internal/logger.(*LogHTTPZap).Error
+	/home/goomer/dev/go-alerting-service/internal/logger/logger.go:55
+github.com/Mr-Punder/go-alerting-service/internal/handlers.(*Handler).JSONValueHandler
+	/home/goomer/dev/go-alerting-service/internal/handlers/handlers.go:192
+net/http.HandlerFunc.ServeHTTP
+	/usr/local/go/src/net/http/server.go:2136
+github.com/go-chi/chi/v5.(*Mux).routeHTTP
+	/home/goomer/go/pkg/mod/github.com/go-chi/chi/v5@v5.0.10/mux.go:444
+net/http.HandlerFunc.ServeHTTP
+	/usr/local/go/src/net/http/server.go:2136
+github.com/go-chi/chi/v5.(*Mux).ServeHTTP
+	/home/goomer/go/pkg/mod/github.com/go-chi/chi/v5@v5.0.10/mux.go:73
+github.com/go-chi/chi/v5.(*Mux).Mount.func1
+	/home/goomer/go/pkg/mod/github.com/go-chi/chi/v5@v5.0.10/mux.go:316
+net/http.HandlerFunc.ServeHTTP
+	/usr/local/go/src/net/http/server.go:2136
+github.com/go-chi/chi/v5.(*Mux).routeHTTP
+	/home/goomer/go/pkg/mod/github.com/go-chi/chi/v5@v5.0.10/mux.go:444
+net/http.HandlerFunc.ServeHTTP
+	/usr/local/go/src/net/http/server.go:2136
+github.com/go-chi/chi/v5.(*Mux).ServeHTTP
+	/home/goomer/go/pkg/mod/github.com/go-chi/chi/v5@v5.0.10/mux.go:90
+net/http.serverHandler.ServeHTTP
+	/usr/local/go/src/net/http/server.go:2938
+net/http.(*conn).serve
+	/usr/local/go/src/net/http/server.go:2009
+2023-10-27T11:27:40.279+0300	ERROR	logger/logger.go:55	wrong type
+github.com/Mr-Punder/go-alerting-service/internal/logger.(*LogHTTPZap).Error
+	/home/goomer/dev/go-alerting-service/internal/logger/logger.go:55
+github.com/Mr-Punder/go-alerting-service/internal/handlers.(*Handler).JSONValueHandler
+	/home/goomer/dev/go-alerting-service/internal/handlers/handlers.go:183
+net/http.HandlerFunc.ServeHTTP
+	/usr/local/go/src/net/http/server.go:2136
+github.com/go-chi/chi/v5.(*Mux).routeHTTP
+	/home/goomer/go/pkg/mod/github.com/go-chi/chi/v5@v5.0.10/mux.go:444
+net/http.HandlerFunc.ServeHTTP
+	/usr/local/go/src/net/http/server.go:2136
+github.com/go-chi/chi/v5.(*Mux).ServeHTTP
+	/home/goomer/go/pkg/mod/github.com/go-chi/chi/v5@v5.0.10/mux.go:73
+github.com/go-chi/chi/v5.(*Mux).Mount.func1
+	/home/goomer/go/pkg/mod/github.com/go-chi/chi/v5@v5.0.10/mux.go:316
+net/http.HandlerFunc.ServeHTTP
+	/usr/local/go/src/net/http/server.go:2136
+github.com/go-chi/chi/v5.(*Mux).routeHTTP
+	/home/goomer/go/pkg/mod/github.com/go-chi/chi/v5@v5.0.10/mux.go:444
+net/http.HandlerFunc.ServeHTTP
+	/usr/local/go/src/net/http/server.go:2136
+github.com/go-chi/chi/v5.(*Mux).ServeHTTP
+	/home/goomer/go/pkg/mod/github.com/go-chi/chi/v5@v5.0.10/mux.go:90
+net/http.serverHandler.ServeHTTP
+	/usr/local/go/src/net/http/server.go:2938
+net/http.(*conn).serve
+	/usr/local/go/src/net/http/server.go:2009
+2023-10-27T11:27:50.703+0300	ERROR	logger/logger.go:55	wrong type
+github.com/Mr-Punder/go-alerting-service/internal/logger.(*LogHTTPZap).Error
+	/home/goomer/dev/go-alerting-service/internal/logger/logger.go:55
+github.com/Mr-Punder/go-alerting-service/internal/handlers.(*Handler).JSONUpdHandler
+	/home/goomer/dev/go-alerting-service/internal/handlers/handlers.go:118
+net/http.HandlerFunc.ServeHTTP
+	/usr/local/go/src/net/http/server.go:2136
+github.com/go-chi/chi/v5.(*Mux).routeHTTP
+	/home/goomer/go/pkg/mod/github.com/go-chi/chi/v5@v5.0.10/mux.go:444
+net/http.HandlerFunc.ServeHTTP
+	/usr/local/go/src/net/http/server.go:2136
+github.com/go-chi/chi/v5.(*Mux).ServeHTTP
+	/home/goomer/go/pkg/mod/github.com/go-chi/chi/v5@v5.0.10/mux.go:73
+github.com/go-chi/chi/v5.(*Mux).Mount.func1
+	/home/goomer/go/pkg/mod/github.com/go-chi/chi/v5@v5.0.10/mux.go:316
+net/http.HandlerFunc.ServeHTTP
+	/usr/local/go/src/net/http/server.go:2136
+github.com/go-chi/chi/v5.(*Mux).routeHTTP
+	/home/goomer/go/pkg/mod/github.com/go-chi/chi/v5@v5.0.10/mux.go:444
+net/http.HandlerFunc.ServeHTTP
+	/usr/local/go/src/net/http/server.go:2136
+github.com/go-chi/chi/v5.(*Mux).ServeHTTP
+	/home/goomer/go/pkg/mod/github.com/go-chi/chi/v5@v5.0.10/mux.go:90
+net/http.serverHandler.ServeHTTP
+	/usr/local/go/src/net/http/server.go:2938
+net/http.(*conn).serve
+	/usr/local/go/src/net/http/server.go:2009
+2023-10-27T11:27:50.707+0300	ERROR	logger/logger.go:55	Cann't find metric
+github.com/Mr-Punder/go-alerting-service/internal/logger.(*LogHTTPZap).Error
+	/home/goomer/dev/go-alerting-service/internal/logger/logger.go:55
+github.com/Mr-Punder/go-alerting-service/internal/handlers.(*Handler).JSONValueHandler
+	/home/goomer/dev/go-alerting-service/internal/handlers/handlers.go:192
+net/http.HandlerFunc.ServeHTTP
+	/usr/local/go/src/net/http/server.go:2136
+github.com/go-chi/chi/v5.(*Mux).routeHTTP
+	/home/goomer/go/pkg/mod/github.com/go-chi/chi/v5@v5.0.10/mux.go:444
+net/http.HandlerFunc.ServeHTTP
+	/usr/local/go/src/net/http/server.go:2136
+github.com/go-chi/chi/v5.(*Mux).ServeHTTP
+	/home/goomer/go/pkg/mod/github.com/go-chi/chi/v5@v5.0.10/mux.go:73
+github.com/go-chi/chi/v5.(*Mux).Mount.func1
+	/home/goomer/go/pkg/mod/github.com/go-chi/chi/v5@v5.0.10/mux.go:316
+net/http.HandlerFunc.ServeHTTP
+	/usr/local/go/src/net/http/server.go:2136
+github.com/go-chi/chi/v5.(*Mux).routeHTTP
+	/home/goomer/go/pkg/mod/github.com/go-chi/chi/v5@v5.0.10/mux.go:444
+net/http.HandlerFunc.ServeHTTP
+	/usr/local/go/src/net/http/server.go:2136
+github.com/go-chi/chi/v5.(*Mux).ServeHTTP
+	/home/goomer/go/pkg/mod/github.com/go-chi/chi/v5@v5.0.10/mux.go:90
+net/http.serverHandler.ServeHTTP
+	/usr/local/go/src/net/http/server.go:2938
+net/http.(*conn).serve
+	/usr/local/go/src/net/http/server.go:2009
+2023-10-27T11:27:50.709+0300	ERROR	logger/logger.go:55	Cann't find metric
+github.com/Mr-Punder/go-alerting-service/internal/logger.(*LogHTTPZap).Error
+	/home/goomer/dev/go-alerting-service/internal/logger/logger.go:55
+github.com/Mr-Punder/go-alerting-service/internal/handlers.(*Handler).JSONValueHandler
+	/home/goomer/dev/go-alerting-service/internal/handlers/handlers.go:192
+net/http.HandlerFunc.ServeHTTP
+	/usr/local/go/src/net/http/server.go:2136
+github.com/go-chi/chi/v5.(*Mux).routeHTTP
+	/home/goomer/go/pkg/mod/github.com/go-chi/chi/v5@v5.0.10/mux.go:444
+net/http.HandlerFunc.ServeHTTP
+	/usr/local/go/src/net/http/server.go:2136
+github.com/go-chi/chi/v5.(*Mux).ServeHTTP
+	/home/goomer/go/pkg/mod/github.com/go-chi/chi/v5@v5.0.10/mux.go:73
+github.com/go-chi/chi/v5.(*Mux).Mount.func1
+	/home/goomer/go/pkg/mod/github.com/go-chi/chi/v5@v5.0.10/mux.go:316
+net/http.HandlerFunc.ServeHTTP
+	/usr/local/go/src/net/http/server.go:2136
+github.com/go-chi/chi/v5.(*Mux).routeHTTP
+	/home/goomer/go/pkg/mod/github.com/go-chi/chi/v5@v5.0.10/mux.go:444
+net/http.HandlerFunc.ServeHTTP
+	/usr/local/go/src/net/http/server.go:2136
+github.com/go-chi/chi/v5.(*Mux).ServeHTTP
+	/home/goomer/go/pkg/mod/github.com/go-chi/chi/v5@v5.0.10/mux.go:90
+net/http.serverHandler.ServeHTTP
+	/usr/local/go/src/net/http/server.go:2938
+net/http.(*conn).serve
+	/usr/local/go/src/net/http/server.go:2009
+2023-10-27T11:27:50.711+0300	ERROR	logger/logger.go:55	wrong type
+github.com/Mr-Punder/go-alerting-service/internal/logger.(*LogHTTPZap).Error
+	/home/goomer/dev/go-alerting-service/internal/logger/logger.go:55
+github.com/Mr-Punder/go-alerting-service/internal/handlers.(*Handler).JSONValueHandler
+	/home/goomer/dev/go-alerting-service/internal/handlers/handlers.go:183
+net/http.HandlerFunc.ServeHTTP
+	/usr/local/go/src/net/http/server.go:2136
+github.com/go-chi/chi/v5.(*Mux).routeHTTP
+	/home/goomer/go/pkg/mod/github.com/go-chi/chi/v5@v5.0.10/mux.go:444
+net/http.HandlerFunc.ServeHTTP
+	/usr/local/go/src/net/http/server.go:2136
+github.com/go-chi/chi/v5.(*Mux).ServeHTTP
+	/home/goomer/go/pkg/mod/github.com/go-chi/chi/v5@v5.0.10/mux.go:73
+github.com/go-chi/chi/v5.(*Mux).Mount.func1
+	/home/goomer/go/pkg/mod/github.com/go-chi/chi/v5@v5.0.10/mux.go:316
+net/http.HandlerFunc.ServeHTTP
+	/usr/local/go/src/net/http/server.go:2136
+github.com/go-chi/chi/v5.(*Mux).routeHTTP
+	/home/goomer/go/pkg/mod/github.com/go-chi/chi/v5@v5.0.10/mux.go:444
+net/http.HandlerFunc.ServeHTTP
+	/usr/local/go/src/net/http/server.go:2136
+github.com/go-chi/chi/v5.(*Mux).ServeHTTP
+	/home/goomer/go/pkg/mod/github.com/go-chi/chi/v5@v5.0.10/mux.go:90
+net/http.serverHandler.ServeHTTP
+	/usr/local/go/src/net/http/server.go:2938
+net/http.(*conn).serve
+	/usr/local/go/src/net/http/server.go:2009
+2023-10-27T11:37:21.729+0300	ERROR	logger/logger.go:55	json decoding error
+github.com/Mr-Punder/go-alerting-service/internal/logger.(*LogHTTPZap).Error
+	/home/goomer/dev/go-alerting-service/internal/logger/logger.go:55
+github.com/Mr-Punder/go-alerting-service/internal/handlers.(*Handler).JSONValueHandler
+	/home/goomer/dev/go-alerting-service/internal/handlers/handlers.go:179
+net/http.HandlerFunc.ServeHTTP
+	/usr/local/go/src/net/http/server.go:2136
+github.com/go-chi/chi/v5.(*Mux).routeHTTP
+	/home/goomer/go/pkg/mod/github.com/go-chi/chi/v5@v5.0.10/mux.go:444
+net/http.HandlerFunc.ServeHTTP
+	/usr/local/go/src/net/http/server.go:2136
+github.com/go-chi/chi/v5.(*Mux).ServeHTTP
+	/home/goomer/go/pkg/mod/github.com/go-chi/chi/v5@v5.0.10/mux.go:73
+github.com/go-chi/chi/v5.(*Mux).Mount.func1
+	/home/goomer/go/pkg/mod/github.com/go-chi/chi/v5@v5.0.10/mux.go:316
+net/http.HandlerFunc.ServeHTTP
+	/usr/local/go/src/net/http/server.go:2136
+github.com/go-chi/chi/v5.(*Mux).routeHTTP
+	/home/goomer/go/pkg/mod/github.com/go-chi/chi/v5@v5.0.10/mux.go:444
+net/http.HandlerFunc.ServeHTTP
+	/usr/local/go/src/net/http/server.go:2136
+github.com/go-chi/chi/v5.(*Mux).ServeHTTP
+	/home/goomer/go/pkg/mod/github.com/go-chi/chi/v5@v5.0.10/mux.go:90
+net/http.serverHandler.ServeHTTP
+	/usr/local/go/src/net/http/server.go:2938
+net/http.(*conn).serve
+	/usr/local/go/src/net/http/server.go:2009
+2023-10-27T11:37:21.731+0300	ERROR	logger/logger.go:55	wrong type
+github.com/Mr-Punder/go-alerting-service/internal/logger.(*LogHTTPZap).Error
+	/home/goomer/dev/go-alerting-service/internal/logger/logger.go:55
+github.com/Mr-Punder/go-alerting-service/internal/handlers.(*Handler).JSONUpdHandler
+	/home/goomer/dev/go-alerting-service/internal/handlers/handlers.go:119
+net/http.HandlerFunc.ServeHTTP
+	/usr/local/go/src/net/http/server.go:2136
+github.com/go-chi/chi/v5.(*Mux).routeHTTP
+	/home/goomer/go/pkg/mod/github.com/go-chi/chi/v5@v5.0.10/mux.go:444
+net/http.HandlerFunc.ServeHTTP
+	/usr/local/go/src/net/http/server.go:2136
+github.com/go-chi/chi/v5.(*Mux).ServeHTTP
+	/home/goomer/go/pkg/mod/github.com/go-chi/chi/v5@v5.0.10/mux.go:73
+github.com/go-chi/chi/v5.(*Mux).Mount.func1
+	/home/goomer/go/pkg/mod/github.com/go-chi/chi/v5@v5.0.10/mux.go:316
+net/http.HandlerFunc.ServeHTTP
+	/usr/local/go/src/net/http/server.go:2136
+github.com/go-chi/chi/v5.(*Mux).routeHTTP
+	/home/goomer/go/pkg/mod/github.com/go-chi/chi/v5@v5.0.10/mux.go:444
+net/http.HandlerFunc.ServeHTTP
+	/usr/local/go/src/net/http/server.go:2136
+github.com/go-chi/chi/v5.(*Mux).ServeHTTP
+	/home/goomer/go/pkg/mod/github.com/go-chi/chi/v5@v5.0.10/mux.go:90
+net/http.serverHandler.ServeHTTP
+	/usr/local/go/src/net/http/server.go:2938
+net/http.(*conn).serve
+	/usr/local/go/src/net/http/server.go:2009
+2023-10-27T11:37:21.734+0300	ERROR	logger/logger.go:55	json decoding error
+github.com/Mr-Punder/go-alerting-service/internal/logger.(*LogHTTPZap).Error
+	/home/goomer/dev/go-alerting-service/internal/logger/logger.go:55
+github.com/Mr-Punder/go-alerting-service/internal/handlers.(*Handler).JSONValueHandler
+	/home/goomer/dev/go-alerting-service/internal/handlers/handlers.go:179
+net/http.HandlerFunc.ServeHTTP
+	/usr/local/go/src/net/http/server.go:2136
+github.com/go-chi/chi/v5.(*Mux).routeHTTP
+	/home/goomer/go/pkg/mod/github.com/go-chi/chi/v5@v5.0.10/mux.go:444
+net/http.HandlerFunc.ServeHTTP
+	/usr/local/go/src/net/http/server.go:2136
+github.com/go-chi/chi/v5.(*Mux).ServeHTTP
+	/home/goomer/go/pkg/mod/github.com/go-chi/chi/v5@v5.0.10/mux.go:73
+github.com/go-chi/chi/v5.(*Mux).Mount.func1
+	/home/goomer/go/pkg/mod/github.com/go-chi/chi/v5@v5.0.10/mux.go:316
+net/http.HandlerFunc.ServeHTTP
+	/usr/local/go/src/net/http/server.go:2136
+github.com/go-chi/chi/v5.(*Mux).routeHTTP
+	/home/goomer/go/pkg/mod/github.com/go-chi/chi/v5@v5.0.10/mux.go:444
+net/http.HandlerFunc.ServeHTTP
+	/usr/local/go/src/net/http/server.go:2136
+github.com/go-chi/chi/v5.(*Mux).ServeHTTP
+	/home/goomer/go/pkg/mod/github.com/go-chi/chi/v5@v5.0.10/mux.go:90
+net/http.serverHandler.ServeHTTP
+	/usr/local/go/src/net/http/server.go:2938
+net/http.(*conn).serve
+	/usr/local/go/src/net/http/server.go:2009
+2023-10-27T11:37:21.736+0300	ERROR	logger/logger.go:55	json decoding error
+github.com/Mr-Punder/go-alerting-service/internal/logger.(*LogHTTPZap).Error
+	/home/goomer/dev/go-alerting-service/internal/logger/logger.go:55
+github.com/Mr-Punder/go-alerting-service/internal/handlers.(*Handler).JSONValueHandler
+	/home/goomer/dev/go-alerting-service/internal/handlers/handlers.go:179
+net/http.HandlerFunc.ServeHTTP
+	/usr/local/go/src/net/http/server.go:2136
+github.com/go-chi/chi/v5.(*Mux).routeHTTP
+	/home/goomer/go/pkg/mod/github.com/go-chi/chi/v5@v5.0.10/mux.go:444
+net/http.HandlerFunc.ServeHTTP
+	/usr/local/go/src/net/http/server.go:2136
+github.com/go-chi/chi/v5.(*Mux).ServeHTTP
+	/home/goomer/go/pkg/mod/github.com/go-chi/chi/v5@v5.0.10/mux.go:73
+github.com/go-chi/chi/v5.(*Mux).Mount.func1
+	/home/goomer/go/pkg/mod/github.com/go-chi/chi/v5@v5.0.10/mux.go:316
+net/http.HandlerFunc.ServeHTTP
+	/usr/local/go/src/net/http/server.go:2136
+github.com/go-chi/chi/v5.(*Mux).routeHTTP
+	/home/goomer/go/pkg/mod/github.com/go-chi/chi/v5@v5.0.10/mux.go:444
+net/http.HandlerFunc.ServeHTTP
+	/usr/local/go/src/net/http/server.go:2136
+github.com/go-chi/chi/v5.(*Mux).ServeHTTP
+	/home/goomer/go/pkg/mod/github.com/go-chi/chi/v5@v5.0.10/mux.go:90
+net/http.serverHandler.ServeHTTP
+	/usr/local/go/src/net/http/server.go:2938
+net/http.(*conn).serve
+	/usr/local/go/src/net/http/server.go:2009
+2023-10-27T11:37:21.738+0300	ERROR	logger/logger.go:55	json decoding error
+github.com/Mr-Punder/go-alerting-service/internal/logger.(*LogHTTPZap).Error
+	/home/goomer/dev/go-alerting-service/internal/logger/logger.go:55
+github.com/Mr-Punder/go-alerting-service/internal/handlers.(*Handler).JSONValueHandler
+	/home/goomer/dev/go-alerting-service/internal/handlers/handlers.go:179
+net/http.HandlerFunc.ServeHTTP
+	/usr/local/go/src/net/http/server.go:2136
+github.com/go-chi/chi/v5.(*Mux).routeHTTP
+	/home/goomer/go/pkg/mod/github.com/go-chi/chi/v5@v5.0.10/mux.go:444
+net/http.HandlerFunc.ServeHTTP
+	/usr/local/go/src/net/http/server.go:2136
+github.com/go-chi/chi/v5.(*Mux).ServeHTTP
+	/home/goomer/go/pkg/mod/github.com/go-chi/chi/v5@v5.0.10/mux.go:73
+github.com/go-chi/chi/v5.(*Mux).Mount.func1
+	/home/goomer/go/pkg/mod/github.com/go-chi/chi/v5@v5.0.10/mux.go:316
+net/http.HandlerFunc.ServeHTTP
+	/usr/local/go/src/net/http/server.go:2136
+github.com/go-chi/chi/v5.(*Mux).routeHTTP
+	/home/goomer/go/pkg/mod/github.com/go-chi/chi/v5@v5.0.10/mux.go:444
+net/http.HandlerFunc.ServeHTTP
+	/usr/local/go/src/net/http/server.go:2136
+github.com/go-chi/chi/v5.(*Mux).ServeHTTP
+	/home/goomer/go/pkg/mod/github.com/go-chi/chi/v5@v5.0.10/mux.go:90
+net/http.serverHandler.ServeHTTP
+	/usr/local/go/src/net/http/server.go:2938
+net/http.(*conn).serve
+	/usr/local/go/src/net/http/server.go:2009
+2023-10-27T11:37:21.739+0300	ERROR	logger/logger.go:55	json decoding error
+github.com/Mr-Punder/go-alerting-service/internal/logger.(*LogHTTPZap).Error
+	/home/goomer/dev/go-alerting-service/internal/logger/logger.go:55
+github.com/Mr-Punder/go-alerting-service/internal/handlers.(*Handler).JSONValueHandler
+	/home/goomer/dev/go-alerting-service/internal/handlers/handlers.go:179
+net/http.HandlerFunc.ServeHTTP
+	/usr/local/go/src/net/http/server.go:2136
+github.com/go-chi/chi/v5.(*Mux).routeHTTP
+	/home/goomer/go/pkg/mod/github.com/go-chi/chi/v5@v5.0.10/mux.go:444
+net/http.HandlerFunc.ServeHTTP
+	/usr/local/go/src/net/http/server.go:2136
+github.com/go-chi/chi/v5.(*Mux).ServeHTTP
+	/home/goomer/go/pkg/mod/github.com/go-chi/chi/v5@v5.0.10/mux.go:73
+github.com/go-chi/chi/v5.(*Mux).Mount.func1
+	/home/goomer/go/pkg/mod/github.com/go-chi/chi/v5@v5.0.10/mux.go:316
+net/http.HandlerFunc.ServeHTTP
+	/usr/local/go/src/net/http/server.go:2136
+github.com/go-chi/chi/v5.(*Mux).routeHTTP
+	/home/goomer/go/pkg/mod/github.com/go-chi/chi/v5@v5.0.10/mux.go:444
+net/http.HandlerFunc.ServeHTTP
+	/usr/local/go/src/net/http/server.go:2136
+github.com/go-chi/chi/v5.(*Mux).ServeHTTP
+	/home/goomer/go/pkg/mod/github.com/go-chi/chi/v5@v5.0.10/mux.go:90
+net/http.serverHandler.ServeHTTP
+	/usr/local/go/src/net/http/server.go:2938
+net/http.(*conn).serve
+	/usr/local/go/src/net/http/server.go:2009
+2023-10-27T11:38:42.993+0300	ERROR	logger/logger.go:55	wrong type
+github.com/Mr-Punder/go-alerting-service/internal/logger.(*LogHTTPZap).Error
+	/home/goomer/dev/go-alerting-service/internal/logger/logger.go:55
+github.com/Mr-Punder/go-alerting-service/internal/handlers.(*Handler).JSONUpdHandler
+	/home/goomer/dev/go-alerting-service/internal/handlers/handlers.go:118
+net/http.HandlerFunc.ServeHTTP
+	/usr/local/go/src/net/http/server.go:2136
+github.com/go-chi/chi/v5.(*Mux).routeHTTP
+	/home/goomer/go/pkg/mod/github.com/go-chi/chi/v5@v5.0.10/mux.go:444
+net/http.HandlerFunc.ServeHTTP
+	/usr/local/go/src/net/http/server.go:2136
+github.com/go-chi/chi/v5.(*Mux).ServeHTTP
+	/home/goomer/go/pkg/mod/github.com/go-chi/chi/v5@v5.0.10/mux.go:73
+github.com/go-chi/chi/v5.(*Mux).Mount.func1
+	/home/goomer/go/pkg/mod/github.com/go-chi/chi/v5@v5.0.10/mux.go:316
+net/http.HandlerFunc.ServeHTTP
+	/usr/local/go/src/net/http/server.go:2136
+github.com/go-chi/chi/v5.(*Mux).routeHTTP
+	/home/goomer/go/pkg/mod/github.com/go-chi/chi/v5@v5.0.10/mux.go:444
+net/http.HandlerFunc.ServeHTTP
+	/usr/local/go/src/net/http/server.go:2136
+github.com/go-chi/chi/v5.(*Mux).ServeHTTP
+	/home/goomer/go/pkg/mod/github.com/go-chi/chi/v5@v5.0.10/mux.go:90
+net/http.serverHandler.ServeHTTP
+	/usr/local/go/src/net/http/server.go:2938
+net/http.(*conn).serve
+	/usr/local/go/src/net/http/server.go:2009
+2023-10-27T11:38:42.998+0300	ERROR	logger/logger.go:55	Cann't find metric
+github.com/Mr-Punder/go-alerting-service/internal/logger.(*LogHTTPZap).Error
+	/home/goomer/dev/go-alerting-service/internal/logger/logger.go:55
+github.com/Mr-Punder/go-alerting-service/internal/handlers.(*Handler).JSONValueHandler
+	/home/goomer/dev/go-alerting-service/internal/handlers/handlers.go:193
+net/http.HandlerFunc.ServeHTTP
+	/usr/local/go/src/net/http/server.go:2136
+github.com/go-chi/chi/v5.(*Mux).routeHTTP
+	/home/goomer/go/pkg/mod/github.com/go-chi/chi/v5@v5.0.10/mux.go:444
+net/http.HandlerFunc.ServeHTTP
+	/usr/local/go/src/net/http/server.go:2136
+github.com/go-chi/chi/v5.(*Mux).ServeHTTP
+	/home/goomer/go/pkg/mod/github.com/go-chi/chi/v5@v5.0.10/mux.go:73
+github.com/go-chi/chi/v5.(*Mux).Mount.func1
+	/home/goomer/go/pkg/mod/github.com/go-chi/chi/v5@v5.0.10/mux.go:316
+net/http.HandlerFunc.ServeHTTP
+	/usr/local/go/src/net/http/server.go:2136
+github.com/go-chi/chi/v5.(*Mux).routeHTTP
+	/home/goomer/go/pkg/mod/github.com/go-chi/chi/v5@v5.0.10/mux.go:444
+net/http.HandlerFunc.ServeHTTP
+	/usr/local/go/src/net/http/server.go:2136
+github.com/go-chi/chi/v5.(*Mux).ServeHTTP
+	/home/goomer/go/pkg/mod/github.com/go-chi/chi/v5@v5.0.10/mux.go:90
+net/http.serverHandler.ServeHTTP
+	/usr/local/go/src/net/http/server.go:2938
+net/http.(*conn).serve
+	/usr/local/go/src/net/http/server.go:2009
+2023-10-27T11:38:43.000+0300	ERROR	logger/logger.go:55	Cann't find metric
+github.com/Mr-Punder/go-alerting-service/internal/logger.(*LogHTTPZap).Error
+	/home/goomer/dev/go-alerting-service/internal/logger/logger.go:55
+github.com/Mr-Punder/go-alerting-service/internal/handlers.(*Handler).JSONValueHandler
+	/home/goomer/dev/go-alerting-service/internal/handlers/handlers.go:193
+net/http.HandlerFunc.ServeHTTP
+	/usr/local/go/src/net/http/server.go:2136
+github.com/go-chi/chi/v5.(*Mux).routeHTTP
+	/home/goomer/go/pkg/mod/github.com/go-chi/chi/v5@v5.0.10/mux.go:444
+net/http.HandlerFunc.ServeHTTP
+	/usr/local/go/src/net/http/server.go:2136
+github.com/go-chi/chi/v5.(*Mux).ServeHTTP
+	/home/goomer/go/pkg/mod/github.com/go-chi/chi/v5@v5.0.10/mux.go:73
+github.com/go-chi/chi/v5.(*Mux).Mount.func1
+	/home/goomer/go/pkg/mod/github.com/go-chi/chi/v5@v5.0.10/mux.go:316
+net/http.HandlerFunc.ServeHTTP
+	/usr/local/go/src/net/http/server.go:2136
+github.com/go-chi/chi/v5.(*Mux).routeHTTP
+	/home/goomer/go/pkg/mod/github.com/go-chi/chi/v5@v5.0.10/mux.go:444
+net/http.HandlerFunc.ServeHTTP
+	/usr/local/go/src/net/http/server.go:2136
+github.com/go-chi/chi/v5.(*Mux).ServeHTTP
+	/home/goomer/go/pkg/mod/github.com/go-chi/chi/v5@v5.0.10/mux.go:90
+net/http.serverHandler.ServeHTTP
+	/usr/local/go/src/net/http/server.go:2938
+net/http.(*conn).serve
+	/usr/local/go/src/net/http/server.go:2009
+2023-10-27T11:38:43.002+0300	ERROR	logger/logger.go:55	wrong type
+github.com/Mr-Punder/go-alerting-service/internal/logger.(*LogHTTPZap).Error
+	/home/goomer/dev/go-alerting-service/internal/logger/logger.go:55
+github.com/Mr-Punder/go-alerting-service/internal/handlers.(*Handler).JSONValueHandler
+	/home/goomer/dev/go-alerting-service/internal/handlers/handlers.go:184
+net/http.HandlerFunc.ServeHTTP
+	/usr/local/go/src/net/http/server.go:2136
+github.com/go-chi/chi/v5.(*Mux).routeHTTP
+	/home/goomer/go/pkg/mod/github.com/go-chi/chi/v5@v5.0.10/mux.go:444
+net/http.HandlerFunc.ServeHTTP
+	/usr/local/go/src/net/http/server.go:2136
+github.com/go-chi/chi/v5.(*Mux).ServeHTTP
+	/home/goomer/go/pkg/mod/github.com/go-chi/chi/v5@v5.0.10/mux.go:73
+github.com/go-chi/chi/v5.(*Mux).Mount.func1
+	/home/goomer/go/pkg/mod/github.com/go-chi/chi/v5@v5.0.10/mux.go:316
+net/http.HandlerFunc.ServeHTTP
+	/usr/local/go/src/net/http/server.go:2136
+github.com/go-chi/chi/v5.(*Mux).routeHTTP
+	/home/goomer/go/pkg/mod/github.com/go-chi/chi/v5@v5.0.10/mux.go:444
+net/http.HandlerFunc.ServeHTTP
+	/usr/local/go/src/net/http/server.go:2136
+github.com/go-chi/chi/v5.(*Mux).ServeHTTP
+	/home/goomer/go/pkg/mod/github.com/go-chi/chi/v5@v5.0.10/mux.go:90
+net/http.serverHandler.ServeHTTP
+	/usr/local/go/src/net/http/server.go:2938
+net/http.(*conn).serve
+	/usr/local/go/src/net/http/server.go:2009
+2023-10-27T11:47:01.442+0300	ERROR	logger/logger.go:55	wrong type smth
+github.com/Mr-Punder/go-alerting-service/internal/logger.(*LogHTTPZap).Error
+	/home/goomer/dev/go-alerting-service/internal/logger/logger.go:55
+github.com/Mr-Punder/go-alerting-service/internal/handlers.(*Handler).JSONUpdHandler
+	/home/goomer/dev/go-alerting-service/internal/handlers/handlers.go:117
+net/http.HandlerFunc.ServeHTTP
+	/usr/local/go/src/net/http/server.go:2136
+github.com/go-chi/chi/v5.(*Mux).routeHTTP
+	/home/goomer/go/pkg/mod/github.com/go-chi/chi/v5@v5.0.10/mux.go:444
+net/http.HandlerFunc.ServeHTTP
+	/usr/local/go/src/net/http/server.go:2136
+github.com/go-chi/chi/v5.(*Mux).ServeHTTP
+	/home/goomer/go/pkg/mod/github.com/go-chi/chi/v5@v5.0.10/mux.go:73
+github.com/go-chi/chi/v5.(*Mux).Mount.func1
+	/home/goomer/go/pkg/mod/github.com/go-chi/chi/v5@v5.0.10/mux.go:316
+net/http.HandlerFunc.ServeHTTP
+	/usr/local/go/src/net/http/server.go:2136
+github.com/go-chi/chi/v5.(*Mux).routeHTTP
+	/home/goomer/go/pkg/mod/github.com/go-chi/chi/v5@v5.0.10/mux.go:444
+net/http.HandlerFunc.ServeHTTP
+	/usr/local/go/src/net/http/server.go:2136
+github.com/go-chi/chi/v5.(*Mux).ServeHTTP
+	/home/goomer/go/pkg/mod/github.com/go-chi/chi/v5@v5.0.10/mux.go:90
+net/http.serverHandler.ServeHTTP
+	/usr/local/go/src/net/http/server.go:2938
+net/http.(*conn).serve
+	/usr/local/go/src/net/http/server.go:2009
+2023-10-27T11:47:01.445+0300	ERROR	logger/logger.go:55	Cann't find metric
+github.com/Mr-Punder/go-alerting-service/internal/logger.(*LogHTTPZap).Error
+	/home/goomer/dev/go-alerting-service/internal/logger/logger.go:55
+github.com/Mr-Punder/go-alerting-service/internal/handlers.(*Handler).JSONValueHandler
+	/home/goomer/dev/go-alerting-service/internal/handlers/handlers.go:197
+net/http.HandlerFunc.ServeHTTP
+	/usr/local/go/src/net/http/server.go:2136
+github.com/go-chi/chi/v5.(*Mux).routeHTTP
+	/home/goomer/go/pkg/mod/github.com/go-chi/chi/v5@v5.0.10/mux.go:444
+net/http.HandlerFunc.ServeHTTP
+	/usr/local/go/src/net/http/server.go:2136
+github.com/go-chi/chi/v5.(*Mux).ServeHTTP
+	/home/goomer/go/pkg/mod/github.com/go-chi/chi/v5@v5.0.10/mux.go:73
+github.com/go-chi/chi/v5.(*Mux).Mount.func1
+	/home/goomer/go/pkg/mod/github.com/go-chi/chi/v5@v5.0.10/mux.go:316
+net/http.HandlerFunc.ServeHTTP
+	/usr/local/go/src/net/http/server.go:2136
+github.com/go-chi/chi/v5.(*Mux).routeHTTP
+	/home/goomer/go/pkg/mod/github.com/go-chi/chi/v5@v5.0.10/mux.go:444
+net/http.HandlerFunc.ServeHTTP
+	/usr/local/go/src/net/http/server.go:2136
+github.com/go-chi/chi/v5.(*Mux).ServeHTTP
+	/home/goomer/go/pkg/mod/github.com/go-chi/chi/v5@v5.0.10/mux.go:90
+net/http.serverHandler.ServeHTTP
+	/usr/local/go/src/net/http/server.go:2938
+net/http.(*conn).serve
+	/usr/local/go/src/net/http/server.go:2009
+2023-10-27T11:47:01.447+0300	ERROR	logger/logger.go:55	Cann't find metric
+github.com/Mr-Punder/go-alerting-service/internal/logger.(*LogHTTPZap).Error
+	/home/goomer/dev/go-alerting-service/internal/logger/logger.go:55
+github.com/Mr-Punder/go-alerting-service/internal/handlers.(*Handler).JSONValueHandler
+	/home/goomer/dev/go-alerting-service/internal/handlers/handlers.go:197
+net/http.HandlerFunc.ServeHTTP
+	/usr/local/go/src/net/http/server.go:2136
+github.com/go-chi/chi/v5.(*Mux).routeHTTP
+	/home/goomer/go/pkg/mod/github.com/go-chi/chi/v5@v5.0.10/mux.go:444
+net/http.HandlerFunc.ServeHTTP
+	/usr/local/go/src/net/http/server.go:2136
+github.com/go-chi/chi/v5.(*Mux).ServeHTTP
+	/home/goomer/go/pkg/mod/github.com/go-chi/chi/v5@v5.0.10/mux.go:73
+github.com/go-chi/chi/v5.(*Mux).Mount.func1
+	/home/goomer/go/pkg/mod/github.com/go-chi/chi/v5@v5.0.10/mux.go:316
+net/http.HandlerFunc.ServeHTTP
+	/usr/local/go/src/net/http/server.go:2136
+github.com/go-chi/chi/v5.(*Mux).routeHTTP
+	/home/goomer/go/pkg/mod/github.com/go-chi/chi/v5@v5.0.10/mux.go:444
+net/http.HandlerFunc.ServeHTTP
+	/usr/local/go/src/net/http/server.go:2136
+github.com/go-chi/chi/v5.(*Mux).ServeHTTP
+	/home/goomer/go/pkg/mod/github.com/go-chi/chi/v5@v5.0.10/mux.go:90
+net/http.serverHandler.ServeHTTP
+	/usr/local/go/src/net/http/server.go:2938
+net/http.(*conn).serve
+	/usr/local/go/src/net/http/server.go:2009
+2023-10-27T11:47:01.449+0300	ERROR	logger/logger.go:55	wrong type smth
+github.com/Mr-Punder/go-alerting-service/internal/logger.(*LogHTTPZap).Error
+	/home/goomer/dev/go-alerting-service/internal/logger/logger.go:55
+github.com/Mr-Punder/go-alerting-service/internal/handlers.(*Handler).JSONValueHandler
+	/home/goomer/dev/go-alerting-service/internal/handlers/handlers.go:188
+net/http.HandlerFunc.ServeHTTP
+	/usr/local/go/src/net/http/server.go:2136
+github.com/go-chi/chi/v5.(*Mux).routeHTTP
+	/home/goomer/go/pkg/mod/github.com/go-chi/chi/v5@v5.0.10/mux.go:444
+net/http.HandlerFunc.ServeHTTP
+	/usr/local/go/src/net/http/server.go:2136
+github.com/go-chi/chi/v5.(*Mux).ServeHTTP
+	/home/goomer/go/pkg/mod/github.com/go-chi/chi/v5@v5.0.10/mux.go:73
+github.com/go-chi/chi/v5.(*Mux).Mount.func1
+	/home/goomer/go/pkg/mod/github.com/go-chi/chi/v5@v5.0.10/mux.go:316
+net/http.HandlerFunc.ServeHTTP
+	/usr/local/go/src/net/http/server.go:2136
+github.com/go-chi/chi/v5.(*Mux).routeHTTP
+	/home/goomer/go/pkg/mod/github.com/go-chi/chi/v5@v5.0.10/mux.go:444
+net/http.HandlerFunc.ServeHTTP
+	/usr/local/go/src/net/http/server.go:2136
+github.com/go-chi/chi/v5.(*Mux).ServeHTTP
+	/home/goomer/go/pkg/mod/github.com/go-chi/chi/v5@v5.0.10/mux.go:90
+net/http.serverHandler.ServeHTTP
+	/usr/local/go/src/net/http/server.go:2938
+net/http.(*conn).serve
+	/usr/local/go/src/net/http/server.go:2009
+2023-10-27T11:49:53.626+0300	ERROR	logger/logger.go:55	wrong type smth
+github.com/Mr-Punder/go-alerting-service/internal/logger.(*LogHTTPZap).Error
+	/home/goomer/dev/go-alerting-service/internal/logger/logger.go:55
+github.com/Mr-Punder/go-alerting-service/internal/handlers.(*Handler).JSONUpdHandler
+	/home/goomer/dev/go-alerting-service/internal/handlers/handlers.go:117
+net/http.HandlerFunc.ServeHTTP
+	/usr/local/go/src/net/http/server.go:2136
+github.com/go-chi/chi/v5.(*Mux).routeHTTP
+	/home/goomer/go/pkg/mod/github.com/go-chi/chi/v5@v5.0.10/mux.go:444
+net/http.HandlerFunc.ServeHTTP
+	/usr/local/go/src/net/http/server.go:2136
+github.com/go-chi/chi/v5.(*Mux).ServeHTTP
+	/home/goomer/go/pkg/mod/github.com/go-chi/chi/v5@v5.0.10/mux.go:73
+github.com/go-chi/chi/v5.(*Mux).Mount.func1
+	/home/goomer/go/pkg/mod/github.com/go-chi/chi/v5@v5.0.10/mux.go:316
+net/http.HandlerFunc.ServeHTTP
+	/usr/local/go/src/net/http/server.go:2136
+github.com/go-chi/chi/v5.(*Mux).routeHTTP
+	/home/goomer/go/pkg/mod/github.com/go-chi/chi/v5@v5.0.10/mux.go:444
+net/http.HandlerFunc.ServeHTTP
+	/usr/local/go/src/net/http/server.go:2136
+github.com/go-chi/chi/v5.(*Mux).ServeHTTP
+	/home/goomer/go/pkg/mod/github.com/go-chi/chi/v5@v5.0.10/mux.go:90
+net/http.serverHandler.ServeHTTP
+	/usr/local/go/src/net/http/server.go:2938
+net/http.(*conn).serve
+	/usr/local/go/src/net/http/server.go:2009
+2023-10-27T11:49:53.628+0300	ERROR	logger/logger.go:55	Cann't find metric
+github.com/Mr-Punder/go-alerting-service/internal/logger.(*LogHTTPZap).Error
+	/home/goomer/dev/go-alerting-service/internal/logger/logger.go:55
+github.com/Mr-Punder/go-alerting-service/internal/handlers.(*Handler).JSONValueHandler
+	/home/goomer/dev/go-alerting-service/internal/handlers/handlers.go:197
+net/http.HandlerFunc.ServeHTTP
+	/usr/local/go/src/net/http/server.go:2136
+github.com/go-chi/chi/v5.(*Mux).routeHTTP
+	/home/goomer/go/pkg/mod/github.com/go-chi/chi/v5@v5.0.10/mux.go:444
+net/http.HandlerFunc.ServeHTTP
+	/usr/local/go/src/net/http/server.go:2136
+github.com/go-chi/chi/v5.(*Mux).ServeHTTP
+	/home/goomer/go/pkg/mod/github.com/go-chi/chi/v5@v5.0.10/mux.go:73
+github.com/go-chi/chi/v5.(*Mux).Mount.func1
+	/home/goomer/go/pkg/mod/github.com/go-chi/chi/v5@v5.0.10/mux.go:316
+net/http.HandlerFunc.ServeHTTP
+	/usr/local/go/src/net/http/server.go:2136
+github.com/go-chi/chi/v5.(*Mux).routeHTTP
+	/home/goomer/go/pkg/mod/github.com/go-chi/chi/v5@v5.0.10/mux.go:444
+net/http.HandlerFunc.ServeHTTP
+	/usr/local/go/src/net/http/server.go:2136
+github.com/go-chi/chi/v5.(*Mux).ServeHTTP
+	/home/goomer/go/pkg/mod/github.com/go-chi/chi/v5@v5.0.10/mux.go:90
+net/http.serverHandler.ServeHTTP
+	/usr/local/go/src/net/http/server.go:2938
+net/http.(*conn).serve
+	/usr/local/go/src/net/http/server.go:2009
+2023-10-27T11:49:53.630+0300	ERROR	logger/logger.go:55	Cann't find metric
+github.com/Mr-Punder/go-alerting-service/internal/logger.(*LogHTTPZap).Error
+	/home/goomer/dev/go-alerting-service/internal/logger/logger.go:55
+github.com/Mr-Punder/go-alerting-service/internal/handlers.(*Handler).JSONValueHandler
+	/home/goomer/dev/go-alerting-service/internal/handlers/handlers.go:197
+net/http.HandlerFunc.ServeHTTP
+	/usr/local/go/src/net/http/server.go:2136
+github.com/go-chi/chi/v5.(*Mux).routeHTTP
+	/home/goomer/go/pkg/mod/github.com/go-chi/chi/v5@v5.0.10/mux.go:444
+net/http.HandlerFunc.ServeHTTP
+	/usr/local/go/src/net/http/server.go:2136
+github.com/go-chi/chi/v5.(*Mux).ServeHTTP
+	/home/goomer/go/pkg/mod/github.com/go-chi/chi/v5@v5.0.10/mux.go:73
+github.com/go-chi/chi/v5.(*Mux).Mount.func1
+	/home/goomer/go/pkg/mod/github.com/go-chi/chi/v5@v5.0.10/mux.go:316
+net/http.HandlerFunc.ServeHTTP
+	/usr/local/go/src/net/http/server.go:2136
+github.com/go-chi/chi/v5.(*Mux).routeHTTP
+	/home/goomer/go/pkg/mod/github.com/go-chi/chi/v5@v5.0.10/mux.go:444
+net/http.HandlerFunc.ServeHTTP
+	/usr/local/go/src/net/http/server.go:2136
+github.com/go-chi/chi/v5.(*Mux).ServeHTTP
+	/home/goomer/go/pkg/mod/github.com/go-chi/chi/v5@v5.0.10/mux.go:90
+net/http.serverHandler.ServeHTTP
+	/usr/local/go/src/net/http/server.go:2938
+net/http.(*conn).serve
+	/usr/local/go/src/net/http/server.go:2009
+2023-10-27T11:49:53.631+0300	ERROR	logger/logger.go:55	Cann't find metric
+github.com/Mr-Punder/go-alerting-service/internal/logger.(*LogHTTPZap).Error
+	/home/goomer/dev/go-alerting-service/internal/logger/logger.go:55
+github.com/Mr-Punder/go-alerting-service/internal/handlers.(*Handler).JSONValueHandler
+	/home/goomer/dev/go-alerting-service/internal/handlers/handlers.go:197
+net/http.HandlerFunc.ServeHTTP
+	/usr/local/go/src/net/http/server.go:2136
+github.com/go-chi/chi/v5.(*Mux).routeHTTP
+	/home/goomer/go/pkg/mod/github.com/go-chi/chi/v5@v5.0.10/mux.go:444
+net/http.HandlerFunc.ServeHTTP
+	/usr/local/go/src/net/http/server.go:2136
+github.com/go-chi/chi/v5.(*Mux).ServeHTTP
+	/home/goomer/go/pkg/mod/github.com/go-chi/chi/v5@v5.0.10/mux.go:73
+github.com/go-chi/chi/v5.(*Mux).Mount.func1
+	/home/goomer/go/pkg/mod/github.com/go-chi/chi/v5@v5.0.10/mux.go:316
+net/http.HandlerFunc.ServeHTTP
+	/usr/local/go/src/net/http/server.go:2136
+github.com/go-chi/chi/v5.(*Mux).routeHTTP
+	/home/goomer/go/pkg/mod/github.com/go-chi/chi/v5@v5.0.10/mux.go:444
+net/http.HandlerFunc.ServeHTTP
+	/usr/local/go/src/net/http/server.go:2136
+github.com/go-chi/chi/v5.(*Mux).ServeHTTP
+	/home/goomer/go/pkg/mod/github.com/go-chi/chi/v5@v5.0.10/mux.go:90
+net/http.serverHandler.ServeHTTP
+	/usr/local/go/src/net/http/server.go:2938
+net/http.(*conn).serve
+	/usr/local/go/src/net/http/server.go:2009
+2023-10-27T14:47:34.861+0300	[31mERROR[0m	logger/logger.go:59	wrong type 
+2023-10-27T14:47:34.863+0300	[31mERROR[0m	logger/logger.go:59	wrong type 
+2023-10-27T14:47:34.864+0300	[31mERROR[0m	logger/logger.go:59	wrong type 
+2023-10-27T14:47:34.866+0300	[31mERROR[0m	logger/logger.go:59	wrong type 
+2023-10-27T14:47:34.868+0300	[31mERROR[0m	logger/logger.go:59	wrong type 
+2023-10-27T14:47:34.869+0300	[31mERROR[0m	logger/logger.go:59	wrong type 
+2023-10-27T14:47:34.871+0300	[31mERROR[0m	logger/logger.go:59	wrong type 
+2023-10-27T14:47:34.873+0300	[31mERROR[0m	logger/logger.go:59	wrong type 
+2023-10-27T14:47:34.875+0300	[31mERROR[0m	logger/logger.go:59	wrong type 
+2023-10-27T14:47:34.878+0300	[31mERROR[0m	logger/logger.go:59	wrong type 
+2023-10-27T14:48:27.980+0300	[31mERROR[0m	logger/logger.go:59	json decoding error
+2023-10-27T14:48:27.983+0300	[31mERROR[0m	logger/logger.go:59	json decoding error
+2023-10-27T14:48:27.984+0300	[31mERROR[0m	logger/logger.go:59	json decoding error
+2023-10-27T14:48:27.986+0300	[31mERROR[0m	logger/logger.go:59	json decoding error
+2023-10-27T14:48:27.987+0300	[31mERROR[0m	logger/logger.go:59	json decoding error
+2023-10-27T14:48:27.989+0300	[31mERROR[0m	logger/logger.go:59	json decoding error
+2023-10-27T14:48:27.990+0300	[31mERROR[0m	logger/logger.go:59	json decoding error
+2023-10-27T14:48:27.991+0300	[31mERROR[0m	logger/logger.go:59	json decoding error
+2023-10-27T14:48:27.993+0300	[31mERROR[0m	logger/logger.go:59	json decoding error
+2023-10-27T14:48:27.994+0300	[31mERROR[0m	logger/logger.go:59	json decoding error
+2023-10-27T14:49:23.974+0300	[31mERROR[0m	logger/logger.go:59	json decoding error
+2023-10-27T14:49:23.976+0300	[31mERROR[0m	logger/logger.go:59	json decoding error
+2023-10-27T14:49:23.978+0300	[31mERROR[0m	logger/logger.go:59	json decoding error
+2023-10-27T14:49:23.980+0300	[31mERROR[0m	logger/logger.go:59	json decoding error
+2023-10-27T14:49:23.981+0300	[31mERROR[0m	logger/logger.go:59	json decoding error
+2023-10-27T14:49:23.983+0300	[31mERROR[0m	logger/logger.go:59	json decoding error
+2023-10-27T14:49:23.985+0300	[31mERROR[0m	logger/logger.go:59	json decoding error
+2023-10-27T14:49:23.987+0300	[31mERROR[0m	logger/logger.go:59	json decoding error
+2023-10-27T14:49:23.988+0300	[31mERROR[0m	logger/logger.go:59	json decoding error
+2023-10-27T14:49:23.990+0300	[31mERROR[0m	logger/logger.go:59	json decoding error
+2023-10-27T14:49:38.441+0300	[31mERROR[0m	logger/logger.go:59	json decoding error
+2023-10-27T14:49:38.443+0300	[31mERROR[0m	logger/logger.go:59	json decoding error
+2023-10-27T14:49:38.445+0300	[31mERROR[0m	logger/logger.go:59	json decoding error
+2023-10-27T14:49:38.446+0300	[31mERROR[0m	logger/logger.go:59	json decoding error
+2023-10-27T14:49:38.447+0300	[31mERROR[0m	logger/logger.go:59	json decoding error
+2023-10-27T14:49:38.449+0300	[31mERROR[0m	logger/logger.go:59	json decoding error
+2023-10-27T14:49:38.450+0300	[31mERROR[0m	logger/logger.go:59	json decoding error
+2023-10-27T14:49:38.452+0300	[31mERROR[0m	logger/logger.go:59	json decoding error
+2023-10-27T14:49:38.453+0300	[31mERROR[0m	logger/logger.go:59	json decoding error
+2023-10-27T14:49:38.454+0300	[31mERROR[0m	logger/logger.go:59	json decoding error
+2023-10-27T14:51:15.478+0300	[31mERROR[0m	logger/logger.go:59	json decoding error
+2023-10-27T14:51:15.482+0300	[31mERROR[0m	logger/logger.go:59	json decoding error
+2023-10-27T14:51:15.485+0300	[31mERROR[0m	logger/logger.go:59	json decoding error
+2023-10-27T14:51:15.487+0300	[31mERROR[0m	logger/logger.go:59	json decoding error
+2023-10-27T14:51:15.489+0300	[31mERROR[0m	logger/logger.go:59	json decoding error
+2023-10-27T14:51:15.491+0300	[31mERROR[0m	logger/logger.go:59	json decoding error
+2023-10-27T14:51:15.494+0300	[31mERROR[0m	logger/logger.go:59	json decoding error
+2023-10-27T14:51:15.496+0300	[31mERROR[0m	logger/logger.go:59	json decoding error
+2023-10-27T14:51:15.500+0300	[31mERROR[0m	logger/logger.go:59	json decoding error
+2023-10-27T14:51:15.502+0300	[31mERROR[0m	logger/logger.go:59	json decoding error
+2023-10-27T14:51:32.824+0300	[31mERROR[0m	logger/logger.go:59	json decoding error
+2023-10-27T14:51:32.828+0300	[31mERROR[0m	logger/logger.go:59	json decoding error
+2023-10-27T14:51:32.830+0300	[31mERROR[0m	logger/logger.go:59	json decoding error
+2023-10-27T14:51:32.832+0300	[31mERROR[0m	logger/logger.go:59	json decoding error
+2023-10-27T14:51:32.833+0300	[31mERROR[0m	logger/logger.go:59	json decoding error
+2023-10-27T14:51:32.835+0300	[31mERROR[0m	logger/logger.go:59	json decoding error
+2023-10-27T14:51:32.837+0300	[31mERROR[0m	logger/logger.go:59	json decoding error
+2023-10-27T14:51:32.839+0300	[31mERROR[0m	logger/logger.go:59	json decoding error
+2023-10-27T14:51:32.841+0300	[31mERROR[0m	logger/logger.go:59	json decoding error
+2023-10-27T14:51:32.842+0300	[31mERROR[0m	logger/logger.go:59	json decoding error
+2023-10-27T14:54:33.954+0300	[31mERROR[0m	logger/logger.go:59	json decoding error
+2023-10-27T14:54:33.957+0300	[31mERROR[0m	logger/logger.go:59	json decoding error
+2023-10-27T14:54:33.959+0300	[31mERROR[0m	logger/logger.go:59	json decoding error
+2023-10-27T14:54:33.961+0300	[31mERROR[0m	logger/logger.go:59	json decoding error
+2023-10-27T14:54:33.963+0300	[31mERROR[0m	logger/logger.go:59	json decoding error
+2023-10-27T14:54:33.965+0300	[31mERROR[0m	logger/logger.go:59	json decoding error
+2023-10-27T14:54:33.967+0300	[31mERROR[0m	logger/logger.go:59	json decoding error
+2023-10-27T14:54:33.970+0300	[31mERROR[0m	logger/logger.go:59	json decoding error
+2023-10-27T14:54:33.972+0300	[31mERROR[0m	logger/logger.go:59	json decoding error
+2023-10-27T14:54:33.974+0300	[31mERROR[0m	logger/logger.go:59	json decoding error
+2023-10-27T15:04:12.394+0300	[34mINFO[0m	logger/logger.go:45	incoming request	{"method": "POST", "path": "/update/gauge/anotherGaugeMetric/4.2", "time": "2.081µs"}
+2023-10-27T15:04:12.394+0300	[34mINFO[0m	logger/logger.go:64	Send response with	{"status": 200, "size": 0}
+2023-10-27T15:04:12.400+0300	[34mINFO[0m	logger/logger.go:45	incoming request	{"method": "POST", "path": "/update/gauge/gaugeMetric/4.2", "time": "1.876µs"}
+2023-10-27T15:04:12.400+0300	[34mINFO[0m	logger/logger.go:64	Send response with	{"status": 200, "size": 0}
+2023-10-27T15:04:12.408+0300	[34mINFO[0m	logger/logger.go:45	incoming request	{"method": "POST", "path": "/update/gauge/anotherCounterMtric/A5C", "time": "11.532µs"}
+2023-10-27T15:04:12.408+0300	[34mINFO[0m	logger/logger.go:64	Send response with	{"status": 400, "size": 0}
+2023-10-27T15:04:12.412+0300	[34mINFO[0m	logger/logger.go:45	incoming request	{"method": "POST", "path": "/update/counter/anothercounterMetric/42", "time": "2.013µs"}
+2023-10-27T15:04:12.412+0300	[34mINFO[0m	logger/logger.go:64	Send response with	{"status": 200, "size": 0}
+2023-10-27T15:04:12.414+0300	[34mINFO[0m	logger/logger.go:45	incoming request	{"method": "POST", "path": "/update/counter/counterMetric/42", "time": "2.208µs"}
+2023-10-27T15:04:12.414+0300	[34mINFO[0m	logger/logger.go:64	Send response with	{"status": 200, "size": 0}
+2023-10-27T15:04:12.416+0300	[34mINFO[0m	logger/logger.go:45	incoming request	{"method": "POST", "path": "/update/counter/anothercounterMtric/A5C", "time": "17.345µs"}
+2023-10-27T15:04:12.416+0300	[34mINFO[0m	logger/logger.go:64	Send response with	{"status": 400, "size": 0}
+2023-10-27T15:04:12.419+0300	[34mINFO[0m	logger/logger.go:45	incoming request	{"method": "GET", "path": "/value/gauge/g", "time": "14.438µs"}
+2023-10-27T15:04:12.419+0300	[34mINFO[0m	logger/logger.go:64	Send response with	{"status": 200, "size": 3}
+2023-10-27T15:04:12.421+0300	[34mINFO[0m	logger/logger.go:45	incoming request	{"method": "GET", "path": "/value/gauge/M", "time": "12.31µs"}
+2023-10-27T15:04:12.421+0300	[34mINFO[0m	logger/logger.go:64	Send response with	{"status": 404, "size": 0}
+2023-10-27T15:04:12.423+0300	[34mINFO[0m	logger/logger.go:45	incoming request	{"method": "GET", "path": "/value/counter/c", "time": "3.646µs"}
+2023-10-27T15:04:12.423+0300	[34mINFO[0m	logger/logger.go:64	Send response with	{"status": 200, "size": 1}
+2023-10-27T15:04:12.425+0300	[34mINFO[0m	logger/logger.go:45	incoming request	{"method": "GET", "path": "/value/counter/M", "time": "10.147µs"}
+2023-10-27T15:04:12.425+0300	[34mINFO[0m	logger/logger.go:64	Send response with	{"status": 404, "size": 0}
+2023-10-27T15:04:12.427+0300	[34mINFO[0m	logger/logger.go:45	incoming request	{"method": "GET", "path": "/", "time": "29.315µs"}
+2023-10-27T15:04:12.427+0300	[34mINFO[0m	logger/logger.go:64	Send response with	{"status": 200, "size": 109}
+2023-10-27T15:04:12.429+0300	[34mINFO[0m	logger/logger.go:45	incoming request	{"method": "POST", "path": "/another", "time": "16.507µs"}
+2023-10-27T15:04:12.429+0300	[34mINFO[0m	logger/logger.go:64	Send response with	{"status": 400, "size": 0}
+2023-10-27T15:04:12.431+0300	[34mINFO[0m	logger/logger.go:45	incoming request	{"method": "GET", "path": "/another", "time": "6.59µs"}
+2023-10-27T15:04:12.431+0300	[34mINFO[0m	logger/logger.go:64	Send response with	{"status": 400, "size": 0}
+2023-10-27T15:04:12.433+0300	[34mINFO[0m	logger/logger.go:54	Entered JSONUpdHandler
+2023-10-27T15:04:12.433+0300	[31mERROR[0m	logger/logger.go:59	json decoding error
+2023-10-27T15:04:12.433+0300	[34mINFO[0m	logger/logger.go:45	incoming request	{"method": "POST", "path": "/update", "time": "62.571µs"}
+2023-10-27T15:04:12.434+0300	[34mINFO[0m	logger/logger.go:64	Send response with	{"status": 400, "size": 0}
+2023-10-27T15:04:12.436+0300	[34mINFO[0m	logger/logger.go:54	Entered JSONValueHandler
+2023-10-27T15:04:12.436+0300	[34mINFO[0m	logger/logger.go:54	Method checked
+2023-10-27T15:04:12.436+0300	[31mERROR[0m	logger/logger.go:59	json decoding error
+2023-10-27T15:04:12.436+0300	[34mINFO[0m	logger/logger.go:45	incoming request	{"method": "POST", "path": "/value", "time": "59.427µs"}
+2023-10-27T15:04:12.437+0300	[34mINFO[0m	logger/logger.go:64	Send response with	{"status": 400, "size": 0}
+2023-10-27T15:04:12.439+0300	[34mINFO[0m	logger/logger.go:54	Entered JSONUpdHandler
+2023-10-27T15:04:12.439+0300	[31mERROR[0m	logger/logger.go:59	json decoding error
+2023-10-27T15:04:12.439+0300	[34mINFO[0m	logger/logger.go:45	incoming request	{"method": "POST", "path": "/update", "time": "43.633µs"}
+2023-10-27T15:04:12.439+0300	[34mINFO[0m	logger/logger.go:64	Send response with	{"status": 400, "size": 0}
+2023-10-27T15:04:12.441+0300	[34mINFO[0m	logger/logger.go:54	Entered JSONUpdHandler
+2023-10-27T15:04:12.441+0300	[31mERROR[0m	logger/logger.go:59	json decoding error
+2023-10-27T15:04:12.441+0300	[34mINFO[0m	logger/logger.go:45	incoming request	{"method": "POST", "path": "/update", "time": "27.623µs"}
+2023-10-27T15:04:12.441+0300	[34mINFO[0m	logger/logger.go:64	Send response with	{"status": 400, "size": 0}
+2023-10-27T15:04:12.443+0300	[34mINFO[0m	logger/logger.go:54	Entered JSONUpdHandler
+2023-10-27T15:04:12.443+0300	[31mERROR[0m	logger/logger.go:59	json decoding error
+2023-10-27T15:04:12.443+0300	[34mINFO[0m	logger/logger.go:45	incoming request	{"method": "POST", "path": "/update", "time": "24.518µs"}
+2023-10-27T15:04:12.444+0300	[34mINFO[0m	logger/logger.go:64	Send response with	{"status": 400, "size": 0}
+2023-10-27T15:04:12.446+0300	[34mINFO[0m	logger/logger.go:54	Entered JSONUpdHandler
+2023-10-27T15:04:12.446+0300	[31mERROR[0m	logger/logger.go:59	json decoding error
+2023-10-27T15:04:12.446+0300	[34mINFO[0m	logger/logger.go:45	incoming request	{"method": "POST", "path": "/update", "time": "19.493µs"}
+2023-10-27T15:04:12.446+0300	[34mINFO[0m	logger/logger.go:64	Send response with	{"status": 400, "size": 0}
+2023-10-27T15:04:12.448+0300	[34mINFO[0m	logger/logger.go:54	Entered JSONValueHandler
+2023-10-27T15:04:12.448+0300	[34mINFO[0m	logger/logger.go:54	Method checked
+2023-10-27T15:04:12.448+0300	[31mERROR[0m	logger/logger.go:59	json decoding error
+2023-10-27T15:04:12.448+0300	[34mINFO[0m	logger/logger.go:45	incoming request	{"method": "POST", "path": "/value", "time": "35.581µs"}
+2023-10-27T15:04:12.448+0300	[34mINFO[0m	logger/logger.go:64	Send response with	{"status": 400, "size": 0}
+2023-10-27T15:04:12.450+0300	[34mINFO[0m	logger/logger.go:54	Entered JSONValueHandler
+2023-10-27T15:04:12.450+0300	[34mINFO[0m	logger/logger.go:54	Method checked
+2023-10-27T15:04:12.450+0300	[31mERROR[0m	logger/logger.go:59	json decoding error
+2023-10-27T15:04:12.450+0300	[34mINFO[0m	logger/logger.go:45	incoming request	{"method": "POST", "path": "/value", "time": "36.22µs"}
+2023-10-27T15:04:12.450+0300	[34mINFO[0m	logger/logger.go:64	Send response with	{"status": 400, "size": 0}
+2023-10-27T15:04:12.454+0300	[34mINFO[0m	logger/logger.go:54	Entered JSONValueHandler
+2023-10-27T15:04:12.454+0300	[34mINFO[0m	logger/logger.go:54	Method checked
+2023-10-27T15:04:12.454+0300	[31mERROR[0m	logger/logger.go:59	json decoding error
+2023-10-27T15:04:12.454+0300	[34mINFO[0m	logger/logger.go:45	incoming request	{"method": "POST", "path": "/value", "time": "42.945µs"}
+2023-10-27T15:04:12.454+0300	[34mINFO[0m	logger/logger.go:64	Send response with	{"status": 400, "size": 0}
+2023-10-27T15:04:12.456+0300	[34mINFO[0m	logger/logger.go:54	Entered JSONValueHandler
+2023-10-27T15:04:12.456+0300	[34mINFO[0m	logger/logger.go:54	Method checked
+2023-10-27T15:04:12.456+0300	[31mERROR[0m	logger/logger.go:59	json decoding error
+2023-10-27T15:04:12.456+0300	[34mINFO[0m	logger/logger.go:45	incoming request	{"method": "POST", "path": "/value", "time": "38.662µs"}
+2023-10-27T15:04:12.456+0300	[34mINFO[0m	logger/logger.go:64	Send response with	{"status": 400, "size": 0}

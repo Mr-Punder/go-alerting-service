@@ -5,8 +5,10 @@ import (
 	"net/http/httptest"
 	"testing"
 
+	"github.com/Mr-Punder/go-alerting-service/internal/logger"
 	"github.com/Mr-Punder/go-alerting-service/internal/metrics"
 	"github.com/stretchr/testify/assert"
+	"github.com/stretchr/testify/require"
 )
 
 func TestSendMetrics(t *testing.T) {
@@ -15,6 +17,11 @@ func TestSendMetrics(t *testing.T) {
 	}))
 	defer server.Close()
 	address := server.URL
+
+	zapLogger, err := logger.NewLogZap("info", "stdout", "stderr")
+	require.NoError(t, err)
+	var simpleValue float64 = 4.2
+	var simpleDelta int64 = 2
 
 	tests := []struct {
 		name    string
@@ -32,12 +39,12 @@ func TestSendMetrics(t *testing.T) {
 				{
 					ID:    "metric 1",
 					MType: "gauge",
-					Value: 4.2,
+					Value: &simpleValue,
 				},
 				{
 					ID:    "metric 2",
 					MType: "counter",
-					Delta: 42,
+					Delta: &simpleDelta,
 				},
 			},
 			wantErr: false,
@@ -45,8 +52,9 @@ func TestSendMetrics(t *testing.T) {
 	}
 	for _, tt := range tests {
 		t.Run(tt.name, func(t *testing.T) {
+
 			if !tt.wantErr {
-				assert.NoError(t, sendMetrics(tt.metric, address))
+				assert.NoError(t, sendMetrics(tt.metric, address, zapLogger))
 			}
 		})
 	}

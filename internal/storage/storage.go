@@ -30,7 +30,7 @@ func (stor *MemStorage) Set(metric metrics.Metrics) error {
 	}
 	if metric.MType == "counter" {
 		if st, ok := stor.Storage[metric.ID]; ok {
-			st.Delta += metric.Delta
+			*st.Delta += *metric.Delta
 			stor.Storage[metric.ID] = st
 		} else {
 			stor.Storage[metric.ID] = metric

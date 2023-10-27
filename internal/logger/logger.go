@@ -4,6 +4,7 @@ import (
 	"time"
 
 	"go.uber.org/zap"
+	"go.uber.org/zap/zapcore"
 )
 
 // LogHTTPZap is implementation of HTTPLogger with zap
@@ -17,14 +18,17 @@ func NewLogZap(level string, path string, errorPath string) (*LogHTTPZap, error)
 	if err != nil {
 		return nil, err
 	}
-
+	encoderConfig := zap.NewDevelopmentEncoderConfig()
+	encoderConfig.EncodeLevel = zapcore.CapitalColorLevelEncoder
+	encoderConfig.EncodeCaller = zapcore.ShortCallerEncoder
 	conf := zap.Config{
-		Level:            lvl,
-		Development:      true,
-		Encoding:         "json",
-		EncoderConfig:    zap.NewDevelopmentEncoderConfig(),
-		OutputPaths:      []string{path},
-		ErrorOutputPaths: []string{errorPath},
+		Level:             lvl,
+		Development:       true,
+		Encoding:          "console",
+		EncoderConfig:     encoderConfig,
+		OutputPaths:       []string{path},
+		ErrorOutputPaths:  []string{errorPath},
+		DisableStacktrace: true,
 	}
 
 	logger, err := conf.Build()
@@ -52,8 +56,7 @@ func (logger *LogHTTPZap) Info(mes string) {
 
 // Error logs message at error level
 func (logger *LogHTTPZap) Error(mes string) {
-	// logger.logZap.Error(mes)
-	logger.logZap.Desugar().Error(mes)
+	logger.logZap.Error(mes)
 }
 
 // ResponseLog makes response log
