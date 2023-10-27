@@ -20,7 +20,7 @@ func TestSendMetrics(t *testing.T) {
 
 	zapLogger, err := logger.NewLogZap("info", "stdout", "stderr")
 	require.NoError(t, err)
-	var simpleValue float64 = 4.2
+	var simpleValue = 4.2
 	var simpleDelta int64 = 2
 
 	tests := []struct {

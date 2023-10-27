@@ -81,6 +81,7 @@ func MetricRouter(storage metricsStorer, logger httpLogger) chi.Router {
 	})
 }
 
+// JSONUpdHandler updates metric via json POST request
 func (h *Handler) JSONUpdHandler(w http.ResponseWriter, r *http.Request) {
 	h.logger.Info("Entered JSONUpdHandler")
 	path := r.RequestURI
@@ -157,6 +158,7 @@ func (h *Handler) JSONUpdHandler(w http.ResponseWriter, r *http.Request) {
 
 }
 
+// JSONValueHandler returns metric via json POST request
 func (h *Handler) JSONValueHandler(w http.ResponseWriter, r *http.Request) {
 	h.logger.Info("Entered JSONValueHandler")
 
@@ -213,6 +215,13 @@ func (h *Handler) JSONValueHandler(w http.ResponseWriter, r *http.Request) {
 		rData.size = 0
 		rData.status = http.StatusNotFound
 		return
+		// respMetric = metrics.Metrics{
+		// 	ID:    metric.ID,
+		// 	MType: metric.MType,
+		// 	Delta: func() *int64 { var d int64 = 1; return &d }(),
+		// 	Value: func() *float64 { var v = 1.5; return &v }(),
+		// }
+		// h.stor.Set(respMetric)
 	}
 	w.Header().Set("Content-Type", "application/json")
 

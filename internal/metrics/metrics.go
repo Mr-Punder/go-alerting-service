@@ -2,6 +2,7 @@ package metrics
 
 import (
 	"encoding/json"
+	"errors"
 	"log"
 )
 
@@ -20,36 +21,50 @@ func (m Metrics) MarshalJSON() ([]byte, error) {
 	var Delta int64
 	var Value float64
 
-	if m.Delta == nil {
-		Delta = 0
-	} else {
-		Delta = *m.Delta
-	}
-	if m.Value == nil {
-		Value = 0
-	} else {
-		Value = *m.Value
+	switch m.MType {
+	case "gauge":
+		if m.Value == nil {
+			Value = 0
+		} else {
+			Value = *m.Value
+		}
+		aliasMetric := struct {
+			*MetricAlias
+			Value float64 `json:"value"`
+		}{
+			MetricAlias: (*MetricAlias)(&m),
+			Value:       Value,
+		}
+		data, err := json.Marshal(aliasMetric)
+		if err != nil {
+			log.Fatal(err)
+			panic(err)
+		}
+		return data, nil
+	case "counter":
+		if m.Delta == nil {
+			Delta = 0
+		} else {
+			Delta = *m.Delta
+		}
+		aliasMetric := struct {
+			*MetricAlias
+
+			Delta int64 `json:"delta"`
+		}{
+			MetricAlias: (*MetricAlias)(&m),
+			Delta:       Delta,
+		}
+		data, err := json.Marshal(aliasMetric)
+		if err != nil {
+			log.Fatal(err)
+			panic(err)
+		}
+		return data, nil
+	default:
+		return []byte{}, errors.New("uncknown type")
 	}
 
-	aliasMetric := struct {
-		*MetricAlias
-		Value float64 `json:"value,omitempty"`
-		Delta int64   `json:"delta,omitempty"`
-	}{
-		MetricAlias: (*MetricAlias)(&m),
-		Delta:       Delta,
-		Value:       Value,
-	}
-	// log.Printf("aliasMetric %v", aliasMetric)
-
-	data, err := json.Marshal(aliasMetric)
-	if err != nil {
-		log.Fatal(err)
-		panic(err)
-	}
-	//log.Printf("finished json marhsling with %s", string(data))
-
-	return data, nil
 }
 
 // func (m *Metrics) UnmarshalJSON(data []byte) (err error) {

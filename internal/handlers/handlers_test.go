@@ -36,7 +36,7 @@ func testRequest(t *testing.T, ts *httptest.Server, method, path string, sentbod
 
 func TestMetricRouter(t *testing.T) {
 
-	simpleValue := func() *float64 { var v float64 = 1.5; return &v }
+	simpleValue := func() *float64 { var v = 1.5; return &v }
 	simpleDelta := func() *int64 { var d int64 = 2; return &d }
 
 	tests := []struct {
