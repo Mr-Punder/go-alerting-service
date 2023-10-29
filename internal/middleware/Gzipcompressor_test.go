@@ -67,9 +67,9 @@ func TestGzipCompressor(t *testing.T) {
 	require.NoError(t, err)
 
 	comp := NewGzipCompressor(Log)
-	hlog := NewHttpLoger(Log)
+	hlog := NewHTTPLoger(Log)
 
-	ts := httptest.NewServer(hlog.HttpLogHandler(comp.CompressHandler(handlers.NewMetricRouter(stor, Log))))
+	ts := httptest.NewServer(hlog.HTTPLogHandler(comp.CompressHandler(handlers.NewMetricRouter(stor, Log))))
 	defer ts.Close()
 
 	requestBody := "{\"id\":\"g\",\"type\":\"gauge\",\"value\":5.2}"

@@ -9,6 +9,7 @@ import (
 	"math/rand"
 	"net/http"
 	"runtime"
+	"strings"
 
 	"time"
 
@@ -107,11 +108,26 @@ func sendMetrics(metrics []metrics.Metrics, addres string, logger simpleLogger) 
 			return fmt.Errorf("unexpected status code: %d", resp.StatusCode)
 		}
 
-		ans, err := io.ReadAll(resp.Body)
-		if err != nil {
-			return err
-		}
 		defer resp.Body.Close()
+
+		gzipEncoding := resp.Header.Get("Content-Encoding")
+		var ans []byte
+		if strings.Contains(gzipEncoding, "gzip") {
+
+			zr, err := gzip.NewReader(resp.Body)
+			if err != nil {
+				return err
+			}
+			ans, err = io.ReadAll(zr)
+			if err != nil {
+				return err
+			}
+		} else {
+			ans, err = io.ReadAll(resp.Body)
+			if err != nil {
+				return err
+			}
+		}
 
 		logger.Info(fmt.Sprintf("recievd: %s", string(ans)))
 

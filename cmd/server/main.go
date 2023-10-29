@@ -36,10 +36,12 @@ func run(conf *config.Config) error {
 
 	ruslog.Info("Initialized compressor")
 
-	hLogger := middleware.NewHttpLoger(ruslog)
+	hLogger := middleware.NewHTTPLoger(ruslog)
 	comp := middleware.NewGzipCompressor(ruslog)
 
+	ruslog.Info("Initialized middleware functions")
+
 	ruslog.Info(fmt.Sprintf("Starting server on %s", conf.FlagRunAddr))
-	return http.ListenAndServe(conf.FlagRunAddr, hLogger.HttpLogHandler(comp.CompressHandler(handlers.NewMetricRouter(storage, ruslog))))
+	return http.ListenAndServe(conf.FlagRunAddr, hLogger.HTTPLogHandler(comp.CompressHandler(handlers.NewMetricRouter(storage, ruslog))))
 
 }

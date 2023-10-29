@@ -1,11 +1,13 @@
 package gzipcomp
 
 import (
+	"bytes"
 	"compress/gzip"
 	"io"
 	"net/http"
 )
 
+// GzipCompressWiter allows to use http.ResponseWriter with gzip compression
 type GzipCompressWiter struct {
 	http.ResponseWriter
 	zw *gzip.Writer
@@ -20,10 +22,6 @@ func NewGzipCompressWriter(w http.ResponseWriter) *GzipCompressWiter {
 
 func NewEmptyGzipCompressWriter() *GzipCompressWiter {
 	return &GzipCompressWiter{}
-}
-
-func (gw *GzipCompressWiter) Name() string {
-	return "gzip"
 }
 
 func (gw *GzipCompressWiter) SetResponseWriter(w http.ResponseWriter) {
@@ -50,8 +48,37 @@ func (gw *GzipCompressWiter) Close() error {
 	return gw.zw.Close()
 }
 
+// GzipResponseWriter stores response before possible compression
+type GzipResponseWriter struct {
+	w      http.ResponseWriter
+	buffer *bytes.Buffer
+}
+
+func NewGzipResponseWriter(w http.ResponseWriter) *GzipResponseWriter {
+	return &GzipResponseWriter{
+		w:      w,
+		buffer: bytes.NewBuffer(nil),
+	}
+}
+func (rw *GzipResponseWriter) WriteTo(wr http.ResponseWriter) {
+	rw.buffer.WriteTo(wr)
+}
+
+func (rw *GzipResponseWriter) Header() http.Header {
+	return rw.w.Header()
+}
+
+func (rw *GzipResponseWriter) Write(data []byte) (int, error) {
+	return rw.buffer.Write(data)
+}
+
+func (rw *GzipResponseWriter) WriteHeader(statusCode int) {
+	rw.w.WriteHeader(statusCode)
+}
+
+// GzipCompressReader is Readcloser with gzip decompression
 type GzipCompressReader struct {
-	r  io.ReadCloser
+	io.ReadCloser
 	zr *gzip.Reader
 }
 
@@ -62,8 +89,8 @@ func NewGzipCompressReader(r io.ReadCloser) (*GzipCompressReader, error) {
 	}
 
 	return &GzipCompressReader{
-		r:  r,
-		zr: zr,
+		ReadCloser: r,
+		zr:         zr,
 	}, nil
 }
 
@@ -77,12 +104,9 @@ func (gr *GzipCompressReader) SetReader(r io.ReadCloser) error {
 	if err != nil {
 		return err
 	}
-	gr.r = r
+	gr.ReadCloser = r
 	gr.zr = zr
 	return nil
-}
-func (gw *GzipCompressReader) Name() string {
-	return "gzip"
 }
 
 func (gr *GzipCompressReader) Read(b []byte) (int, error) {
@@ -90,7 +114,7 @@ func (gr *GzipCompressReader) Read(b []byte) (int, error) {
 }
 
 func (gr *GzipCompressReader) Close() error {
-	if err := gr.r.Close(); err != nil {
+	if err := gr.ReadCloser.Close(); err != nil {
 		return err
 	}
 	return gr.zr.Close()

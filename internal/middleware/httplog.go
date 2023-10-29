@@ -6,6 +6,7 @@ import (
 	"time"
 )
 
+// httpLogger is logger interface for middleware logger
 type httpLogger interface {
 	Info(mes string)
 	Error(mes string)
@@ -19,14 +20,15 @@ type responseData struct {
 	size   int
 }
 
-type HttpLogger struct {
+type HTTPLogger struct {
 	log httpLogger
 }
 
-func NewHttpLoger(logger httpLogger) *HttpLogger {
-	return &HttpLogger{logger}
+func NewHTTPLoger(logger httpLogger) *HTTPLogger {
+	return &HTTPLogger{logger}
 }
 
+// loggingResponseWriter allows use ResponnseWriter and stores information to log
 type loggingResponseWriter struct {
 	http.ResponseWriter
 	responseData *responseData
@@ -36,6 +38,9 @@ func (r *loggingResponseWriter) Write(b []byte) (int, error) {
 
 	size, err := r.ResponseWriter.Write(b)
 	r.responseData.size += size
+	if r.responseData.status == 0 {
+		r.responseData.status = 200
+	}
 	return size, err
 }
 
@@ -45,7 +50,7 @@ func (r *loggingResponseWriter) WriteHeader(statusCode int) {
 	r.ResponseWriter.WriteHeader(statusCode)
 }
 
-func (l *HttpLogger) HttpLogHandler(next http.Handler) http.Handler {
+func (l *HTTPLogger) HTTPLogHandler(next http.Handler) http.Handler {
 	return http.HandlerFunc(func(w http.ResponseWriter, r *http.Request) {
 		headers := r.Header
 

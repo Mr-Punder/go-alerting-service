@@ -8,6 +8,7 @@ import (
 	"github.com/Mr-Punder/go-alerting-service/internal/gzipcomp"
 )
 
+// middlewareLogger is logger interface for middleware compressor
 type middlewareLogger interface {
 	Info(mes string)
 	Error(mess string)
@@ -15,6 +16,7 @@ type middlewareLogger interface {
 	Infof(str string, arg ...any)
 }
 
+// GzipCompressor is middleware compressor
 type GzipCompressor struct {
 	log middlewareLogger
 }
@@ -64,15 +66,26 @@ func (c *GzipCompressor) CompressHandler(next http.Handler) http.Handler {
 		}
 
 		if supportGzip {
+
 			c.log.Info("Detected gzip support")
-			cw := gzipcomp.NewGzipCompressWriter(w)
 
-			ow = cw
+			rw := gzipcomp.NewGzipResponseWriter(w)
+			next.ServeHTTP(rw, r)
 
-			defer cw.Close()
+			contentType := rw.Header().Get("Content-Type")
+			if contentType == "text/html" || contentType == "application/json" {
 
+				cw := gzipcomp.NewGzipCompressWriter(w)
+				cw.Header().Set("Content-Encoding", "gzip")
+				defer cw.Close()
+
+				ow = cw
+				rw.WriteTo(cw)
+			}
+
+		} else {
+			next.ServeHTTP(ow, r)
 		}
-		next.ServeHTTP(ow, r)
 		c.log.Info("request served from GzipCompressor")
 
 	})
