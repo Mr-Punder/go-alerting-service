@@ -72,8 +72,8 @@ func sendMetrics(metrics []metrics.Metrics, addres string, logger simpleLogger) 
 		req.Header.Set("Accept-Encoding", "gzip")
 		req.Header.Set("Content-Encoding", "gzip")
 		resp, err := client.Do(req)
-
 		logger.Info(fmt.Sprintf("Send request, err : %s", err))
+		defer resp.Body.Close()
 
 		retries := 2
 		for i := 0; i < retries; i++ {
@@ -107,8 +107,6 @@ func sendMetrics(metrics []metrics.Metrics, addres string, logger simpleLogger) 
 
 			return fmt.Errorf("unexpected status code: %d", resp.StatusCode)
 		}
-
-		defer resp.Body.Close()
 
 		gzipEncoding := resp.Header.Get("Content-Encoding")
 		var ans []byte

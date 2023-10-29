@@ -92,8 +92,9 @@ func TestGzipCompressor(t *testing.T) {
 		}
 
 		resp := testRequest(t, ts, http.MethodPost, "/update", buf, headers, Log)
-		require.Equal(t, http.StatusOK, resp.StatusCode)
 
+		require.Equal(t, http.StatusOK, resp.StatusCode)
+		defer resp.Body.Close()
 		strbody, err := io.ReadAll(resp.Body)
 		require.NoError(t, err)
 
