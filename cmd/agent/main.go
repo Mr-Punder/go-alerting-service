@@ -73,8 +73,9 @@ func sendMetrics(metrics []metrics.Metrics, addres string, logger simpleLogger) 
 		req.Header.Set("Content-Encoding", "gzip")
 		resp, err := client.Do(req)
 		logger.Info(fmt.Sprintf("Send request, err : %s", err))
-		defer resp.Body.Close() // statictest thinks that I have to put it exactly here
-
+		if err == nil {
+			defer resp.Body.Close() // statictest thinks that I have to put it exactly here
+		}
 		retries := 2
 		for i := 0; i < retries; i++ {
 
@@ -89,8 +90,9 @@ func sendMetrics(metrics []metrics.Metrics, addres string, logger simpleLogger) 
 				req.Header.Del("Accept-Encoding")
 				resp, err = client.Do(req)
 				logger.Info(fmt.Sprintf("Repeated request, err: %s", err))
-				defer resp.Body.Close() // statictest thinks that I have to put it exactly here
-
+				if err == nil {
+					defer resp.Body.Close() // statictest thinks that I have to put it exactly here
+				}
 				if err != nil {
 					i++
 				} else {
