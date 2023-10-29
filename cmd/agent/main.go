@@ -1,8 +1,11 @@
 package main
 
 import (
+	"bytes"
+	"compress/gzip"
 	"encoding/json"
 	"fmt"
+	"io"
 	"math/rand"
 	"net/http"
 	"runtime"
@@ -12,7 +15,6 @@ import (
 	"github.com/Mr-Punder/go-alerting-service/internal/agent/config"
 	"github.com/Mr-Punder/go-alerting-service/internal/logger"
 	"github.com/Mr-Punder/go-alerting-service/internal/metrics"
-	"github.com/go-resty/resty/v2"
 )
 
 func main() {
@@ -26,18 +28,19 @@ func main() {
 type simpleLogger interface {
 	Info(mes string)
 	Error(mes string)
+	Infof(str string, args ...any)
+	Errorf(str string, args ...any)
 }
 
 func sendMetrics(metrics []metrics.Metrics, addres string, logger simpleLogger) error {
-	init := fmt.Sprintf("%s/update", addres)
-	client := resty.New()
+	client := http.Client{}
 	logger.Info("client initialized")
 
 	for _, metric := range metrics {
-		url := init
+		url := fmt.Sprintf("%s/update", addres)
 		body, err := json.Marshal(metric)
 		if err != nil {
-			panic(err)
+			return err
 		}
 		if metric.MType == "gauge" {
 			logger.Info(fmt.Sprintf("metric to encode %s %s %f", metric.ID, metric.MType, *metric.Value))
@@ -45,37 +48,71 @@ func sendMetrics(metrics []metrics.Metrics, addres string, logger simpleLogger) 
 			logger.Info(fmt.Sprintf("metric to encode %s %s %d", metric.ID, metric.MType, *metric.Delta))
 
 		}
-		logger.Info(fmt.Sprintf("Metric %s encoded to %s", metric.ID, body))
 
-		resp, err := client.R().SetHeader("Content-Type", "application/json").SetBody(body).Post(url)
-		logger.Info(fmt.Sprintf("Send request, err : %v", err))
+		metricstr := string(body)
+		logger.Info(fmt.Sprintf("Metric %s encoded to %s", metric.ID, metricstr))
 
-		retries := 3
+		buf := bytes.NewBuffer(nil)
+		zb := gzip.NewWriter(buf)
+		_, err = zb.Write(body)
+		if err != nil {
+			return err
+		}
+		err = zb.Close()
+		if err != nil {
+			return err
+		}
+
+		req, err := http.NewRequest("POST", url, buf)
+		if err != nil {
+			return err
+		}
+		req.Header.Set("Content-Type", "application/json")
+		req.Header.Set("Accept-Encoding", "gzip")
+		req.Header.Set("Content-Encoding", "gzip")
+		resp, err := client.Do(req)
+
+		logger.Info(fmt.Sprintf("Send request, err : %s", err))
+
+		retries := 2
 		for i := 0; i < retries; i++ {
+
 			if err != nil {
 
 				time.Sleep(40 * time.Millisecond)
-				resp, err = client.R().SetHeader("Content-Type", "application/json").SetBody(body).Post(url)
-				logger.Info(fmt.Sprintf("Repeated request, err: %v", err))
+				req, err = http.NewRequest("POST", url, bytes.NewBufferString(metricstr))
+				if err != nil {
+					return err
+				}
+				req.Header.Set("Content-Type", "application/json")
+				req.Header.Del("Accept-Encoding")
+				resp, err = client.Do(req)
+				logger.Info(fmt.Sprintf("Repeated request, err: %s", err))
 				if err != nil {
 					i++
 				} else {
 					break
 				}
 			}
+
 		}
 
 		if err != nil {
+			logger.Errorf("Sending error: %s", err)
 
-			logger.Error(fmt.Sprintf("sending error %e", err))
+		}
+		if resp.StatusCode != http.StatusOK {
+			logger.Error(fmt.Sprintf("Unexpected code %d", resp.StatusCode))
+
+			return fmt.Errorf("unexpected status code: %d", resp.StatusCode)
+		}
+
+		ans, err := io.ReadAll(resp.Body)
+		if err != nil {
 			return err
 		}
-		if resp.StatusCode() != http.StatusOK {
-			logger.Error(fmt.Sprintf("Unexpected code %d", resp.StatusCode()))
+		defer resp.Body.Close()
 
-			return fmt.Errorf("unexpected status code: %d", resp.StatusCode())
-		}
-		ans := resp.Body()
 		logger.Info(fmt.Sprintf("recievd: %s", string(ans)))
 
 	}
@@ -83,7 +120,8 @@ func sendMetrics(metrics []metrics.Metrics, addres string, logger simpleLogger) 
 }
 
 func run() error {
-	zapLogger, err := logger.NewLogZap("info", "stdout", "stderr")
+	//zapLogger, err := logger.NewLogZap("info", "stdout", "stderr")
+	ruslog, err := logger.NewLogLogrus("info", "stdout")
 	if err != nil {
 		return err
 	}
@@ -91,11 +129,10 @@ func run() error {
 	reportTicker := time.NewTicker(config.ReportInterval)
 	defer pollTicker.Stop()
 	defer reportTicker.Stop()
-	//time.Sleep(11 * time.Second)
-	zapLogger.Info("agent started")
+	ruslog.Info("agent started")
 
 	metric := Collect()
-	zapLogger.Info("metrics collected")
+	ruslog.Info("metrics collected")
 	for {
 		select {
 		case <-pollTicker.C:
@@ -103,8 +140,8 @@ func run() error {
 
 		case <-reportTicker.C:
 			address := "http://" + config.ServerAddress
-			zapLogger.Info(fmt.Sprintf("sending metrics to %s", address))
-			err := sendMetrics(metric, address, zapLogger)
+			ruslog.Info(fmt.Sprintf("sending metrics to %s", address))
+			err := sendMetrics(metric, address, ruslog)
 			if err != nil {
 				return err
 			}

@@ -18,7 +18,8 @@ func TestSendMetrics(t *testing.T) {
 	defer server.Close()
 	address := server.URL
 
-	zapLogger, err := logger.NewLogZap("info", "stdout", "stderr")
+	// zapLogger, err := logger.NewLogZap("info", "stdout", "stderr")
+	logrus, err := logger.NewLogLogrus("info", "stdout")
 	require.NoError(t, err)
 	var simpleValue = 4.2
 	var simpleDelta int64 = 2
@@ -54,7 +55,7 @@ func TestSendMetrics(t *testing.T) {
 		t.Run(tt.name, func(t *testing.T) {
 
 			if !tt.wantErr {
-				assert.NoError(t, sendMetrics(tt.metric, address, zapLogger))
+				assert.NoError(t, sendMetrics(tt.metric, address, logrus))
 			}
 		})
 	}

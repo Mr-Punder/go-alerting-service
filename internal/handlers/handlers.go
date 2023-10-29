@@ -7,23 +7,16 @@ import (
 	"os"
 	"sort"
 	"strconv"
-	"time"
 
 	"github.com/Mr-Punder/go-alerting-service/internal/metrics"
 	"github.com/go-chi/chi/v5"
 )
 
-type responseData struct {
-	status int
-	size   int
-}
-
 // httpLogger logs information about http requests and responses
 type httpLogger interface {
-	RequestLog(method string, path string, duration time.Duration)
-	ResponseLog(status int, size int)
 	Info(mes string)
 	Error(mes string)
+	Debug(mes string)
 }
 
 type metricsAllGetter interface {
@@ -60,7 +53,7 @@ func NewHandler(stor metricsStorer, logger httpLogger) *Handler {
 	return &Handler{stor, logger}
 }
 
-func MetricRouter(storage metricsStorer, logger httpLogger) chi.Router {
+func NewMetricRouter(storage metricsStorer, logger httpLogger) chi.Router {
 	r := chi.NewRouter()
 
 	handler := NewHandler(storage, logger)
@@ -83,23 +76,12 @@ func MetricRouter(storage metricsStorer, logger httpLogger) chi.Router {
 
 // JSONUpdHandler updates metric via json POST request
 func (h *Handler) JSONUpdHandler(w http.ResponseWriter, r *http.Request) {
+
 	h.logger.Info("Entered JSONUpdHandler")
-	path := r.RequestURI
-	method := r.Method
-	start := time.Now()
-	rData := responseData{}
-	defer func() {
-		duration := time.Since(start)
-
-		h.logger.RequestLog(method, path, duration)
-		h.logger.ResponseLog(rData.status, rData.size)
-	}()
-
 	if r.Method != http.MethodPost {
 		h.logger.Error("wrong request method")
 		http.Error(w, "Only POST requests are allowed for update!", http.StatusMethodNotAllowed)
-		rData.size = 0
-		rData.status = http.StatusBadRequest
+
 		return
 	}
 	h.logger.Info("Method checked")
@@ -108,10 +90,9 @@ func (h *Handler) JSONUpdHandler(w http.ResponseWriter, r *http.Request) {
 
 	if err := json.NewDecoder(r.Body).Decode(&metric); err != nil {
 		h.logger.Error(fmt.Sprintf("json decoding error %e", err))
+		w.WriteHeader(http.StatusBadRequest)
 		http.Error(w, "wrong requests", http.StatusBadRequest)
 
-		rData.size = 0
-		rData.status = http.StatusBadRequest
 		return
 	}
 	h.logger.Info(fmt.Sprintf("Decoded metric to stor %v", metric))
@@ -120,8 +101,6 @@ func (h *Handler) JSONUpdHandler(w http.ResponseWriter, r *http.Request) {
 
 		http.Error(w, "wrong type", http.StatusBadRequest)
 
-		rData.size = 0
-		rData.status = http.StatusBadRequest
 		return
 	}
 
@@ -134,8 +113,7 @@ func (h *Handler) JSONUpdHandler(w http.ResponseWriter, r *http.Request) {
 	if err := h.stor.Set(metric); err != nil {
 		w.WriteHeader(http.StatusBadRequest)
 		h.logger.Error("Cann't find metric")
-		rData.size = 0
-		rData.status = http.StatusBadRequest
+
 		return
 	}
 
@@ -148,36 +126,24 @@ func (h *Handler) JSONUpdHandler(w http.ResponseWriter, r *http.Request) {
 	if err != nil {
 		w.WriteHeader(http.StatusInternalServerError)
 		h.logger.Error("json marhsaling error")
-		rData.size = 0
-		rData.status = http.StatusInternalServerError
+
 		return
 	}
 
-	rData.size, _ = w.Write(body)
-	rData.status = http.StatusOK
+	w.Write(body)
+	h.logger.Info("JSONUpdHandler exited")
 
 }
 
 // JSONValueHandler returns metric via json POST request
 func (h *Handler) JSONValueHandler(w http.ResponseWriter, r *http.Request) {
+
 	h.logger.Info("Entered JSONValueHandler")
-
-	path := r.RequestURI
-	method := r.Method
-	start := time.Now()
-	rData := responseData{}
-	defer func() {
-		duration := time.Since(start)
-
-		h.logger.RequestLog(method, path, duration)
-		h.logger.ResponseLog(rData.status, rData.size)
-	}()
 
 	if r.Method != http.MethodPost {
 		http.Error(w, "Only POST requests are allowed for update!", http.StatusMethodNotAllowed)
 		h.logger.Error("wrong request method")
-		rData.size = 0
-		rData.status = http.StatusBadRequest
+
 		return
 	}
 
@@ -188,8 +154,7 @@ func (h *Handler) JSONValueHandler(w http.ResponseWriter, r *http.Request) {
 	if err := json.NewDecoder(r.Body).Decode(&metric); err != nil {
 		h.logger.Error("json decoding error")
 		http.Error(w, "wrong requests", http.StatusBadRequest)
-		rData.size = 0
-		rData.status = http.StatusBadRequest
+
 		return
 	}
 
@@ -198,8 +163,7 @@ func (h *Handler) JSONValueHandler(w http.ResponseWriter, r *http.Request) {
 	if metric.MType != "gauge" && metric.MType != "counter" {
 		h.logger.Error(fmt.Sprintf("wrong type %s", metric.MType))
 		http.Error(w, "wrong type", http.StatusBadRequest)
-		rData.size = 0
-		rData.status = http.StatusBadRequest
+
 		return
 	}
 
@@ -212,16 +176,8 @@ func (h *Handler) JSONValueHandler(w http.ResponseWriter, r *http.Request) {
 		h.logger.Info(str)
 		h.logger.Error("Cann't find metric")
 		http.Error(w, fmt.Sprintf("%s not found", metric.ID), http.StatusNotFound)
-		rData.size = 0
-		rData.status = http.StatusNotFound
+
 		return
-		// respMetric = metrics.Metrics{
-		// 	ID:    metric.ID,
-		// 	MType: metric.MType,
-		// 	Delta: func() *int64 { var d int64 = 1; return &d }(),
-		// 	Value: func() *float64 { var v = 1.5; return &v }(),
-		// }
-		// h.stor.Set(respMetric)
 	}
 	w.Header().Set("Content-Type", "application/json")
 
@@ -229,32 +185,22 @@ func (h *Handler) JSONValueHandler(w http.ResponseWriter, r *http.Request) {
 	if err != nil {
 		h.logger.Error("json marhsaling error")
 		w.WriteHeader(http.StatusInternalServerError)
-		rData.size = 0
-		rData.status = http.StatusInternalServerError
+
 		return
 	}
 
-	rData.size, _ = w.Write(body)
-	rData.status = http.StatusOK
+	w.Write(body)
+
 }
 
 // UpdHandler updates one metric or creates new one with name
 func (h *Handler) UpdHandler(w http.ResponseWriter, r *http.Request) {
-	path := r.RequestURI
-	method := r.Method
-	start := time.Now()
-	rData := responseData{}
-	defer func() {
-		duration := time.Since(start)
 
-		h.logger.RequestLog(method, path, duration)
-		h.logger.ResponseLog(rData.status, rData.size)
-	}()
+	h.logger.Info("Entered UpdHandler")
 
 	if r.Method != http.MethodPost {
 		http.Error(w, "Only POST requests are allowed for update!", http.StatusMethodNotAllowed)
-		rData.size = 0
-		rData.status = http.StatusBadRequest
+
 		return
 	}
 
@@ -267,8 +213,7 @@ func (h *Handler) UpdHandler(w http.ResponseWriter, r *http.Request) {
 		fval, err := strconv.ParseFloat(val, 64)
 		if err != nil {
 			http.Error(w, "wrong format value", http.StatusBadRequest)
-			rData.size = 0
-			rData.status = http.StatusBadRequest
+
 			return
 		}
 
@@ -280,8 +225,7 @@ func (h *Handler) UpdHandler(w http.ResponseWriter, r *http.Request) {
 
 		if err := h.stor.Set(metric); err != nil {
 			w.WriteHeader(http.StatusBadRequest)
-			rData.size = 0
-			rData.status = http.StatusBadRequest
+
 			return
 		}
 
@@ -289,8 +233,7 @@ func (h *Handler) UpdHandler(w http.ResponseWriter, r *http.Request) {
 		ival, err := strconv.ParseInt(val, 10, 64)
 		if err != nil {
 			http.Error(w, "wrong format value", http.StatusBadRequest)
-			rData.size = 0
-			rData.status = http.StatusBadRequest
+
 			return
 		}
 
@@ -302,58 +245,38 @@ func (h *Handler) UpdHandler(w http.ResponseWriter, r *http.Request) {
 
 		if err := h.stor.Set(metric); err != nil {
 			w.WriteHeader(http.StatusBadRequest)
-			rData.size = 0
-			rData.status = http.StatusBadRequest
+
 			return
 		}
 	default:
 		http.Error(w, "wrong type", http.StatusBadRequest)
-		rData.size = 0
-		rData.status = http.StatusBadRequest
+
 		return
 	}
 
 	w.WriteHeader(http.StatusOK)
-	rData.size = 0
-	rData.status = http.StatusOK
 
 }
 
 // DefoultHandler for incorrect requests
 func (h *Handler) DefoultHandler(w http.ResponseWriter, r *http.Request) {
-	path := r.RequestURI
-	method := r.Method
-	start := time.Now()
-	rData := responseData{}
-	defer func() {
-		duration := time.Since(start)
 
-		h.logger.RequestLog(method, path, duration)
-		h.logger.ResponseLog(rData.status, rData.size)
-	}()
+	h.logger.Info("Entered DefoultHandler")
 
 	http.Error(w, "wrong requests", http.StatusBadRequest)
-	rData.size = 0
-	rData.status = http.StatusBadRequest
+
 }
 
 // ValueHandler returns value of metric by name if the metric exists
 func (h *Handler) ValueHandler(w http.ResponseWriter, r *http.Request) {
-	path := r.RequestURI
-	method := r.Method
-	start := time.Now()
-	rData := responseData{}
-	defer func() {
-		duration := time.Since(start)
 
-		h.logger.RequestLog(method, path, duration)
-		h.logger.ResponseLog(rData.status, rData.size)
-	}()
+	h.logger.Info("Entered ValueHandler")
+	headers := r.Header
+	h.logger.Info(fmt.Sprintf("Headers:  %v", headers))
 
 	if r.Method != http.MethodGet {
 		http.Error(w, "Only Get requests are allowed for value!", http.StatusMethodNotAllowed)
-		rData.size = 0
-		rData.status = http.StatusMethodNotAllowed
+
 		return
 	}
 
@@ -369,26 +292,22 @@ func (h *Handler) ValueHandler(w http.ResponseWriter, r *http.Request) {
 		val, ok := h.stor.Get(metric)
 		if !ok {
 			http.Error(w, fmt.Sprintf("%s not found", name), http.StatusNotFound)
-			rData.size = 0
-			rData.status = http.StatusNotFound
+
 			return
 		}
-		rData.size, _ = w.Write([]byte(strconv.FormatFloat(*val.Value, 'f', -1, 64)))
-		rData.status = http.StatusOK
+		w.Write([]byte(strconv.FormatFloat(*val.Value, 'f', -1, 64)))
 	case "counter":
 		val, ok := h.stor.Get(metric)
 		if !ok {
 			http.Error(w, fmt.Sprintf("%s not found", name), http.StatusNotFound)
-			rData.size = 0
-			rData.status = http.StatusNotFound
+
 			return
 		}
-		rData.size, _ = w.Write([]byte(strconv.FormatInt(*val.Delta, 10)))
-		rData.status = http.StatusOK
+		w.Write([]byte(strconv.FormatInt(*val.Delta, 10)))
+
 	default:
 		http.Error(w, "wrong type", http.StatusBadRequest)
-		rData.size = 0
-		rData.status = http.StatusBadRequest
+
 	}
 
 }
@@ -396,22 +315,11 @@ func (h *Handler) ValueHandler(w http.ResponseWriter, r *http.Request) {
 // ShowAllHandler returns html with all known metrics
 func (h *Handler) ShowAllHandler(w http.ResponseWriter, r *http.Request) {
 
-	h.logger.Info("entered ShowAllHandler")
-	path := r.RequestURI
-	method := r.Method
-	start := time.Now()
-	rData := responseData{}
-	defer func() {
-		duration := time.Since(start)
-
-		h.logger.RequestLog(method, path, duration)
-		h.logger.ResponseLog(rData.status, rData.size)
-	}()
+	h.logger.Info("Entered ShowAllHandler")
 
 	if r.Method != http.MethodGet {
 		http.Error(w, "Only Get requests are allowed for value!", http.StatusMethodNotAllowed)
-		rData.size = 0
-		rData.status = http.StatusMethodNotAllowed
+
 		return
 	}
 	h.logger.Info("method checked")
@@ -452,35 +360,23 @@ func (h *Handler) ShowAllHandler(w http.ResponseWriter, r *http.Request) {
 	html += "</body></html>"
 	w.Header().Set("Content-Type", "text/html")
 
-	rData.size, _ = w.Write([]byte(html))
-	rData.status = http.StatusOK
+	w.Write([]byte(html))
 
 }
 
 // FaviconHandler returns Gopher!!!!
 func (h *Handler) FaviconHandler(w http.ResponseWriter, r *http.Request) {
-	path := r.RequestURI
-	method := r.Method
-	start := time.Now()
-	rData := responseData{}
-	defer func() {
-		duration := time.Since(start)
 
-		h.logger.RequestLog(method, path, duration)
-		h.logger.ResponseLog(rData.status, rData.size)
-	}()
+	h.logger.Info("Entered FaviconHandler")
 
 	icon, err := os.ReadFile("../../images/gopher.png")
 	if err != nil {
 		http.Error(w, "Иконка не найдена", http.StatusNotFound)
-		rData.size = 0
-		rData.status = http.StatusNotFound
+
 		return
 	}
 
 	w.Header().Set("Content-Type", "image/png")
 
-	rData.size, _ = w.Write(icon)
-	rData.status = http.StatusOK
-
+	w.Write(icon)
 }

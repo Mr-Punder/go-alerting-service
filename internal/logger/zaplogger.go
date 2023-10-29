@@ -41,11 +41,10 @@ func NewLogZap(level string, path string, errorPath string) (*LogHTTPZap, error)
 }
 
 // RequestLog makes request log
-func (logger *LogHTTPZap) RequestLog(method string, path string, duration time.Duration) {
+func (logger *LogHTTPZap) RequestLog(method string, path string) {
 	logger.logZap.Infow("incoming request",
 		"method", method,
 		"path", path,
-		"time", duration.String(),
 	)
 }
 
@@ -59,10 +58,16 @@ func (logger *LogHTTPZap) Error(mes string) {
 	logger.logZap.Error(mes)
 }
 
+// Debug logs message at debug level
+func (logger *LogHTTPZap) Debug(mes string) {
+	logger.logZap.Debug(mes)
+}
+
 // ResponseLog makes response log
-func (logger *LogHTTPZap) ResponseLog(status int, size int) {
+func (logger *LogHTTPZap) ResponseLog(status int, size int, duration time.Duration) {
 	logger.logZap.Infow("Send response with",
 		"status", status,
 		"size", size,
+		"time", duration.String(),
 	)
 }

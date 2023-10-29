@@ -16,7 +16,6 @@ type Metrics struct {
 
 func (m Metrics) MarshalJSON() ([]byte, error) {
 
-	//log.Printf("started json marhsling %v", m)
 	type MetricAlias Metrics
 	var Delta int64
 	var Value float64
@@ -66,22 +65,3 @@ func (m Metrics) MarshalJSON() ([]byte, error) {
 	}
 
 }
-
-// func (m *Metrics) UnmarshalJSON(data []byte) (err error) {
-// 	type MetricAlias Metrics
-
-// 	aliasMetric := struct {
-// 		*MetricAlias
-// 		Value float64
-// 		Delta int64
-// 	}{
-// 		MetricAlias: (*MetricAlias)(m),
-// 	}
-
-// 	if err := json.Unmarshal(data, &aliasMetric); err != nil {
-// 		return err
-// 	}
-// 	m.Delta = &aliasMetric.Delta
-// 	m.Value = &aliasMetric.Value
-// 	return nil
-// }

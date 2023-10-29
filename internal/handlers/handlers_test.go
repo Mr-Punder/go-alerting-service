@@ -626,8 +626,9 @@ func TestMetricRouter(t *testing.T) {
 			Log, err := logger.NewLogZap("info", "./log.txt", "stderr")
 			require.NoError(t, err)
 
-			ts := httptest.NewServer(MetricRouter(stor, Log))
+			ts := httptest.NewServer(NewMetricRouter(stor, Log))
 			defer ts.Close()
+
 			resp, body := testRequest(t, ts, tt.method, tt.uri, tt.sentBody, tt.sentHeaders)
 			defer resp.Body.Close()
 			assert.Equal(t, tt.wantCode, resp.StatusCode)
