@@ -3,26 +3,38 @@ package config
 import (
 	"flag"
 	"os"
+	"strconv"
 )
 
 type Config struct {
-	FlagRunAddr   string
-	LogLevel      string
-	LogOutputPath string
-	LogErrorPath  string
+	FlagRunAddr     string
+	LogLevel        string
+	LogOutputPath   string
+	LogErrorPath    string
+	StoreInterval   int64
+	FileStoragePath string
+	Restore         bool
 }
 
 // GetConfig from environment and consol parameters
 func GetConfig() *Config {
-	var flagRunAddr string
-	var logLevel string
-	var logOutputPath string
-	var logErrortPath string
+	var (
+		flagRunAddr     string
+		logLevel        string
+		logOutputPath   string
+		logErrortPath   string
+		storeInterval   int64
+		fileStoragePath string
+		restore         bool
+	)
 
 	flag.StringVar(&flagRunAddr, "a", "localhost:8080", "addres and port to run server")
 	flag.StringVar(&logLevel, "l", "info", "level of logging")
 	flag.StringVar(&logOutputPath, "lp", "stdout", "log output path")
 	flag.StringVar(&logErrortPath, "le", "stderr", "log error output path")
+	flag.Int64Var(&storeInterval, "i", 300, "metrics saving interval")
+	flag.StringVar(&fileStoragePath, "f", "/tmp/metrics-db.json", "storage filename")
+	flag.BoolVar(&restore, "r", true, "restore metrics from storage")
 
 	flag.Parse()
 
@@ -42,6 +54,18 @@ func GetConfig() *Config {
 
 		logErrortPath = envLogErrorPath
 	}
+	if envStoreInterval, ok := os.LookupEnv("STORE_INTERVAL"); ok {
 
-	return &Config{flagRunAddr, logLevel, logOutputPath, logErrortPath}
+		storeInterval, _ = strconv.ParseInt(envStoreInterval, 10, 64)
+	}
+	if envFileStoragePath, ok := os.LookupEnv("FILE_STORAGE_PATH"); ok {
+
+		fileStoragePath = envFileStoragePath
+	}
+	if envRestor, ok := os.LookupEnv("RESTORE"); ok {
+
+		restore, _ = strconv.ParseBool(envRestor)
+	}
+
+	return &Config{flagRunAddr, logLevel, logOutputPath, logErrortPath, storeInterval, fileStoragePath, restore}
 }

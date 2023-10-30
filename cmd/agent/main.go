@@ -139,7 +139,7 @@ func sendMetrics(metrics []metrics.Metrics, addres string, logger simpleLogger) 
 
 func run() error {
 	//zapLogger, err := logger.NewLogZap("info", "stdout", "stderr")
-	ruslog, err := logger.NewLogLogrus("info", "stdout")
+	ruslog, err := logger.NewLogLogrus(config.LogLevel, config.LogOutputPath)
 	if err != nil {
 		return err
 	}

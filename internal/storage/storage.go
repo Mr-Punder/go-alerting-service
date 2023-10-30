@@ -1,62 +1,153 @@
 package storage
 
 import (
+	"encoding/json"
 	"errors"
+	"io"
+	"os"
+	"path/filepath"
+	"sync"
 
 	"github.com/Mr-Punder/go-alerting-service/internal/metrics"
 )
 
+type storLogger interface {
+	Info(mes string)
+	Errorf(str string, arg ...any)
+	Error(mess string)
+	Infof(str string, arg ...any)
+	Debug(mess string)
+}
+
 // MemStorage is simple implementation of storage metrics storage with map
 type MemStorage struct {
-	Storage map[string]metrics.Metrics
+	syncSave bool
+	log      storLogger
+	file     *os.File
+	encoder  *json.Encoder
+	mu       sync.Mutex
+	storage  map[string]metrics.Metrics
+}
+
+func NewMemStorage(metrics map[string]metrics.Metrics, ss bool, path string, log storLogger) (*MemStorage, error) {
+	var file *os.File
+	var err error
+
+	if path != "" {
+		file, err = os.OpenFile(path, os.O_CREATE|os.O_TRUNC|os.O_RDWR, 0666)
+		if err != nil {
+			log.Infof("cann't open file %s", err)
+			log.Infof("Trying to create dir %s", filepath.Dir(path))
+			err = os.MkdirAll(filepath.Dir(path), 0777)
+			if err != nil {
+				log.Errorf("creating directory %s", err)
+				return nil, err
+			}
+			file, err = os.OpenFile(path, os.O_CREATE|os.O_TRUNC|os.O_RDWR, 0666)
+			if err != nil {
+				log.Errorf("cann't open file %s", err)
+				return nil, err
+
+			}
+		}
+		log.Info("File opened")
+	}
+
+	return &MemStorage{
+		syncSave: ss,
+		log:      log,
+		storage:  metrics,
+		file:     file,
+		encoder:  json.NewEncoder(file),
+	}, nil
+}
+
+func (stor *MemStorage) Close() {
+	stor.file.Close()
+	stor.log.Info("File closed")
 }
 
 // GetAll returns map with all metrics
 func (stor *MemStorage) GetAll() map[string]metrics.Metrics {
-	if stor.Storage == nil {
-		stor.Storage = make(map[string]metrics.Metrics)
+	if stor.storage == nil {
+		stor.storage = make(map[string]metrics.Metrics)
 	}
-	return stor.Storage
+	return stor.storage
 }
 
 // Set stores metric
 func (stor *MemStorage) Set(metric metrics.Metrics) error {
-	if stor.Storage == nil {
-		stor.Storage = make(map[string]metrics.Metrics)
+	if stor.storage == nil {
+		stor.storage = make(map[string]metrics.Metrics)
 	}
 	if metric.MType == "gauge" {
-		stor.Storage[metric.ID] = metric
-		return nil
-	}
-	if metric.MType == "counter" {
-		if st, ok := stor.Storage[metric.ID]; ok {
+		stor.mu.Lock()
+		stor.storage[metric.ID] = metric
+		stor.mu.Unlock()
+
+	} else if metric.MType == "counter" {
+		stor.mu.Lock()
+
+		if st, ok := stor.storage[metric.ID]; ok {
 			*st.Delta += *metric.Delta
-			stor.Storage[metric.ID] = st
+			stor.storage[metric.ID] = st
 		} else {
-			stor.Storage[metric.ID] = metric
+			stor.storage[metric.ID] = metric
 		}
-		return nil
+		stor.mu.Unlock()
+
+	} else {
+		return errors.New("wrong type")
+
 	}
-	return errors.New("wrong type")
+
+	if stor.syncSave {
+		err := stor.Save()
+		if err != nil {
+			return err
+		}
+	}
+	return nil
 }
 
 // Get returns one metric  and it's existence
 // returns metrics.Metrics{}, false if metric is not found
 func (stor *MemStorage) Get(metric metrics.Metrics) (metrics.Metrics, bool) {
-	if stor.Storage == nil {
-		stor.Storage = make(map[string]metrics.Metrics)
+	if stor.storage == nil {
+		stor.storage = make(map[string]metrics.Metrics)
 	}
 	if metric.MType != "gauge" && metric.MType != "counter" {
 		return metrics.Metrics{}, false
 	}
-	m, ok := stor.Storage[metric.ID]
+	m, ok := stor.storage[metric.ID]
 	return m, ok
 }
 
 // Delete deletes one gauge by name and do nothibg if the metric does not exist
 func (stor *MemStorage) DeleteGouge(metric metrics.Metrics) {
-	if stor.Storage == nil {
-		stor.Storage = make(map[string]metrics.Metrics)
+	if stor.storage == nil {
+		stor.storage = make(map[string]metrics.Metrics)
 	}
-	delete(stor.Storage, metric.ID)
+	delete(stor.storage, metric.ID)
+}
+
+func (stor *MemStorage) Save() error {
+	if _, err := stor.file.Seek(0, io.SeekStart); err != nil {
+		return err
+	}
+	err := stor.file.Truncate(0)
+	if err != nil {
+		stor.log.Errorf("Truncate file %s", err)
+		return err
+	}
+
+	stor.mu.Lock()
+	err = stor.encoder.Encode(stor.storage)
+	if err != nil {
+		stor.log.Errorf("encode metrics %s", err)
+		return err
+	}
+	stor.mu.Unlock()
+	stor.log.Info("Metrics saved")
+	return nil
 }

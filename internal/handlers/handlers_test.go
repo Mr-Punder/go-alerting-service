@@ -622,8 +622,9 @@ func TestMetricRouter(t *testing.T) {
 	}
 	for _, tt := range tests {
 		t.Run(tt.name, func(t *testing.T) {
-			stor := &storage.MemStorage{Storage: tt.metrics}
-			Log, err := logger.NewLogZap("info", "./log.txt", "stderr")
+			Log, err := logger.NewLogLogrus("info", "./log.txt")
+			require.NoError(t, err)
+			stor, err := storage.NewMemStorage(tt.metrics, false, "", Log)
 			require.NoError(t, err)
 
 			ts := httptest.NewServer(NewMetricRouter(stor, Log))

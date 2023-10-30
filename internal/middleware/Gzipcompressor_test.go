@@ -61,10 +61,11 @@ func TestGzipCompressor(t *testing.T) {
 		},
 	}
 
-	stor := &storage.MemStorage{Storage: metrics}
-	// Log, err := logger.NewLogZap("info", "./log.txt", "stderr")
 	Log, err := logger.NewLogLogrus("info", "./log.txt")
 	require.NoError(t, err)
+	stor, err := storage.NewMemStorage(metrics, false, "", Log)
+	require.NoError(t, err)
+	// Log, err := logger.NewLogZap("info", "./log.txt", "stderr")
 
 	comp := NewGzipCompressor(Log)
 	hlog := NewHTTPLoger(Log)
