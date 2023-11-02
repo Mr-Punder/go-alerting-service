@@ -166,3 +166,297 @@ time="2023-11-01T14:40:33+03:00" level=info msg="2023-11-01 14:40:33.58649935\t 
 2023-11-02T14:51:03.651+0300	[34mINFO[0m	zap/zaplogger.go:57	Recieved str: ‹      ÿªVÊLQ²RJWÒQ*©,H1KÓS•t”ÊsJS•¬LõŒj  ÿÿRÁé%   
 2023-11-02T14:51:03.651+0300	[34mINFO[0m	zap/zaplogger.go:57	Decompressed response: {"id":"g","type":"gauge","value":5.2}
 2023-11-02T14:51:03.651+0300	[34mINFO[0m	zap/zaplogger.go:57	Want response: {"id":"g","type":"gauge","value":5.2}
+2023-11-02T15:08:46.075+0300	[34mINFO[0m	zap/zaplogger.go:53	sending test started
+2023-11-02T15:08:46.075+0300	[34mINFO[0m	zap/zaplogger.go:45	incoming request	{"method": "POST", "path": "/update"}
+2023-11-02T15:08:46.075+0300	[34mINFO[0m	zap/zaplogger.go:53	Headers:  map[Accept-Encoding:[gzip] Content-Encoding:[gzip] Content-Length:[59] Content-Type:[application/json] User-Agent:[Go-http-client/1.1]]
+2023-11-02T15:08:46.075+0300	[34mINFO[0m	zap/zaplogger.go:53	Entered compressor
+2023-11-02T15:08:46.075+0300	[34mINFO[0m	zap/zaplogger.go:53	Headers:  map[Accept-Encoding:[gzip] Content-Encoding:[gzip] Content-Length:[59] Content-Type:[application/json] User-Agent:[Go-http-client/1.1]]
+2023-11-02T15:08:46.075+0300	[34mINFO[0m	zap/zaplogger.go:53	Content-Encoding = gzip
+2023-11-02T15:08:46.075+0300	[34mINFO[0m	zap/zaplogger.go:53	Detected gzip compression
+2023-11-02T15:08:46.075+0300	[34mINFO[0m	zap/zaplogger.go:53	Accept-Encoding: [gzip]
+2023-11-02T15:08:46.075+0300	[34mINFO[0m	zap/zaplogger.go:53	Detected gzip support
+2023-11-02T15:08:46.075+0300	[34mINFO[0m	zap/zaplogger.go:53	Entered JSONUpdHandler
+2023-11-02T15:08:46.075+0300	[34mINFO[0m	zap/zaplogger.go:53	Method checked
+2023-11-02T15:08:46.075+0300	[34mINFO[0m	zap/zaplogger.go:53	Decoded metric to stor {g gauge <nil> 0xc00012e1b0}
+2023-11-02T15:08:46.075+0300	[34mINFO[0m	zap/zaplogger.go:53	Metrics on server: gaugeMetric, counterMetric, 
+2023-11-02T15:08:46.075+0300	[34mINFO[0m	zap/zaplogger.go:53	Metric g stored
+2023-11-02T15:08:46.075+0300	[34mINFO[0m	zap/zaplogger.go:53	JSONUpdHandler exited
+2023-11-02T15:08:46.076+0300	[34mINFO[0m	zap/zaplogger.go:53	request served from GzipCompressor
+2023-11-02T15:08:46.076+0300	[34mINFO[0m	zap/zaplogger.go:53	request served from HttpLogger
+2023-11-02T15:08:46.076+0300	[34mINFO[0m	zap/zaplogger.go:76	Send response with	{"status": 200, "size": 59, "time": "353.574Âµs"}
+2023-11-02T15:08:46.076+0300	[34mINFO[0m	zap/zaplogger.go:53	request sent
+2023-11-02T15:08:46.076+0300	[34mINFO[0m	zap/zaplogger.go:57	finish request with status 200 OK
+2023-11-02T15:08:46.076+0300	[34mINFO[0m	zap/zaplogger.go:57	Recieved str: {"id":"g","type":"gauge","value":5.2}
+2023-11-02T15:08:46.076+0300	[34mINFO[0m	zap/zaplogger.go:45	incoming request	{"method": "POST", "path": "/update"}
+2023-11-02T15:08:46.076+0300	[34mINFO[0m	zap/zaplogger.go:53	Headers:  map[Accept-Encoding:[gzip] Content-Length:[37] Content-Type:[application/json] User-Agent:[Go-http-client/1.1]]
+2023-11-02T15:08:46.076+0300	[34mINFO[0m	zap/zaplogger.go:53	Entered compressor
+2023-11-02T15:08:46.076+0300	[34mINFO[0m	zap/zaplogger.go:53	Headers:  map[Accept-Encoding:[gzip] Content-Length:[37] Content-Type:[application/json] User-Agent:[Go-http-client/1.1]]
+2023-11-02T15:08:46.076+0300	[34mINFO[0m	zap/zaplogger.go:53	Content-Encoding = 
+2023-11-02T15:08:46.076+0300	[34mINFO[0m	zap/zaplogger.go:53	Accept-Encoding: [gzip]
+2023-11-02T15:08:46.076+0300	[34mINFO[0m	zap/zaplogger.go:53	Detected gzip support
+2023-11-02T15:08:46.076+0300	[34mINFO[0m	zap/zaplogger.go:53	Entered JSONUpdHandler
+2023-11-02T15:08:46.076+0300	[34mINFO[0m	zap/zaplogger.go:53	Method checked
+2023-11-02T15:08:46.076+0300	[34mINFO[0m	zap/zaplogger.go:53	Decoded metric to stor {g gauge <nil> 0xc0002b6050}
+2023-11-02T15:08:46.076+0300	[34mINFO[0m	zap/zaplogger.go:53	Metrics on server: gaugeMetric, counterMetric, g, 
+2023-11-02T15:08:46.076+0300	[34mINFO[0m	zap/zaplogger.go:53	Metric g stored
+2023-11-02T15:08:46.076+0300	[34mINFO[0m	zap/zaplogger.go:53	JSONUpdHandler exited
+2023-11-02T15:08:46.077+0300	[34mINFO[0m	zap/zaplogger.go:53	request served from GzipCompressor
+2023-11-02T15:08:46.077+0300	[34mINFO[0m	zap/zaplogger.go:53	request served from HttpLogger
+2023-11-02T15:08:46.077+0300	[34mINFO[0m	zap/zaplogger.go:76	Send response with	{"status": 200, "size": 59, "time": "788.864Âµs"}
+2023-11-02T15:08:46.077+0300	[34mINFO[0m	zap/zaplogger.go:53	request sent
+2023-11-02T15:08:46.077+0300	[34mINFO[0m	zap/zaplogger.go:57	finish request with status 200 OK
+2023-11-02T15:08:46.077+0300	[34mINFO[0m	zap/zaplogger.go:57	Recieved str: ‹      ÿªVÊLQ²RJWÒQ*©,H1KÓS•t”ÊsJS•¬LõŒj  ÿÿRÁé%   
+2023-11-02T15:08:46.077+0300	[34mINFO[0m	zap/zaplogger.go:57	Decompressed response: {"id":"g","type":"gauge","value":5.2}
+2023-11-02T15:08:46.077+0300	[34mINFO[0m	zap/zaplogger.go:57	Want response: {"id":"g","type":"gauge","value":5.2}
+2023-11-02T15:38:23.653+0300	[34mINFO[0m	zap/zaplogger.go:53	sending test started
+2023-11-02T15:38:23.653+0300	[34mINFO[0m	zap/zaplogger.go:45	incoming request	{"method": "POST", "path": "/update"}
+2023-11-02T15:38:23.653+0300	[34mINFO[0m	zap/zaplogger.go:53	Headers:  map[Accept-Encoding:[gzip] Content-Encoding:[gzip] Content-Length:[59] Content-Type:[application/json] User-Agent:[Go-http-client/1.1]]
+2023-11-02T15:38:23.653+0300	[34mINFO[0m	zap/zaplogger.go:53	Entered compressor
+2023-11-02T15:38:23.653+0300	[34mINFO[0m	zap/zaplogger.go:53	Headers:  map[Accept-Encoding:[gzip] Content-Encoding:[gzip] Content-Length:[59] Content-Type:[application/json] User-Agent:[Go-http-client/1.1]]
+2023-11-02T15:38:23.653+0300	[34mINFO[0m	zap/zaplogger.go:53	Content-Encoding = gzip
+2023-11-02T15:38:23.653+0300	[34mINFO[0m	zap/zaplogger.go:53	Detected gzip compression
+2023-11-02T15:38:23.653+0300	[34mINFO[0m	zap/zaplogger.go:53	Accept-Encoding: [gzip]
+2023-11-02T15:38:23.653+0300	[34mINFO[0m	zap/zaplogger.go:53	Detected gzip support
+2023-11-02T15:38:23.653+0300	[34mINFO[0m	zap/zaplogger.go:53	Entered JSONUpdHandler
+2023-11-02T15:38:23.653+0300	[34mINFO[0m	zap/zaplogger.go:53	Method checked
+2023-11-02T15:38:23.653+0300	[34mINFO[0m	zap/zaplogger.go:53	Decoded metric to stor {g gauge <nil> 0xc0001261b0}
+2023-11-02T15:38:23.653+0300	[34mINFO[0m	zap/zaplogger.go:53	Metrics on server: gaugeMetric, counterMetric, 
+2023-11-02T15:38:23.653+0300	[34mINFO[0m	zap/zaplogger.go:53	Metric g stored
+2023-11-02T15:38:23.653+0300	[34mINFO[0m	zap/zaplogger.go:53	JSONUpdHandler exited
+2023-11-02T15:38:23.653+0300	[34mINFO[0m	zap/zaplogger.go:53	request served from GzipCompressor
+2023-11-02T15:38:23.653+0300	[34mINFO[0m	zap/zaplogger.go:53	request served from HttpLogger
+2023-11-02T15:38:23.653+0300	[34mINFO[0m	zap/zaplogger.go:76	Send response with	{"status": 200, "size": 59, "time": "293.474Âµs"}
+2023-11-02T15:38:23.654+0300	[34mINFO[0m	zap/zaplogger.go:53	request sent
+2023-11-02T15:38:23.654+0300	[34mINFO[0m	zap/zaplogger.go:57	finish request with status 200 OK
+2023-11-02T15:38:23.654+0300	[34mINFO[0m	zap/zaplogger.go:57	Recieved str: {"id":"g","type":"gauge","value":5.2}
+2023-11-02T15:38:23.654+0300	[34mINFO[0m	zap/zaplogger.go:45	incoming request	{"method": "POST", "path": "/update"}
+2023-11-02T15:38:23.654+0300	[34mINFO[0m	zap/zaplogger.go:53	Headers:  map[Accept-Encoding:[gzip] Content-Length:[37] Content-Type:[application/json] User-Agent:[Go-http-client/1.1]]
+2023-11-02T15:38:23.654+0300	[34mINFO[0m	zap/zaplogger.go:53	Entered compressor
+2023-11-02T15:38:23.654+0300	[34mINFO[0m	zap/zaplogger.go:53	Headers:  map[Accept-Encoding:[gzip] Content-Length:[37] Content-Type:[application/json] User-Agent:[Go-http-client/1.1]]
+2023-11-02T15:38:23.654+0300	[34mINFO[0m	zap/zaplogger.go:53	Content-Encoding = 
+2023-11-02T15:38:23.654+0300	[34mINFO[0m	zap/zaplogger.go:53	Accept-Encoding: [gzip]
+2023-11-02T15:38:23.654+0300	[34mINFO[0m	zap/zaplogger.go:53	Detected gzip support
+2023-11-02T15:38:23.654+0300	[34mINFO[0m	zap/zaplogger.go:53	Entered JSONUpdHandler
+2023-11-02T15:38:23.654+0300	[34mINFO[0m	zap/zaplogger.go:53	Method checked
+2023-11-02T15:38:23.654+0300	[34mINFO[0m	zap/zaplogger.go:53	Decoded metric to stor {g gauge <nil> 0xc0001263a8}
+2023-11-02T15:38:23.654+0300	[34mINFO[0m	zap/zaplogger.go:53	Metrics on server: gaugeMetric, counterMetric, g, 
+2023-11-02T15:38:23.654+0300	[34mINFO[0m	zap/zaplogger.go:53	Metric g stored
+2023-11-02T15:38:23.654+0300	[34mINFO[0m	zap/zaplogger.go:53	JSONUpdHandler exited
+2023-11-02T15:38:23.654+0300	[34mINFO[0m	zap/zaplogger.go:53	request served from GzipCompressor
+2023-11-02T15:38:23.655+0300	[34mINFO[0m	zap/zaplogger.go:53	request served from HttpLogger
+2023-11-02T15:38:23.655+0300	[34mINFO[0m	zap/zaplogger.go:76	Send response with	{"status": 200, "size": 59, "time": "1.002957ms"}
+2023-11-02T15:38:23.655+0300	[34mINFO[0m	zap/zaplogger.go:53	request sent
+2023-11-02T15:38:23.655+0300	[34mINFO[0m	zap/zaplogger.go:57	finish request with status 200 OK
+2023-11-02T15:38:23.655+0300	[34mINFO[0m	zap/zaplogger.go:57	Recieved str: ‹      ÿªVÊLQ²RJWÒQ*©,H1KÓS•t”ÊsJS•¬LõŒj  ÿÿRÁé%   
+2023-11-02T15:38:23.655+0300	[34mINFO[0m	zap/zaplogger.go:57	Decompressed response: {"id":"g","type":"gauge","value":5.2}
+2023-11-02T15:38:23.655+0300	[34mINFO[0m	zap/zaplogger.go:57	Want response: {"id":"g","type":"gauge","value":5.2}
+2023-11-02T15:38:48.975+0300	[34mINFO[0m	zap/zaplogger.go:53	sending test started
+2023-11-02T15:38:48.976+0300	[34mINFO[0m	zap/zaplogger.go:45	incoming request	{"method": "POST", "path": "/update"}
+2023-11-02T15:38:48.976+0300	[34mINFO[0m	zap/zaplogger.go:53	Headers:  map[Accept-Encoding:[gzip] Content-Encoding:[gzip] Content-Length:[59] Content-Type:[application/json] User-Agent:[Go-http-client/1.1]]
+2023-11-02T15:38:48.976+0300	[34mINFO[0m	zap/zaplogger.go:53	Entered compressor
+2023-11-02T15:38:48.976+0300	[34mINFO[0m	zap/zaplogger.go:53	Headers:  map[Accept-Encoding:[gzip] Content-Encoding:[gzip] Content-Length:[59] Content-Type:[application/json] User-Agent:[Go-http-client/1.1]]
+2023-11-02T15:38:48.976+0300	[34mINFO[0m	zap/zaplogger.go:53	Content-Encoding = gzip
+2023-11-02T15:38:48.976+0300	[34mINFO[0m	zap/zaplogger.go:53	Detected gzip compression
+2023-11-02T15:38:48.976+0300	[34mINFO[0m	zap/zaplogger.go:53	Accept-Encoding: [gzip]
+2023-11-02T15:38:48.976+0300	[34mINFO[0m	zap/zaplogger.go:53	Detected gzip support
+2023-11-02T15:38:48.976+0300	[34mINFO[0m	zap/zaplogger.go:53	Entered JSONUpdHandler
+2023-11-02T15:38:48.976+0300	[34mINFO[0m	zap/zaplogger.go:53	Method checked
+2023-11-02T15:38:48.976+0300	[34mINFO[0m	zap/zaplogger.go:53	Decoded metric to stor {g gauge <nil> 0xc0002661b0}
+2023-11-02T15:38:48.976+0300	[34mINFO[0m	zap/zaplogger.go:53	Metrics on server: gaugeMetric, counterMetric, 
+2023-11-02T15:38:48.976+0300	[34mINFO[0m	zap/zaplogger.go:53	Metric g stored
+2023-11-02T15:38:48.976+0300	[34mINFO[0m	zap/zaplogger.go:53	JSONUpdHandler exited
+2023-11-02T15:38:48.976+0300	[34mINFO[0m	zap/zaplogger.go:53	request served from GzipCompressor
+2023-11-02T15:38:48.976+0300	[34mINFO[0m	zap/zaplogger.go:53	request served from HttpLogger
+2023-11-02T15:38:48.976+0300	[34mINFO[0m	zap/zaplogger.go:76	Send response with	{"status": 200, "size": 59, "time": "366.371Âµs"}
+2023-11-02T15:38:48.977+0300	[34mINFO[0m	zap/zaplogger.go:53	request sent
+2023-11-02T15:38:48.977+0300	[34mINFO[0m	zap/zaplogger.go:57	finish request with status 200 OK
+2023-11-02T15:38:48.977+0300	[34mINFO[0m	zap/zaplogger.go:57	Recieved str: {"id":"g","type":"gauge","value":5.2}
+2023-11-02T15:38:48.977+0300	[34mINFO[0m	zap/zaplogger.go:45	incoming request	{"method": "POST", "path": "/update"}
+2023-11-02T15:38:48.977+0300	[34mINFO[0m	zap/zaplogger.go:53	Headers:  map[Accept-Encoding:[gzip] Content-Length:[37] Content-Type:[application/json] User-Agent:[Go-http-client/1.1]]
+2023-11-02T15:38:48.977+0300	[34mINFO[0m	zap/zaplogger.go:53	Entered compressor
+2023-11-02T15:38:48.977+0300	[34mINFO[0m	zap/zaplogger.go:53	Headers:  map[Accept-Encoding:[gzip] Content-Length:[37] Content-Type:[application/json] User-Agent:[Go-http-client/1.1]]
+2023-11-02T15:38:48.977+0300	[34mINFO[0m	zap/zaplogger.go:53	Content-Encoding = 
+2023-11-02T15:38:48.977+0300	[34mINFO[0m	zap/zaplogger.go:53	Accept-Encoding: [gzip]
+2023-11-02T15:38:48.977+0300	[34mINFO[0m	zap/zaplogger.go:53	Detected gzip support
+2023-11-02T15:38:48.977+0300	[34mINFO[0m	zap/zaplogger.go:53	Entered JSONUpdHandler
+2023-11-02T15:38:48.977+0300	[34mINFO[0m	zap/zaplogger.go:53	Method checked
+2023-11-02T15:38:48.977+0300	[34mINFO[0m	zap/zaplogger.go:53	Decoded metric to stor {g gauge <nil> 0xc00042c050}
+2023-11-02T15:38:48.977+0300	[34mINFO[0m	zap/zaplogger.go:53	Metrics on server: gaugeMetric, counterMetric, g, 
+2023-11-02T15:38:48.977+0300	[34mINFO[0m	zap/zaplogger.go:53	Metric g stored
+2023-11-02T15:38:48.977+0300	[34mINFO[0m	zap/zaplogger.go:53	JSONUpdHandler exited
+2023-11-02T15:38:48.978+0300	[34mINFO[0m	zap/zaplogger.go:53	request served from GzipCompressor
+2023-11-02T15:38:48.978+0300	[34mINFO[0m	zap/zaplogger.go:53	request served from HttpLogger
+2023-11-02T15:38:48.978+0300	[34mINFO[0m	zap/zaplogger.go:76	Send response with	{"status": 200, "size": 59, "time": "716.688Âµs"}
+2023-11-02T15:38:48.978+0300	[34mINFO[0m	zap/zaplogger.go:53	request sent
+2023-11-02T15:38:48.978+0300	[34mINFO[0m	zap/zaplogger.go:57	finish request with status 200 OK
+2023-11-02T15:38:48.978+0300	[34mINFO[0m	zap/zaplogger.go:57	Recieved str: ‹      ÿªVÊLQ²RJWÒQ*©,H1KÓS•t”ÊsJS•¬LõŒj  ÿÿRÁé%   
+2023-11-02T15:38:48.978+0300	[34mINFO[0m	zap/zaplogger.go:57	Decompressed response: {"id":"g","type":"gauge","value":5.2}
+2023-11-02T15:38:48.978+0300	[34mINFO[0m	zap/zaplogger.go:57	Want response: {"id":"g","type":"gauge","value":5.2}
+2023-11-02T15:38:51.019+0300	[34mINFO[0m	zap/zaplogger.go:53	sending test started
+2023-11-02T15:38:51.020+0300	[34mINFO[0m	zap/zaplogger.go:45	incoming request	{"method": "POST", "path": "/update"}
+2023-11-02T15:38:51.020+0300	[34mINFO[0m	zap/zaplogger.go:53	Headers:  map[Accept-Encoding:[gzip] Content-Encoding:[gzip] Content-Length:[59] Content-Type:[application/json] User-Agent:[Go-http-client/1.1]]
+2023-11-02T15:38:51.020+0300	[34mINFO[0m	zap/zaplogger.go:53	Entered compressor
+2023-11-02T15:38:51.020+0300	[34mINFO[0m	zap/zaplogger.go:53	Headers:  map[Accept-Encoding:[gzip] Content-Encoding:[gzip] Content-Length:[59] Content-Type:[application/json] User-Agent:[Go-http-client/1.1]]
+2023-11-02T15:38:51.020+0300	[34mINFO[0m	zap/zaplogger.go:53	Content-Encoding = gzip
+2023-11-02T15:38:51.020+0300	[34mINFO[0m	zap/zaplogger.go:53	Detected gzip compression
+2023-11-02T15:38:51.020+0300	[34mINFO[0m	zap/zaplogger.go:53	Accept-Encoding: [gzip]
+2023-11-02T15:38:51.020+0300	[34mINFO[0m	zap/zaplogger.go:53	Detected gzip support
+2023-11-02T15:38:51.020+0300	[34mINFO[0m	zap/zaplogger.go:53	Entered JSONUpdHandler
+2023-11-02T15:38:51.020+0300	[34mINFO[0m	zap/zaplogger.go:53	Method checked
+2023-11-02T15:38:51.020+0300	[34mINFO[0m	zap/zaplogger.go:53	Decoded metric to stor {g gauge <nil> 0xc000126190}
+2023-11-02T15:38:51.020+0300	[34mINFO[0m	zap/zaplogger.go:53	Metrics on server: gaugeMetric, counterMetric, 
+2023-11-02T15:38:51.020+0300	[34mINFO[0m	zap/zaplogger.go:53	Metric g stored
+2023-11-02T15:38:51.020+0300	[34mINFO[0m	zap/zaplogger.go:53	JSONUpdHandler exited
+2023-11-02T15:38:51.020+0300	[34mINFO[0m	zap/zaplogger.go:53	request served from GzipCompressor
+2023-11-02T15:38:51.020+0300	[34mINFO[0m	zap/zaplogger.go:53	request served from HttpLogger
+2023-11-02T15:38:51.020+0300	[34mINFO[0m	zap/zaplogger.go:76	Send response with	{"status": 200, "size": 59, "time": "272.522Âµs"}
+2023-11-02T15:38:51.020+0300	[34mINFO[0m	zap/zaplogger.go:53	request sent
+2023-11-02T15:38:51.021+0300	[34mINFO[0m	zap/zaplogger.go:57	finish request with status 200 OK
+2023-11-02T15:38:51.021+0300	[34mINFO[0m	zap/zaplogger.go:57	Recieved str: {"id":"g","type":"gauge","value":5.2}
+2023-11-02T15:38:51.021+0300	[34mINFO[0m	zap/zaplogger.go:45	incoming request	{"method": "POST", "path": "/update"}
+2023-11-02T15:38:51.021+0300	[34mINFO[0m	zap/zaplogger.go:53	Headers:  map[Accept-Encoding:[gzip] Content-Length:[37] Content-Type:[application/json] User-Agent:[Go-http-client/1.1]]
+2023-11-02T15:38:51.021+0300	[34mINFO[0m	zap/zaplogger.go:53	Entered compressor
+2023-11-02T15:38:51.021+0300	[34mINFO[0m	zap/zaplogger.go:53	Headers:  map[Accept-Encoding:[gzip] Content-Length:[37] Content-Type:[application/json] User-Agent:[Go-http-client/1.1]]
+2023-11-02T15:38:51.021+0300	[34mINFO[0m	zap/zaplogger.go:53	Content-Encoding = 
+2023-11-02T15:38:51.021+0300	[34mINFO[0m	zap/zaplogger.go:53	Accept-Encoding: [gzip]
+2023-11-02T15:38:51.021+0300	[34mINFO[0m	zap/zaplogger.go:53	Detected gzip support
+2023-11-02T15:38:51.021+0300	[34mINFO[0m	zap/zaplogger.go:53	Entered JSONUpdHandler
+2023-11-02T15:38:51.021+0300	[34mINFO[0m	zap/zaplogger.go:53	Method checked
+2023-11-02T15:38:51.021+0300	[34mINFO[0m	zap/zaplogger.go:53	Decoded metric to stor {g gauge <nil> 0xc000126468}
+2023-11-02T15:38:51.021+0300	[34mINFO[0m	zap/zaplogger.go:53	Metrics on server: gaugeMetric, counterMetric, g, 
+2023-11-02T15:38:51.021+0300	[34mINFO[0m	zap/zaplogger.go:53	Metric g stored
+2023-11-02T15:38:51.021+0300	[34mINFO[0m	zap/zaplogger.go:53	JSONUpdHandler exited
+2023-11-02T15:38:51.021+0300	[34mINFO[0m	zap/zaplogger.go:53	request served from GzipCompressor
+2023-11-02T15:38:51.022+0300	[34mINFO[0m	zap/zaplogger.go:53	request served from HttpLogger
+2023-11-02T15:38:51.022+0300	[34mINFO[0m	zap/zaplogger.go:76	Send response with	{"status": 200, "size": 59, "time": "894.441Âµs"}
+2023-11-02T15:38:51.022+0300	[34mINFO[0m	zap/zaplogger.go:53	request sent
+2023-11-02T15:38:51.022+0300	[34mINFO[0m	zap/zaplogger.go:57	finish request with status 200 OK
+2023-11-02T15:38:51.022+0300	[34mINFO[0m	zap/zaplogger.go:57	Recieved str: ‹      ÿªVÊLQ²RJWÒQ*©,H1KÓS•t”ÊsJS•¬LõŒj  ÿÿRÁé%   
+2023-11-02T15:38:51.022+0300	[34mINFO[0m	zap/zaplogger.go:57	Decompressed response: {"id":"g","type":"gauge","value":5.2}
+2023-11-02T15:38:51.022+0300	[34mINFO[0m	zap/zaplogger.go:57	Want response: {"id":"g","type":"gauge","value":5.2}
+2023-11-02T15:39:51.360+0300	[34mINFO[0m	zap/zaplogger.go:53	sending test started
+2023-11-02T15:39:51.360+0300	[34mINFO[0m	zap/zaplogger.go:45	incoming request	{"method": "POST", "path": "/update"}
+2023-11-02T15:39:51.360+0300	[34mINFO[0m	zap/zaplogger.go:53	Headers:  map[Accept-Encoding:[gzip] Content-Encoding:[gzip] Content-Length:[59] Content-Type:[application/json] User-Agent:[Go-http-client/1.1]]
+2023-11-02T15:39:51.360+0300	[34mINFO[0m	zap/zaplogger.go:53	Entered compressor
+2023-11-02T15:39:51.360+0300	[34mINFO[0m	zap/zaplogger.go:53	Headers:  map[Accept-Encoding:[gzip] Content-Encoding:[gzip] Content-Length:[59] Content-Type:[application/json] User-Agent:[Go-http-client/1.1]]
+2023-11-02T15:39:51.360+0300	[34mINFO[0m	zap/zaplogger.go:53	Content-Encoding = gzip
+2023-11-02T15:39:51.360+0300	[34mINFO[0m	zap/zaplogger.go:53	Detected gzip compression
+2023-11-02T15:39:51.360+0300	[34mINFO[0m	zap/zaplogger.go:53	Accept-Encoding: [gzip]
+2023-11-02T15:39:51.360+0300	[34mINFO[0m	zap/zaplogger.go:53	Detected gzip support
+2023-11-02T15:39:51.360+0300	[34mINFO[0m	zap/zaplogger.go:53	Entered JSONUpdHandler
+2023-11-02T15:39:51.361+0300	[34mINFO[0m	zap/zaplogger.go:53	Method checked
+2023-11-02T15:39:51.361+0300	[34mINFO[0m	zap/zaplogger.go:53	Decoded metric to stor {g gauge <nil> 0xc0002c41b0}
+2023-11-02T15:39:51.361+0300	[34mINFO[0m	zap/zaplogger.go:53	Metrics on server: counterMetric, gaugeMetric, 
+2023-11-02T15:39:51.361+0300	[34mINFO[0m	zap/zaplogger.go:53	Metric g stored
+2023-11-02T15:39:51.361+0300	[34mINFO[0m	zap/zaplogger.go:53	JSONUpdHandler exited
+2023-11-02T15:39:51.361+0300	[34mINFO[0m	zap/zaplogger.go:53	request served from GzipCompressor
+2023-11-02T15:39:51.361+0300	[34mINFO[0m	zap/zaplogger.go:53	request served from HttpLogger
+2023-11-02T15:39:51.361+0300	[34mINFO[0m	zap/zaplogger.go:76	Send response with	{"status": 200, "size": 59, "time": "492.445Âµs"}
+2023-11-02T15:39:51.361+0300	[34mINFO[0m	zap/zaplogger.go:53	request sent
+2023-11-02T15:39:51.361+0300	[34mINFO[0m	zap/zaplogger.go:57	finish request with status 200 OK
+2023-11-02T15:39:51.361+0300	[34mINFO[0m	zap/zaplogger.go:57	Recieved str: {"id":"g","type":"gauge","value":5.2}
+2023-11-02T15:39:51.361+0300	[34mINFO[0m	zap/zaplogger.go:45	incoming request	{"method": "POST", "path": "/update"}
+2023-11-02T15:39:51.361+0300	[34mINFO[0m	zap/zaplogger.go:53	Headers:  map[Accept-Encoding:[gzip] Content-Length:[37] Content-Type:[application/json] User-Agent:[Go-http-client/1.1]]
+2023-11-02T15:39:51.361+0300	[34mINFO[0m	zap/zaplogger.go:53	Entered compressor
+2023-11-02T15:39:51.361+0300	[34mINFO[0m	zap/zaplogger.go:53	Headers:  map[Accept-Encoding:[gzip] Content-Length:[37] Content-Type:[application/json] User-Agent:[Go-http-client/1.1]]
+2023-11-02T15:39:51.361+0300	[34mINFO[0m	zap/zaplogger.go:53	Content-Encoding = 
+2023-11-02T15:39:51.361+0300	[34mINFO[0m	zap/zaplogger.go:53	Accept-Encoding: [gzip]
+2023-11-02T15:39:51.361+0300	[34mINFO[0m	zap/zaplogger.go:53	Detected gzip support
+2023-11-02T15:39:51.361+0300	[34mINFO[0m	zap/zaplogger.go:53	Entered JSONUpdHandler
+2023-11-02T15:39:51.361+0300	[34mINFO[0m	zap/zaplogger.go:53	Method checked
+2023-11-02T15:39:51.361+0300	[34mINFO[0m	zap/zaplogger.go:53	Decoded metric to stor {g gauge <nil> 0xc000012100}
+2023-11-02T15:39:51.361+0300	[34mINFO[0m	zap/zaplogger.go:53	Metrics on server: gaugeMetric, counterMetric, g, 
+2023-11-02T15:39:51.361+0300	[34mINFO[0m	zap/zaplogger.go:53	Metric g stored
+2023-11-02T15:39:51.361+0300	[34mINFO[0m	zap/zaplogger.go:53	JSONUpdHandler exited
+2023-11-02T15:39:51.362+0300	[34mINFO[0m	zap/zaplogger.go:53	request served from GzipCompressor
+2023-11-02T15:39:51.362+0300	[34mINFO[0m	zap/zaplogger.go:53	request served from HttpLogger
+2023-11-02T15:39:51.362+0300	[34mINFO[0m	zap/zaplogger.go:76	Send response with	{"status": 200, "size": 59, "time": "833.604Âµs"}
+2023-11-02T15:39:51.362+0300	[34mINFO[0m	zap/zaplogger.go:53	request sent
+2023-11-02T15:39:51.362+0300	[34mINFO[0m	zap/zaplogger.go:57	finish request with status 200 OK
+2023-11-02T15:39:51.362+0300	[34mINFO[0m	zap/zaplogger.go:57	Recieved str: ‹      ÿªVÊLQ²RJWÒQ*©,H1KÓS•t”ÊsJS•¬LõŒj  ÿÿRÁé%   
+2023-11-02T15:39:51.362+0300	[34mINFO[0m	zap/zaplogger.go:57	Decompressed response: {"id":"g","type":"gauge","value":5.2}
+2023-11-02T15:39:51.362+0300	[34mINFO[0m	zap/zaplogger.go:57	Want response: {"id":"g","type":"gauge","value":5.2}
+2023-11-02T15:40:19.495+0300	[34mINFO[0m	zap/zaplogger.go:53	sending test started
+2023-11-02T15:40:19.496+0300	[34mINFO[0m	zap/zaplogger.go:45	incoming request	{"method": "POST", "path": "/update"}
+2023-11-02T15:40:19.496+0300	[34mINFO[0m	zap/zaplogger.go:53	Headers:  map[Accept-Encoding:[gzip] Content-Encoding:[gzip] Content-Length:[59] Content-Type:[application/json] User-Agent:[Go-http-client/1.1]]
+2023-11-02T15:40:19.496+0300	[34mINFO[0m	zap/zaplogger.go:53	Entered compressor
+2023-11-02T15:40:19.496+0300	[34mINFO[0m	zap/zaplogger.go:53	Headers:  map[Accept-Encoding:[gzip] Content-Encoding:[gzip] Content-Length:[59] Content-Type:[application/json] User-Agent:[Go-http-client/1.1]]
+2023-11-02T15:40:19.496+0300	[34mINFO[0m	zap/zaplogger.go:53	Content-Encoding = gzip
+2023-11-02T15:40:19.496+0300	[34mINFO[0m	zap/zaplogger.go:53	Detected gzip compression
+2023-11-02T15:40:19.496+0300	[34mINFO[0m	zap/zaplogger.go:53	Accept-Encoding: [gzip]
+2023-11-02T15:40:19.496+0300	[34mINFO[0m	zap/zaplogger.go:53	Detected gzip support
+2023-11-02T15:40:19.496+0300	[34mINFO[0m	zap/zaplogger.go:53	Entered JSONUpdHandler
+2023-11-02T15:40:19.496+0300	[34mINFO[0m	zap/zaplogger.go:53	Method checked
+2023-11-02T15:40:19.496+0300	[34mINFO[0m	zap/zaplogger.go:53	Decoded metric to stor {g gauge <nil> 0xc000012260}
+2023-11-02T15:40:19.496+0300	[34mINFO[0m	zap/zaplogger.go:53	Metrics on server: gaugeMetric, counterMetric, 
+2023-11-02T15:40:19.496+0300	[34mINFO[0m	zap/zaplogger.go:53	Metric g stored
+2023-11-02T15:40:19.496+0300	[34mINFO[0m	zap/zaplogger.go:53	JSONUpdHandler exited
+2023-11-02T15:40:19.496+0300	[34mINFO[0m	zap/zaplogger.go:53	request served from GzipCompressor
+2023-11-02T15:40:19.496+0300	[34mINFO[0m	zap/zaplogger.go:53	request served from HttpLogger
+2023-11-02T15:40:19.496+0300	[34mINFO[0m	zap/zaplogger.go:76	Send response with	{"status": 200, "size": 59, "time": "328.845Âµs"}
+2023-11-02T15:40:19.496+0300	[34mINFO[0m	zap/zaplogger.go:53	request sent
+2023-11-02T15:40:19.496+0300	[34mINFO[0m	zap/zaplogger.go:57	finish request with status 200 OK
+2023-11-02T15:40:19.497+0300	[34mINFO[0m	zap/zaplogger.go:57	Recieved str: {"id":"g","type":"gauge","value":5.2}
+2023-11-02T15:40:19.497+0300	[34mINFO[0m	zap/zaplogger.go:45	incoming request	{"method": "POST", "path": "/update"}
+2023-11-02T15:40:19.497+0300	[34mINFO[0m	zap/zaplogger.go:53	Headers:  map[Accept-Encoding:[gzip] Content-Length:[37] Content-Type:[application/json] User-Agent:[Go-http-client/1.1]]
+2023-11-02T15:40:19.497+0300	[34mINFO[0m	zap/zaplogger.go:53	Entered compressor
+2023-11-02T15:40:19.497+0300	[34mINFO[0m	zap/zaplogger.go:53	Headers:  map[Accept-Encoding:[gzip] Content-Length:[37] Content-Type:[application/json] User-Agent:[Go-http-client/1.1]]
+2023-11-02T15:40:19.497+0300	[34mINFO[0m	zap/zaplogger.go:53	Content-Encoding = 
+2023-11-02T15:40:19.497+0300	[34mINFO[0m	zap/zaplogger.go:53	Accept-Encoding: [gzip]
+2023-11-02T15:40:19.497+0300	[34mINFO[0m	zap/zaplogger.go:53	Detected gzip support
+2023-11-02T15:40:19.497+0300	[34mINFO[0m	zap/zaplogger.go:53	Entered JSONUpdHandler
+2023-11-02T15:40:19.497+0300	[34mINFO[0m	zap/zaplogger.go:53	Method checked
+2023-11-02T15:40:19.497+0300	[34mINFO[0m	zap/zaplogger.go:53	Decoded metric to stor {g gauge <nil> 0xc000012458}
+2023-11-02T15:40:19.497+0300	[34mINFO[0m	zap/zaplogger.go:53	Metrics on server: gaugeMetric, counterMetric, g, 
+2023-11-02T15:40:19.497+0300	[34mINFO[0m	zap/zaplogger.go:53	Metric g stored
+2023-11-02T15:40:19.497+0300	[34mINFO[0m	zap/zaplogger.go:53	JSONUpdHandler exited
+2023-11-02T15:40:19.497+0300	[34mINFO[0m	zap/zaplogger.go:53	request served from GzipCompressor
+2023-11-02T15:40:19.497+0300	[34mINFO[0m	zap/zaplogger.go:53	request served from HttpLogger
+2023-11-02T15:40:19.498+0300	[34mINFO[0m	zap/zaplogger.go:76	Send response with	{"status": 200, "size": 59, "time": "861.047Âµs"}
+2023-11-02T15:40:19.498+0300	[34mINFO[0m	zap/zaplogger.go:53	request sent
+2023-11-02T15:40:19.498+0300	[34mINFO[0m	zap/zaplogger.go:57	finish request with status 200 OK
+2023-11-02T15:40:19.498+0300	[34mINFO[0m	zap/zaplogger.go:57	Recieved str: ‹      ÿªVÊLQ²RJWÒQ*©,H1KÓS•t”ÊsJS•¬LõŒj  ÿÿRÁé%   
+2023-11-02T15:40:19.498+0300	[34mINFO[0m	zap/zaplogger.go:57	Decompressed response: {"id":"g","type":"gauge","value":5.2}
+2023-11-02T15:40:19.498+0300	[34mINFO[0m	zap/zaplogger.go:57	Want response: {"id":"g","type":"gauge","value":5.2}
+2023-11-02T15:40:22.618+0300	[34mINFO[0m	zap/zaplogger.go:53	sending test started
+2023-11-02T15:40:22.618+0300	[34mINFO[0m	zap/zaplogger.go:45	incoming request	{"method": "POST", "path": "/update"}
+2023-11-02T15:40:22.619+0300	[34mINFO[0m	zap/zaplogger.go:53	Headers:  map[Accept-Encoding:[gzip] Content-Encoding:[gzip] Content-Length:[59] Content-Type:[application/json] User-Agent:[Go-http-client/1.1]]
+2023-11-02T15:40:22.619+0300	[34mINFO[0m	zap/zaplogger.go:53	Entered compressor
+2023-11-02T15:40:22.619+0300	[34mINFO[0m	zap/zaplogger.go:53	Headers:  map[Accept-Encoding:[gzip] Content-Encoding:[gzip] Content-Length:[59] Content-Type:[application/json] User-Agent:[Go-http-client/1.1]]
+2023-11-02T15:40:22.619+0300	[34mINFO[0m	zap/zaplogger.go:53	Content-Encoding = gzip
+2023-11-02T15:40:22.619+0300	[34mINFO[0m	zap/zaplogger.go:53	Detected gzip compression
+2023-11-02T15:40:22.619+0300	[34mINFO[0m	zap/zaplogger.go:53	Accept-Encoding: [gzip]
+2023-11-02T15:40:22.619+0300	[34mINFO[0m	zap/zaplogger.go:53	Detected gzip support
+2023-11-02T15:40:22.619+0300	[34mINFO[0m	zap/zaplogger.go:53	Entered JSONUpdHandler
+2023-11-02T15:40:22.619+0300	[34mINFO[0m	zap/zaplogger.go:53	Method checked
+2023-11-02T15:40:22.619+0300	[34mINFO[0m	zap/zaplogger.go:53	Decoded metric to stor {g gauge <nil> 0xc0001941b0}
+2023-11-02T15:40:22.619+0300	[34mINFO[0m	zap/zaplogger.go:53	Metrics on server: gaugeMetric, counterMetric, 
+2023-11-02T15:40:22.619+0300	[34mINFO[0m	zap/zaplogger.go:53	Metric g stored
+2023-11-02T15:40:22.619+0300	[34mINFO[0m	zap/zaplogger.go:53	JSONUpdHandler exited
+2023-11-02T15:40:22.619+0300	[34mINFO[0m	zap/zaplogger.go:53	request served from GzipCompressor
+2023-11-02T15:40:22.619+0300	[34mINFO[0m	zap/zaplogger.go:53	request served from HttpLogger
+2023-11-02T15:40:22.619+0300	[34mINFO[0m	zap/zaplogger.go:76	Send response with	{"status": 200, "size": 59, "time": "424.419Âµs"}
+2023-11-02T15:40:22.619+0300	[34mINFO[0m	zap/zaplogger.go:53	request sent
+2023-11-02T15:40:22.619+0300	[34mINFO[0m	zap/zaplogger.go:57	finish request with status 200 OK
+2023-11-02T15:40:22.619+0300	[34mINFO[0m	zap/zaplogger.go:57	Recieved str: {"id":"g","type":"gauge","value":5.2}
+2023-11-02T15:40:22.619+0300	[34mINFO[0m	zap/zaplogger.go:45	incoming request	{"method": "POST", "path": "/update"}
+2023-11-02T15:40:22.619+0300	[34mINFO[0m	zap/zaplogger.go:53	Headers:  map[Accept-Encoding:[gzip] Content-Length:[37] Content-Type:[application/json] User-Agent:[Go-http-client/1.1]]
+2023-11-02T15:40:22.619+0300	[34mINFO[0m	zap/zaplogger.go:53	Entered compressor
+2023-11-02T15:40:22.619+0300	[34mINFO[0m	zap/zaplogger.go:53	Headers:  map[Accept-Encoding:[gzip] Content-Length:[37] Content-Type:[application/json] User-Agent:[Go-http-client/1.1]]
+2023-11-02T15:40:22.619+0300	[34mINFO[0m	zap/zaplogger.go:53	Content-Encoding = 
+2023-11-02T15:40:22.619+0300	[34mINFO[0m	zap/zaplogger.go:53	Accept-Encoding: [gzip]
+2023-11-02T15:40:22.619+0300	[34mINFO[0m	zap/zaplogger.go:53	Detected gzip support
+2023-11-02T15:40:22.620+0300	[34mINFO[0m	zap/zaplogger.go:53	Entered JSONUpdHandler
+2023-11-02T15:40:22.620+0300	[34mINFO[0m	zap/zaplogger.go:53	Method checked
+2023-11-02T15:40:22.620+0300	[34mINFO[0m	zap/zaplogger.go:53	Decoded metric to stor {g gauge <nil> 0xc000012100}
+2023-11-02T15:40:22.620+0300	[34mINFO[0m	zap/zaplogger.go:53	Metrics on server: gaugeMetric, counterMetric, g, 
+2023-11-02T15:40:22.620+0300	[34mINFO[0m	zap/zaplogger.go:53	Metric g stored
+2023-11-02T15:40:22.620+0300	[34mINFO[0m	zap/zaplogger.go:53	JSONUpdHandler exited
+2023-11-02T15:40:22.620+0300	[34mINFO[0m	zap/zaplogger.go:53	request served from GzipCompressor
+2023-11-02T15:40:22.620+0300	[34mINFO[0m	zap/zaplogger.go:53	request served from HttpLogger
+2023-11-02T15:40:22.620+0300	[34mINFO[0m	zap/zaplogger.go:76	Send response with	{"status": 200, "size": 59, "time": "849.992Âµs"}
+2023-11-02T15:40:22.620+0300	[34mINFO[0m	zap/zaplogger.go:53	request sent
+2023-11-02T15:40:22.620+0300	[34mINFO[0m	zap/zaplogger.go:57	finish request with status 200 OK
+2023-11-02T15:40:22.620+0300	[34mINFO[0m	zap/zaplogger.go:57	Recieved str: ‹      ÿªVÊLQ²RJWÒQ*©,H1KÓS•t”ÊsJS•¬LõŒj  ÿÿRÁé%   
+2023-11-02T15:40:22.620+0300	[34mINFO[0m	zap/zaplogger.go:57	Decompressed response: {"id":"g","type":"gauge","value":5.2}
+2023-11-02T15:40:22.620+0300	[34mINFO[0m	zap/zaplogger.go:57	Want response: {"id":"g","type":"gauge","value":5.2}

@@ -209,3 +209,486 @@ time="2023-11-01T14:40:33+03:00" level=error msg="2023-11-01 14:40:33.5950823\t 
 2023-11-02T14:51:03.687+0300	[34mINFO[0m	zap/zaplogger.go:53	Method checked
 2023-11-02T14:51:03.687+0300	[34mINFO[0m	zap/zaplogger.go:53	Decoded metric {c_unk smth <nil> <nil>}
 2023-11-02T14:51:03.687+0300	[31mERROR[0m	zap/zaplogger.go:66	wrong type smth
+2023-11-02T15:08:46.075+0300	[34mINFO[0m	zap/zaplogger.go:53	Entered UpdHandler
+2023-11-02T15:08:46.078+0300	[34mINFO[0m	zap/zaplogger.go:53	Entered UpdHandler
+2023-11-02T15:08:46.080+0300	[34mINFO[0m	zap/zaplogger.go:53	Entered UpdHandler
+2023-11-02T15:08:46.082+0300	[34mINFO[0m	zap/zaplogger.go:53	Entered UpdHandler
+2023-11-02T15:08:46.084+0300	[34mINFO[0m	zap/zaplogger.go:53	Entered UpdHandler
+2023-11-02T15:08:46.085+0300	[34mINFO[0m	zap/zaplogger.go:53	Entered UpdHandler
+2023-11-02T15:08:46.089+0300	[34mINFO[0m	zap/zaplogger.go:53	Entered ValueHandler
+2023-11-02T15:08:46.089+0300	[34mINFO[0m	zap/zaplogger.go:53	Headers:  map[Accept-Encoding:[gzip] User-Agent:[Go-http-client/1.1]]
+2023-11-02T15:08:46.090+0300	[34mINFO[0m	zap/zaplogger.go:53	Entered ValueHandler
+2023-11-02T15:08:46.091+0300	[34mINFO[0m	zap/zaplogger.go:53	Headers:  map[Accept-Encoding:[gzip] User-Agent:[Go-http-client/1.1]]
+2023-11-02T15:08:46.092+0300	[34mINFO[0m	zap/zaplogger.go:53	Entered ValueHandler
+2023-11-02T15:08:46.092+0300	[34mINFO[0m	zap/zaplogger.go:53	Headers:  map[Accept-Encoding:[gzip] User-Agent:[Go-http-client/1.1]]
+2023-11-02T15:08:46.094+0300	[34mINFO[0m	zap/zaplogger.go:53	Entered ValueHandler
+2023-11-02T15:08:46.094+0300	[34mINFO[0m	zap/zaplogger.go:53	Headers:  map[Accept-Encoding:[gzip] User-Agent:[Go-http-client/1.1]]
+2023-11-02T15:08:46.096+0300	[34mINFO[0m	zap/zaplogger.go:53	Entered ShowAllHandler
+2023-11-02T15:08:46.096+0300	[34mINFO[0m	zap/zaplogger.go:53	method checked
+2023-11-02T15:08:46.096+0300	[34mINFO[0m	zap/zaplogger.go:53	trying to add gauge {gaugeMetric gauge <nil> 0xc000012a70}
+2023-11-02T15:08:46.096+0300	[34mINFO[0m	zap/zaplogger.go:53	trying to add counter {counterMetric counter 0xc000012a78 <nil>}
+2023-11-02T15:08:46.096+0300	[34mINFO[0m	zap/zaplogger.go:53	Metrics collected
+2023-11-02T15:08:46.098+0300	[34mINFO[0m	zap/zaplogger.go:53	Entered DefoultHandler
+2023-11-02T15:08:46.099+0300	[34mINFO[0m	zap/zaplogger.go:53	Entered DefoultHandler
+2023-11-02T15:08:46.101+0300	[34mINFO[0m	zap/zaplogger.go:53	Entered JSONUpdHandler
+2023-11-02T15:08:46.101+0300	[34mINFO[0m	zap/zaplogger.go:53	Method checked
+2023-11-02T15:08:46.101+0300	[34mINFO[0m	zap/zaplogger.go:53	Decoded metric to stor {g_new gauge <nil> 0xc00021a880}
+2023-11-02T15:08:46.101+0300	[34mINFO[0m	zap/zaplogger.go:53	Metrics on server: g, c, 
+2023-11-02T15:08:46.101+0300	[34mINFO[0m	zap/zaplogger.go:53	Metric g_new stored
+2023-11-02T15:08:46.101+0300	[34mINFO[0m	zap/zaplogger.go:53	JSONUpdHandler exited
+2023-11-02T15:08:46.102+0300	[34mINFO[0m	zap/zaplogger.go:53	Entered JSONValueHandler
+2023-11-02T15:08:46.102+0300	[34mINFO[0m	zap/zaplogger.go:53	Method checked
+2023-11-02T15:08:46.102+0300	[34mINFO[0m	zap/zaplogger.go:53	Decoded metric {g gauge <nil> <nil>}
+2023-11-02T15:08:46.104+0300	[34mINFO[0m	zap/zaplogger.go:53	Entered JSONUpdHandler
+2023-11-02T15:08:46.104+0300	[34mINFO[0m	zap/zaplogger.go:53	Method checked
+2023-11-02T15:08:46.104+0300	[34mINFO[0m	zap/zaplogger.go:53	Decoded metric to stor {c_new counter 0xc000288638 <nil>}
+2023-11-02T15:08:46.104+0300	[34mINFO[0m	zap/zaplogger.go:53	Metrics on server: c, gaugeMetric, 
+2023-11-02T15:08:46.104+0300	[34mINFO[0m	zap/zaplogger.go:53	Metric c_new stored
+2023-11-02T15:08:46.104+0300	[34mINFO[0m	zap/zaplogger.go:53	JSONUpdHandler exited
+2023-11-02T15:08:46.106+0300	[34mINFO[0m	zap/zaplogger.go:53	Entered JSONUpdHandler
+2023-11-02T15:08:46.106+0300	[34mINFO[0m	zap/zaplogger.go:53	Method checked
+2023-11-02T15:08:46.106+0300	[34mINFO[0m	zap/zaplogger.go:53	Decoded metric to stor {c_new smth 0xc00038c3d8 <nil>}
+2023-11-02T15:08:46.106+0300	[31mERROR[0m	zap/zaplogger.go:66	wrong type smth
+2023-11-02T15:08:46.107+0300	[34mINFO[0m	zap/zaplogger.go:53	Entered JSONUpdHandler
+2023-11-02T15:08:46.107+0300	[34mINFO[0m	zap/zaplogger.go:53	Method checked
+2023-11-02T15:08:46.107+0300	[34mINFO[0m	zap/zaplogger.go:53	Decoded metric to stor {c counter 0xc000288910 <nil>}
+2023-11-02T15:08:46.107+0300	[34mINFO[0m	zap/zaplogger.go:53	Metrics on server: gaugeMetric, c, 
+2023-11-02T15:08:46.108+0300	[34mINFO[0m	zap/zaplogger.go:53	Metric c stored
+2023-11-02T15:08:46.108+0300	[34mINFO[0m	zap/zaplogger.go:53	JSONUpdHandler exited
+2023-11-02T15:08:46.109+0300	[34mINFO[0m	zap/zaplogger.go:53	Entered JSONUpdHandler
+2023-11-02T15:08:46.109+0300	[34mINFO[0m	zap/zaplogger.go:53	Method checked
+2023-11-02T15:08:46.109+0300	[34mINFO[0m	zap/zaplogger.go:53	Decoded metric to stor {g gauge <nil> 0xc000288968}
+2023-11-02T15:08:46.109+0300	[34mINFO[0m	zap/zaplogger.go:53	Metrics on server: g, c, 
+2023-11-02T15:08:46.109+0300	[34mINFO[0m	zap/zaplogger.go:53	Metric g stored
+2023-11-02T15:08:46.109+0300	[34mINFO[0m	zap/zaplogger.go:53	JSONUpdHandler exited
+2023-11-02T15:08:46.111+0300	[34mINFO[0m	zap/zaplogger.go:53	Entered JSONValueHandler
+2023-11-02T15:08:46.111+0300	[34mINFO[0m	zap/zaplogger.go:53	Method checked
+2023-11-02T15:08:46.111+0300	[34mINFO[0m	zap/zaplogger.go:53	Decoded metric {c counter <nil> <nil>}
+2023-11-02T15:08:46.112+0300	[34mINFO[0m	zap/zaplogger.go:53	Entered JSONValueHandler
+2023-11-02T15:08:46.112+0300	[34mINFO[0m	zap/zaplogger.go:53	Method checked
+2023-11-02T15:08:46.112+0300	[34mINFO[0m	zap/zaplogger.go:53	Decoded metric {c_unk counter <nil> <nil>}
+2023-11-02T15:08:46.112+0300	[34mINFO[0m	zap/zaplogger.go:53	Metrics on server: gaugeMetric, c, 
+2023-11-02T15:08:46.112+0300	[31mERROR[0m	zap/zaplogger.go:66	Cann't find metric
+2023-11-02T15:08:46.114+0300	[34mINFO[0m	zap/zaplogger.go:53	Entered JSONValueHandler
+2023-11-02T15:08:46.114+0300	[34mINFO[0m	zap/zaplogger.go:53	Method checked
+2023-11-02T15:08:46.114+0300	[34mINFO[0m	zap/zaplogger.go:53	Decoded metric {g_unk gauge <nil> <nil>}
+2023-11-02T15:08:46.114+0300	[34mINFO[0m	zap/zaplogger.go:53	Metrics on server: gaugeMetric, c, 
+2023-11-02T15:08:46.114+0300	[31mERROR[0m	zap/zaplogger.go:66	Cann't find metric
+2023-11-02T15:08:46.115+0300	[34mINFO[0m	zap/zaplogger.go:53	Entered JSONValueHandler
+2023-11-02T15:08:46.115+0300	[34mINFO[0m	zap/zaplogger.go:53	Method checked
+2023-11-02T15:08:46.115+0300	[34mINFO[0m	zap/zaplogger.go:53	Decoded metric {c_unk smth <nil> <nil>}
+2023-11-02T15:08:46.115+0300	[31mERROR[0m	zap/zaplogger.go:66	wrong type smth
+2023-11-02T15:38:23.653+0300	[34mINFO[0m	zap/zaplogger.go:53	Entered UpdHandler
+2023-11-02T15:38:23.655+0300	[34mINFO[0m	zap/zaplogger.go:53	Entered UpdHandler
+2023-11-02T15:38:23.657+0300	[34mINFO[0m	zap/zaplogger.go:53	Entered UpdHandler
+2023-11-02T15:38:23.659+0300	[34mINFO[0m	zap/zaplogger.go:53	Entered UpdHandler
+2023-11-02T15:38:23.660+0300	[34mINFO[0m	zap/zaplogger.go:53	Entered UpdHandler
+2023-11-02T15:38:23.662+0300	[34mINFO[0m	zap/zaplogger.go:53	Entered UpdHandler
+2023-11-02T15:38:23.664+0300	[34mINFO[0m	zap/zaplogger.go:53	Entered ValueHandler
+2023-11-02T15:38:23.664+0300	[34mINFO[0m	zap/zaplogger.go:53	Headers:  map[Accept-Encoding:[gzip] User-Agent:[Go-http-client/1.1]]
+2023-11-02T15:38:23.665+0300	[34mINFO[0m	zap/zaplogger.go:53	Entered ValueHandler
+2023-11-02T15:38:23.665+0300	[34mINFO[0m	zap/zaplogger.go:53	Headers:  map[Accept-Encoding:[gzip] User-Agent:[Go-http-client/1.1]]
+2023-11-02T15:38:23.667+0300	[34mINFO[0m	zap/zaplogger.go:53	Entered ValueHandler
+2023-11-02T15:38:23.667+0300	[34mINFO[0m	zap/zaplogger.go:53	Headers:  map[Accept-Encoding:[gzip] User-Agent:[Go-http-client/1.1]]
+2023-11-02T15:38:23.668+0300	[34mINFO[0m	zap/zaplogger.go:53	Entered ValueHandler
+2023-11-02T15:38:23.668+0300	[34mINFO[0m	zap/zaplogger.go:53	Headers:  map[Accept-Encoding:[gzip] User-Agent:[Go-http-client/1.1]]
+2023-11-02T15:38:23.669+0300	[34mINFO[0m	zap/zaplogger.go:53	Entered ShowAllHandler
+2023-11-02T15:38:23.670+0300	[34mINFO[0m	zap/zaplogger.go:53	method checked
+2023-11-02T15:38:23.670+0300	[34mINFO[0m	zap/zaplogger.go:53	trying to add gauge {gaugeMetric gauge <nil> 0xc0002160f0}
+2023-11-02T15:38:23.670+0300	[34mINFO[0m	zap/zaplogger.go:53	trying to add counter {counterMetric counter 0xc0002160f8 <nil>}
+2023-11-02T15:38:23.670+0300	[34mINFO[0m	zap/zaplogger.go:53	Metrics collected
+2023-11-02T15:38:23.671+0300	[34mINFO[0m	zap/zaplogger.go:53	Entered DefoultHandler
+2023-11-02T15:38:23.672+0300	[34mINFO[0m	zap/zaplogger.go:53	Entered DefoultHandler
+2023-11-02T15:38:23.674+0300	[34mINFO[0m	zap/zaplogger.go:53	Entered JSONUpdHandler
+2023-11-02T15:38:23.674+0300	[34mINFO[0m	zap/zaplogger.go:53	Method checked
+2023-11-02T15:38:23.674+0300	[34mINFO[0m	zap/zaplogger.go:53	Decoded metric to stor {g_new gauge <nil> 0xc000386528}
+2023-11-02T15:38:23.674+0300	[34mINFO[0m	zap/zaplogger.go:53	Metrics on server: g, c, 
+2023-11-02T15:38:23.674+0300	[34mINFO[0m	zap/zaplogger.go:53	Metric g_new stored
+2023-11-02T15:38:23.674+0300	[34mINFO[0m	zap/zaplogger.go:53	JSONUpdHandler exited
+2023-11-02T15:38:23.675+0300	[34mINFO[0m	zap/zaplogger.go:53	Entered JSONValueHandler
+2023-11-02T15:38:23.675+0300	[34mINFO[0m	zap/zaplogger.go:53	Method checked
+2023-11-02T15:38:23.675+0300	[34mINFO[0m	zap/zaplogger.go:53	Decoded metric {g gauge <nil> <nil>}
+2023-11-02T15:38:23.677+0300	[34mINFO[0m	zap/zaplogger.go:53	Entered JSONUpdHandler
+2023-11-02T15:38:23.677+0300	[34mINFO[0m	zap/zaplogger.go:53	Method checked
+2023-11-02T15:38:23.677+0300	[34mINFO[0m	zap/zaplogger.go:53	Decoded metric to stor {c_new counter 0xc000386870 <nil>}
+2023-11-02T15:38:23.677+0300	[34mINFO[0m	zap/zaplogger.go:53	Metrics on server: gaugeMetric, c, 
+2023-11-02T15:38:23.677+0300	[34mINFO[0m	zap/zaplogger.go:53	Metric c_new stored
+2023-11-02T15:38:23.677+0300	[34mINFO[0m	zap/zaplogger.go:53	JSONUpdHandler exited
+2023-11-02T15:38:23.678+0300	[34mINFO[0m	zap/zaplogger.go:53	Entered JSONUpdHandler
+2023-11-02T15:38:23.678+0300	[34mINFO[0m	zap/zaplogger.go:53	Method checked
+2023-11-02T15:38:23.678+0300	[34mINFO[0m	zap/zaplogger.go:53	Decoded metric to stor {c_new smth 0xc000012718 <nil>}
+2023-11-02T15:38:23.678+0300	[31mERROR[0m	zap/zaplogger.go:66	wrong type smth
+2023-11-02T15:38:23.679+0300	[34mINFO[0m	zap/zaplogger.go:53	Entered JSONUpdHandler
+2023-11-02T15:38:23.679+0300	[34mINFO[0m	zap/zaplogger.go:53	Method checked
+2023-11-02T15:38:23.679+0300	[34mINFO[0m	zap/zaplogger.go:53	Decoded metric to stor {c counter 0xc000216bc8 <nil>}
+2023-11-02T15:38:23.679+0300	[34mINFO[0m	zap/zaplogger.go:53	Metrics on server: gaugeMetric, c, 
+2023-11-02T15:38:23.679+0300	[34mINFO[0m	zap/zaplogger.go:53	Metric c stored
+2023-11-02T15:38:23.679+0300	[34mINFO[0m	zap/zaplogger.go:53	JSONUpdHandler exited
+2023-11-02T15:38:23.681+0300	[34mINFO[0m	zap/zaplogger.go:53	Entered JSONUpdHandler
+2023-11-02T15:38:23.681+0300	[34mINFO[0m	zap/zaplogger.go:53	Method checked
+2023-11-02T15:38:23.681+0300	[34mINFO[0m	zap/zaplogger.go:53	Decoded metric to stor {g gauge <nil> 0xc000282620}
+2023-11-02T15:38:23.681+0300	[34mINFO[0m	zap/zaplogger.go:53	Metrics on server: g, c, 
+2023-11-02T15:38:23.681+0300	[34mINFO[0m	zap/zaplogger.go:53	Metric g stored
+2023-11-02T15:38:23.681+0300	[34mINFO[0m	zap/zaplogger.go:53	JSONUpdHandler exited
+2023-11-02T15:38:23.682+0300	[34mINFO[0m	zap/zaplogger.go:53	Entered JSONValueHandler
+2023-11-02T15:38:23.682+0300	[34mINFO[0m	zap/zaplogger.go:53	Method checked
+2023-11-02T15:38:23.682+0300	[34mINFO[0m	zap/zaplogger.go:53	Decoded metric {c counter <nil> <nil>}
+2023-11-02T15:38:23.684+0300	[34mINFO[0m	zap/zaplogger.go:53	Entered JSONValueHandler
+2023-11-02T15:38:23.684+0300	[34mINFO[0m	zap/zaplogger.go:53	Method checked
+2023-11-02T15:38:23.684+0300	[34mINFO[0m	zap/zaplogger.go:53	Decoded metric {c_unk counter <nil> <nil>}
+2023-11-02T15:38:23.684+0300	[34mINFO[0m	zap/zaplogger.go:53	Metrics on server: c, gaugeMetric, 
+2023-11-02T15:38:23.684+0300	[31mERROR[0m	zap/zaplogger.go:66	Cann't find metric
+2023-11-02T15:38:23.685+0300	[34mINFO[0m	zap/zaplogger.go:53	Entered JSONValueHandler
+2023-11-02T15:38:23.685+0300	[34mINFO[0m	zap/zaplogger.go:53	Method checked
+2023-11-02T15:38:23.685+0300	[34mINFO[0m	zap/zaplogger.go:53	Decoded metric {g_unk gauge <nil> <nil>}
+2023-11-02T15:38:23.685+0300	[34mINFO[0m	zap/zaplogger.go:53	Metrics on server: gaugeMetric, c, 
+2023-11-02T15:38:23.685+0300	[31mERROR[0m	zap/zaplogger.go:66	Cann't find metric
+2023-11-02T15:38:23.686+0300	[34mINFO[0m	zap/zaplogger.go:53	Entered JSONValueHandler
+2023-11-02T15:38:23.686+0300	[34mINFO[0m	zap/zaplogger.go:53	Method checked
+2023-11-02T15:38:23.686+0300	[34mINFO[0m	zap/zaplogger.go:53	Decoded metric {c_unk smth <nil> <nil>}
+2023-11-02T15:38:23.686+0300	[31mERROR[0m	zap/zaplogger.go:66	wrong type smth
+2023-11-02T15:38:48.976+0300	[34mINFO[0m	zap/zaplogger.go:53	Entered UpdHandler
+2023-11-02T15:38:48.986+0300	[34mINFO[0m	zap/zaplogger.go:53	Entered UpdHandler
+2023-11-02T15:38:48.991+0300	[34mINFO[0m	zap/zaplogger.go:53	Entered UpdHandler
+2023-11-02T15:38:48.994+0300	[34mINFO[0m	zap/zaplogger.go:53	Entered UpdHandler
+2023-11-02T15:38:48.996+0300	[34mINFO[0m	zap/zaplogger.go:53	Entered UpdHandler
+2023-11-02T15:38:48.997+0300	[34mINFO[0m	zap/zaplogger.go:53	Entered UpdHandler
+2023-11-02T15:38:49.000+0300	[34mINFO[0m	zap/zaplogger.go:53	Entered ValueHandler
+2023-11-02T15:38:49.000+0300	[34mINFO[0m	zap/zaplogger.go:53	Headers:  map[Accept-Encoding:[gzip] User-Agent:[Go-http-client/1.1]]
+2023-11-02T15:38:49.002+0300	[34mINFO[0m	zap/zaplogger.go:53	Entered ValueHandler
+2023-11-02T15:38:49.002+0300	[34mINFO[0m	zap/zaplogger.go:53	Headers:  map[Accept-Encoding:[gzip] User-Agent:[Go-http-client/1.1]]
+2023-11-02T15:38:49.004+0300	[34mINFO[0m	zap/zaplogger.go:53	Entered ValueHandler
+2023-11-02T15:38:49.004+0300	[34mINFO[0m	zap/zaplogger.go:53	Headers:  map[Accept-Encoding:[gzip] User-Agent:[Go-http-client/1.1]]
+2023-11-02T15:38:49.005+0300	[34mINFO[0m	zap/zaplogger.go:53	Entered ValueHandler
+2023-11-02T15:38:49.006+0300	[34mINFO[0m	zap/zaplogger.go:53	Headers:  map[Accept-Encoding:[gzip] User-Agent:[Go-http-client/1.1]]
+2023-11-02T15:38:49.007+0300	[34mINFO[0m	zap/zaplogger.go:53	Entered ShowAllHandler
+2023-11-02T15:38:49.007+0300	[34mINFO[0m	zap/zaplogger.go:53	method checked
+2023-11-02T15:38:49.007+0300	[34mINFO[0m	zap/zaplogger.go:53	trying to add gauge {gaugeMetric gauge <nil> 0xc0001160f0}
+2023-11-02T15:38:49.007+0300	[34mINFO[0m	zap/zaplogger.go:53	trying to add counter {counterMetric counter 0xc0001160f8 <nil>}
+2023-11-02T15:38:49.007+0300	[34mINFO[0m	zap/zaplogger.go:53	Metrics collected
+2023-11-02T15:38:49.009+0300	[34mINFO[0m	zap/zaplogger.go:53	Entered DefoultHandler
+2023-11-02T15:38:49.010+0300	[34mINFO[0m	zap/zaplogger.go:53	Entered DefoultHandler
+2023-11-02T15:38:49.011+0300	[34mINFO[0m	zap/zaplogger.go:53	Entered JSONUpdHandler
+2023-11-02T15:38:49.012+0300	[34mINFO[0m	zap/zaplogger.go:53	Method checked
+2023-11-02T15:38:49.012+0300	[34mINFO[0m	zap/zaplogger.go:53	Decoded metric to stor {g_new gauge <nil> 0xc000116b60}
+2023-11-02T15:38:49.012+0300	[34mINFO[0m	zap/zaplogger.go:53	Metrics on server: g, c, 
+2023-11-02T15:38:49.012+0300	[34mINFO[0m	zap/zaplogger.go:53	Metric g_new stored
+2023-11-02T15:38:49.012+0300	[34mINFO[0m	zap/zaplogger.go:53	JSONUpdHandler exited
+2023-11-02T15:38:49.013+0300	[34mINFO[0m	zap/zaplogger.go:53	Entered JSONValueHandler
+2023-11-02T15:38:49.013+0300	[34mINFO[0m	zap/zaplogger.go:53	Method checked
+2023-11-02T15:38:49.013+0300	[34mINFO[0m	zap/zaplogger.go:53	Decoded metric {g gauge <nil> <nil>}
+2023-11-02T15:38:49.015+0300	[34mINFO[0m	zap/zaplogger.go:53	Entered JSONUpdHandler
+2023-11-02T15:38:49.015+0300	[34mINFO[0m	zap/zaplogger.go:53	Method checked
+2023-11-02T15:38:49.015+0300	[34mINFO[0m	zap/zaplogger.go:53	Decoded metric to stor {c_new counter 0xc000300618 <nil>}
+2023-11-02T15:38:49.015+0300	[34mINFO[0m	zap/zaplogger.go:53	Metrics on server: gaugeMetric, c, 
+2023-11-02T15:38:49.015+0300	[34mINFO[0m	zap/zaplogger.go:53	Metric c_new stored
+2023-11-02T15:38:49.015+0300	[34mINFO[0m	zap/zaplogger.go:53	JSONUpdHandler exited
+2023-11-02T15:38:49.017+0300	[34mINFO[0m	zap/zaplogger.go:53	Entered JSONUpdHandler
+2023-11-02T15:38:49.017+0300	[34mINFO[0m	zap/zaplogger.go:53	Method checked
+2023-11-02T15:38:49.017+0300	[34mINFO[0m	zap/zaplogger.go:53	Decoded metric to stor {c_new smth 0xc0003007c0 <nil>}
+2023-11-02T15:38:49.017+0300	[31mERROR[0m	zap/zaplogger.go:66	wrong type smth
+2023-11-02T15:38:49.018+0300	[34mINFO[0m	zap/zaplogger.go:53	Entered JSONUpdHandler
+2023-11-02T15:38:49.018+0300	[34mINFO[0m	zap/zaplogger.go:53	Method checked
+2023-11-02T15:38:49.018+0300	[34mINFO[0m	zap/zaplogger.go:53	Decoded metric to stor {c counter 0xc000116f88 <nil>}
+2023-11-02T15:38:49.018+0300	[34mINFO[0m	zap/zaplogger.go:53	Metrics on server: gaugeMetric, c, 
+2023-11-02T15:38:49.018+0300	[34mINFO[0m	zap/zaplogger.go:53	Metric c stored
+2023-11-02T15:38:49.018+0300	[34mINFO[0m	zap/zaplogger.go:53	JSONUpdHandler exited
+2023-11-02T15:38:49.020+0300	[34mINFO[0m	zap/zaplogger.go:53	Entered JSONUpdHandler
+2023-11-02T15:38:49.020+0300	[34mINFO[0m	zap/zaplogger.go:53	Method checked
+2023-11-02T15:38:49.020+0300	[34mINFO[0m	zap/zaplogger.go:53	Decoded metric to stor {g gauge <nil> 0xc0001170f8}
+2023-11-02T15:38:49.020+0300	[34mINFO[0m	zap/zaplogger.go:53	Metrics on server: g, c, 
+2023-11-02T15:38:49.020+0300	[34mINFO[0m	zap/zaplogger.go:53	Metric g stored
+2023-11-02T15:38:49.020+0300	[34mINFO[0m	zap/zaplogger.go:53	JSONUpdHandler exited
+2023-11-02T15:38:49.021+0300	[34mINFO[0m	zap/zaplogger.go:53	Entered JSONValueHandler
+2023-11-02T15:38:49.021+0300	[34mINFO[0m	zap/zaplogger.go:53	Method checked
+2023-11-02T15:38:49.021+0300	[34mINFO[0m	zap/zaplogger.go:53	Decoded metric {c counter <nil> <nil>}
+2023-11-02T15:38:49.023+0300	[34mINFO[0m	zap/zaplogger.go:53	Entered JSONValueHandler
+2023-11-02T15:38:49.023+0300	[34mINFO[0m	zap/zaplogger.go:53	Method checked
+2023-11-02T15:38:49.023+0300	[34mINFO[0m	zap/zaplogger.go:53	Decoded metric {c_unk counter <nil> <nil>}
+2023-11-02T15:38:49.023+0300	[34mINFO[0m	zap/zaplogger.go:53	Metrics on server: gaugeMetric, c, 
+2023-11-02T15:38:49.023+0300	[31mERROR[0m	zap/zaplogger.go:66	Cann't find metric
+2023-11-02T15:38:49.024+0300	[34mINFO[0m	zap/zaplogger.go:53	Entered JSONValueHandler
+2023-11-02T15:38:49.024+0300	[34mINFO[0m	zap/zaplogger.go:53	Method checked
+2023-11-02T15:38:49.024+0300	[34mINFO[0m	zap/zaplogger.go:53	Decoded metric {g_unk gauge <nil> <nil>}
+2023-11-02T15:38:49.024+0300	[34mINFO[0m	zap/zaplogger.go:53	Metrics on server: gaugeMetric, c, 
+2023-11-02T15:38:49.024+0300	[31mERROR[0m	zap/zaplogger.go:66	Cann't find metric
+2023-11-02T15:38:49.026+0300	[34mINFO[0m	zap/zaplogger.go:53	Entered JSONValueHandler
+2023-11-02T15:38:49.026+0300	[34mINFO[0m	zap/zaplogger.go:53	Method checked
+2023-11-02T15:38:49.026+0300	[34mINFO[0m	zap/zaplogger.go:53	Decoded metric {c_unk smth <nil> <nil>}
+2023-11-02T15:38:49.026+0300	[31mERROR[0m	zap/zaplogger.go:66	wrong type smth
+2023-11-02T15:38:51.009+0300	[34mINFO[0m	zap/zaplogger.go:53	Entered UpdHandler
+2023-11-02T15:38:51.024+0300	[34mINFO[0m	zap/zaplogger.go:53	Entered UpdHandler
+2023-11-02T15:38:51.026+0300	[34mINFO[0m	zap/zaplogger.go:53	Entered UpdHandler
+2023-11-02T15:38:51.029+0300	[34mINFO[0m	zap/zaplogger.go:53	Entered UpdHandler
+2023-11-02T15:38:51.030+0300	[34mINFO[0m	zap/zaplogger.go:53	Entered UpdHandler
+2023-11-02T15:38:51.032+0300	[34mINFO[0m	zap/zaplogger.go:53	Entered UpdHandler
+2023-11-02T15:38:51.034+0300	[34mINFO[0m	zap/zaplogger.go:53	Entered ValueHandler
+2023-11-02T15:38:51.034+0300	[34mINFO[0m	zap/zaplogger.go:53	Headers:  map[Accept-Encoding:[gzip] User-Agent:[Go-http-client/1.1]]
+2023-11-02T15:38:51.036+0300	[34mINFO[0m	zap/zaplogger.go:53	Entered ValueHandler
+2023-11-02T15:38:51.036+0300	[34mINFO[0m	zap/zaplogger.go:53	Headers:  map[Accept-Encoding:[gzip] User-Agent:[Go-http-client/1.1]]
+2023-11-02T15:38:51.037+0300	[34mINFO[0m	zap/zaplogger.go:53	Entered ValueHandler
+2023-11-02T15:38:51.037+0300	[34mINFO[0m	zap/zaplogger.go:53	Headers:  map[Accept-Encoding:[gzip] User-Agent:[Go-http-client/1.1]]
+2023-11-02T15:38:51.039+0300	[34mINFO[0m	zap/zaplogger.go:53	Entered ValueHandler
+2023-11-02T15:38:51.039+0300	[34mINFO[0m	zap/zaplogger.go:53	Headers:  map[Accept-Encoding:[gzip] User-Agent:[Go-http-client/1.1]]
+2023-11-02T15:38:51.040+0300	[34mINFO[0m	zap/zaplogger.go:53	Entered ShowAllHandler
+2023-11-02T15:38:51.040+0300	[34mINFO[0m	zap/zaplogger.go:53	method checked
+2023-11-02T15:38:51.040+0300	[34mINFO[0m	zap/zaplogger.go:53	trying to add gauge {gaugeMetric gauge <nil> 0xc0001280f0}
+2023-11-02T15:38:51.040+0300	[34mINFO[0m	zap/zaplogger.go:53	trying to add counter {counterMetric counter 0xc0001280f8 <nil>}
+2023-11-02T15:38:51.040+0300	[34mINFO[0m	zap/zaplogger.go:53	Metrics collected
+2023-11-02T15:38:51.041+0300	[34mINFO[0m	zap/zaplogger.go:53	Entered DefoultHandler
+2023-11-02T15:38:51.043+0300	[34mINFO[0m	zap/zaplogger.go:53	Entered DefoultHandler
+2023-11-02T15:38:51.044+0300	[34mINFO[0m	zap/zaplogger.go:53	Entered JSONUpdHandler
+2023-11-02T15:38:51.044+0300	[34mINFO[0m	zap/zaplogger.go:53	Method checked
+2023-11-02T15:38:51.045+0300	[34mINFO[0m	zap/zaplogger.go:53	Decoded metric to stor {g_new gauge <nil> 0xc000308c88}
+2023-11-02T15:38:51.045+0300	[34mINFO[0m	zap/zaplogger.go:53	Metrics on server: g, c, 
+2023-11-02T15:38:51.045+0300	[34mINFO[0m	zap/zaplogger.go:53	Metric g_new stored
+2023-11-02T15:38:51.045+0300	[34mINFO[0m	zap/zaplogger.go:53	JSONUpdHandler exited
+2023-11-02T15:38:51.046+0300	[34mINFO[0m	zap/zaplogger.go:53	Entered JSONValueHandler
+2023-11-02T15:38:51.046+0300	[34mINFO[0m	zap/zaplogger.go:53	Method checked
+2023-11-02T15:38:51.046+0300	[34mINFO[0m	zap/zaplogger.go:53	Decoded metric {g gauge <nil> <nil>}
+2023-11-02T15:38:51.047+0300	[34mINFO[0m	zap/zaplogger.go:53	Entered JSONUpdHandler
+2023-11-02T15:38:51.048+0300	[34mINFO[0m	zap/zaplogger.go:53	Method checked
+2023-11-02T15:38:51.048+0300	[34mINFO[0m	zap/zaplogger.go:53	Decoded metric to stor {c_new counter 0xc000308f70 <nil>}
+2023-11-02T15:38:51.048+0300	[34mINFO[0m	zap/zaplogger.go:53	Metrics on server: gaugeMetric, c, 
+2023-11-02T15:38:51.048+0300	[34mINFO[0m	zap/zaplogger.go:53	Metric c_new stored
+2023-11-02T15:38:51.048+0300	[34mINFO[0m	zap/zaplogger.go:53	JSONUpdHandler exited
+2023-11-02T15:38:51.049+0300	[34mINFO[0m	zap/zaplogger.go:53	Entered JSONUpdHandler
+2023-11-02T15:38:51.049+0300	[34mINFO[0m	zap/zaplogger.go:53	Method checked
+2023-11-02T15:38:51.049+0300	[34mINFO[0m	zap/zaplogger.go:53	Decoded metric to stor {c_new smth 0xc0001286f0 <nil>}
+2023-11-02T15:38:51.049+0300	[31mERROR[0m	zap/zaplogger.go:66	wrong type smth
+2023-11-02T15:38:51.051+0300	[34mINFO[0m	zap/zaplogger.go:53	Entered JSONUpdHandler
+2023-11-02T15:38:51.051+0300	[34mINFO[0m	zap/zaplogger.go:53	Method checked
+2023-11-02T15:38:51.051+0300	[34mINFO[0m	zap/zaplogger.go:53	Decoded metric to stor {c counter 0xc000309140 <nil>}
+2023-11-02T15:38:51.051+0300	[34mINFO[0m	zap/zaplogger.go:53	Metrics on server: gaugeMetric, c, 
+2023-11-02T15:38:51.051+0300	[34mINFO[0m	zap/zaplogger.go:53	Metric c stored
+2023-11-02T15:38:51.051+0300	[34mINFO[0m	zap/zaplogger.go:53	JSONUpdHandler exited
+2023-11-02T15:38:51.052+0300	[34mINFO[0m	zap/zaplogger.go:53	Entered JSONUpdHandler
+2023-11-02T15:38:51.052+0300	[34mINFO[0m	zap/zaplogger.go:53	Method checked
+2023-11-02T15:38:51.052+0300	[34mINFO[0m	zap/zaplogger.go:53	Decoded metric to stor {g gauge <nil> 0xc0002982c0}
+2023-11-02T15:38:51.052+0300	[34mINFO[0m	zap/zaplogger.go:53	Metrics on server: g, c, 
+2023-11-02T15:38:51.052+0300	[34mINFO[0m	zap/zaplogger.go:53	Metric g stored
+2023-11-02T15:38:51.052+0300	[34mINFO[0m	zap/zaplogger.go:53	JSONUpdHandler exited
+2023-11-02T15:38:51.054+0300	[34mINFO[0m	zap/zaplogger.go:53	Entered JSONValueHandler
+2023-11-02T15:38:51.054+0300	[34mINFO[0m	zap/zaplogger.go:53	Method checked
+2023-11-02T15:38:51.054+0300	[34mINFO[0m	zap/zaplogger.go:53	Decoded metric {c counter <nil> <nil>}
+2023-11-02T15:38:51.055+0300	[34mINFO[0m	zap/zaplogger.go:53	Entered JSONValueHandler
+2023-11-02T15:38:51.055+0300	[34mINFO[0m	zap/zaplogger.go:53	Method checked
+2023-11-02T15:38:51.055+0300	[34mINFO[0m	zap/zaplogger.go:53	Decoded metric {c_unk counter <nil> <nil>}
+2023-11-02T15:38:51.055+0300	[34mINFO[0m	zap/zaplogger.go:53	Metrics on server: gaugeMetric, c, 
+2023-11-02T15:38:51.055+0300	[31mERROR[0m	zap/zaplogger.go:66	Cann't find metric
+2023-11-02T15:38:51.057+0300	[34mINFO[0m	zap/zaplogger.go:53	Entered JSONValueHandler
+2023-11-02T15:38:51.057+0300	[34mINFO[0m	zap/zaplogger.go:53	Method checked
+2023-11-02T15:38:51.057+0300	[34mINFO[0m	zap/zaplogger.go:53	Decoded metric {g_unk gauge <nil> <nil>}
+2023-11-02T15:38:51.057+0300	[34mINFO[0m	zap/zaplogger.go:53	Metrics on server: gaugeMetric, c, 
+2023-11-02T15:38:51.057+0300	[31mERROR[0m	zap/zaplogger.go:66	Cann't find metric
+2023-11-02T15:38:51.059+0300	[34mINFO[0m	zap/zaplogger.go:53	Entered JSONValueHandler
+2023-11-02T15:38:51.059+0300	[34mINFO[0m	zap/zaplogger.go:53	Method checked
+2023-11-02T15:38:51.059+0300	[34mINFO[0m	zap/zaplogger.go:53	Decoded metric {c_unk smth <nil> <nil>}
+2023-11-02T15:38:51.059+0300	[31mERROR[0m	zap/zaplogger.go:66	wrong type smth
+2023-11-02T15:39:51.360+0300	[34mINFO[0m	zap/zaplogger.go:53	Entered UpdHandler
+2023-11-02T15:39:51.363+0300	[34mINFO[0m	zap/zaplogger.go:53	Entered UpdHandler
+2023-11-02T15:39:51.364+0300	[34mINFO[0m	zap/zaplogger.go:53	Entered UpdHandler
+2023-11-02T15:39:51.367+0300	[34mINFO[0m	zap/zaplogger.go:53	Entered UpdHandler
+2023-11-02T15:39:51.369+0300	[34mINFO[0m	zap/zaplogger.go:53	Entered UpdHandler
+2023-11-02T15:39:51.370+0300	[34mINFO[0m	zap/zaplogger.go:53	Entered UpdHandler
+2023-11-02T15:39:51.372+0300	[34mINFO[0m	zap/zaplogger.go:53	Entered ValueHandler
+2023-11-02T15:39:51.372+0300	[34mINFO[0m	zap/zaplogger.go:53	Headers:  map[Accept-Encoding:[gzip] User-Agent:[Go-http-client/1.1]]
+2023-11-02T15:39:51.373+0300	[34mINFO[0m	zap/zaplogger.go:53	Entered ValueHandler
+2023-11-02T15:39:51.374+0300	[34mINFO[0m	zap/zaplogger.go:53	Headers:  map[Accept-Encoding:[gzip] User-Agent:[Go-http-client/1.1]]
+2023-11-02T15:39:51.375+0300	[34mINFO[0m	zap/zaplogger.go:53	Entered ValueHandler
+2023-11-02T15:39:51.375+0300	[34mINFO[0m	zap/zaplogger.go:53	Headers:  map[Accept-Encoding:[gzip] User-Agent:[Go-http-client/1.1]]
+2023-11-02T15:39:51.377+0300	[34mINFO[0m	zap/zaplogger.go:53	Entered ValueHandler
+2023-11-02T15:39:51.377+0300	[34mINFO[0m	zap/zaplogger.go:53	Headers:  map[Accept-Encoding:[gzip] User-Agent:[Go-http-client/1.1]]
+2023-11-02T15:39:51.378+0300	[34mINFO[0m	zap/zaplogger.go:53	Entered ShowAllHandler
+2023-11-02T15:39:51.378+0300	[34mINFO[0m	zap/zaplogger.go:53	method checked
+2023-11-02T15:39:51.378+0300	[34mINFO[0m	zap/zaplogger.go:53	trying to add gauge {gaugeMetric gauge <nil> 0xc000012a70}
+2023-11-02T15:39:51.378+0300	[34mINFO[0m	zap/zaplogger.go:53	trying to add counter {counterMetric counter 0xc000012a78 <nil>}
+2023-11-02T15:39:51.378+0300	[34mINFO[0m	zap/zaplogger.go:53	Metrics collected
+2023-11-02T15:39:51.380+0300	[34mINFO[0m	zap/zaplogger.go:53	Entered DefoultHandler
+2023-11-02T15:39:51.381+0300	[34mINFO[0m	zap/zaplogger.go:53	Entered DefoultHandler
+2023-11-02T15:39:51.383+0300	[34mINFO[0m	zap/zaplogger.go:53	Entered JSONUpdHandler
+2023-11-02T15:39:51.383+0300	[34mINFO[0m	zap/zaplogger.go:53	Method checked
+2023-11-02T15:39:51.383+0300	[34mINFO[0m	zap/zaplogger.go:53	Decoded metric to stor {g_new gauge <nil> 0xc00039c758}
+2023-11-02T15:39:51.383+0300	[34mINFO[0m	zap/zaplogger.go:53	Metrics on server: g, c, 
+2023-11-02T15:39:51.383+0300	[34mINFO[0m	zap/zaplogger.go:53	Metric g_new stored
+2023-11-02T15:39:51.383+0300	[34mINFO[0m	zap/zaplogger.go:53	JSONUpdHandler exited
+2023-11-02T15:39:51.385+0300	[34mINFO[0m	zap/zaplogger.go:53	Entered JSONValueHandler
+2023-11-02T15:39:51.385+0300	[34mINFO[0m	zap/zaplogger.go:53	Method checked
+2023-11-02T15:39:51.385+0300	[34mINFO[0m	zap/zaplogger.go:53	Decoded metric {g gauge <nil> <nil>}
+2023-11-02T15:39:51.386+0300	[34mINFO[0m	zap/zaplogger.go:53	Entered JSONUpdHandler
+2023-11-02T15:39:51.386+0300	[34mINFO[0m	zap/zaplogger.go:53	Method checked
+2023-11-02T15:39:51.386+0300	[34mINFO[0m	zap/zaplogger.go:53	Decoded metric to stor {c_new counter 0xc00039caa0 <nil>}
+2023-11-02T15:39:51.386+0300	[34mINFO[0m	zap/zaplogger.go:53	Metrics on server: gaugeMetric, c, 
+2023-11-02T15:39:51.386+0300	[34mINFO[0m	zap/zaplogger.go:53	Metric c_new stored
+2023-11-02T15:39:51.386+0300	[34mINFO[0m	zap/zaplogger.go:53	JSONUpdHandler exited
+2023-11-02T15:39:51.388+0300	[34mINFO[0m	zap/zaplogger.go:53	Entered JSONUpdHandler
+2023-11-02T15:39:51.388+0300	[34mINFO[0m	zap/zaplogger.go:53	Method checked
+2023-11-02T15:39:51.388+0300	[34mINFO[0m	zap/zaplogger.go:53	Decoded metric to stor {c_new smth 0xc00039cc50 <nil>}
+2023-11-02T15:39:51.388+0300	[31mERROR[0m	zap/zaplogger.go:66	wrong type smth
+2023-11-02T15:39:51.389+0300	[34mINFO[0m	zap/zaplogger.go:53	Entered JSONUpdHandler
+2023-11-02T15:39:51.389+0300	[34mINFO[0m	zap/zaplogger.go:53	Method checked
+2023-11-02T15:39:51.389+0300	[34mINFO[0m	zap/zaplogger.go:53	Decoded metric to stor {c counter 0xc00039cca8 <nil>}
+2023-11-02T15:39:51.389+0300	[34mINFO[0m	zap/zaplogger.go:53	Metrics on server: gaugeMetric, c, 
+2023-11-02T15:39:51.389+0300	[34mINFO[0m	zap/zaplogger.go:53	Metric c stored
+2023-11-02T15:39:51.389+0300	[34mINFO[0m	zap/zaplogger.go:53	JSONUpdHandler exited
+2023-11-02T15:39:51.390+0300	[34mINFO[0m	zap/zaplogger.go:53	Entered JSONUpdHandler
+2023-11-02T15:39:51.390+0300	[34mINFO[0m	zap/zaplogger.go:53	Method checked
+2023-11-02T15:39:51.390+0300	[34mINFO[0m	zap/zaplogger.go:53	Decoded metric to stor {g gauge <nil> 0xc0002825e0}
+2023-11-02T15:39:51.390+0300	[34mINFO[0m	zap/zaplogger.go:53	Metrics on server: g, c, 
+2023-11-02T15:39:51.390+0300	[34mINFO[0m	zap/zaplogger.go:53	Metric g stored
+2023-11-02T15:39:51.390+0300	[34mINFO[0m	zap/zaplogger.go:53	JSONUpdHandler exited
+2023-11-02T15:39:51.392+0300	[34mINFO[0m	zap/zaplogger.go:53	Entered JSONValueHandler
+2023-11-02T15:39:51.392+0300	[34mINFO[0m	zap/zaplogger.go:53	Method checked
+2023-11-02T15:39:51.392+0300	[34mINFO[0m	zap/zaplogger.go:53	Decoded metric {c counter <nil> <nil>}
+2023-11-02T15:39:51.393+0300	[34mINFO[0m	zap/zaplogger.go:53	Entered JSONValueHandler
+2023-11-02T15:39:51.393+0300	[34mINFO[0m	zap/zaplogger.go:53	Method checked
+2023-11-02T15:39:51.393+0300	[34mINFO[0m	zap/zaplogger.go:53	Decoded metric {c_unk counter <nil> <nil>}
+2023-11-02T15:39:51.393+0300	[34mINFO[0m	zap/zaplogger.go:53	Metrics on server: gaugeMetric, c, 
+2023-11-02T15:39:51.393+0300	[31mERROR[0m	zap/zaplogger.go:66	Cann't find metric
+2023-11-02T15:39:51.395+0300	[34mINFO[0m	zap/zaplogger.go:53	Entered JSONValueHandler
+2023-11-02T15:39:51.395+0300	[34mINFO[0m	zap/zaplogger.go:53	Method checked
+2023-11-02T15:39:51.395+0300	[34mINFO[0m	zap/zaplogger.go:53	Decoded metric {g_unk gauge <nil> <nil>}
+2023-11-02T15:39:51.395+0300	[34mINFO[0m	zap/zaplogger.go:53	Metrics on server: gaugeMetric, c, 
+2023-11-02T15:39:51.395+0300	[31mERROR[0m	zap/zaplogger.go:66	Cann't find metric
+2023-11-02T15:39:51.396+0300	[34mINFO[0m	zap/zaplogger.go:53	Entered JSONValueHandler
+2023-11-02T15:39:51.396+0300	[34mINFO[0m	zap/zaplogger.go:53	Method checked
+2023-11-02T15:39:51.396+0300	[34mINFO[0m	zap/zaplogger.go:53	Decoded metric {c_unk smth <nil> <nil>}
+2023-11-02T15:39:51.396+0300	[31mERROR[0m	zap/zaplogger.go:66	wrong type smth
+2023-11-02T15:40:19.493+0300	[34mINFO[0m	zap/zaplogger.go:53	Entered UpdHandler
+2023-11-02T15:40:19.496+0300	[34mINFO[0m	zap/zaplogger.go:53	Entered UpdHandler
+2023-11-02T15:40:19.497+0300	[34mINFO[0m	zap/zaplogger.go:53	Entered UpdHandler
+2023-11-02T15:40:19.500+0300	[34mINFO[0m	zap/zaplogger.go:53	Entered UpdHandler
+2023-11-02T15:40:19.501+0300	[34mINFO[0m	zap/zaplogger.go:53	Entered UpdHandler
+2023-11-02T15:40:19.503+0300	[34mINFO[0m	zap/zaplogger.go:53	Entered UpdHandler
+2023-11-02T15:40:19.505+0300	[34mINFO[0m	zap/zaplogger.go:53	Entered ValueHandler
+2023-11-02T15:40:19.505+0300	[34mINFO[0m	zap/zaplogger.go:53	Headers:  map[Accept-Encoding:[gzip] User-Agent:[Go-http-client/1.1]]
+2023-11-02T15:40:19.506+0300	[34mINFO[0m	zap/zaplogger.go:53	Entered ValueHandler
+2023-11-02T15:40:19.506+0300	[34mINFO[0m	zap/zaplogger.go:53	Headers:  map[Accept-Encoding:[gzip] User-Agent:[Go-http-client/1.1]]
+2023-11-02T15:40:19.508+0300	[34mINFO[0m	zap/zaplogger.go:53	Entered ValueHandler
+2023-11-02T15:40:19.508+0300	[34mINFO[0m	zap/zaplogger.go:53	Headers:  map[Accept-Encoding:[gzip] User-Agent:[Go-http-client/1.1]]
+2023-11-02T15:40:19.509+0300	[34mINFO[0m	zap/zaplogger.go:53	Entered ValueHandler
+2023-11-02T15:40:19.509+0300	[34mINFO[0m	zap/zaplogger.go:53	Headers:  map[Accept-Encoding:[gzip] User-Agent:[Go-http-client/1.1]]
+2023-11-02T15:40:19.511+0300	[34mINFO[0m	zap/zaplogger.go:53	Entered ShowAllHandler
+2023-11-02T15:40:19.511+0300	[34mINFO[0m	zap/zaplogger.go:53	method checked
+2023-11-02T15:40:19.511+0300	[34mINFO[0m	zap/zaplogger.go:53	trying to add gauge {gaugeMetric gauge <nil> 0xc0001280f0}
+2023-11-02T15:40:19.511+0300	[34mINFO[0m	zap/zaplogger.go:53	trying to add counter {counterMetric counter 0xc0001280f8 <nil>}
+2023-11-02T15:40:19.511+0300	[34mINFO[0m	zap/zaplogger.go:53	Metrics collected
+2023-11-02T15:40:19.512+0300	[34mINFO[0m	zap/zaplogger.go:53	Entered DefoultHandler
+2023-11-02T15:40:19.514+0300	[34mINFO[0m	zap/zaplogger.go:53	Entered DefoultHandler
+2023-11-02T15:40:19.515+0300	[34mINFO[0m	zap/zaplogger.go:53	Entered JSONUpdHandler
+2023-11-02T15:40:19.515+0300	[34mINFO[0m	zap/zaplogger.go:53	Method checked
+2023-11-02T15:40:19.515+0300	[34mINFO[0m	zap/zaplogger.go:53	Decoded metric to stor {g_new gauge <nil> 0xc00028c5c8}
+2023-11-02T15:40:19.515+0300	[34mINFO[0m	zap/zaplogger.go:53	Metrics on server: g, c, 
+2023-11-02T15:40:19.515+0300	[34mINFO[0m	zap/zaplogger.go:53	Metric g_new stored
+2023-11-02T15:40:19.515+0300	[34mINFO[0m	zap/zaplogger.go:53	JSONUpdHandler exited
+2023-11-02T15:40:19.517+0300	[34mINFO[0m	zap/zaplogger.go:53	Entered JSONValueHandler
+2023-11-02T15:40:19.517+0300	[34mINFO[0m	zap/zaplogger.go:53	Method checked
+2023-11-02T15:40:19.517+0300	[34mINFO[0m	zap/zaplogger.go:53	Decoded metric {g gauge <nil> <nil>}
+2023-11-02T15:40:19.518+0300	[34mINFO[0m	zap/zaplogger.go:53	Entered JSONUpdHandler
+2023-11-02T15:40:19.518+0300	[34mINFO[0m	zap/zaplogger.go:53	Method checked
+2023-11-02T15:40:19.518+0300	[34mINFO[0m	zap/zaplogger.go:53	Decoded metric to stor {c_new counter 0xc000128510 <nil>}
+2023-11-02T15:40:19.518+0300	[34mINFO[0m	zap/zaplogger.go:53	Metrics on server: c, gaugeMetric, 
+2023-11-02T15:40:19.518+0300	[34mINFO[0m	zap/zaplogger.go:53	Metric c_new stored
+2023-11-02T15:40:19.518+0300	[34mINFO[0m	zap/zaplogger.go:53	JSONUpdHandler exited
+2023-11-02T15:40:19.519+0300	[34mINFO[0m	zap/zaplogger.go:53	Entered JSONUpdHandler
+2023-11-02T15:40:19.519+0300	[34mINFO[0m	zap/zaplogger.go:53	Method checked
+2023-11-02T15:40:19.520+0300	[34mINFO[0m	zap/zaplogger.go:53	Decoded metric to stor {c_new smth 0xc00039e5d0 <nil>}
+2023-11-02T15:40:19.520+0300	[31mERROR[0m	zap/zaplogger.go:66	wrong type smth
+2023-11-02T15:40:19.521+0300	[34mINFO[0m	zap/zaplogger.go:53	Entered JSONUpdHandler
+2023-11-02T15:40:19.521+0300	[34mINFO[0m	zap/zaplogger.go:53	Method checked
+2023-11-02T15:40:19.521+0300	[34mINFO[0m	zap/zaplogger.go:53	Decoded metric to stor {c counter 0xc00021aa78 <nil>}
+2023-11-02T15:40:19.521+0300	[34mINFO[0m	zap/zaplogger.go:53	Metrics on server: gaugeMetric, c, 
+2023-11-02T15:40:19.521+0300	[34mINFO[0m	zap/zaplogger.go:53	Metric c stored
+2023-11-02T15:40:19.521+0300	[34mINFO[0m	zap/zaplogger.go:53	JSONUpdHandler exited
+2023-11-02T15:40:19.522+0300	[34mINFO[0m	zap/zaplogger.go:53	Entered JSONUpdHandler
+2023-11-02T15:40:19.522+0300	[34mINFO[0m	zap/zaplogger.go:53	Method checked
+2023-11-02T15:40:19.523+0300	[34mINFO[0m	zap/zaplogger.go:53	Decoded metric to stor {g gauge <nil> 0xc000128810}
+2023-11-02T15:40:19.523+0300	[34mINFO[0m	zap/zaplogger.go:53	Metrics on server: g, c, 
+2023-11-02T15:40:19.523+0300	[34mINFO[0m	zap/zaplogger.go:53	Metric g stored
+2023-11-02T15:40:19.523+0300	[34mINFO[0m	zap/zaplogger.go:53	JSONUpdHandler exited
+2023-11-02T15:40:19.524+0300	[34mINFO[0m	zap/zaplogger.go:53	Entered JSONValueHandler
+2023-11-02T15:40:19.524+0300	[34mINFO[0m	zap/zaplogger.go:53	Method checked
+2023-11-02T15:40:19.524+0300	[34mINFO[0m	zap/zaplogger.go:53	Decoded metric {c counter <nil> <nil>}
+2023-11-02T15:40:19.526+0300	[34mINFO[0m	zap/zaplogger.go:53	Entered JSONValueHandler
+2023-11-02T15:40:19.526+0300	[34mINFO[0m	zap/zaplogger.go:53	Method checked
+2023-11-02T15:40:19.526+0300	[34mINFO[0m	zap/zaplogger.go:53	Decoded metric {c_unk counter <nil> <nil>}
+2023-11-02T15:40:19.526+0300	[34mINFO[0m	zap/zaplogger.go:53	Metrics on server: gaugeMetric, c, 
+2023-11-02T15:40:19.526+0300	[31mERROR[0m	zap/zaplogger.go:66	Cann't find metric
+2023-11-02T15:40:19.527+0300	[34mINFO[0m	zap/zaplogger.go:53	Entered JSONValueHandler
+2023-11-02T15:40:19.527+0300	[34mINFO[0m	zap/zaplogger.go:53	Method checked
+2023-11-02T15:40:19.527+0300	[34mINFO[0m	zap/zaplogger.go:53	Decoded metric {g_unk gauge <nil> <nil>}
+2023-11-02T15:40:19.527+0300	[34mINFO[0m	zap/zaplogger.go:53	Metrics on server: gaugeMetric, c, 
+2023-11-02T15:40:19.527+0300	[31mERROR[0m	zap/zaplogger.go:66	Cann't find metric
+2023-11-02T15:40:19.529+0300	[34mINFO[0m	zap/zaplogger.go:53	Entered JSONValueHandler
+2023-11-02T15:40:19.529+0300	[34mINFO[0m	zap/zaplogger.go:53	Method checked
+2023-11-02T15:40:19.529+0300	[34mINFO[0m	zap/zaplogger.go:53	Decoded metric {c_unk smth <nil> <nil>}
+2023-11-02T15:40:19.529+0300	[31mERROR[0m	zap/zaplogger.go:66	wrong type smth
+2023-11-02T15:40:22.618+0300	[34mINFO[0m	zap/zaplogger.go:53	Entered UpdHandler
+2023-11-02T15:40:22.623+0300	[34mINFO[0m	zap/zaplogger.go:53	Entered UpdHandler
+2023-11-02T15:40:22.626+0300	[34mINFO[0m	zap/zaplogger.go:53	Entered UpdHandler
+2023-11-02T15:40:22.629+0300	[34mINFO[0m	zap/zaplogger.go:53	Entered UpdHandler
+2023-11-02T15:40:22.630+0300	[34mINFO[0m	zap/zaplogger.go:53	Entered UpdHandler
+2023-11-02T15:40:22.631+0300	[34mINFO[0m	zap/zaplogger.go:53	Entered UpdHandler
+2023-11-02T15:40:22.633+0300	[34mINFO[0m	zap/zaplogger.go:53	Entered ValueHandler
+2023-11-02T15:40:22.633+0300	[34mINFO[0m	zap/zaplogger.go:53	Headers:  map[Accept-Encoding:[gzip] User-Agent:[Go-http-client/1.1]]
+2023-11-02T15:40:22.635+0300	[34mINFO[0m	zap/zaplogger.go:53	Entered ValueHandler
+2023-11-02T15:40:22.635+0300	[34mINFO[0m	zap/zaplogger.go:53	Headers:  map[Accept-Encoding:[gzip] User-Agent:[Go-http-client/1.1]]
+2023-11-02T15:40:22.636+0300	[34mINFO[0m	zap/zaplogger.go:53	Entered ValueHandler
+2023-11-02T15:40:22.636+0300	[34mINFO[0m	zap/zaplogger.go:53	Headers:  map[Accept-Encoding:[gzip] User-Agent:[Go-http-client/1.1]]
+2023-11-02T15:40:22.637+0300	[34mINFO[0m	zap/zaplogger.go:53	Entered ValueHandler
+2023-11-02T15:40:22.637+0300	[34mINFO[0m	zap/zaplogger.go:53	Headers:  map[Accept-Encoding:[gzip] User-Agent:[Go-http-client/1.1]]
+2023-11-02T15:40:22.639+0300	[34mINFO[0m	zap/zaplogger.go:53	Entered ShowAllHandler
+2023-11-02T15:40:22.639+0300	[34mINFO[0m	zap/zaplogger.go:53	method checked
+2023-11-02T15:40:22.639+0300	[34mINFO[0m	zap/zaplogger.go:53	trying to add gauge {gaugeMetric gauge <nil> 0xc000012a70}
+2023-11-02T15:40:22.639+0300	[34mINFO[0m	zap/zaplogger.go:53	trying to add counter {counterMetric counter 0xc000012a78 <nil>}
+2023-11-02T15:40:22.639+0300	[34mINFO[0m	zap/zaplogger.go:53	Metrics collected
+2023-11-02T15:40:22.640+0300	[34mINFO[0m	zap/zaplogger.go:53	Entered DefoultHandler
+2023-11-02T15:40:22.641+0300	[34mINFO[0m	zap/zaplogger.go:53	Entered DefoultHandler
+2023-11-02T15:40:22.643+0300	[34mINFO[0m	zap/zaplogger.go:53	Entered JSONUpdHandler
+2023-11-02T15:40:22.643+0300	[34mINFO[0m	zap/zaplogger.go:53	Method checked
+2023-11-02T15:40:22.643+0300	[34mINFO[0m	zap/zaplogger.go:53	Decoded metric to stor {g_new gauge <nil> 0xc00021a5f8}
+2023-11-02T15:40:22.643+0300	[34mINFO[0m	zap/zaplogger.go:53	Metrics on server: g, c, 
+2023-11-02T15:40:22.643+0300	[34mINFO[0m	zap/zaplogger.go:53	Metric g_new stored
+2023-11-02T15:40:22.643+0300	[34mINFO[0m	zap/zaplogger.go:53	JSONUpdHandler exited
+2023-11-02T15:40:22.644+0300	[34mINFO[0m	zap/zaplogger.go:53	Entered JSONValueHandler
+2023-11-02T15:40:22.644+0300	[34mINFO[0m	zap/zaplogger.go:53	Method checked
+2023-11-02T15:40:22.644+0300	[34mINFO[0m	zap/zaplogger.go:53	Decoded metric {g gauge <nil> <nil>}
+2023-11-02T15:40:22.646+0300	[34mINFO[0m	zap/zaplogger.go:53	Entered JSONUpdHandler
+2023-11-02T15:40:22.646+0300	[34mINFO[0m	zap/zaplogger.go:53	Method checked
+2023-11-02T15:40:22.646+0300	[34mINFO[0m	zap/zaplogger.go:53	Decoded metric to stor {c_new counter 0xc00021a850 <nil>}
+2023-11-02T15:40:22.646+0300	[34mINFO[0m	zap/zaplogger.go:53	Metrics on server: gaugeMetric, c, 
+2023-11-02T15:40:22.646+0300	[34mINFO[0m	zap/zaplogger.go:53	Metric c_new stored
+2023-11-02T15:40:22.646+0300	[34mINFO[0m	zap/zaplogger.go:53	JSONUpdHandler exited
+2023-11-02T15:40:22.647+0300	[34mINFO[0m	zap/zaplogger.go:53	Entered JSONUpdHandler
+2023-11-02T15:40:22.647+0300	[34mINFO[0m	zap/zaplogger.go:53	Method checked
+2023-11-02T15:40:22.647+0300	[34mINFO[0m	zap/zaplogger.go:53	Decoded metric to stor {c_new smth 0xc0001266c0 <nil>}
+2023-11-02T15:40:22.647+0300	[31mERROR[0m	zap/zaplogger.go:66	wrong type smth
+2023-11-02T15:40:22.649+0300	[34mINFO[0m	zap/zaplogger.go:53	Entered JSONUpdHandler
+2023-11-02T15:40:22.649+0300	[34mINFO[0m	zap/zaplogger.go:53	Method checked
+2023-11-02T15:40:22.649+0300	[34mINFO[0m	zap/zaplogger.go:53	Decoded metric to stor {c counter 0xc000126838 <nil>}
+2023-11-02T15:40:22.649+0300	[34mINFO[0m	zap/zaplogger.go:53	Metrics on server: gaugeMetric, c, 
+2023-11-02T15:40:22.649+0300	[34mINFO[0m	zap/zaplogger.go:53	Metric c stored
+2023-11-02T15:40:22.649+0300	[34mINFO[0m	zap/zaplogger.go:53	JSONUpdHandler exited
+2023-11-02T15:40:22.650+0300	[34mINFO[0m	zap/zaplogger.go:53	Entered JSONUpdHandler
+2023-11-02T15:40:22.650+0300	[34mINFO[0m	zap/zaplogger.go:53	Method checked
+2023-11-02T15:40:22.650+0300	[34mINFO[0m	zap/zaplogger.go:53	Decoded metric to stor {g gauge <nil> 0xc000013588}
+2023-11-02T15:40:22.650+0300	[34mINFO[0m	zap/zaplogger.go:53	Metrics on server: g, c, 
+2023-11-02T15:40:22.650+0300	[34mINFO[0m	zap/zaplogger.go:53	Metric g stored
+2023-11-02T15:40:22.650+0300	[34mINFO[0m	zap/zaplogger.go:53	JSONUpdHandler exited
+2023-11-02T15:40:22.652+0300	[34mINFO[0m	zap/zaplogger.go:53	Entered JSONValueHandler
+2023-11-02T15:40:22.652+0300	[34mINFO[0m	zap/zaplogger.go:53	Method checked
+2023-11-02T15:40:22.652+0300	[34mINFO[0m	zap/zaplogger.go:53	Decoded metric {c counter <nil> <nil>}
+2023-11-02T15:40:22.653+0300	[34mINFO[0m	zap/zaplogger.go:53	Entered JSONValueHandler
+2023-11-02T15:40:22.653+0300	[34mINFO[0m	zap/zaplogger.go:53	Method checked
+2023-11-02T15:40:22.653+0300	[34mINFO[0m	zap/zaplogger.go:53	Decoded metric {c_unk counter <nil> <nil>}
+2023-11-02T15:40:22.653+0300	[34mINFO[0m	zap/zaplogger.go:53	Metrics on server: gaugeMetric, c, 
+2023-11-02T15:40:22.653+0300	[31mERROR[0m	zap/zaplogger.go:66	Cann't find metric
+2023-11-02T15:40:22.655+0300	[34mINFO[0m	zap/zaplogger.go:53	Entered JSONValueHandler
+2023-11-02T15:40:22.655+0300	[34mINFO[0m	zap/zaplogger.go:53	Method checked
+2023-11-02T15:40:22.655+0300	[34mINFO[0m	zap/zaplogger.go:53	Decoded metric {g_unk gauge <nil> <nil>}
+2023-11-02T15:40:22.655+0300	[34mINFO[0m	zap/zaplogger.go:53	Metrics on server: gaugeMetric, c, 
+2023-11-02T15:40:22.655+0300	[31mERROR[0m	zap/zaplogger.go:66	Cann't find metric
+2023-11-02T15:40:22.656+0300	[34mINFO[0m	zap/zaplogger.go:53	Entered JSONValueHandler
+2023-11-02T15:40:22.656+0300	[34mINFO[0m	zap/zaplogger.go:53	Method checked
+2023-11-02T15:40:22.656+0300	[34mINFO[0m	zap/zaplogger.go:53	Decoded metric {c_unk smth <nil> <nil>}
+2023-11-02T15:40:22.656+0300	[31mERROR[0m	zap/zaplogger.go:66	wrong type smth

@@ -61,7 +61,7 @@ func TestGzipCompressor(t *testing.T) {
 		},
 	}
 
-	Log, err := logger.NewLogZap("info", "./log.txt")
+	Log, err := logger.New("info", "./log.txt")
 	require.NoError(t, err)
 	stor, err := storage.NewMemStorage(metrics, false, "", Log)
 	require.NoError(t, err)

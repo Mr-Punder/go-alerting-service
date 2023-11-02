@@ -1,4 +1,4 @@
-package main
+package telemetry
 
 import (
 	"net/http"
@@ -19,7 +19,7 @@ func TestSendMetrics(t *testing.T) {
 	address := server.URL
 
 	// zapLogger, err := logger.NewLogZap("info", "stdout", "stderr")
-	Log, err := logger.NewLogZap("info", "stdout")
+	Log, err := logger.New("info", "stdout")
 	require.NoError(t, err)
 	var simpleValue = 4.2
 	var simpleDelta int64 = 2
@@ -53,9 +53,10 @@ func TestSendMetrics(t *testing.T) {
 	}
 	for _, tt := range tests {
 		t.Run(tt.name, func(t *testing.T) {
+			tel := NewTelemetry(address, tt.metric, Log)
 
 			if !tt.wantErr {
-				assert.NoError(t, sendMetrics(tt.metric, address, Log))
+				assert.NoError(t, tel.SendMetrics())
 			}
 		})
 	}

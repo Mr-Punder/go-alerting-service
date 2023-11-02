@@ -29,7 +29,7 @@ func main() {
 func run(conf *config.Config) error {
 
 	//zapLogger, err := logger.NewLogZap(conf.LogLevel, conf.LogOutputPath, conf.LogErrorPath)
-	Log, err := logger.NewLogZap(conf.LogLevel, conf.LogOutputPath)
+	Log, err := logger.New(conf.LogLevel, conf.LogOutputPath)
 	if err != nil {
 		return err
 	}

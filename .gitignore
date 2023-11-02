@@ -24,9 +24,9 @@ vendor/
 .idea
 .vscode
 
-# # logs
-# *.txt
+# logs
+*.txt
 
-# # data
-# *.json
-# # data/
+# data
+*.json
+data/

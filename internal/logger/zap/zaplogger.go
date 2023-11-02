@@ -13,7 +13,7 @@ type LogZap struct {
 
 }
 
-func NewLogZap(level string, path string) (*LogZap, error) {
+func New(level string, path string) (*LogZap, error) {
 	lvl, err := zap.ParseAtomicLevel(level)
 	if err != nil {
 		return nil, err

@@ -8,21 +8,21 @@ import (
 	"time"
 )
 
-var (
+type Config struct {
 	PollInterval   time.Duration
 	ReportInterval time.Duration
 	ServerAddress  string
 	LogLevel       string
 	LogOutputPath  string
 	LogErrorPath   string
-)
+}
 
-func ParseFlags() {
-	var rawPollInterval, rawReportInterval int
-	var rawlogLevel string
-	var rawlogOutputPath string
-	var rawlogErrortPath string
-	flag.StringVar(&ServerAddress, "a", "localhost:8080", "address and port to connect")
+func New() Config {
+	var (
+		rawPollInterval, rawReportInterval                                int
+		rawServerAddress, rawlogLevel, rawlogOutputPath, rawlogErrortPath string
+	)
+	flag.StringVar(&rawServerAddress, "a", "localhost:8080", "address and port to connect")
 	flag.IntVar(&rawPollInterval, "r", 2, "poll interval")
 	flag.IntVar(&rawReportInterval, "p", 10, "report interval")
 	flag.StringVar(&rawlogLevel, "l", "info", "level of logging")
@@ -31,7 +31,7 @@ func ParseFlags() {
 	flag.Parse()
 
 	if envAddrs, ok := os.LookupEnv("ADDRESS"); ok {
-		ServerAddress = envAddrs
+		rawServerAddress = envAddrs
 	}
 
 	if envPollInterval, ok := os.LookupEnv("POLL_INTERVAL"); ok {
@@ -65,9 +65,12 @@ func ParseFlags() {
 		rawlogErrortPath = envLogErrorPath
 	}
 
-	PollInterval = time.Duration(rawPollInterval) * time.Second
-	ReportInterval = time.Duration(rawReportInterval) * time.Second
-	LogLevel = rawlogLevel
-	LogOutputPath = rawlogOutputPath
-	LogErrorPath = rawlogErrortPath
+	return Config{
+		ServerAddress:  rawServerAddress,
+		PollInterval:   time.Duration(rawPollInterval) * time.Second,
+		ReportInterval: time.Duration(rawReportInterval) * time.Second,
+		LogLevel:       rawlogLevel,
+		LogOutputPath:  rawlogOutputPath,
+		LogErrorPath:   rawlogErrortPath,
+	}
 }

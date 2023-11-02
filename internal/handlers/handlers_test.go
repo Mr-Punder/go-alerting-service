@@ -622,7 +622,7 @@ func TestMetricRouter(t *testing.T) {
 	}
 	for _, tt := range tests {
 		t.Run(tt.name, func(t *testing.T) {
-			Log, err := logger.NewLogZap("info", "./log.txt")
+			Log, err := logger.New("info", "./log.txt")
 			require.NoError(t, err)
 			stor, err := storage.NewMemStorage(tt.metrics, false, "", Log)
 			require.NoError(t, err)
