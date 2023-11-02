@@ -25,9 +25,11 @@ vendor/
 .vscode
 
 # logs
-*.txt
+# *.txt
 
 # data
 *.json
 data/
 tmp/
+
+.sh
