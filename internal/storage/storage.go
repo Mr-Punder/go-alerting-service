@@ -8,28 +8,21 @@ import (
 	"path/filepath"
 	"sync"
 
+	"github.com/Mr-Punder/go-alerting-service/internal/interfaces"
 	"github.com/Mr-Punder/go-alerting-service/internal/metrics"
 )
-
-type storLogger interface {
-	Info(mes string)
-	Errorf(str string, arg ...any)
-	Error(mess string)
-	Infof(str string, arg ...any)
-	Debug(mess string)
-}
 
 // MemStorage is simple implementation of storage metrics storage with map
 type MemStorage struct {
 	syncSave bool
-	log      storLogger
+	log      interfaces.Logger
 	file     *os.File
 	encoder  *json.Encoder
 	mu       sync.Mutex
 	storage  map[string]metrics.Metrics
 }
 
-func NewMemStorage(metrics map[string]metrics.Metrics, ss bool, path string, log storLogger) (*MemStorage, error) {
+func NewMemStorage(metrics map[string]metrics.Metrics, ss bool, path string, log interfaces.Logger) (*MemStorage, error) {
 	var file *os.File
 	var err error
 

@@ -12,7 +12,7 @@ import (
 	"time"
 
 	"github.com/Mr-Punder/go-alerting-service/internal/handlers"
-	"github.com/Mr-Punder/go-alerting-service/internal/logger"
+	logger "github.com/Mr-Punder/go-alerting-service/internal/logger/zap"
 	"github.com/Mr-Punder/go-alerting-service/internal/metrics"
 	"github.com/Mr-Punder/go-alerting-service/internal/middleware"
 	"github.com/Mr-Punder/go-alerting-service/internal/server/config"
@@ -29,7 +29,7 @@ func main() {
 func run(conf *config.Config) error {
 
 	//zapLogger, err := logger.NewLogZap(conf.LogLevel, conf.LogOutputPath, conf.LogErrorPath)
-	Log, err := logger.NewLogLogrus(conf.LogLevel, conf.LogOutputPath)
+	Log, err := logger.NewLogZap(conf.LogLevel, conf.LogOutputPath)
 	if err != nil {
 		return err
 	}

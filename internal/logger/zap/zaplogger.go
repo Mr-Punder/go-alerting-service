@@ -1,4 +1,4 @@
-package logger
+package zaplogger
 
 import (
 	"time"
@@ -7,13 +7,13 @@ import (
 	"go.uber.org/zap/zapcore"
 )
 
-// LogHTTPZap is implementation of HTTPLogger with zap
-type LogHTTPZap struct {
+// LogZap is implementation of HTTPLogger with zap
+type LogZap struct {
 	logZap *zap.SugaredLogger //zap.NewNop()
 
 }
 
-func NewLogZap(level string, path string, errorPath string) (*LogHTTPZap, error) {
+func NewLogZap(level string, path string) (*LogZap, error) {
 	lvl, err := zap.ParseAtomicLevel(level)
 	if err != nil {
 		return nil, err
@@ -27,7 +27,7 @@ func NewLogZap(level string, path string, errorPath string) (*LogHTTPZap, error)
 		Encoding:          "console",
 		EncoderConfig:     encoderConfig,
 		OutputPaths:       []string{path},
-		ErrorOutputPaths:  []string{errorPath},
+		ErrorOutputPaths:  []string{"stderr"},
 		DisableStacktrace: true,
 	}
 
@@ -37,11 +37,11 @@ func NewLogZap(level string, path string, errorPath string) (*LogHTTPZap, error)
 	}
 	defer logger.Sync()
 
-	return &LogHTTPZap{logger.Sugar()}, nil
+	return &LogZap{logger.Sugar()}, nil
 }
 
 // RequestLog makes request log
-func (logger *LogHTTPZap) RequestLog(method string, path string) {
+func (logger *LogZap) RequestLog(method string, path string) {
 	logger.logZap.Infow("incoming request",
 		"method", method,
 		"path", path,
@@ -49,22 +49,30 @@ func (logger *LogHTTPZap) RequestLog(method string, path string) {
 }
 
 // Info logs message at info level
-func (logger *LogHTTPZap) Info(mes string) {
+func (logger *LogZap) Info(mes string) {
 	logger.logZap.Info(mes)
 }
 
+func (logger *LogZap) Infof(str string, arg ...any) {
+	logger.logZap.Infof(str, arg...)
+}
+func (logger *LogZap) Errorf(str string, arg ...any) {
+	logger.logZap.Errorf(str, arg...)
+
+}
+
 // Error logs message at error level
-func (logger *LogHTTPZap) Error(mes string) {
+func (logger *LogZap) Error(mes string) {
 	logger.logZap.Error(mes)
 }
 
 // Debug logs message at debug level
-func (logger *LogHTTPZap) Debug(mes string) {
+func (logger *LogZap) Debug(mes string) {
 	logger.logZap.Debug(mes)
 }
 
 // ResponseLog makes response log
-func (logger *LogHTTPZap) ResponseLog(status int, size int, duration time.Duration) {
+func (logger *LogZap) ResponseLog(status int, size int, duration time.Duration) {
 	logger.logZap.Infow("Send response with",
 		"status", status,
 		"size", size,

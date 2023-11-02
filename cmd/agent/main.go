@@ -14,7 +14,8 @@ import (
 	"time"
 
 	"github.com/Mr-Punder/go-alerting-service/internal/agent/config"
-	"github.com/Mr-Punder/go-alerting-service/internal/logger"
+	"github.com/Mr-Punder/go-alerting-service/internal/interfaces"
+	zaplogger "github.com/Mr-Punder/go-alerting-service/internal/logger/zap"
 	"github.com/Mr-Punder/go-alerting-service/internal/metrics"
 )
 
@@ -26,14 +27,7 @@ func main() {
 	}
 }
 
-type simpleLogger interface {
-	Info(mes string)
-	Error(mes string)
-	Infof(str string, args ...any)
-	Errorf(str string, args ...any)
-}
-
-func sendMetrics(metrics []metrics.Metrics, addres string, logger simpleLogger) error {
+func sendMetrics(metrics []metrics.Metrics, addres string, logger interfaces.Logger) error {
 	client := http.Client{}
 	logger.Info("client initialized")
 
@@ -139,7 +133,7 @@ func sendMetrics(metrics []metrics.Metrics, addres string, logger simpleLogger) 
 
 func run() error {
 	//zapLogger, err := logger.NewLogZap("info", "stdout", "stderr")
-	ruslog, err := logger.NewLogLogrus(config.LogLevel, config.LogOutputPath)
+	ruslog, err := zaplogger.NewLogZap(config.LogLevel, config.LogOutputPath)
 	if err != nil {
 		return err
 	}

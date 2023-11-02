@@ -1,4 +1,4 @@
-package logger
+package logrruslogger
 
 import (
 	"fmt"
@@ -10,6 +10,14 @@ import (
 
 type LogHTTPLogrus struct {
 	log *logrus.Logger
+}
+
+type Logger interface {
+	Info(mes string)
+	Errorf(str string, arg ...any)
+	Error(mess string)
+	Infof(str string, arg ...any)
+	Debug(mess string)
 }
 
 func NewLogLogrus(level string, path string) (*LogHTTPLogrus, error) {

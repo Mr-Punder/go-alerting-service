@@ -8,16 +8,10 @@ import (
 	"sort"
 	"strconv"
 
+	"github.com/Mr-Punder/go-alerting-service/internal/interfaces"
 	"github.com/Mr-Punder/go-alerting-service/internal/metrics"
 	"github.com/go-chi/chi/v5"
 )
-
-// httpLogger logs information about http requests and responses
-type httpLogger interface {
-	Info(mes string)
-	Error(mes string)
-	Debug(mes string)
-}
 
 type metricsAllGetter interface {
 	GetAll() map[string]metrics.Metrics
@@ -46,14 +40,14 @@ type metricsStorer interface {
 // Handler type contains MemStorer and HttpLogger
 type Handler struct {
 	stor   metricsStorer
-	logger httpLogger
+	logger interfaces.Logger
 }
 
-func NewHandler(stor metricsStorer, logger httpLogger) *Handler {
+func NewHandler(stor metricsStorer, logger interfaces.Logger) *Handler {
 	return &Handler{stor, logger}
 }
 
-func NewMetricRouter(storage metricsStorer, logger httpLogger) chi.Router {
+func NewMetricRouter(storage metricsStorer, logger interfaces.Logger) chi.Router {
 	r := chi.NewRouter()
 
 	handler := NewHandler(storage, logger)
