@@ -242,7 +242,7 @@ func (t *Telemetry) SendMetrics() error {
 	t.log.Info("client initialized")
 
 	for _, metric := range t.metrics {
-		url := fmt.Sprintf("%s/update", t.address)
+		url := fmt.Sprintf("http://%s/update", t.address)
 		body, err := json.Marshal(metric)
 		if err != nil {
 			return err

@@ -30,3 +30,4 @@ vendor/
 # data
 *.json
 data/
+tmp/

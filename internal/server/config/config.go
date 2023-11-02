@@ -16,16 +16,12 @@ type Config struct {
 	Restore         bool
 }
 
-// GetConfig from environment and consol parameters
-func GetConfig() *Config {
+// New from environment and consol parameters
+func New() *Config {
 	var (
-		flagRunAddr     string
-		logLevel        string
-		logOutputPath   string
-		logErrortPath   string
-		storeInterval   int64
-		fileStoragePath string
-		restore         bool
+		flagRunAddr, logLevel, logOutputPath, fileStoragePath, logErrortPath string
+		storeInterval                                                        int64
+		restore                                                              bool
 	)
 
 	flag.StringVar(&flagRunAddr, "a", "localhost:8080", "addres and port to run server")

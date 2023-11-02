@@ -13,41 +13,17 @@ import (
 	"github.com/go-chi/chi/v5"
 )
 
-type metricsAllGetter interface {
-	GetAll() map[string]metrics.Metrics
-}
-
-type metricsGetter interface {
-	Get(metric metrics.Metrics) (metrics.Metrics, bool)
-}
-
-type metricsSetter interface {
-	Set(metric metrics.Metrics) error
-}
-
-type metricsDeleter interface {
-	DeleteGouge(metric metrics.Metrics)
-}
-
-// Memstorer is a general metrics storage interface
-type metricsStorer interface {
-	metricsDeleter
-	metricsGetter
-	metricsSetter
-	metricsAllGetter
-}
-
 // Handler type contains MemStorer and HttpLogger
 type Handler struct {
-	stor   metricsStorer
+	stor   interfaces.MetricsStorer
 	logger interfaces.Logger
 }
 
-func NewHandler(stor metricsStorer, logger interfaces.Logger) *Handler {
+func NewHandler(stor interfaces.MetricsStorer, logger interfaces.Logger) *Handler {
 	return &Handler{stor, logger}
 }
 
-func NewMetricRouter(storage metricsStorer, logger interfaces.Logger) chi.Router {
+func NewMetricRouter(storage interfaces.MetricsStorer, logger interfaces.Logger) chi.Router {
 	r := chi.NewRouter()
 
 	handler := NewHandler(storage, logger)
