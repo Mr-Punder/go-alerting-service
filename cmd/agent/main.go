@@ -1,60 +1,26 @@
 package main
 
 import (
-	"fmt"
-	"net/http"
-
-	"time"
-
-	"github.com/Mr-Punder/go-alerting-service/internal/config"
-	"github.com/Mr-Punder/go-alerting-service/internal/metrics"
-	"github.com/go-resty/resty/v2"
+	cnf "github.com/Mr-Punder/go-alerting-service/internal/agent/config"
+	zaplogger "github.com/Mr-Punder/go-alerting-service/internal/logger/zap"
+	"github.com/Mr-Punder/go-alerting-service/internal/telemetry"
 )
 
 func main() {
-	config.ParseFlags()
-	if err := run(); err != nil {
+	config := cnf.New()
+
+	Log, err := zaplogger.New(config.LogLevel, config.LogOutputPath)
+	if err != nil {
 		panic(err)
 	}
-}
+	Log.Info("agent started")
 
-func sendMetrics(metrics []metrics.Metric, addres string) error {
-	init := fmt.Sprintf("%s/update", addres)
-	client := resty.New()
+	tel := telemetry.NewTelemetry(config.ServerAddress, nil, Log)
+	tel.CollectMetrics()
+	Log.Info("metrics collected")
 
-	for _, metric := range metrics {
-		url := fmt.Sprintf("%s/%s/%s/%s", init, metric.Type, metric.Name, metric.Val)
-
-		resp, err := client.R().SetHeader("Content-Type", "text/plain").Post(url)
-		if err != nil {
-			return err
-		}
-		if resp.StatusCode() != http.StatusOK {
-			return fmt.Errorf("unexpected status code: %d", resp.StatusCode())
-		}
+	err = tel.Run(config.PollInterval, config.ReportInterval)
+	if err != nil {
+		panic(err)
 	}
-	return nil
-}
-
-func run() error {
-	pollTicker := time.NewTicker(config.PollInterval)
-	reportTicker := time.NewTicker(config.ReportInterval)
-	defer pollTicker.Stop()
-	defer reportTicker.Stop()
-
-	metric := metrics.Collect()
-	for {
-		select {
-		case <-pollTicker.C:
-			metric = metrics.Collect()
-
-		case <-reportTicker.C:
-			address := "http://" + config.ServerAddress
-			err := sendMetrics(metric, address)
-			if err != nil {
-				return err
-			}
-		}
-	}
-
 }
