@@ -52,6 +52,10 @@ func main() {
 		panic(err)
 	}
 	log.Infof("Database is opened with dsn %s", conf.DBstring)
+	env := os.Environ()
+	log.Infof("env values: %s", env)
+
+	log.Infof("config parametrs: %s", *conf)
 
 	router := handlers.NewMetricRouter(stor, db, log)
 	mserver := metricserver.NewMetricServer(conf.FlagRunAddr, router, log)
