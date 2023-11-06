@@ -59,9 +59,9 @@ func (h *Handler) PingHandler(w http.ResponseWriter, r *http.Request) {
 
 	err := h.sqlDB.Ping()
 	if err != nil {
-		h.logger.Info("database does not ping")
+		h.logger.Errorf("Database does not ping %s", err)
 		w.WriteHeader(http.StatusInternalServerError)
-		http.Error(w, "database does not ping", http.StatusInternalServerError)
+		http.Error(w, "Database does not ping", http.StatusInternalServerError)
 
 		return
 	}
