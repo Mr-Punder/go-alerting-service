@@ -65,7 +65,7 @@ func (stor *MemStorage) Close() error {
 	return nil
 }
 
-func (store *MemStorage) Ping() error {
+func (stor *MemStorage) Ping() error {
 	return nil
 }
 

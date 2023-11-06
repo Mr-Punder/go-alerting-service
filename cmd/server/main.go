@@ -14,8 +14,6 @@ import (
 	"github.com/Mr-Punder/go-alerting-service/internal/postgre"
 	"github.com/Mr-Punder/go-alerting-service/internal/server/config"
 	"github.com/Mr-Punder/go-alerting-service/internal/storage"
-
-	_ "github.com/jackc/pgx"
 )
 
 func main() {
@@ -53,7 +51,7 @@ func main() {
 		log.Errorf("Error opening database", err)
 		panic(err)
 	}
-	log.Info("Database is opened")
+	log.Infof("Database is opened with dsn %s", conf.DBstring)
 
 	router := handlers.NewMetricRouter(stor, db, log)
 	mserver := metricserver.NewMetricServer(conf.FlagRunAddr, router, log)
