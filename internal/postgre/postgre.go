@@ -13,8 +13,8 @@ type PostgreDB struct {
 	log interfaces.Logger
 }
 
-func NewPostgreDB(initstr string, log interfaces.Logger) (*PostgreDB, error) {
-	db, err := sql.Open("pgx", initstr)
+func NewPostgreDB(dsn string, log interfaces.Logger) (*PostgreDB, error) {
+	db, err := sql.Open("pgx", dsn)
 	if err != nil {
 		log.Errorf("Error opening postgre database %s", err)
 		return nil, err
