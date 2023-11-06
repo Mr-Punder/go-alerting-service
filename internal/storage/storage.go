@@ -55,9 +55,18 @@ func NewMemStorage(metrics map[string]metrics.Metrics, ss bool, path string, log
 	}, nil
 }
 
-func (stor *MemStorage) Close() {
-	stor.file.Close()
+func (stor *MemStorage) Close() error {
+	err := stor.file.Close()
+	if err != nil {
+		stor.log.Errorf("Error closing file", err)
+		return err
+	}
 	stor.log.Info("File closed")
+	return nil
+}
+
+func (store *MemStorage) Ping() error {
+	return nil
 }
 
 // GetAll returns map with all metrics
@@ -117,7 +126,7 @@ func (stor *MemStorage) Get(metric metrics.Metrics) (metrics.Metrics, bool) {
 }
 
 // Delete deletes one gauge by name and do nothibg if the metric does not exist
-func (stor *MemStorage) DeleteGouge(metric metrics.Metrics) {
+func (stor *MemStorage) Delete(metric metrics.Metrics) {
 	if stor.storage == nil {
 		stor.storage = make(map[string]metrics.Metrics)
 	}

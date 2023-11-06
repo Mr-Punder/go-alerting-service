@@ -24,11 +24,15 @@ type MetricsSetter interface {
 }
 
 type MetricsDeleter interface {
-	DeleteGouge(metric metrics.Metrics)
+	Delete(metric metrics.Metrics)
 }
 
 type MetricSaver interface {
 	Save() error
+}
+
+type MetricPinger interface {
+	Ping() error
 }
 
 // Memstorer is a general metrics storage interface
@@ -37,4 +41,5 @@ type MetricsStorer interface {
 	MetricsGetter
 	MetricsSetter
 	MetricsAllGetter
+	MetricPinger
 }

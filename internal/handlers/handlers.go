@@ -16,17 +16,18 @@ import (
 // Handler type contains MemStorer and HttpLogger
 type Handler struct {
 	stor   interfaces.MetricsStorer
+	sqlDB  interfaces.MetricsStorer
 	logger interfaces.Logger
 }
 
-func NewHandler(stor interfaces.MetricsStorer, logger interfaces.Logger) *Handler {
-	return &Handler{stor, logger}
+func NewHandler(stor interfaces.MetricsStorer, sqlDb interfaces.MetricsStorer, logger interfaces.Logger) *Handler {
+	return &Handler{stor, sqlDb, logger}
 }
 
-func NewMetricRouter(storage interfaces.MetricsStorer, logger interfaces.Logger) chi.Router {
+func NewMetricRouter(storage interfaces.MetricsStorer, sqlDb interfaces.MetricsStorer, logger interfaces.Logger) chi.Router {
 	r := chi.NewRouter()
 
-	handler := NewHandler(storage, logger)
+	handler := NewHandler(storage, sqlDb, logger)
 
 	return r.Route("/", func(r chi.Router) {
 		r.Get("/", handler.ShowAllHandler)
@@ -38,10 +39,36 @@ func NewMetricRouter(storage interfaces.MetricsStorer, logger interfaces.Logger)
 			r.Post("/", handler.JSONValueHandler)
 			r.Get("/{type}/{name}", handler.ValueHandler)
 		})
+		r.Get("/ping", handler.PingHandler)
 		r.Get("/favicon.ico", handler.FaviconHandler)
 		r.Get("/{}", handler.DefoultHandler)
 		r.Post("/{}", handler.DefoultHandler)
 	})
+}
+
+func (h *Handler) PingHandler(w http.ResponseWriter, r *http.Request) {
+
+	h.logger.Info("Entered PingHandler")
+	if r.Method != http.MethodGet {
+		h.logger.Error("wrong request method")
+		http.Error(w, "Only GET requests are allowed for update!", http.StatusMethodNotAllowed)
+
+		return
+	}
+	h.logger.Info("Method checked")
+
+	err := h.sqlDB.Ping()
+	if err != nil {
+		h.logger.Info("database does not ping")
+		w.WriteHeader(http.StatusInternalServerError)
+		http.Error(w, "database does not ping", http.StatusInternalServerError)
+
+		return
+	}
+
+	w.WriteHeader(http.StatusOK)
+	h.logger.Info("PingHandler exited")
+
 }
 
 // JSONUpdHandler updates metric via json POST request

@@ -627,7 +627,7 @@ func TestMetricRouter(t *testing.T) {
 			stor, err := storage.NewMemStorage(tt.metrics, false, "", Log)
 			require.NoError(t, err)
 
-			ts := httptest.NewServer(NewMetricRouter(stor, Log))
+			ts := httptest.NewServer(NewMetricRouter(stor, stor, Log))
 			defer ts.Close()
 
 			resp, body := testRequest(t, ts, tt.method, tt.uri, tt.sentBody, tt.sentHeaders)

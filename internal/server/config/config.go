@@ -14,14 +14,15 @@ type Config struct {
 	StoreInterval   int64
 	FileStoragePath string
 	Restore         bool
+	DBstring        string
 }
 
 // New from environment and consol parameters
 func New() *Config {
 	var (
-		flagRunAddr, logLevel, logOutputPath, fileStoragePath, logErrortPath string
-		storeInterval                                                        int64
-		restore                                                              bool
+		flagRunAddr, logLevel, logOutputPath, fileStoragePath, logErrortPath, dbString string
+		storeInterval                                                                  int64
+		restore                                                                        bool
 	)
 
 	flag.StringVar(&flagRunAddr, "a", "localhost:8080", "addres and port to run server")
@@ -31,6 +32,7 @@ func New() *Config {
 	flag.Int64Var(&storeInterval, "i", 300, "metrics saving interval")
 	flag.StringVar(&fileStoragePath, "f", "/tmp/metrics-db.json", "storage filename")
 	flag.BoolVar(&restore, "r", true, "restore metrics from storage")
+	flag.StringVar(&dbString, "d", "host=localhost user=metrics password=metrics_password dbname=metrics", "databese opening string")
 
 	flag.Parse()
 
@@ -62,6 +64,9 @@ func New() *Config {
 
 		restore, _ = strconv.ParseBool(envRestor)
 	}
+	if envDBstring, ok := os.LookupEnv("DATABASE_DSN"); ok {
+		dbString = envDBstring
+	}
 
-	return &Config{flagRunAddr, logLevel, logOutputPath, logErrortPath, storeInterval, fileStoragePath, restore}
+	return &Config{flagRunAddr, logLevel, logOutputPath, logErrortPath, storeInterval, fileStoragePath, restore, dbString}
 }
