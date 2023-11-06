@@ -20,14 +20,14 @@ type Handler struct {
 	logger interfaces.Logger
 }
 
-func NewHandler(stor interfaces.MetricsStorer, sqlDb interfaces.MetricsStorer, logger interfaces.Logger) *Handler {
-	return &Handler{stor, sqlDb, logger}
+func NewHandler(stor interfaces.MetricsStorer, sqlDB interfaces.MetricsStorer, logger interfaces.Logger) *Handler {
+	return &Handler{stor, sqlDB, logger}
 }
 
-func NewMetricRouter(storage interfaces.MetricsStorer, sqlDb interfaces.MetricsStorer, logger interfaces.Logger) chi.Router {
+func NewMetricRouter(storage interfaces.MetricsStorer, sqlDB interfaces.MetricsStorer, logger interfaces.Logger) chi.Router {
 	r := chi.NewRouter()
 
-	handler := NewHandler(storage, sqlDb, logger)
+	handler := NewHandler(storage, sqlDB, logger)
 
 	return r.Route("/", func(r chi.Router) {
 		r.Get("/", handler.ShowAllHandler)
