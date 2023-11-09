@@ -105,6 +105,12 @@ func (db *PostgreDB) GetAll(ctx context.Context) map[string]metrics.Metrics {
 
 	}
 
+	if rows.Err() != nil {
+		db.log.Errorf("Error selecting all metrics %s", err)
+		return make(map[string]metrics.Metrics)
+
+	}
+
 	defer rows.Close()
 	metricMap := make(map[string]metrics.Metrics)
 
