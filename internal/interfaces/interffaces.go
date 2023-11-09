@@ -1,6 +1,10 @@
 package interfaces
 
-import "github.com/Mr-Punder/go-alerting-service/internal/metrics"
+import (
+	"context"
+
+	"github.com/Mr-Punder/go-alerting-service/internal/metrics"
+)
 
 // Logger is a global logger interface
 type Logger interface {
@@ -12,23 +16,23 @@ type Logger interface {
 }
 
 type MetricsAllGetter interface {
-	GetAll() map[string]metrics.Metrics
+	GetAll(ctx context.Context) map[string]metrics.Metrics
 }
 
 type MetricsGetter interface {
-	Get(metric metrics.Metrics) (metrics.Metrics, bool)
+	Get(ctx context.Context, metric metrics.Metrics) (metrics.Metrics, bool)
 }
 
 type MetricsSetter interface {
-	Set(metric metrics.Metrics) error
+	Set(ctx context.Context, metric metrics.Metrics) error
 }
 
 type MetricsDeleter interface {
-	Delete(metric metrics.Metrics)
+	Delete(ctx context.Context, metric metrics.Metrics) error
 }
 
 type MetricSaver interface {
-	Save() error
+	Save(ctx context.Context) error
 }
 
 type MetricPinger interface {

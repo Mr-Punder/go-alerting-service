@@ -1,6 +1,7 @@
 package storage
 
 import (
+	"context"
 	"encoding/json"
 	"errors"
 	"io"
@@ -70,7 +71,7 @@ func (stor *MemStorage) Ping() error {
 }
 
 // GetAll returns map with all metrics
-func (stor *MemStorage) GetAll() map[string]metrics.Metrics {
+func (stor *MemStorage) GetAll(ctx context.Context) map[string]metrics.Metrics {
 	if stor.storage == nil {
 		stor.storage = make(map[string]metrics.Metrics)
 	}
@@ -78,7 +79,7 @@ func (stor *MemStorage) GetAll() map[string]metrics.Metrics {
 }
 
 // Set stores metric
-func (stor *MemStorage) Set(metric metrics.Metrics) error {
+func (stor *MemStorage) Set(ctx context.Context, metric metrics.Metrics) error {
 	if stor.storage == nil {
 		stor.storage = make(map[string]metrics.Metrics)
 	}
@@ -102,9 +103,8 @@ func (stor *MemStorage) Set(metric metrics.Metrics) error {
 		return errors.New("wrong type")
 
 	}
-
 	if stor.syncSave {
-		err := stor.Save()
+		err := stor.Save(ctx)
 		if err != nil {
 			return err
 		}
@@ -114,7 +114,7 @@ func (stor *MemStorage) Set(metric metrics.Metrics) error {
 
 // Get returns one metric  and it's existence
 // returns metrics.Metrics{}, false if metric is not found
-func (stor *MemStorage) Get(metric metrics.Metrics) (metrics.Metrics, bool) {
+func (stor *MemStorage) Get(ctx context.Context, metric metrics.Metrics) (metrics.Metrics, bool) {
 	if stor.storage == nil {
 		stor.storage = make(map[string]metrics.Metrics)
 	}
@@ -126,14 +126,15 @@ func (stor *MemStorage) Get(metric metrics.Metrics) (metrics.Metrics, bool) {
 }
 
 // Delete deletes one gauge by name and do nothibg if the metric does not exist
-func (stor *MemStorage) Delete(metric metrics.Metrics) {
+func (stor *MemStorage) Delete(ctx context.Context, metric metrics.Metrics) error {
 	if stor.storage == nil {
 		stor.storage = make(map[string]metrics.Metrics)
 	}
 	delete(stor.storage, metric.ID)
+	return nil
 }
 
-func (stor *MemStorage) Save() error {
+func (stor *MemStorage) Save(ctx context.Context) error {
 	if _, err := stor.file.Seek(0, io.SeekStart); err != nil {
 		return err
 	}

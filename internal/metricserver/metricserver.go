@@ -48,7 +48,7 @@ func (ms *MetrciServer) RunServer() {
 	}
 	ms.Log.Infof("Starting server on %s", ms.address)
 	if err := ms.server.ListenAndServe(); err != nil && err != http.ErrServerClosed {
-		ms.Log.Errorf("starting server on %s", ms.address)
+		ms.Log.Errorf("starting server on %s error: %s", ms.address, err)
 	}
 
 }
@@ -80,7 +80,9 @@ func (ms *MetrciServer) Shutdown(ctx context.Context) error {
 
 func SaveMetrics(stor interfaces.MetricSaver, saveInt int64, Log interfaces.Logger) {
 	for range time.Tick(time.Duration(saveInt) * time.Second) {
-		err := stor.Save()
+		ctx, cancel := context.WithTimeout(context.Background(), 3*time.Second)
+		defer cancel()
+		err := stor.Save(ctx)
 		if err != nil {
 			log.Printf("Ошибка сохранения метрик на диск: %v", err)
 		}
