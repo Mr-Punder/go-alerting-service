@@ -26,6 +26,7 @@ func NewTelemetry(adr string, metrucs []metrics.Metrics, logger interfaces.Logge
 	return &Telemetry{
 		log:     logger,
 		address: adr,
+		metrics: metrucs,
 	}
 }
 

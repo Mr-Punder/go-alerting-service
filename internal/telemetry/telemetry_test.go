@@ -3,6 +3,7 @@ package telemetry
 import (
 	"net/http"
 	"net/http/httptest"
+	"strings"
 	"testing"
 
 	logger "github.com/Mr-Punder/go-alerting-service/internal/logger/zap"
@@ -12,15 +13,18 @@ import (
 )
 
 func TestSendMetrics(t *testing.T) {
+	log, err := logger.New("info", "stdout")
+	require.NoError(t, err)
 	server := httptest.NewServer(http.HandlerFunc(func(w http.ResponseWriter, r *http.Request) {
+		log.Info("I'm handler")
 		w.WriteHeader(http.StatusOK)
 	}))
 	defer server.Close()
 	address := server.URL
+	address = strings.TrimPrefix(address, "http://")
+	log.Error(address)
 
 	// zapLogger, err := logger.NewLogZap("info", "stdout", "stderr")
-	Log, err := logger.New("info", "stdout")
-	require.NoError(t, err)
 	var simpleValue = 4.2
 	var simpleDelta int64 = 2
 
@@ -38,12 +42,12 @@ func TestSendMetrics(t *testing.T) {
 			name: "simple metric",
 			metric: []metrics.Metrics{
 				{
-					ID:    "metric 1",
+					ID:    "metric_1",
 					MType: "gauge",
 					Value: &simpleValue,
 				},
 				{
-					ID:    "metric 2",
+					ID:    "metric_2",
 					MType: "counter",
 					Delta: &simpleDelta,
 				},
@@ -53,7 +57,7 @@ func TestSendMetrics(t *testing.T) {
 	}
 	for _, tt := range tests {
 		t.Run(tt.name, func(t *testing.T) {
-			tel := NewTelemetry(address, tt.metric, Log)
+			tel := NewTelemetry(address, tt.metric, log)
 
 			if !tt.wantErr {
 				assert.NoError(t, tel.SendMetrics())
