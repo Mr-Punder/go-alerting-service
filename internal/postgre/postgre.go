@@ -21,6 +21,7 @@ func NewPostgreDB(dsn string, log interfaces.Logger) (*PostgreDB, error) {
 		log.Errorf("Error opening postgre database %s", err)
 		return nil, err
 	}
+	log.Infof("opened database witjh dsn %s", dsn)
 
 	Pdb := PostgreDB{
 		db:  db,
@@ -53,6 +54,7 @@ func (db *PostgreDB) InitTable(ctx context.Context) error {
 	var existsGauge bool
 	err := db.db.QueryRowContext(ctx, query).Scan(&existsGauge)
 	if err != nil {
+
 		db.log.Errorf("Error searching table %s", err)
 		return err
 	}
@@ -78,13 +80,13 @@ func (db *PostgreDB) InitTable(ctx context.Context) error {
 
 	db.log.Info("Table has not found and then created")
 
-	_, err = db.db.ExecContext(ctx, "CREATE INDEX IF NOT EXIST m_name ON metric (m_name)")
-	if err != nil {
-		db.log.Errorf("Error creating index %s", err)
-		return err
-	}
+	// _, err = db.db.ExecContext(ctx, "CREATE INDEX IF NOT EXIST m_name ON metric (m_name)")
+	// if err != nil {
+	// 	db.log.Errorf("Error creating index %s", err)
+	// 	return err
+	// }
 
-	db.log.Info("Index created")
+	// db.log.Info("Index created")
 	return nil
 
 }
