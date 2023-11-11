@@ -15,16 +15,14 @@ type Logger interface {
 	Debug(mess string)
 }
 
-type MetricsAllGetter interface {
-	GetAll(ctx context.Context) map[string]metrics.Metrics
-}
-
 type MetricsGetter interface {
+	GetAll(ctx context.Context) map[string]metrics.Metrics
 	Get(ctx context.Context, metric metrics.Metrics) (metrics.Metrics, bool)
 }
 
 type MetricsSetter interface {
 	Set(ctx context.Context, metric metrics.Metrics) error
+	SetAll(ctx context.Context, metrics []metrics.Metrics) error
 }
 
 type MetricsDeleter interface {
@@ -44,6 +42,5 @@ type MetricsStorer interface {
 	MetricsDeleter
 	MetricsGetter
 	MetricsSetter
-	MetricsAllGetter
 	MetricPinger
 }

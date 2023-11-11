@@ -241,102 +241,100 @@ func (t *Telemetry) SendMetrics() error {
 	client := http.Client{}
 	t.log.Info("client initialized")
 
-	for _, metric := range t.metrics {
-		url := fmt.Sprintf("http://%s/update", t.address)
-		body, err := json.Marshal(metric)
-		if err != nil {
-			return err
-		}
-		if metric.MType == "gauge" {
-			t.log.Info(fmt.Sprintf("metric to encode %s %s %f", metric.ID, metric.MType, *metric.Value))
-		} else {
-			t.log.Info(fmt.Sprintf("metric to encode %s %s %d", metric.ID, metric.MType, *metric.Delta))
+	url := fmt.Sprintf("http://%s/updates/", t.address)
+	body, err := json.Marshal(t.metrics)
+	if err != nil {
+		return err
+	}
+	// if metric.MType == "gauge" {
+	// 	t.log.Info(fmt.Sprintf("metric to encode %s %s %f", metric.ID, metric.MType, *metric.Value))
+	// } else {
+	// 	t.log.Info(fmt.Sprintf("metric to encode %s %s %d", metric.ID, metric.MType, *metric.Delta))
 
-		}
+	// }
 
-		metricstr := string(body)
-		t.log.Info(fmt.Sprintf("Metric %s encoded to %s", metric.ID, metricstr))
+	metricstr := string(body)
+	t.log.Info(fmt.Sprintf("Metrics  encoded to %s", metricstr))
 
-		buf := bytes.NewBuffer(nil)
-		zb := gzip.NewWriter(buf)
-		_, err = zb.Write(body)
-		if err != nil {
-			return err
-		}
-		err = zb.Close()
-		if err != nil {
-			return err
-		}
+	buf := bytes.NewBuffer(nil)
+	zb := gzip.NewWriter(buf)
+	_, err = zb.Write(body)
+	if err != nil {
+		return err
+	}
+	err = zb.Close()
+	if err != nil {
+		return err
+	}
 
-		req, err := http.NewRequest("POST", url, buf)
-		if err != nil {
-			return err
-		}
-		req.Header.Set("Content-Type", "application/json")
-		req.Header.Set("Accept-Encoding", "gzip")
-		req.Header.Set("Content-Encoding", "gzip")
-		resp, err := client.Do(req)
-		t.log.Info(fmt.Sprintf("Send request, err : %s", err))
-		if err == nil {
-			defer resp.Body.Close() // statictest thinks that I have to put it exactly here
-		}
-		retries := 2
-		for i := 0; i < retries; i++ {
-
-			if err != nil {
-
-				time.Sleep(40 * time.Millisecond)
-				req, err = http.NewRequest("POST", url, bytes.NewBufferString(metricstr))
-				if err != nil {
-					return err
-				}
-				req.Header.Set("Content-Type", "application/json")
-				req.Header.Del("Accept-Encoding")
-				resp, err = client.Do(req)
-				t.log.Info(fmt.Sprintf("Repeated request, err: %s", err))
-				if err == nil {
-					defer resp.Body.Close() // statictest thinks that I have to put it exactly here
-				}
-				if err != nil {
-					i++
-				} else {
-					break
-				}
-			}
-
-		}
+	req, err := http.NewRequest("POST", url, buf)
+	if err != nil {
+		return err
+	}
+	req.Header.Set("Content-Type", "application/json")
+	req.Header.Set("Accept-Encoding", "gzip")
+	req.Header.Set("Content-Encoding", "gzip")
+	resp, err := client.Do(req)
+	t.log.Info(fmt.Sprintf("Send request, err : %s", err))
+	if err == nil {
+		defer resp.Body.Close() // statictest thinks that I have to put it exactly here
+	}
+	retries := 2
+	for i := 0; i < retries; i++ {
 
 		if err != nil {
-			t.log.Errorf("Sending error: %s", err)
 
-		}
-		if resp.StatusCode != http.StatusOK {
-			t.log.Error(fmt.Sprintf("Unexpected code %d", resp.StatusCode))
-
-			return fmt.Errorf("unexpected status code: %d", resp.StatusCode)
-		}
-
-		gzipEncoding := resp.Header.Get("Content-Encoding")
-		var ans []byte
-		if strings.Contains(gzipEncoding, "gzip") {
-
-			zr, err := gzip.NewReader(resp.Body)
+			time.Sleep(40 * time.Millisecond)
+			req, err = http.NewRequest("POST", url, bytes.NewBufferString(metricstr))
 			if err != nil {
 				return err
 			}
-			ans, err = io.ReadAll(zr)
-			if err != nil {
-				return err
+			req.Header.Set("Content-Type", "application/json")
+			req.Header.Del("Accept-Encoding")
+			resp, err = client.Do(req)
+			t.log.Info(fmt.Sprintf("Repeated request, err: %s", err))
+			if err == nil {
+				defer resp.Body.Close() // statictest thinks that I have to put it exactly here
 			}
-		} else {
-			ans, err = io.ReadAll(resp.Body)
 			if err != nil {
-				return err
+				i++
+			} else {
+				break
 			}
 		}
-
-		t.log.Info(fmt.Sprintf("recievd: %s", string(ans)))
 
 	}
+
+	if err != nil {
+		t.log.Errorf("Sending error: %s", err)
+
+	}
+	if resp.StatusCode != http.StatusOK {
+		t.log.Error(fmt.Sprintf("Unexpected code %d", resp.StatusCode))
+
+		return fmt.Errorf("unexpected status code: %d", resp.StatusCode)
+	}
+
+	gzipEncoding := resp.Header.Get("Content-Encoding")
+	var ans []byte
+	if strings.Contains(gzipEncoding, "gzip") {
+
+		zr, err := gzip.NewReader(resp.Body)
+		if err != nil {
+			return err
+		}
+		ans, err = io.ReadAll(zr)
+		if err != nil {
+			return err
+		}
+	} else {
+		ans, err = io.ReadAll(resp.Body)
+		if err != nil {
+			return err
+		}
+	}
+
+	t.log.Info(fmt.Sprintf("recievd: %s", string(ans)))
+
 	return nil
 }

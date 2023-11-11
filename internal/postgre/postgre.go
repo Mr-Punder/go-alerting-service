@@ -64,7 +64,7 @@ func (db *PostgreDB) InitTable(ctx context.Context) error {
 	query = `
 		CREATE TABLE metric (
 			m_name VARCHAR(50) PRIMARY KEY,
-			m_type VARCHAR(50),
+			m_type VARCHAR(50) NOT NULL,
 			delta BIGINT,
 			value DOUBLE PRECISION
 		)
@@ -78,6 +78,13 @@ func (db *PostgreDB) InitTable(ctx context.Context) error {
 
 	db.log.Info("Table has not found and then created")
 
+	_, err = db.db.ExecContext(ctx, "CREATE INDEX IF NOT EXIST m_name ON metric (m_name)")
+	if err != nil {
+		db.log.Errorf("Error creating index %s", err)
+		return err
+	}
+
+	db.log.Info("Index created")
 	return nil
 
 }
@@ -172,7 +179,7 @@ func (db *PostgreDB) Set(ctx context.Context, metric metrics.Metrics) error {
 		INSERT INTO metric (m_name, m_type, delta, value)
 		VALUES ($1, $2, $3, $4)
 		ON CONFLICT (m_name) DO update
-		SET  m_type = EXCLUDED.m_type, delta = EXCLUDED.delta, value = EXCLUDED.value
+		SET  m_type = EXCLUDED.m_type, delta = metric.delta + EXCLUDED.delta, value = EXCLUDED.value
 	`
 
 	var delta int64
@@ -195,4 +202,48 @@ func (db *PostgreDB) Set(ctx context.Context, metric metrics.Metrics) error {
 	}
 
 	return nil
+}
+
+func (db *PostgreDB) SetAll(ctx context.Context, metrics []metrics.Metrics) error {
+	tx, err := db.db.Begin()
+	if err != nil {
+		db.log.Errorf("Error creating transaction %s", err)
+		return err
+	}
+
+	stmt, err := tx.PrepareContext(ctx, `
+	INSERT INTO metric (m_name, m_type, delta, value)
+	VALUES ($1, $2, $3, $4)
+	ON CONFLICT (m_name) DO update
+	SET  m_type = EXCLUDED.m_type, delta = metric.delta + EXCLUDED.delta, value = EXCLUDED.value
+`)
+
+	if err != nil {
+		db.log.Errorf("Error preparing query", err)
+		return err
+	}
+	defer stmt.Close()
+
+	for _, metric := range metrics {
+		var delta int64
+		var value float64
+		if metric.Delta == nil {
+			delta = 0
+		} else {
+			delta = *metric.Delta
+		}
+		if metric.Value == nil {
+			value = 0.0
+		} else {
+			value = *metric.Value
+		}
+
+		_, err := stmt.ExecContext(ctx, metric.ID, metric.MType, delta, value)
+		if err != nil {
+			db.log.Errorf("Error updating metric %s  error: %s in transaction", metric.ID, err)
+			tx.Rollback()
+			return err
+		}
+	}
+	return tx.Commit()
 }

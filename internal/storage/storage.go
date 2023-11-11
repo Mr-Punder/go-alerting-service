@@ -154,3 +154,14 @@ func (stor *MemStorage) Save(ctx context.Context) error {
 	stor.log.Info("Metrics saved")
 	return nil
 }
+
+func (stor *MemStorage) SetAll(ctx context.Context, metrics []metrics.Metrics) error {
+	for _, metric := range metrics {
+		err := stor.Set(ctx, metric)
+		if err != nil {
+			return err
+		}
+	}
+
+	return nil
+}

@@ -33,6 +33,7 @@ func NewMetricRouter(storage interfaces.MetricsStorer, logger interfaces.Logger)
 
 	return r.Route("/", func(r chi.Router) {
 		r.Get("/", handler.ShowAllHandler)
+		r.Post("/updates/", handler.JSONUpdAllHandler)
 		r.Route("/update", func(r chi.Router) {
 			r.Post("/", handler.JSONUpdHandler)
 			r.Post("/{type}/{name}/{value}", handler.UpdHandler)
@@ -46,6 +47,50 @@ func NewMetricRouter(storage interfaces.MetricsStorer, logger interfaces.Logger)
 		r.Get("/{}", handler.DefoultHandler)
 		r.Post("/{}", handler.DefoultHandler)
 	})
+}
+
+func (h *Handler) JSONUpdAllHandler(w http.ResponseWriter, r *http.Request) {
+	h.logger.Info("Entered JSONUpdAllHandler")
+	if r.Method != http.MethodPost {
+		h.logger.Error("wrong request method")
+		http.Error(w, "Only POST requests are allowed for update!", http.StatusMethodNotAllowed)
+
+		return
+	}
+	h.logger.Info("Method checked")
+
+	metrics := make([]metrics.Metrics, 0)
+	if err := json.NewDecoder(r.Body).Decode(&metrics); err != nil {
+		h.logger.Error(fmt.Sprintf("json decoding error %e", err))
+		w.WriteHeader(http.StatusBadRequest)
+		http.Error(w, "wrong requests", http.StatusBadRequest)
+
+		return
+	}
+
+	for _, m := range metrics {
+		if m.MType != "gauge" && m.MType != "counter" {
+			h.logger.Error(fmt.Sprintf("wrong type %s", m.MType))
+
+			http.Error(w, "wrong type", http.StatusBadRequest)
+
+			return
+		}
+	}
+
+	ctx, cancel := context.WithTimeout(r.Context(), h.timeout)
+	defer cancel()
+	if err := h.stor.SetAll(ctx, metrics); err != nil {
+		w.WriteHeader(http.StatusBadRequest)
+		h.logger.Errorf("Cann't store metrics", err)
+
+		return
+	}
+
+	h.logger.Info("Metrics stored")
+	w.WriteHeader(http.StatusOK)
+	h.logger.Info("JSONUpdHandler exited")
+
 }
 
 func (h *Handler) PingHandler(w http.ResponseWriter, r *http.Request) {
@@ -116,12 +161,12 @@ func (h *Handler) JSONUpdHandler(w http.ResponseWriter, r *http.Request) {
 	defer cancel()
 	if err := h.stor.Set(ctx, metric); err != nil {
 		w.WriteHeader(http.StatusBadRequest)
-		h.logger.Error("Cann't find metric")
+		h.logger.Errorf("Cann't store metric", err)
 
 		return
 	}
 
-	h.logger.Info(fmt.Sprintf("Metric %s stored", metric.ID))
+	h.logger.Infof("Metric %s stored", metric.ID)
 
 	ctx, cancel = context.WithTimeout(r.Context(), h.timeout)
 	defer cancel()

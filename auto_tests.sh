@@ -94,3 +94,26 @@ SERVER_PORT=8090
             -database-dsn='host=localhost user=metrics password=metrics_password dbname=metrics' \
             -server-port=$SERVER_PORT \
             -source-path=.
+
+ SERVER_PORT=8090
+          ADDRESS="localhost:${SERVER_PORT}"
+          TEMP_FILE=$(random tempfile)
+          metricstest -test.v -test.run=^TestIteration11$ \
+            -agent-binary-path=cmd/agent/agent \
+            -binary-path=cmd/server/server \
+            -database-dsn='host=localhost user=metrics password=metrics_password dbname=metrics' \
+            -server-port=$SERVER_PORT \
+            -source-path=.
+
+
+
+            # 12
+            SERVER_PORT=8080
+          ADDRESS="localhost:${SERVER_PORT}"
+          TEMP_FILE=$(random tempfile)
+          metricstest -test.v -test.run=^TestIteration12$ \
+            -agent-binary-path=cmd/agent/agent \
+            -binary-path=cmd/server/server \
+            -database-dsn='host=localhost user=metrics password=metrics_password dbname=metrics' \
+            -server-port=$SERVER_PORT \
+            -source-path=.
