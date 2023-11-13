@@ -3,12 +3,56 @@ package postgre
 import (
 	"context"
 	"database/sql"
+	"errors"
 	"time"
 
 	"github.com/Mr-Punder/go-alerting-service/internal/interfaces"
 	"github.com/Mr-Punder/go-alerting-service/internal/metrics"
+	"github.com/jackc/pgerrcode"
+	"github.com/jackc/pgx/v5/pgconn"
 	_ "github.com/jackc/pgx/v5/stdlib"
 )
+
+// I want do to it that way but I feel I'm doing something wrong
+
+// withRetry1 allows to retry function returning 1 parameter
+func withRetry1(f func(ar ...any) error, args ...any) error {
+	var err error
+	for attempt := 0; attempt < 3; attempt++ {
+		err = f(args...)
+		if err != nil {
+			var pgErr *pgconn.PgError
+			if errors.As(err, &pgErr) && pgerrcode.UniqueViolation == pgErr.Code {
+				time.Sleep(time.Duration(attempt*2+1) * time.Second)
+				continue
+			}
+			return err
+		}
+		return err
+
+	}
+	return err
+}
+
+// withRetry1 allows to retry function returning 2 parameters
+func withRetry2(f func(ar ...any) (any, error), args ...any) (any, error) {
+	var resp any
+	var err error
+	for attempt := 0; attempt < 3; attempt++ {
+		resp, err = f(args...)
+		if err != nil {
+			var pgErr *pgconn.PgError
+			if errors.As(err, &pgErr) && pgerrcode.UniqueViolation == pgErr.Code {
+				time.Sleep(time.Duration(attempt*2+1) * time.Second)
+				continue
+			}
+			return nil, err
+		}
+		return resp, err
+
+	}
+	return nil, err
+}
 
 type PostgreDB struct {
 	db  *sql.DB
@@ -18,6 +62,7 @@ type PostgreDB struct {
 func NewPostgreDB(dsn string, log interfaces.Logger) (*PostgreDB, error) {
 	db, err := sql.Open("pgx", dsn)
 	if err != nil {
+
 		log.Errorf("Error opening postgre database %s", err)
 		return nil, err
 	}
@@ -51,15 +96,15 @@ func (db *PostgreDB) InitTable(ctx context.Context) error {
 		)
 	`
 
-	var existsGauge bool
-	err := db.db.QueryRowContext(ctx, query).Scan(&existsGauge)
+	var existsTable bool
+	err := db.db.QueryRowContext(ctx, query).Scan(&existsTable)
 	if err != nil {
 
 		db.log.Errorf("Error searching table %s", err)
 		return err
 	}
 
-	if existsGauge {
+	if existsTable {
 		db.log.Info("Found table")
 		return nil
 	}
@@ -117,7 +162,6 @@ func (db *PostgreDB) GetAll(ctx context.Context) map[string]metrics.Metrics {
 	if rows.Err() != nil {
 		db.log.Errorf("Error selecting all metrics %s", err)
 		return make(map[string]metrics.Metrics)
-
 	}
 
 	defer rows.Close()
@@ -132,6 +176,11 @@ func (db *PostgreDB) GetAll(ctx context.Context) map[string]metrics.Metrics {
 			return make(map[string]metrics.Metrics)
 		}
 
+		if metric.MType == "gauge" {
+			metric.Delta = nil
+		} else {
+			metric.Value = nil
+		}
 		metricMap[metric.ID] = metric
 	}
 
@@ -157,6 +206,12 @@ func (db *PostgreDB) Get(ctx context.Context, metric metrics.Metrics) (metrics.M
 	if err != nil {
 		db.log.Errorf("Error getting metric %s with error %s", id, err)
 		return metrics.Metrics{}, false
+	}
+
+	if resMetric.MType == "gauge" {
+		resMetric.Delta = nil
+	} else {
+		resMetric.Value = nil
 	}
 
 	return resMetric, true

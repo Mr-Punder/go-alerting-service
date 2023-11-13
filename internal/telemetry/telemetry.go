@@ -281,11 +281,11 @@ func (t *Telemetry) SendMetrics() error {
 		defer resp.Body.Close() // statictest thinks that I have to put it exactly here
 	}
 	retries := 2
-	for i := 0; i < retries; i++ {
+	for i := 1; i <= retries; i++ {
 
 		if err != nil {
 
-			time.Sleep(40 * time.Millisecond)
+			time.Sleep(time.Duration(i*40) * time.Millisecond)
 			req, err = http.NewRequest("POST", url, bytes.NewBufferString(metricstr))
 			if err != nil {
 				return err

@@ -33,7 +33,7 @@ func New() *Config {
 	flag.StringVar(&fileStoragePath, "f", "/tmp/metrics-db.json", "storage filename")
 	flag.BoolVar(&restore, "r", true, "restore metrics from storage")
 	flag.StringVar(&dbString, "d", "", "databese opening string")
-	// host=localhost user=metrics password=metrics dbname=metrics
+	// host=localhost user=metrics password=metrics_password dbname=metrics
 
 	flag.Parse()
 
