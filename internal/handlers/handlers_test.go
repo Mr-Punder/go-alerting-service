@@ -8,7 +8,7 @@ import (
 	"net/http/httptest"
 	"testing"
 
-	logger "github.com/Mr-Punder/go-alerting-service/internal/logger/zap"
+	"github.com/Mr-Punder/go-alerting-service/internal/logger"
 	"github.com/Mr-Punder/go-alerting-service/internal/metrics"
 	"github.com/Mr-Punder/go-alerting-service/internal/storage"
 
@@ -622,7 +622,7 @@ func TestMetricRouter(t *testing.T) {
 	}
 	for _, tt := range tests {
 		t.Run(tt.name, func(t *testing.T) {
-			Log, err := logger.New("info", "./log.txt")
+			Log, err := logger.NewZapLogger("info", "./log.txt")
 			require.NoError(t, err)
 			stor, err := storage.NewMemStorage(tt.metrics, false, "", Log)
 			require.NoError(t, err)

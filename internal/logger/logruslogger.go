@@ -1,4 +1,4 @@
-package logrruslogger
+package logger
 
 import (
 	"fmt"
@@ -12,7 +12,7 @@ type LogHTTPLogrus struct {
 	log *logrus.Logger
 }
 
-func New(level string, path string) (*LogHTTPLogrus, error) {
+func NewLogrusLogger(level string, path string) (*LogHTTPLogrus, error) {
 	logger := logrus.New()
 
 	var lvl logrus.Level

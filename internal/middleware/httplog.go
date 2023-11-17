@@ -5,12 +5,12 @@ import (
 	"net/http"
 	"time"
 
-	"github.com/Mr-Punder/go-alerting-service/internal/interfaces"
+	"github.com/Mr-Punder/go-alerting-service/internal/logger"
 )
 
 // httpLogger is logger interface for middleware logger
 type httpLogger interface {
-	interfaces.Logger
+	logger.Logger
 	RequestLog(method string, path string)
 	ResponseLog(status int, size int, duration time.Duration)
 }

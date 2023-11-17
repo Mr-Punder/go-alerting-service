@@ -6,14 +6,14 @@ import (
 	"strings"
 	"testing"
 
-	logger "github.com/Mr-Punder/go-alerting-service/internal/logger/zap"
+	"github.com/Mr-Punder/go-alerting-service/internal/logger"
 	"github.com/Mr-Punder/go-alerting-service/internal/metrics"
 	"github.com/stretchr/testify/assert"
 	"github.com/stretchr/testify/require"
 )
 
 func TestSendMetrics(t *testing.T) {
-	log, err := logger.New("info", "stdout")
+	log, err := logger.NewZapLogger("info", "stdout")
 	require.NoError(t, err)
 	server := httptest.NewServer(http.HandlerFunc(func(w http.ResponseWriter, r *http.Request) {
 		log.Info("I'm handler")

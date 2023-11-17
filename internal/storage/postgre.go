@@ -1,65 +1,21 @@
-package postgre
+package storage
 
 import (
 	"context"
 	"database/sql"
-	"errors"
 	"time"
 
-	"github.com/Mr-Punder/go-alerting-service/internal/interfaces"
+	"github.com/Mr-Punder/go-alerting-service/internal/logger"
 	"github.com/Mr-Punder/go-alerting-service/internal/metrics"
-	"github.com/jackc/pgerrcode"
-	"github.com/jackc/pgx/v5/pgconn"
 	_ "github.com/jackc/pgx/v5/stdlib"
 )
 
-// I want do to it that way but I feel I'm doing something wrong
-
-// withRetry1 allows to retry function returning 1 parameter
-func withRetry1(f func(ar ...any) error, args ...any) error {
-	var err error
-	for attempt := 0; attempt < 3; attempt++ {
-		err = f(args...)
-		if err != nil {
-			var pgErr *pgconn.PgError
-			if errors.As(err, &pgErr) && pgerrcode.UniqueViolation == pgErr.Code {
-				time.Sleep(time.Duration(attempt*2+1) * time.Second)
-				continue
-			}
-			return err
-		}
-		return err
-
-	}
-	return err
-}
-
-// withRetry1 allows to retry function returning 2 parameters
-func withRetry2(f func(ar ...any) (any, error), args ...any) (any, error) {
-	var resp any
-	var err error
-	for attempt := 0; attempt < 3; attempt++ {
-		resp, err = f(args...)
-		if err != nil {
-			var pgErr *pgconn.PgError
-			if errors.As(err, &pgErr) && pgerrcode.UniqueViolation == pgErr.Code {
-				time.Sleep(time.Duration(attempt*2+1) * time.Second)
-				continue
-			}
-			return nil, err
-		}
-		return resp, err
-
-	}
-	return nil, err
-}
-
 type PostgreDB struct {
 	db  *sql.DB
-	log interfaces.Logger
+	log logger.Logger
 }
 
-func NewPostgreDB(dsn string, log interfaces.Logger) (*PostgreDB, error) {
+func NewPostgreDB(dsn string, log logger.Logger) (*PostgreDB, error) {
 	db, err := sql.Open("pgx", dsn)
 	if err != nil {
 

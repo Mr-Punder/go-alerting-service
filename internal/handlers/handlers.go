@@ -10,23 +10,24 @@ import (
 	"strconv"
 	"time"
 
-	"github.com/Mr-Punder/go-alerting-service/internal/interfaces"
+	"github.com/Mr-Punder/go-alerting-service/internal/logger"
 	"github.com/Mr-Punder/go-alerting-service/internal/metrics"
+	"github.com/Mr-Punder/go-alerting-service/internal/storage"
 	"github.com/go-chi/chi/v5"
 )
 
 // Handler type contains MemStorer and HttpLogger
 type Handler struct {
-	stor    interfaces.MetricsStorer
-	logger  interfaces.Logger
+	stor    storage.MetricsStorer
+	logger  logger.Logger
 	timeout time.Duration
 }
 
-func NewHandler(stor interfaces.MetricsStorer, logger interfaces.Logger) *Handler {
+func NewHandler(stor storage.MetricsStorer, logger logger.Logger) *Handler {
 	return &Handler{stor, logger, 3 * time.Second}
 }
 
-func NewMetricRouter(storage interfaces.MetricsStorer, logger interfaces.Logger) chi.Router {
+func NewMetricRouter(storage storage.MetricsStorer, logger logger.Logger) chi.Router {
 	r := chi.NewRouter()
 
 	handler := NewHandler(storage, logger)

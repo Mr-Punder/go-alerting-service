@@ -6,15 +6,15 @@ import (
 	"strings"
 
 	"github.com/Mr-Punder/go-alerting-service/internal/gzipcomp"
-	"github.com/Mr-Punder/go-alerting-service/internal/interfaces"
+	"github.com/Mr-Punder/go-alerting-service/internal/logger"
 )
 
 // GzipCompressor is middleware compressor
 type GzipCompressor struct {
-	log interfaces.Logger
+	log logger.Logger
 }
 
-func NewGzipCompressor(log interfaces.Logger) *GzipCompressor {
+func NewGzipCompressor(log logger.Logger) *GzipCompressor {
 	return &GzipCompressor{
 		log: log,
 	}

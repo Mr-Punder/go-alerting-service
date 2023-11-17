@@ -2,14 +2,14 @@ package main
 
 import (
 	cnf "github.com/Mr-Punder/go-alerting-service/internal/agent/config"
-	zaplogger "github.com/Mr-Punder/go-alerting-service/internal/logger/zap"
+	"github.com/Mr-Punder/go-alerting-service/internal/logger"
 	"github.com/Mr-Punder/go-alerting-service/internal/telemetry"
 )
 
 func main() {
 	config := cnf.New()
 
-	Log, err := zaplogger.New(config.LogLevel, config.LogOutputPath)
+	Log, err := logger.NewZapLogger(config.LogLevel, config.LogOutputPath)
 	if err != nil {
 		panic(err)
 	}
