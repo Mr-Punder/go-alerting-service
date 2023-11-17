@@ -12,17 +12,17 @@ import (
 	"strings"
 	"time"
 
-	"github.com/Mr-Punder/go-alerting-service/internal/interfaces"
+	"github.com/Mr-Punder/go-alerting-service/internal/logger"
 	"github.com/Mr-Punder/go-alerting-service/internal/metrics"
 )
 
 type Telemetry struct {
-	log     interfaces.Logger
+	log     logger.Logger
 	metrics []metrics.Metrics
 	address string
 }
 
-func NewTelemetry(adr string, metrucs []metrics.Metrics, logger interfaces.Logger) *Telemetry {
+func NewTelemetry(adr string, metrucs []metrics.Metrics, logger logger.Logger) *Telemetry {
 	return &Telemetry{
 		log:     logger,
 		address: adr,

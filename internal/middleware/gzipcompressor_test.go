@@ -9,7 +9,7 @@ import (
 	"testing"
 
 	"github.com/Mr-Punder/go-alerting-service/internal/handlers"
-	logger "github.com/Mr-Punder/go-alerting-service/internal/logger/zap"
+	"github.com/Mr-Punder/go-alerting-service/internal/logger"
 	"github.com/Mr-Punder/go-alerting-service/internal/metrics"
 	"github.com/Mr-Punder/go-alerting-service/internal/storage"
 
@@ -61,7 +61,7 @@ func TestGzipCompressor(t *testing.T) {
 		},
 	}
 
-	Log, err := logger.New("info", "./log.txt")
+	Log, err := logger.NewZapLogger("info", "./log.txt")
 	require.NoError(t, err)
 	stor, err := storage.NewMemStorage(metrics, false, "", Log)
 	require.NoError(t, err)
