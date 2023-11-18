@@ -1,35 +1,40 @@
 package handlers
 
 import (
+	"context"
 	"encoding/json"
 	"fmt"
 	"net/http"
 	"os"
 	"sort"
 	"strconv"
+	"time"
 
-	"github.com/Mr-Punder/go-alerting-service/internal/interfaces"
+	"github.com/Mr-Punder/go-alerting-service/internal/logger"
 	"github.com/Mr-Punder/go-alerting-service/internal/metrics"
+	"github.com/Mr-Punder/go-alerting-service/internal/storage"
 	"github.com/go-chi/chi/v5"
 )
 
 // Handler type contains MemStorer and HttpLogger
 type Handler struct {
-	stor   interfaces.MetricsStorer
-	logger interfaces.Logger
+	stor    storage.MetricsStorer
+	logger  logger.Logger
+	timeout time.Duration
 }
 
-func NewHandler(stor interfaces.MetricsStorer, logger interfaces.Logger) *Handler {
-	return &Handler{stor, logger}
+func NewHandler(stor storage.MetricsStorer, logger logger.Logger) *Handler {
+	return &Handler{stor, logger, 3 * time.Second}
 }
 
-func NewMetricRouter(storage interfaces.MetricsStorer, logger interfaces.Logger) chi.Router {
+func NewMetricRouter(storage storage.MetricsStorer, logger logger.Logger) chi.Router {
 	r := chi.NewRouter()
 
 	handler := NewHandler(storage, logger)
 
 	return r.Route("/", func(r chi.Router) {
 		r.Get("/", handler.ShowAllHandler)
+		r.Post("/updates/", handler.JSONUpdAllHandler)
 		r.Route("/update", func(r chi.Router) {
 			r.Post("/", handler.JSONUpdHandler)
 			r.Post("/{type}/{name}/{value}", handler.UpdHandler)
@@ -38,10 +43,80 @@ func NewMetricRouter(storage interfaces.MetricsStorer, logger interfaces.Logger)
 			r.Post("/", handler.JSONValueHandler)
 			r.Get("/{type}/{name}", handler.ValueHandler)
 		})
+		r.Get("/ping", handler.PingHandler)
 		r.Get("/favicon.ico", handler.FaviconHandler)
 		r.Get("/{}", handler.DefoultHandler)
 		r.Post("/{}", handler.DefoultHandler)
 	})
+}
+
+func (h *Handler) JSONUpdAllHandler(w http.ResponseWriter, r *http.Request) {
+	h.logger.Info("Entered JSONUpdAllHandler")
+	if r.Method != http.MethodPost {
+		h.logger.Error("wrong request method")
+		http.Error(w, "Only POST requests are allowed for update!", http.StatusMethodNotAllowed)
+
+		return
+	}
+	h.logger.Info("Method checked")
+
+	metrics := make([]metrics.Metrics, 0)
+	if err := json.NewDecoder(r.Body).Decode(&metrics); err != nil {
+		h.logger.Error(fmt.Sprintf("json decoding error %e", err))
+		w.WriteHeader(http.StatusBadRequest)
+		http.Error(w, "wrong requests", http.StatusBadRequest)
+
+		return
+	}
+
+	for _, m := range metrics {
+		if m.MType != "gauge" && m.MType != "counter" {
+			h.logger.Error(fmt.Sprintf("wrong type %s", m.MType))
+
+			http.Error(w, "wrong type", http.StatusBadRequest)
+
+			return
+		}
+	}
+
+	ctx, cancel := context.WithTimeout(r.Context(), h.timeout)
+	defer cancel()
+	if err := h.stor.SetAll(ctx, metrics); err != nil {
+		w.WriteHeader(http.StatusBadRequest)
+		h.logger.Errorf("Cann't store metrics", err)
+
+		return
+	}
+
+	h.logger.Info("Metrics stored")
+	w.WriteHeader(http.StatusOK)
+	h.logger.Info("JSONUpdHandler exited")
+
+}
+
+func (h *Handler) PingHandler(w http.ResponseWriter, r *http.Request) {
+
+	h.logger.Info("Entered PingHandler")
+	if r.Method != http.MethodGet {
+		h.logger.Error("wrong request method")
+		http.Error(w, "Only GET requests are allowed for update!", http.StatusMethodNotAllowed)
+
+		return
+	}
+	h.logger.Info("Method checked")
+
+	err := h.stor.Ping()
+	if err != nil {
+		h.logger.Errorf("Database does not ping %s", err)
+		w.WriteHeader(http.StatusInternalServerError)
+		http.Error(w, "Database does not ping", http.StatusInternalServerError)
+
+		return
+	}
+
+	w.WriteHeader(http.StatusOK)
+	h.logger.Info("PingHandler exited")
+
 }
 
 // JSONUpdHandler updates metric via json POST request
@@ -75,21 +150,29 @@ func (h *Handler) JSONUpdHandler(w http.ResponseWriter, r *http.Request) {
 	}
 
 	str := "Metrics on server: "
-	for key := range h.stor.GetAll() {
+
+	ctx, cancel := context.WithTimeout(r.Context(), h.timeout)
+	defer cancel()
+	for key := range h.stor.GetAll(ctx) {
 		str += key + ", "
 	}
 	h.logger.Info(str)
 
-	if err := h.stor.Set(metric); err != nil {
+	ctx, cancel = context.WithTimeout(r.Context(), h.timeout)
+	defer cancel()
+	if err := h.stor.Set(ctx, metric); err != nil {
 		w.WriteHeader(http.StatusBadRequest)
-		h.logger.Error("Cann't find metric")
+		h.logger.Errorf("Cann't store metric", err)
 
 		return
 	}
 
-	h.logger.Info(fmt.Sprintf("Metric %s stored", metric.ID))
+	h.logger.Infof("Metric %s stored", metric.ID)
 
-	respMetric, _ := h.stor.Get(metric)
+	ctx, cancel = context.WithTimeout(r.Context(), h.timeout)
+	defer cancel()
+
+	respMetric, _ := h.stor.Get(ctx, metric)
 	w.Header().Set("Content-Type", "application/json")
 
 	body, err := json.Marshal(respMetric)
@@ -137,10 +220,15 @@ func (h *Handler) JSONValueHandler(w http.ResponseWriter, r *http.Request) {
 		return
 	}
 
-	respMetric, ok := h.stor.Get(metric)
+	ctx, cancel := context.WithTimeout(r.Context(), h.timeout)
+	defer cancel()
+
+	respMetric, ok := h.stor.Get(ctx, metric)
 	if !ok {
+		ctx, cancel := context.WithTimeout(r.Context(), h.timeout)
+		defer cancel()
 		str := "Metrics on server: "
-		for key := range h.stor.GetAll() {
+		for key := range h.stor.GetAll(ctx) {
 			str += key + ", "
 		}
 		h.logger.Info(str)
@@ -193,7 +281,10 @@ func (h *Handler) UpdHandler(w http.ResponseWriter, r *http.Request) {
 			Value: &fval,
 		}
 
-		if err := h.stor.Set(metric); err != nil {
+		ctx, cancel := context.WithTimeout(r.Context(), h.timeout)
+		defer cancel()
+
+		if err := h.stor.Set(ctx, metric); err != nil {
 			w.WriteHeader(http.StatusBadRequest)
 
 			return
@@ -213,7 +304,9 @@ func (h *Handler) UpdHandler(w http.ResponseWriter, r *http.Request) {
 			Delta: &ival,
 		}
 
-		if err := h.stor.Set(metric); err != nil {
+		ctx, cancel := context.WithTimeout(r.Context(), h.timeout)
+		defer cancel()
+		if err := h.stor.Set(ctx, metric); err != nil {
 			w.WriteHeader(http.StatusBadRequest)
 
 			return
@@ -257,9 +350,12 @@ func (h *Handler) ValueHandler(w http.ResponseWriter, r *http.Request) {
 		MType: tp,
 	}
 	w.Header().Set("Content-Type", "text/plain")
+
+	ctx, cancel := context.WithTimeout(r.Context(), h.timeout)
+	defer cancel()
 	switch tp {
 	case "gauge":
-		val, ok := h.stor.Get(metric)
+		val, ok := h.stor.Get(ctx, metric)
 		if !ok {
 			http.Error(w, fmt.Sprintf("%s not found", name), http.StatusNotFound)
 
@@ -267,7 +363,7 @@ func (h *Handler) ValueHandler(w http.ResponseWriter, r *http.Request) {
 		}
 		w.Write([]byte(strconv.FormatFloat(*val.Value, 'f', -1, 64)))
 	case "counter":
-		val, ok := h.stor.Get(metric)
+		val, ok := h.stor.Get(ctx, metric)
 		if !ok {
 			http.Error(w, fmt.Sprintf("%s not found", name), http.StatusNotFound)
 
@@ -294,9 +390,12 @@ func (h *Handler) ShowAllHandler(w http.ResponseWriter, r *http.Request) {
 	}
 	h.logger.Info("method checked")
 
+	ctx, cancel := context.WithTimeout(r.Context(), h.timeout)
+	defer cancel()
+
 	gaugeMetrics := []string{}
 	counterMetrics := []string{}
-	for key, val := range h.stor.GetAll() {
+	for key, val := range h.stor.GetAll(ctx) {
 		if val.MType == "gauge" {
 			var value = 0.0
 			if val.Value != nil {

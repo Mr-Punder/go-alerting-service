@@ -1,4 +1,4 @@
-package zaplogger
+package logger
 
 import (
 	"time"
@@ -13,7 +13,7 @@ type LogZap struct {
 
 }
 
-func New(level string, path string) (*LogZap, error) {
+func NewZapLogger(level string, path string) (*LogZap, error) {
 	lvl, err := zap.ParseAtomicLevel(level)
 	if err != nil {
 		return nil, err
