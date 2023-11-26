@@ -15,12 +15,13 @@ type Config struct {
 	LogLevel       string
 	LogOutputPath  string
 	LogErrorPath   string
+	HashKey        string
 }
 
 func New() Config {
 	var (
-		rawPollInterval, rawReportInterval                                int
-		rawServerAddress, rawlogLevel, rawlogOutputPath, rawlogErrortPath string
+		rawPollInterval, rawReportInterval                                        int
+		rawServerAddress, rawlogLevel, rawlogOutputPath, rawlogErrortPath, rawKey string
 	)
 	flag.StringVar(&rawServerAddress, "a", "localhost:8080", "address and port to connect")
 	flag.IntVar(&rawPollInterval, "r", 2, "poll interval")
@@ -28,6 +29,8 @@ func New() Config {
 	flag.StringVar(&rawlogLevel, "l", "info", "level of logging")
 	flag.StringVar(&rawlogOutputPath, "lp", "stdout", "log output path")
 	flag.StringVar(&rawlogErrortPath, "le", "stderr", "log error output path")
+	flag.StringVar(&rawKey, "k", "", "Key for hash summ")
+
 	flag.Parse()
 
 	if envAddrs, ok := os.LookupEnv("ADDRESS"); ok {
@@ -64,6 +67,10 @@ func New() Config {
 
 		rawlogErrortPath = envLogErrorPath
 	}
+	if envHashKey, ok := os.LookupEnv("KEY"); ok {
+
+		rawKey = envHashKey
+	}
 
 	return Config{
 		ServerAddress:  rawServerAddress,
@@ -72,5 +79,6 @@ func New() Config {
 		LogLevel:       rawlogLevel,
 		LogOutputPath:  rawlogOutputPath,
 		LogErrorPath:   rawlogErrortPath,
+		HashKey:        rawKey,
 	}
 }

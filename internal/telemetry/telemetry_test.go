@@ -57,7 +57,7 @@ func TestSendMetrics(t *testing.T) {
 	}
 	for _, tt := range tests {
 		t.Run(tt.name, func(t *testing.T) {
-			tel := NewTelemetry(address, tt.metric, log)
+			tel := NewTelemetry(address, "", tt.metric, log)
 
 			if !tt.wantErr {
 				assert.NoError(t, tel.SendMetrics())

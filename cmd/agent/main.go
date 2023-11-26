@@ -15,7 +15,7 @@ func main() {
 	}
 	Log.Info("agent started")
 
-	tel := telemetry.NewTelemetry(config.ServerAddress, nil, Log)
+	tel := telemetry.NewTelemetry(config.ServerAddress, config.HashKey, nil, Log)
 	tel.CollectMetrics()
 	Log.Info("metrics collected")
 

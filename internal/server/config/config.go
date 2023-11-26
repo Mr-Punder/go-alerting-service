@@ -15,14 +15,15 @@ type Config struct {
 	FileStoragePath string
 	Restore         bool
 	DBstring        string
+	HashKey         string
 }
 
 // New from environment and consol parameters
 func New() *Config {
 	var (
-		flagRunAddr, logLevel, logOutputPath, fileStoragePath, logErrortPath, dbString string
-		storeInterval                                                                  int64
-		restore                                                                        bool
+		flagRunAddr, logLevel, logOutputPath, fileStoragePath, logErrortPath, dbString, rawKey string
+		storeInterval                                                                          int64
+		restore                                                                                bool
 	)
 
 	flag.StringVar(&flagRunAddr, "a", "localhost:8080", "addres and port to run server")
@@ -34,6 +35,7 @@ func New() *Config {
 	flag.BoolVar(&restore, "r", true, "restore metrics from storage")
 	flag.StringVar(&dbString, "d", "", "databese opening string")
 	// host=localhost user=metrics password=metrics_password dbname=metrics
+	flag.StringVar(&rawKey, "k", "", "Key for hash summ")
 
 	flag.Parse()
 
@@ -68,6 +70,10 @@ func New() *Config {
 	if envDBstring, ok := os.LookupEnv("DATABASE_DSN"); ok {
 		dbString = envDBstring
 	}
+	if envHashKey, ok := os.LookupEnv("KEY"); ok {
 
-	return &Config{flagRunAddr, logLevel, logOutputPath, logErrortPath, storeInterval, fileStoragePath, restore, dbString}
+		rawKey = envHashKey
+	}
+
+	return &Config{flagRunAddr, logLevel, logOutputPath, logErrortPath, storeInterval, fileStoragePath, restore, dbString, rawKey}
 }

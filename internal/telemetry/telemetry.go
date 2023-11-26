@@ -3,6 +3,9 @@ package telemetry
 import (
 	"bytes"
 	"compress/gzip"
+	"crypto/hmac"
+	"crypto/sha256"
+	"encoding/hex"
 	"encoding/json"
 	"fmt"
 	"io"
@@ -20,13 +23,15 @@ type Telemetry struct {
 	log     logger.Logger
 	metrics []metrics.Metrics
 	address string
+	key     string
 }
 
-func NewTelemetry(adr string, metrucs []metrics.Metrics, logger logger.Logger) *Telemetry {
+func NewTelemetry(adr string, key string, metrucs []metrics.Metrics, logger logger.Logger) *Telemetry {
 	return &Telemetry{
 		log:     logger,
 		address: adr,
 		metrics: metrucs,
+		key:     key,
 	}
 }
 
@@ -247,16 +252,9 @@ func (t *Telemetry) SendMetrics() error {
 	if err != nil {
 		return err
 	}
-	// if metric.MType == "gauge" {
-	// 	t.log.Info(fmt.Sprintf("metric to encode %s %s %f", metric.ID, metric.MType, *metric.Value))
-	// } else {
-	// 	t.log.Info(fmt.Sprintf("metric to encode %s %s %d", metric.ID, metric.MType, *metric.Delta))
-
-	// }
 
 	metricstr := string(body)
 	t.log.Info(fmt.Sprintf("Metrics  encoded to %s", metricstr))
-
 	buf := bytes.NewBuffer(nil)
 	zb := gzip.NewWriter(buf)
 	_, err = zb.Write(body)
@@ -271,6 +269,17 @@ func (t *Telemetry) SendMetrics() error {
 	req, err := http.NewRequest("POST", url, buf)
 	if err != nil {
 		return err
+	}
+
+	if t.key != "" {
+		h := hmac.New(sha256.New, []byte(t.key))
+		h.Write(body)
+
+		hash := h.Sum(nil)
+
+		hashStr := hex.EncodeToString(hash[:])
+		t.log.Infof("Calculated sha256 hash: %s", hashStr)
+		req.Header.Set("HashSHA256", hashStr)
 	}
 	req.Header.Set("Content-Type", "application/json")
 	req.Header.Set("Accept-Encoding", "gzip")
