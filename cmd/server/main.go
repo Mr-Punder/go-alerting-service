@@ -42,16 +42,14 @@ func main() {
 	comp := middleware.NewGzipCompressor(log)
 	log.Info("Initialized compressor")
 
-	// if conf.HashKey != "" {
-	// 	hashHandler := middleware.NewHashSum(conf.HashKey, log)
-	// 	log.Info("Initialized SHA256 Handler")
-	// 	mserver.AddMidleware(hashHandler.HashSummHandler)
-	// }
+	hashHandler := middleware.NewHashSum(conf.HashKey, log)
+	log.Info("Initialized SHA256 Handler")
+	mserver.AddMidleware()
 
 	hLogger := middleware.NewHTTPLoger(log)
 	log.Info("Initialized middleware functions")
 
-	mserver.AddMidleware(comp.CompressHandler, hLogger.HTTPLogHandler)
+	mserver.AddMidleware(hashHandler.HashSummHandler, comp.CompressHandler, hLogger.HTTPLogHandler)
 
 	go mserver.RunServer()
 

@@ -13,19 +13,19 @@ import (
 
 type hashWriter struct {
 	http.ResponseWriter
-	hw bytes.Buffer
+	buffer *bytes.Buffer
 }
 
 func NewHashWriter(w http.ResponseWriter) *hashWriter {
 	return &hashWriter{
 		ResponseWriter: w,
-		hw:             bytes.Buffer{},
+		buffer:         bytes.NewBuffer(nil),
 	}
 }
 
 func (hw *hashWriter) Write(b []byte) (int, error) {
-	hw.ResponseWriter.WriteHeader(200)
-	return hw.hw.Write(b)
+	hw.buffer.Write(b)
+	return hw.ResponseWriter.Write(b)
 }
 func (hw *hashWriter) Header() http.Header {
 	return hw.ResponseWriter.Header()
@@ -80,16 +80,15 @@ func (hs *HashSum) HashSummHandler(next http.Handler) http.Handler {
 		if hs.key != "" {
 			hashWriter := NewHashWriter(w)
 			next.ServeHTTP(hashWriter, r)
-			respBody := hashWriter.hw.Bytes()
+			respBody := hashWriter.buffer.Bytes()
 			h := hmac.New(sha256.New, []byte(hs.key))
 			h.Write(respBody)
 			hash := hex.EncodeToString(h.Sum(nil))
 			w.Header().Set("HashSHA256", hash)
-			hs.log.Infof("Resp body %s", string(respBody))
-			w.Write(respBody)
+			hs.log.Infof("Hash calculated: %s", hash)
+
 		} else {
 			next.ServeHTTP(w, r)
-
 		}
 		hs.log.Info("Request served from HashHandler")
 	})
