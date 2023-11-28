@@ -16,17 +16,19 @@ type Config struct {
 	LogOutputPath  string
 	LogErrorPath   string
 	HashKey        string
+	RateLimit      int
 }
 
 func New() Config {
 	var (
-		rawPollInterval, rawReportInterval                                        int
+		rawPollInterval, rawReportInterval, rawRateLimit                          int
 		rawServerAddress, rawlogLevel, rawlogOutputPath, rawlogErrortPath, rawKey string
 	)
 	flag.StringVar(&rawServerAddress, "a", "localhost:8080", "address and port to connect")
 	flag.IntVar(&rawPollInterval, "r", 2, "poll interval")
 	flag.IntVar(&rawReportInterval, "p", 10, "report interval")
-	flag.StringVar(&rawlogLevel, "l", "info", "level of logging")
+	flag.IntVar(&rawRateLimit, "l", 1, "Limit http requests")
+	flag.StringVar(&rawlogLevel, "ll", "info", "level of logging")
 	flag.StringVar(&rawlogOutputPath, "lp", "stdout", "log output path")
 	flag.StringVar(&rawlogErrortPath, "le", "stderr", "log error output path")
 	flag.StringVar(&rawKey, "k", "", "Key for hash summ")
@@ -71,6 +73,13 @@ func New() Config {
 
 		rawKey = envHashKey
 	}
+	if envRateLimit, ok := os.LookupEnv("RATE_LIMIT"); ok {
+		rawRateLimit, err := strconv.ParseInt(envRateLimit, 10, 64)
+		if err != nil {
+			log.Fatal("wrong report interval")
+		}
+		rawReportInterval = int(rawRateLimit)
+	}
 
 	return Config{
 		ServerAddress:  rawServerAddress,
@@ -80,5 +89,6 @@ func New() Config {
 		LogOutputPath:  rawlogOutputPath,
 		LogErrorPath:   rawlogErrortPath,
 		HashKey:        rawKey,
+		RateLimit:      rawRateLimit,
 	}
 }

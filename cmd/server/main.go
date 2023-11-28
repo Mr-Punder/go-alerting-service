@@ -44,7 +44,6 @@ func main() {
 
 	hashHandler := middleware.NewHashSum(conf.HashKey, log)
 	log.Info("Initialized SHA256 Handler")
-	mserver.AddMidleware()
 
 	hLogger := middleware.NewHTTPLoger(log)
 	log.Info("Initialized middleware functions")
