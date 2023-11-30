@@ -15,12 +15,12 @@ func main() {
 	}
 	Log.Info("agent started")
 
-	tel := telemetry.NewTelemetry(config.ServerAddress, nil, Log)
-	tel.CollectMetrics()
-	Log.Info("metrics collected")
+	tel := telemetry.NewTelemetry(config.ServerAddress, config.HashKey, config.RateLimit, Log)
 
 	err = tel.Run(config.PollInterval, config.ReportInterval)
+
 	if err != nil {
 		panic(err)
 	}
+	Log.Info("agent finished")
 }

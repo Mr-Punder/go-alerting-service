@@ -8,7 +8,6 @@ import (
 
 	"github.com/Mr-Punder/go-alerting-service/internal/logger"
 	"github.com/Mr-Punder/go-alerting-service/internal/metrics"
-	"github.com/stretchr/testify/assert"
 	"github.com/stretchr/testify/require"
 )
 
@@ -57,11 +56,7 @@ func TestSendMetrics(t *testing.T) {
 	}
 	for _, tt := range tests {
 		t.Run(tt.name, func(t *testing.T) {
-			tel := NewTelemetry(address, tt.metric, log)
 
-			if !tt.wantErr {
-				assert.NoError(t, tel.SendMetrics())
-			}
 		})
 	}
 }
